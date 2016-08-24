@@ -80,3 +80,41 @@ query.on('end', function() { client.end(); });
 $ node models/database.js
 ```
 
+Проверьте создание таблицы / схемы в [PSQL](http://postgresguide.com/utilities/psql.html) :
+
+```
+michaelherman=# \c todo
+You are now connected to database "todo" as user "michaelherman".
+todo=# \d+ items
+                                                     Table "public.items"
+  Column  |         Type          |                     Modifiers                      | Storage  | Stats target | Description
+----------+-----------------------+----------------------------------------------------+----------+--------------+-------------
+ id       | integer               | not null default nextval('items_id_seq'::regclass) | plain    |              |
+ text     | character varying(40) | not null                                           | extended |              |
+ complete | boolean               |                                                    | plain    |              |
+Indexes:
+    "items_pkey" PRIMARY KEY, btree (id)
+```
+
+Вместе с подключением к базе мы создали таблицу **items**. Теперь переходим к следующему шагу - настройка нашего CRUD приложения.
+
+#### Маршрутизация на стороне сервера:
+
+Следующим шагом мы просто добавим функциональные блоки в файл **index.js**,  который находиться в папке **routes** 
+
+```javascript
+var express = require('express');
+var router = express.Router();
+var pg = require('pg');
+var connectionString = require(path.join(__dirname, '../', '../', 'config'));
+```
+
+Сейчас мы добавим каждый функциональный блок
+
+| Function | URL                    | Action                   |
+| -------- | ---------------------- | ------------------------ |
+| CREATE   | /api/v1/todos          | Создаем новую задачу     |
+| READ     | /api/v1/todos          | Получаем список задач    |
+| UPDATE   | /api/v1/todos/:todo_id | Обновляем текущюю задачу |
+| DELETE   | /api/v1/todos/:todo_id | Удаляем текущюю задачу   |
+
