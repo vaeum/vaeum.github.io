@@ -2,7 +2,7 @@
 layout: post
 title:  "Michael Herman - PostgreSQL and NodeJS"
 date:   2016-08-24
-categories: PostgreSQL, NodeJS
+categories: PostgreSQL NodeJS
 ---
 
 Ссылка на оригинальный пост [link](http://mherman.org/blog/2015/02/12/postgresql-and-nodejs/)
@@ -111,6 +111,7 @@ var connectionString = require(path.join(__dirname, '../', '../', 'config'));
 
 Сейчас мы добавим каждый функциональный блок
 
+{: .table}
 | Function | URL                    | Action                   |
 | -------- | ---------------------- | ------------------------ |
 | CREATE   | /api/v1/todos          | Создаем новую задачу     |
