@@ -6,7 +6,7 @@
 name: Vaeum
 
 # Short bio or description (displayed in the header)
-description: Web Developers blog
+description: Web Developer's blog
 
 #
 # Flags below are optional
@@ -15,7 +15,7 @@ description: Web Developers blog
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: vaeum@mail.ru
+  email: vaeum@yahoo.com
   facebook:
   flickr:
   github: vaeum/vaeum.github.io
@@ -38,7 +38,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url:
+url: http://www.vaeum.com
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
