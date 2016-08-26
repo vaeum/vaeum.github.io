@@ -80,7 +80,6 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
-  - CNAME
   - package.json
   - node_modules
   # - assets
