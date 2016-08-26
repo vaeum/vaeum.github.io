@@ -60,36 +60,44 @@
             </ul>
           </nav>
 
-<!--           <div class="related-posts content-block">
-            <span class="sidebar-title content-block-title">
-              Похожие записи
+          {% if site.related_posts%}
+            <div class="related-posts content-block">
+              <span class="sidebar-title content-block-title">
+                Похожие записи
+              </span>
+              <ul class="lsn pl0">
+                {% for post in site.related_posts limit:3 %}
+                  <li>
+                    <a href="{{ post.url }}">
+                      {{ post.title }}
+                      <span class="time db">
+                        {{ post.date | date: "%B %-d, %Y" }}
+                      </span>
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+
+          <div class="content-block">
+            <span class="content-block-title">
+              Категории
             </span>
+
             <ul class="lsn pl0">
-              {% for post in site.related_posts limit:3 %}
-                <li>
-                  <a href="{{ post.url }}">
-                    {{ post.title }}
-                    <span class="time db">
-                      {{ post.date | date: "%B %-d, %Y" }}
-                    </span>
+              {% for category in site.categories %}
+                {% assign name_category = category | first %}
+
+                <h3>{{name_category}}</h3>
+                {% for p in site.categories[name_category] %}
+                  <a href="{{ p.url }}">
+                    {{p.title}}
                   </a>
-                </li>
+                {% endfor %}
               {% endfor %}
             </ul>
           </div>
-
-          <div class="related-posts content-block">
-            <span class="sidebar-title content-block-title">
-              Категории
-            </span>
-            <ul class="lsn pl0">
-              {% for category in site.categories %}
-                <li>
-                  <a name="{{ category | first }}">{{ category | first }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </div> -->
         </div>
       </div>
     </div>
