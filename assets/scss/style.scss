@@ -80,6 +80,10 @@ a{
   border-top:1px solid #999;
   padding-top: 20px;
   margin-bottom: 40px;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
 }
 
 .border-block-title{

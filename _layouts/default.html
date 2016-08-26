@@ -77,7 +77,24 @@
             </div>
           {% endif %}
 
-          <div class="content-block _padding">
+          <div class="related-posts content-block">
+            <span class="sidebar-title content-block-title">
+              Дерево тегов
+            </span>
+
+            <ul class="lsn pl0">
+              {% assign tags = site.tags | sort %}
+              {% for tag in tags %}
+               <li>
+                  <a href="/tag/{{ tag | first | slugify }}/">
+                    {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+                  </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="content-block _padding-big">
             <span class="content-block-title">
               Категории
             </span>
@@ -87,12 +104,21 @@
                 {% if forloop.index < 4 %}
                   {% assign name_category = category | first %}
 
-                  <h3>{{name_category}}</h3>
-                  {% for p in site.categories[name_category] %}
-                    <a href="{{ p.url }}">
-                      {{p.title}}
-                    </a>
-                  {% endfor %}
+
+                  <div class="border-block">
+                    <div class="border-block-title">
+                      {{name_category}}
+                    </div>
+
+                    <div class="border-block-content">
+                      {% for p in site.categories[name_category] %}
+                        <a href="{{ p.url }}">
+                          {{p.title}}
+                        </a>
+                      {% endfor %}
+                    </div>
+                  </div>
+
                 {% endif %}
               {% endfor %}
             </ul>
