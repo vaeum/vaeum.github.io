@@ -84,5 +84,7 @@ exclude:
   - package.json
   - node_modules
   # - assets
+  - assets/bower
+  - assets/scss
   - gulpfile.babel.js
   - bower.json

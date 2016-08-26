@@ -1,0 +1,24 @@
+language: ruby
+rvm:
+  - 2.2
+  - jruby
+  - rbx-2
+before_install:
+  - gem update --system
+  - gem --version
+  - gem install jekyll
+  - jekyll build
+
+  - rm -rf .git
+  - cd _site
+  - git init
+  - git config user.name "Alexander Anpleenko"
+  - git config user.email "vaeum@yahoo.com"
+  - git add .
+  - git add -f app
+  - git commit -m "Deploy to GitHub Pages"
+  - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master > /dev/null 2>&1
+env:
+  global:
+    - GH_REF: github.com/vaeum/vaeum.github.io.git
+    - secure: QfbBrNY0cqZpEYCvby2UcleNPj8i0ViW436B8wfDYx+2qP84maFbphFrb4in+iFE1OqXUOSgizsximlQXRyI4IcvaPzUlxQazJ9g3ls5QSojUUkgQegi1k5ldJjBEAO/nJl7ZP2TAEIakbyOjJnLb8QMRC7DpAJoi2w6NV4s3F1biwy3Z1g0EEG8iTz9+MyuujnZW8fdFGjpmo12EcUcwLF7YqBrM2LWIT4k1oeL3sY736V/Z9syp6DdUcfZvnuiI/CYmN+rMiM2fqJEenFays0XXYLoB/ynp46PwPaa7E1KHOeIMksO9CNWYOeP7i1Sp2KHrRmquN6FaUVXMj7odi922BSxoSPvmFm9a7mQ0JLKr6klhCHyKDPcL3qDP9VK5OHPWWpOvWauZ/0inOoTjliwz7+o1He1u/aPwN3c5ruBbgwMjtAcdNc2OY9Tqd4LAGWxN7mSFfBTWElAk3jlVEcPHOltcUZKh22XpXovxw/E9dfl96UpTr3OSmmnVh9SnbYMWa1iej7MGIDWC/aJOF+1EdxQl0XkSk7IZpIytgu63x4g6BNzVjYOBOLQmusIxzeDA2zxs+NKgd5sQ6uo9U1Ec72JDVsnSA5ABVP8E5Q8bzshDtxSFvoG1Ex7cKw1ySYHTEQ2efGTHz8GFmfFVqP2EtkpBtpfoRXiHhNkEUc=
