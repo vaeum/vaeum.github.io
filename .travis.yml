@@ -5,8 +5,8 @@ before_install:
   - gem update --system
   - gem --version
   - gem install jekyll
-  - gem install jekyll-sitemap
-  - gem install jekyll-feed
+  - gem install bundler
+  - bundle install
   - jekyll build
 
   - rm -rf .git

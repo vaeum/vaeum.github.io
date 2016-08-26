@@ -65,7 +65,10 @@
               Похожие записи
             </span>
             <ul class="lsn pl0">
-              {% for post in site.related_posts limit:3 %}
+
+              <related-posts />
+
+              <!-- {% for post in site.related_posts limit:3 %}
                 <li>
                   <a href="{{ post.url }}">
                     {{ post.title }}
@@ -74,7 +77,7 @@
                     </span>
                   </a>
                 </li>
-              {% endfor %}
+              {% endfor %} -->
             </ul>
           </div>
 
