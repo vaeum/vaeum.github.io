@@ -5,7 +5,6 @@ before_install:
   - gem update --system
   - gem --version
   - gem install jekyll
-  - gem install jekyll-related-posts
   - gem install jekyll-feed
   - gem install jekyll-sitemap
   - jekyll build
