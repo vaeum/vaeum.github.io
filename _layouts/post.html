@@ -2,16 +2,18 @@
 layout: default
 ---
 
-<article class="post">
-  <h1 class="post-title">
-    {{ page.title }}
-
+<article class="post content-block _padding">
+  <div class="content-block-settings">
     <a
       href="https://github.com/vaeum/vaeum.github.io/edit/master/{{page.path}}"
       target="_blank"
-      class="fa fa-pencil pull-right no-underline post-edit-link"
+      class="fa fa-pencil no-underline post-edit-link"
       aria-hidden="true">
     </a>
+  </div>
+
+  <h1 class="post-title">
+    {{ page.title }}
   </h1>
 
   <div class="entry">
@@ -25,6 +27,21 @@ layout: default
   <!-- {% if jekyll.environment == "production" %}
     {% include disqus.html %}
   {% endif %} -->
+
+  <!-- ссылка на следующий пост -->
+  <!-- {% if page.next %}
+    <a href="{{ page.next.url }}">
+      {{ page.next.title }}
+    </a>
+  {% endif %} -->
+
+  <!-- вычисление сколько времени нужно для прочтения статьи -->
+  <!-- {% capture words %}
+    {{ content | number_of_words | minus: 180 }}
+  {% endcapture %}
+  {% unless words contains "-" %}
+    {{ words | plus: 180 | divided_by: 180 | append: " minutes to read" }}
+  {% endunless %} -->
 
 </article>
 

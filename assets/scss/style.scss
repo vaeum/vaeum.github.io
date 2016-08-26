@@ -1,10 +1,13 @@
 @import "variables";
 @import "layout";
+@import "header";
+@import "footer";
+@import "posts";
+@import "sidebar";
 @import "highlights";
 @import "svg-icons";
 @import "../bower/font-awesome/scss/font-awesome";
 @import "../bower/css.modifiers/dist/modifiers.css";
-
 
 html {
   position: relative;
@@ -12,24 +15,15 @@ html {
 }
 
 body {
-  margin: 0 0 $footer-height;
+  margin-bottom: $footer-height + 40px;
   // padding-top: $header-height;
-  background: #F6F9FA;
+  // background: #F6F9FA;
   font-family: $trebuchet;
-  font-size: 15px;
+  // font-size: 14px;
 }
 
-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: $footer-height;
-  width: 100%;
-  padding: 20px 0;
-  text-align: center;
-}
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
   &:first-child {
     margin-top: 0px;
   }
@@ -51,12 +45,12 @@ a{
 
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {
-  max-width: none;
+  // max-width: none;
 }
 
 .date {
-  font-style: italic;
-  color: $gray;
+  // font-style: italic;
+  // color: $gray;
 }
 
 // Specify the color of the selection
@@ -66,56 +60,15 @@ a{
   //background: #eee;
 }
 
-.posts {
-  > * + * {
-    padding-top: 2em;
-    border-top: 1px solid #eee;
-  }
-
-  .post {
-    padding-bottom: 2em;
-    &:last-child {
-      // padding-bottom: 1em;
-      // border-bottom: none;
-    }
-
-    blockquote {
-      margin: 1.8em .8em;
-      border-left: 2px solid $gray;
-      padding: 0.1em 1em;
-      color: $gray;
-      font-size: 22px;
-      font-style: italic;
-    }
-
-    .comments {
-      margin-top: 10px;
-    }
-
-    .read-more {
-      // text-transform: uppercase;
-      // font-size: 15px;
-    }
-  }
+.media {
+  display: flex;
+  align-items: flex-start;
 }
 
-.post-title{
-  &:hover{
-    .post-edit-link{
-      display: inline-block;
-    }
-  }
+.media-center {
+  align-items: center;
 }
 
-.post-edit-link{
-  font-size: 20px;
-  line-height: 39px;
-  display: none;
-}
-
-.wrapper-footer {
-  margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: #eee;
+.media-body{
+  flex: 1;
 }

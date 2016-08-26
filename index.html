@@ -2,10 +2,73 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
+<div class="posts content-block">
+  <span class="content-block-title">
+    Записи блога
+  </span>
+<!--   {% for post in site.posts %}
+    {% capture currentyear %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% if currentyear != year %}
+      {% unless forloop.first %}
+        </ul>
+      {% endunless %}
+      <span class="post-year">
+        Записи за {{ currentyear }} год
+      </span>
+      <ul class="lsn pl0 mb0">
+      {% capture year %}{{ currentyear }}{% endcapture %}
+    {% endif %}
+    <li class="post">
+      <a href="{{ post.url }}" class="post-link">
+        <span class="post-link-text">{{ post.title }}</span>
+        <span class="post-entry">{{ post.excerpt }}</span>
+      </a>
+    </li>
+  {% endfor %} -->
+
+<!--   {% for post in site.posts %}
+    {% capture currentyear %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% if currentyear != year %}
+      {% unless forloop.first %}
+        </ul>
+      {% endunless %}
+      <span class="post-year">
+        Записи за {{ currentyear }} год
+      </span>
+      <ul>
+      {% capture year %}{{ currentyear }}{% endcapture %}
+    {% endif %}
+    <li class="post">
+      <a href="{{ post.url }}" class="post-link">
+        <span class="post-link-text">{{ post.title }}</span>
+        <span class="post-entry">{{ post.excerpt }}</span>
+      </a>
+    </li>
+  {% endfor %} -->
+
+  <ul class="pl0 lsn mb0 post-list">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}" class="link">
+          <span class="media media-center">
+            <span class="media-body">
+              <span class="text">{{ post.title }}</span>
+            </span>
+            <span class="time">{{ post.date | date: "%B %-d, %Y" }}</span>
+          </span>
+          <p class="excerpt">
+            {{ post.content | strip_html | truncatewords: 15 }}
+          </p>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+<!--   {% for post in site.posts %}
     <article class="post">
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      <h1>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </h1>
 
       <div class="entry">
         {{ post.excerpt }}
@@ -13,5 +76,5 @@ layout: default
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
-  {% endfor %}
+  {% endfor %} -->
 </div>
