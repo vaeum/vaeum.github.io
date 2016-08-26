@@ -4,10 +4,8 @@ rvm:
 before_install:
   - gem update --system
   - gem --version
-  - gem install jekyll
-  - gem install jekyll-feed
-  - gem install jekyll-sitemap
-  - jekyll build
+  - make install
+  - make build
 
   - rm -rf .git
   - cd _site

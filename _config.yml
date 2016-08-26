@@ -88,4 +88,5 @@ exclude:
   - gulpfile.babel.js
   - bower.json
 
-include: ["_pages"]
+include:
+  - _pages
