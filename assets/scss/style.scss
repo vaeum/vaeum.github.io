@@ -72,3 +72,25 @@ a{
 .media-body{
   flex: 1;
 }
+
+.border-block{
+  // height: 1px;
+  width: 100%;
+  position: relative;
+  border-top:1px solid #999;
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+
+.border-block-title{
+  position: absolute;
+  left: 15px;
+  top: 0;
+  transform: translateY(-50%);
+  height: 20px;
+  line-height: 20px;
+  border-radius: 100px;
+  background: #999;
+  color: #fff;
+  padding: 0 10px;
+}

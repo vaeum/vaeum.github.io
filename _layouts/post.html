@@ -3,6 +3,11 @@ layout: default
 ---
 
 <article class="post content-block _padding">
+
+  <span class="content-block-title">
+    Статья
+  </span>
+
   <div class="content-block-settings">
     <a
       href="https://github.com/vaeum/vaeum.github.io/issues/new?title=Error%20in%20blog%20article&body=link%20to%20file%20{{page.path}}"
@@ -35,13 +40,6 @@ layout: default
     {% include disqus.html %}
   {% endif %} -->
 
-  <!-- ссылка на следующий пост -->
-  <!-- {% if page.next %}
-    <a href="{{ page.next.url }}">
-      {{ page.next.title }}
-    </a>
-  {% endif %} -->
-
   <!-- вычисление сколько времени нужно для прочтения статьи -->
   <!-- {% capture words %}
     {{ content | number_of_words | minus: 180 }}
@@ -52,3 +50,33 @@ layout: default
 
 </article>
 
+{% if page.next %}
+  <div class="content-block _padding-big">
+
+    <span class="content-block-title">
+      Cсылка на следующий пост
+    </span>
+
+
+    <a href="{{ page.next.url }}">
+      {{ page.next.title }}
+    </a>
+  </div>
+{% endif %}
+
+<div class="content-block _padding-big">
+  <span class="content-block-title">
+    Комментарии
+  </span>
+
+  {% include disqus.html %}
+</div>
+
+<!-- <div class="border-block">
+  <div class="border-block-title">
+    Cсылка на следующий пост
+  </div>
+
+  <div class="border-block-content">
+  </div>
+</div> -->
