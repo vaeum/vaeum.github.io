@@ -1,12 +1,11 @@
 language: ruby
 rvm:
   - 2.2
-  - jruby
-  - rbx-2
 before_install:
   - gem update --system
   - gem --version
   - gem install jekyll
+  - gem install jekyll-sitemap
   - jekyll build
 
   - rm -rf .git
