@@ -6,6 +6,7 @@ before_install:
   - gem --version
   - gem install jekyll
   - gem install jekyll-sitemap
+  - gem install jekyll-feed
   - jekyll build
 
   - rm -rf .git
