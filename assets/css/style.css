@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(../bower/css.modifiers/dist/modifiers.css);
 
 .debug {
     display: none;
@@ -559,7 +558,7 @@ code {
     float: left;
 }
 
-.fa-pull-right, .pull-right {
+.fa-pull-right {
     float: right;
 }
 
@@ -571,7 +570,7 @@ code {
     margin-left: .3em;
 }
 
-.pull-left {
+ul.menu-list>li {
     float: left;
 }
 
@@ -3238,6 +3237,247 @@ code {
     clip: auto;
 }
 
+.block-center, .table-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block-center, .db, .text-overflow, .transform-middle, ul.menu-list>li>a {
+    display: block;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.dt, .table-center {
+    display: table;
+}
+
+.dn {
+    display: none;
+}
+
+.text-overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pr, .transform-middle {
+    position: relative;
+}
+
+.pa {
+    position: absolute;
+}
+
+.pf {
+    position: fixed;
+}
+
+.ps {
+    position: static;
+}
+
+.no-outline:active, .no-outline:focus, .no-outline:focus:active {
+    outline: none !important;
+}
+
+.no-select {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.fluid {
+    width: 100%;
+}
+
+.no-underline, .no-underline:active, .no-underline:focus, .no-underline:hover,
+.text-line, .text-underline:active, .text-underline:focus, .text-underline:hover {
+    text-decoration: none;
+}
+
+.text-line:active, .text-line:focus, .text-line:hover, .text-underline {
+    text-decoration: underline;
+}
+
+.fn {
+    float: none;
+}
+
+.text-smoothing {
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, .2),
+                 1px 1px 1px rgba(255, 255, 255, .2),
+                 1px 1px 1px rgba(0, 0, 0, .7);
+}
+
+ul.menu-list {
+    *zoom: 1;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+ul.menu-list:after, ul.menu-list:before {
+    content: " ";
+    display: table;
+}
+
+ul.menu-list:after {
+    clear: both;
+}
+
+.lsn li, ul.menu-list>li {
+    list-style: none;
+}
+
+.hard-hide {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-black {
+    color: #000;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.m0 {
+    margin: 0;
+}
+
+.mt0 {
+    margin-top: 0;
+}
+
+.mr0 {
+    margin-right: 0;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.ml0 {
+    margin-left: 0;
+}
+
+.p0 {
+    padding: 0;
+}
+
+.pt0 {
+    padding-top: 0;
+}
+
+.pr0 {
+    padding-right: 0;
+}
+
+.pb0 {
+    padding-bottom: 0;
+}
+
+.pl0 {
+    padding-left: 0;
+}
+
+.cur:focus, .cur:hover, a:focus, a:hover {
+    cursor: pointer;
+}
+
+.transform-middle {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.fw100 {
+    font-weight: 100;
+}
+
+.fw200 {
+    font-weight: 200;
+}
+
+.fw300 {
+    font-weight: 300;
+}
+
+.fw400 {
+    font-weight: 400;
+}
+
+.fw500 {
+    font-weight: 500;
+}
+
+.fw600 {
+    font-weight: 600;
+}
+
+.fw700 {
+    font-weight: 700;
+}
+
+.fw800 {
+    font-weight: 800;
+}
+
+.fw900 {
+    font-weight: 900;
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -3245,12 +3485,7 @@ html {
 
 body {
     margin-bottom: 140px;
-    font-family: "Trebuchet MS",
-                 "Lucida Grande",
-                 "Lucida Sans Unicode",
-                 "Lucida Sans",
-                 Tahoma,
-                 sans-serif;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .h1:first-child, .h2:first-child, .h3:first-child, .h4:first-child,
@@ -3267,10 +3502,6 @@ h5:last-child, h6:last-child {
 
 img {
     max-width: 100%;
-}
-
-a:focus, a:hover {
-    cursor: pointer;
 }
 
 .media {
