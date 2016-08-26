@@ -87,3 +87,5 @@ exclude:
   - assets/scss
   - gulpfile.babel.js
   - bower.json
+
+include: ["_pages"]

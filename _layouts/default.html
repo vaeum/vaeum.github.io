@@ -77,21 +77,23 @@
             </div>
           {% endif %}
 
-          <div class="content-block">
+          <div class="content-block _padding">
             <span class="content-block-title">
               Категории
             </span>
 
             <ul class="lsn pl0">
               {% for category in site.categories %}
-                {% assign name_category = category | first %}
+                {% if forloop.index < 4 %}
+                  {% assign name_category = category | first %}
 
-                <h3>{{name_category}}</h3>
-                {% for p in site.categories[name_category] %}
-                  <a href="{{ p.url }}">
-                    {{p.title}}
-                  </a>
-                {% endfor %}
+                  <h3>{{name_category}}</h3>
+                  {% for p in site.categories[name_category] %}
+                    <a href="{{ p.url }}">
+                      {{p.title}}
+                    </a>
+                  {% endfor %}
+                {% endif %}
               {% endfor %}
             </ul>
           </div>
