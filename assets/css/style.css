@@ -44,12 +44,12 @@ footer {
     padding-bottom: 0;
 }
 
-.post-list a {
+.post-list .link {
     padding: 15px 20px;
     display: block;
 }
 
-.post-list a:focus, .post-list a:hover, .related-posts a:focus,
+.post-list .link:focus, .post-list .link:hover, .related-posts a:focus,
 .related-posts a:hover, .sidebar-nav a:focus, .sidebar-nav a:hover {
     background: #eee;
     text-decoration: none;

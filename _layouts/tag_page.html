@@ -1,13 +1,35 @@
 ---
 layout: default
 ---
-<h2>{{ page.tag }}</h2>
-<ul>
-{% for post in page.posts %}
-  <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }} | Tags: {{ post | tags }})</li>
-{% endfor %}
-</ul>
 
-<div id="tag-cloud">
+<div class="content-block">
+  <div class="content-block-title">
+    Страница тега "{{ page.tag }}"
+  </div>
+
+  <ul class="pl0 lsn mb0 post-list">
+    {% for post in page.posts %}
+      <li>
+        <a href="{{ post.url }}" class="link">
+          <span class="media media-center">
+            <span class="media-body">
+              <span class="text">{{ post.title }}</span>
+            </span>
+            <span class="time">{{ post.date | date_to_string }}</span>
+            <!-- <span>{{ post | tags | strip_html}}</span> -->
+          </span>
+          <p class="excerpt">
+            {{ post.content | strip_html | truncatewords: 15 }}
+          </p>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+
+<!-- <div id="tag-cloud">
   {{ site | tag_cloud }}
 </div>
+
+ -->
