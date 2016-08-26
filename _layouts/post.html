@@ -5,6 +5,13 @@ layout: default
 <article class="post content-block _padding">
   <div class="content-block-settings">
     <a
+      href="https://github.com/vaeum/vaeum.github.io/issues/new?title=Error%20in%20blog%20article&body=link%20to%20file%20{{page.path}}"
+      target="_blank"
+      class="fa fa-exclamation-circle no-underline post-edit-link"
+      aria-hidden="true">
+    </a>
+    |
+    <a
       href="https://github.com/vaeum/vaeum.github.io/edit/master/{{page.path}}"
       target="_blank"
       class="fa fa-pencil no-underline post-edit-link"
@@ -20,9 +27,9 @@ layout: default
     {{ content }}
   </div>
 
-  <div class="date">
+  <!-- <div class="date">
     Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
+  </div> -->
 
   <!-- {% if jekyll.environment == "production" %}
     {% include disqus.html %}

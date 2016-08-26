@@ -6,45 +6,6 @@ layout: default
   <span class="content-block-title">
     Записи блога
   </span>
-<!--   {% for post in site.posts %}
-    {% capture currentyear %}{{ post.date | date: "%Y" }}{% endcapture %}
-    {% if currentyear != year %}
-      {% unless forloop.first %}
-        </ul>
-      {% endunless %}
-      <span class="post-year">
-        Записи за {{ currentyear }} год
-      </span>
-      <ul class="lsn pl0 mb0">
-      {% capture year %}{{ currentyear }}{% endcapture %}
-    {% endif %}
-    <li class="post">
-      <a href="{{ post.url }}" class="post-link">
-        <span class="post-link-text">{{ post.title }}</span>
-        <span class="post-entry">{{ post.excerpt }}</span>
-      </a>
-    </li>
-  {% endfor %} -->
-
-<!--   {% for post in site.posts %}
-    {% capture currentyear %}{{ post.date | date: "%Y" }}{% endcapture %}
-    {% if currentyear != year %}
-      {% unless forloop.first %}
-        </ul>
-      {% endunless %}
-      <span class="post-year">
-        Записи за {{ currentyear }} год
-      </span>
-      <ul>
-      {% capture year %}{{ currentyear }}{% endcapture %}
-    {% endif %}
-    <li class="post">
-      <a href="{{ post.url }}" class="post-link">
-        <span class="post-link-text">{{ post.title }}</span>
-        <span class="post-entry">{{ post.excerpt }}</span>
-      </a>
-    </li>
-  {% endfor %} -->
 
   <ul class="pl0 lsn mb0 post-list">
     {% for post in site.posts %}
@@ -63,18 +24,4 @@ layout: default
       </li>
     {% endfor %}
   </ul>
-
-<!--   {% for post in site.posts %}
-    <article class="post">
-      <h1>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %} -->
 </div>
