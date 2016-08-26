@@ -81,6 +81,7 @@ exclude:
   - LICENSE
   - README.md
   - package.json
+  - Makefile
   - node_modules
   # - assets
   - assets/bower
