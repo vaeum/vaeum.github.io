@@ -106,3 +106,6 @@ sitemap:
     - "/index.html"
   change_frequency_name: "change_frequency"
   priority_name: "priority"
+
+# set your locale
+lang: ru

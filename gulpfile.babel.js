@@ -97,6 +97,6 @@ gulp.task('jekyll-build', () => runSequence(
 gulp.task('default', ['build'], () => {
     $.watch(['assets/scss/**/*.scss'], () => gulp.start('jekyll-build'));
     $.watch(['assets/bootstrap/**/*.scss'], () => gulp.start('jekyll-build'));
-    $.watch(['*.html', '_layouts/*.html', '_posts/*'], () => gulp.start('jekyll-build'));
+    $.watch(['*.html', '_layouts/*.html', '_posts/*', '_pages/*'], () => gulp.start('jekyll-build'));
 })
 

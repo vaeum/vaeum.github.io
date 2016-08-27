@@ -15,7 +15,7 @@ layout: default
             <span class="media-body">
               <span class="text">{{ post.title }}</span>
             </span>
-            <span class="time">{{ post.date | date_to_string }}</span>
+            <span class="time">{{ post.date | localize: "%d %B %Y" }}</span>
             <!-- <span>{{ post | tags | strip_html}}</span> -->
           </span>
           <p class="excerpt">

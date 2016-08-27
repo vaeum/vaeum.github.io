@@ -15,7 +15,7 @@ layout: default
             <span class="media-body">
               <span class="text">{{ post.title }}</span>
             </span>
-            <span class="time">{{ post.date | date: "%B %-d, %Y" }}</span>
+            <span class="time">{{ post.date | localize: "%d %B %Y" }}</span>
           </span>
           <p class="excerpt">
             {{ post.content | strip_html | truncatewords: 15 }}
