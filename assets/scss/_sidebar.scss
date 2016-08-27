@@ -49,6 +49,13 @@
     padding-right: 20px;
     padding-bottom: 20px;
   }
+
+  &._no-border{
+    border: none;
+    &:after{
+      display: none;
+    }
+  }
 }
 
 .content-block-settings{
