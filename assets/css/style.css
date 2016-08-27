@@ -284,26 +284,20 @@ footer {
 
 .post-entry {
     font-size: 14px;
-    margin-bottom: 0;
     color: #999;
     line-height: 20px;
 }
 
-.post-navigation .next, .post-navigation .prev {
+.post-navigation .next, .post-navigation .prev, .sidebar-nav a {
     font-weight: 700;
     color: #333;
-}
-
-.post-navigation .next:focus, .post-navigation .next:hover,
-.post-navigation .prev:focus, .post-navigation .prev:hover {
-    text-decoration: none;
 }
 
 .post-navigation .next {
     text-align: right;
 }
 
-.sidebar-nav ul, .tags-list ul {
+.post-entry, .sidebar-nav ul, .tags-list ul {
     margin-bottom: 0;
 }
 
@@ -315,7 +309,6 @@ footer {
     padding: 10px 15px;
     display: block;
     color: #2f2f2f;
-    font-weight: 700;
 }
 
 .sidebar-nav a:focus, .sidebar-nav a:hover {
