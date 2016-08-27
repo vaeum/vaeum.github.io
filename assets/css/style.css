@@ -49,8 +49,8 @@ footer {
     display: block;
 }
 
-.post-list .link:focus, .post-list .link:hover, .related-posts a:focus,
-.related-posts a:hover, .sidebar-nav a:focus, .sidebar-nav a:hover {
+.post-list .link:focus, .post-list .link:hover, .sidebar-nav a:focus,
+.sidebar-nav a:hover {
     background: #eee;
     text-decoration: none;
 }
@@ -181,19 +181,42 @@ footer {
     color: #fff;
 }
 
-.related-posts ul, .sidebar-nav ul {
+.sidebar-nav ul, .tags-list ul {
     margin-bottom: 0;
 }
 
-.related-posts li.active a, .sidebar-nav li.active a {
+.sidebar-nav li.active a, .tags-list li.active a {
     background: #eee;
 }
 
-.related-posts a, .sidebar-nav a {
-    padding: 15px;
+.sidebar-nav a {
+    padding: 10px 15px;
     display: block;
     color: #2f2f2f;
     font-weight: 700;
+}
+
+.tags-list {
+    padding: 20px 10px 10px;
+}
+
+.tags-list li {
+    display: inline-block;
+}
+
+.tags-list li:last-child a:after {
+    display: none;
+}
+
+.tags-list a {
+    padding: 5px 0;
+    color: #2f2f2f;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.tags-list a:after {
+    content: ',';
 }
 
 .highlight {

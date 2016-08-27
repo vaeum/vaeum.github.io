@@ -60,26 +60,9 @@
             </ul>
           </nav>
 
-          {% if site.related_posts.size >= 1 %}
-            <div class="related-posts content-block">
-              <span class="sidebar-title content-block-title">
-                Похожие записи
-              </span>
-              <ul class="lsn pl0">
-                <div>
-                  <ul>
-                  {% for related_post in site.related_posts limit: 5 %}
-                    <li><a href="{{ related_post.url }}">{{ related_post.title }}</a></li>
-                  {% endfor %}
-                  </ul>
-                </div>
-              </ul>
-            </div>
-          {% endif %}
-
-          <div class="related-posts content-block">
+          <div class="tags-list content-block">
             <span class="sidebar-title content-block-title">
-              Дерево тегов
+              Теги
             </span>
 
             <ul class="lsn pl0">
@@ -94,23 +77,19 @@
             </ul>
           </div>
 
-          <div class="related-posts content-block">
+          <div class="tags-list content-block">
             <span class="content-block-title">
               Категории
             </span>
 
             <ul class="lsn pl0">
               {% for category in site.categories %}
-                {% if forloop.index < 4 %}
                   {% assign name_category = category | first %}
-
                    <li>
                       <a href="/categories/{{name_category}}/">
                         {{name_category}}
                       </a>
                   </li>
-
-                {% endif %}
               {% endfor %}
             </ul>
           </div>
