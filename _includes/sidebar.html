@@ -65,3 +65,23 @@
     </li>
   </ul>
 </div>
+
+<div class="sidebar-statistic content-block">
+  <span class="sidebar-title content-block-title">
+    Статистика блога
+  </span>
+  <ul class="clearfix lsn pl0">
+    <li>
+      <span class="count">{{ site.posts | size }}</span>
+      <div class="text">Постов</div>
+    </li>
+    <li>
+      <span class="count">{{ site.categories | size }}</span>
+      <div class="text">Категорий</div>
+    </li>
+    <li>
+      <span class="count">{{ site.tags | size }}</span>
+      <div class="text">Тегов</div>
+    </li>
+  </ul>
+</div>

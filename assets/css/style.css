@@ -1,7 +1,66 @@
 @charset "UTF-8";
 
-.content-block._no-border:after, .debug {
+.content-block {
+    border-top: 4px solid #ee6775;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    position: relative;
+    padding-top: 20px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+}
+
+.content-block:last-child {
+    margin-bottom: 0;
+}
+
+.content-block-settings, .content-block-title {
+    position: absolute;
+    top: 0%;
+    background: #ee6775;
+    border-radius: 4px;
+    padding: 0 10px;
+    color: #fff;
+    height: 24px;
+    line-height: 24px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+.content-block-title {
+    left: 15px;
+}
+
+.content-block._padding {
+    padding: 20px;
+}
+
+.content-block._padding-big {
+    padding: 40px 20px 20px;
+}
+
+.content-block._no-border {
+    border: none;
+}
+
+.content-block._no-border:after {
     display: none;
+}
+
+.content-block-settings {
+    right: 15px;
+    font-size: 16px;
+}
+
+.post-edit-link {
+    color: #fff;
+}
+
+.post-edit-link:focus, .post-edit-link:hover {
+    color: #fff;
 }
 
 header.main {
@@ -142,19 +201,6 @@ footer {
     color: #d54d0d;
 }
 
-.post {
-    position: relative;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-
-.post:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
 .post-list .wrap {
     padding: 15px 20px;
 }
@@ -243,59 +289,18 @@ footer {
     line-height: 20px;
 }
 
-.content-block {
-    border-top: 4px solid #ee6775;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 40px;
-    position: relative;
-    padding-top: 20px;
-    background: #fff;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+.post-navigation .next, .post-navigation .prev {
+    font-weight: 700;
+    color: #333;
 }
 
-.content-block-settings, .content-block-title {
-    position: absolute;
-    top: 0%;
-    font-size: 16px;
-    background: #ee6775;
-    border-radius: 4px;
-    padding: 0 10px;
-    color: #fff;
-    height: 30px;
-    line-height: 30px;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+.post-navigation .next:focus, .post-navigation .next:hover,
+.post-navigation .prev:focus, .post-navigation .prev:hover {
+    text-decoration: none;
 }
 
-.content-block-title {
-    left: 15px;
-}
-
-.content-block._padding {
-    padding: 20px;
-}
-
-.content-block._padding-big {
-    padding: 40px 20px 20px;
-}
-
-.content-block._no-border {
-    border: none;
-}
-
-.content-block-settings {
-    right: 15px;
-}
-
-.post-edit-link {
-    color: #fff;
-}
-
-.post-edit-link:focus, .post-edit-link:hover {
-    color: #fff;
+.post-navigation .next {
+    text-align: right;
 }
 
 .sidebar-nav ul, .tags-list ul {
@@ -339,6 +344,21 @@ footer {
 
 .tags-list a:after {
     content: ',';
+}
+
+.sidebar-statistic li {
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+}
+
+.sidebar-statistic .text {
+    display: block;
+}
+
+.sidebar-statistic .count {
+    font-size: 20px;
+    display: block;
 }
 
 .highlight {
@@ -3624,9 +3644,9 @@ h4:first-child, h5:first-child, h6:first-child {
     margin-top: 0;
 }
 
-.border-block:last-child, .h1:last-child, .h2:last-child, .h3:last-child,
-.h4:last-child, .h5:last-child, .h6:last-child, h1:last-child, h2:last-child,
-h3:last-child, h4:last-child, h5:last-child, h6:last-child {
+.h1:last-child, .h2:last-child, .h3:last-child, .h4:last-child, .h5:last-child,
+.h6:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child,
+h5:last-child, h6:last-child {
     margin-bottom: 0;
 }
 
@@ -3670,26 +3690,4 @@ a {
     -webkit-box-flex: 1;
     -ms-flex: 1;
         flex: 1;
-}
-
-.border-block {
-    width: 100%;
-    position: relative;
-    border-top: 1px solid #999;
-    padding-top: 20px;
-    margin-bottom: 30px;
-}
-
-.border-block-title {
-    position: absolute;
-    left: 15px;
-    top: 0;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    height: 20px;
-    line-height: 20px;
-    border-radius: 100px;
-    background: #999;
-    color: #fff;
-    padding: 0 10px;
 }

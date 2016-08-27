@@ -2,8 +2,7 @@
 layout: default
 ---
 
-<article class="post content-block _padding">
-
+<article class="content-block _padding">
   <span class="content-block-title">
     Статья
   </span>
@@ -31,38 +30,55 @@ layout: default
   <div class="entry">
     {{ content }}
   </div>
-
-  <!-- <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div> -->
-
-  <!-- {% if jekyll.environment == "production" %}
-    {% include disqus.html %}
-  {% endif %} -->
-
-  <!-- вычисление сколько времени нужно для прочтения статьи -->
-  <!-- {% capture words %}
-    {{ content | number_of_words | minus: 180 }}
-  {% endcapture %}
-  {% unless words contains "-" %}
-    {{ words | plus: 180 | divided_by: 180 | append: " minutes to read" }}
-  {% endunless %} -->
-
 </article>
 
-{% if page.next %}
-  <div class="content-block _padding-big">
+<div class="content-block _padding">
+  <span class="content-block-title">
+    Информация о посте
+  </span>
 
+  <dl class="dl-horizontal mb0">
+    <dt>Время для чтения</dt>
+    <dd>
+      {% capture words %}
+        {{ content | number_of_words | minus: 180 }}
+      {% endcapture %}
+      {% unless words contains "-" %}
+        {{ words | plus: 180 | divided_by: 180 | append: " минуты" }}
+      {% endunless %}
+    </dd>
+
+    <dt>Дата создания</dt>
+    <dd>{{ page.date | localize: "%d %B %Y" }}</dd>
+  </dl>
+</div>
+
+<div class="content-block _padding">
+  {% if page.previous.url %}
     <span class="content-block-title">
-      Cсылка на следующий пост
+      Предыдущий пост
     </span>
+  {% endif %}
 
+  {% if page.next.url %}
+    <div class="content-block-settings">
+      Следующий пост
+    </div>
+  {% endif %}
 
-    <a href="{{ page.next.url }}">
-      {{ page.next.title }}
-    </a>
+  <div class="post-navigation clearfix media media-center">
+    {% if page.previous.url %}
+      <a class="prev media-body" href="{{page.previous.url}}">
+        {{page.previous.title}}
+      </a>
+    {% endif %}
+    {% if page.next.url %}
+      <a class="next media-body" href="{{page.next.url}}">
+        {{page.next.title}}
+      </a>
+    {% endif %}
   </div>
-{% endif %}
+</div>
 
 <!-- {% if jekyll.environment == "production" %}
   <div class="content-block _padding-big">
