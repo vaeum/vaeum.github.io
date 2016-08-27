@@ -51,14 +51,27 @@ header.main{
 }
 
 #search-input{
-  color: #333;
-  // margin-bottom: 20px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  box-shadow: none;
+  font-weight: 200;
+  border-radius: 0;
+  background: #fff;
+  line-height: 20px;
+  padding: 12px 28px 12px 20px;
+  border-bottom: 1px solid #e2e2e2;
 }
 
 #results-container{
-  padding-top: 10px;
+  // padding-top: 10px;
 }
 
+.search-no-result-text{
+  padding: 8px 15px;
+  margin: 0;
+}
 
 #search-container{
   ul{
@@ -72,8 +85,17 @@ header.main{
 
   a{
     display: block;
-    padding: 10px 0;
-    font-weight: bold;
-    // color: #333;
+    padding: 8px 15px;
+    // font-weight: bold;
+    color: #333;
+    // font-size: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &:hover{
+      background: $blue;
+      color: #fff;
+      text-decoration: none;
+    }
   }
 }

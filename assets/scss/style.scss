@@ -19,13 +19,7 @@ body {
   // padding-top: $header-height;
   // background: #F6F9FA;
   font-family: $trebuchet;
-  font-size: 14px;
-
-  @media
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi) {
-      font-size: 16px;
-  }
+  // font-size: 14px;
 }
 
 h1, h2, h3, h4, h5, h6,

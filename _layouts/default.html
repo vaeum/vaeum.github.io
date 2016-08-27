@@ -34,9 +34,9 @@
           <i class="fa fa-search cur" id="search-open"></i>
 
           <div class="search-overlay" id="search-overlay">
-            <div class="search-wrapper content-block _padding _no-border" id="search-wrapper">
+            <div class="search-wrapper" id="search-wrapper">
               <div id="search-container" class="">
-                <input type="text" id="search-input" class="form-control" placeholder="поиск...">
+                <input type="text" id="search-input" class="" placeholder="поиск...">
                 <ul id="results-container"></ul>
               </div>
             </div>
@@ -127,7 +127,7 @@
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         json: '/search.json',
-        noResultsText: "По вашему запросу не найденно результатов"
+        noResultsText: "<p class='search-no-result-text'>По вашему запросу не найденно результатов</p>"
       })
 
       document.getElementById("search-open").onclick = function() {
