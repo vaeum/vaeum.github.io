@@ -4,19 +4,18 @@ layout: default
 
 <div class="content-block">
   <div class="content-block-title">
-    Страница тега "{{ page.tag }}"
+    Страница категории "{{ page.category}}"
   </div>
 
   <ul class="pl0 lsn mb0 post-list">
-    {% for post in page.posts %}
+    {% for post in site.categories[page.category] %}
       <li>
         <a href="{{ post.url }}" class="link">
           <span class="media media-center">
             <span class="media-body">
               <span class="text">{{ post.title }}</span>
             </span>
-            <span class="time">{{ post.date | date_to_string }}</span>
-            <!-- <span>{{ post | tags | strip_html}}</span> -->
+            <span class="time">{{ post.date | date: "%B %-d, %Y" }}</span>
           </span>
           <p class="excerpt">
             {{ post.content | strip_html | truncatewords: 15 }}

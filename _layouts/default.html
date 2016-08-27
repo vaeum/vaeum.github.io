@@ -94,7 +94,7 @@
             </ul>
           </div>
 
-          <div class="content-block _padding-big">
+          <div class="related-posts content-block">
             <span class="content-block-title">
               Категории
             </span>
@@ -104,20 +104,11 @@
                 {% if forloop.index < 4 %}
                   {% assign name_category = category | first %}
 
-
-                  <div class="border-block">
-                    <div class="border-block-title">
-                      {{name_category}}
-                    </div>
-
-                    <div class="border-block-content">
-                      {% for p in site.categories[name_category] %}
-                        <a href="{{ p.url }}">
-                          {{p.title}}
-                        </a>
-                      {% endfor %}
-                    </div>
-                  </div>
+                   <li>
+                      <a href="/categories/{{name_category}}/">
+                        {{name_category}}
+                      </a>
+                  </li>
 
                 {% endif %}
               {% endfor %}
