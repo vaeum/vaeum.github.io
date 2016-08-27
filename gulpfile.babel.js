@@ -16,6 +16,13 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 
 let $ = gulpLoadPlugins({});
 
+var cp = require('child_process');
+
+var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+var messages = {
+    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
+};
+
 let PROCESSORS = [
   autoprefixer({ browsers: ['last 2 versions', '> 1%'] }),
   mqpacker,
@@ -42,6 +49,7 @@ gulp.task('bootstrap', () =>
     .pipe($.csso())
     .pipe($.if(!prod, $.postcss([perfectionist({})])))
     .pipe(gulp.dest('./assets/css/'))
+    .pipe(browserSync.stream())
 )
 
 gulp.task('scss', () =>
@@ -51,6 +59,7 @@ gulp.task('scss', () =>
     .pipe($.csso())
     .pipe($.if(!prod, $.postcss([perfectionist({})])))
     .pipe(gulp.dest('./assets/css/'))
+    .pipe(browserSync.stream())
 )
 
 gulp.task('font', () =>
@@ -58,12 +67,36 @@ gulp.task('font', () =>
     .pipe(gulp.dest('./assets/fonts/'))
 )
 
+gulp.task('jekyll', (done) => {
+  browserSync.notify(messages.jekyllBuild);
+  return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
+    .on('close', done);
+})
+
+gulp.task('reload', () =>
+    browserSync.reload()
+)
+
+gulp.task('serve', () =>
+  browserSync({
+    open: false,
+    server: {
+      baseDir: '_site'
+    }
+  })
+)
+
 gulp.task('build', () => runSequence(
-  'scss', 'bootstrap', 'font'
+  'scss', 'bootstrap', 'font', 'jekyll', 'serve'
+))
+
+gulp.task('jekyll-build', () => runSequence(
+  'scss', 'bootstrap', 'jekyll', 'reload'
 ))
 
 gulp.task('default', ['build'], () => {
-    $.watch(['assets/scss/**/*.scss'], () => gulp.start('scss'));
-    $.watch(['assets/bootstrap/**/*.scss'], () => gulp.start('bootstrap'));
+    $.watch(['assets/scss/**/*.scss'], () => gulp.start('jekyll-build'));
+    $.watch(['assets/bootstrap/**/*.scss'], () => gulp.start('jekyll-build'));
+    $.watch(['*.html', '_layouts/*.html', '_posts/*'], () => gulp.start('jekyll-build'));
 })
 
