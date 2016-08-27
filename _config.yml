@@ -18,11 +18,11 @@ footer-links:
   email: vaeum@yahoo.com
   facebook:
   flickr:
-  github: vaeum/vaeum.github.io
+  github: vaeum
   instagram:
-  linkedin:
+  linkedin: alexander-anpleenko-07b9a811b
   pinterest:
-  rss: # just type anything here for a working RSS icon
+  rss: true # just type anything here for a working RSS icon
   twitter: vaeum
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>

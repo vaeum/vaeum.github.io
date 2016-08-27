@@ -9,18 +9,32 @@ layout: default
 
   <ul class="pl0 lsn mb0 post-list">
     {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url }}" class="link">
-          <span class="media media-center">
-            <span class="media-body">
-              <span class="text">{{ post.title }}</span>
-            </span>
-            <span class="time">{{ post.date | localize: "%d %B %Y" }}</span>
-          </span>
-          <p class="excerpt">
-            {{ post.content | strip_html | truncatewords: 15 }}
-          </p>
-        </a>
+      <li class="wrap">
+        <a a href="{{ post.url }}" class="title">{{ post.title }}</a>
+
+        <div class="post-meta">
+          <i class="fa fa-calendar"></i>
+          <span class="time">{{ post.date | localize: "%d %B %Y" }}</span>
+
+          &nbsp;|&nbsp;
+
+          <i class="fa fa-folder"></i>
+
+          {% for category in post.categories %}
+            <a href="/categories/{{category}}/">
+              {{category}}
+            </a>&nbsp;
+          {% endfor %}
+        </div>
+
+
+        <p class="excerpt">
+          {{ post.content | strip_html | truncatewords: 40 }}
+        </p>
+
+        <p>
+          <a href="{{ post.url }}" class="post-readmore">Читать далее</a>
+        </p>
       </li>
     {% endfor %}
   </ul>

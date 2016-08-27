@@ -17,9 +17,9 @@ html {
 body {
   margin-bottom: $footer-height + 40px;
   // padding-top: $header-height;
-  // background: #F6F9FA;
+  background: #F6F9FA;
   font-family: $trebuchet;
-  // font-size: 14px;
+  font-size: 14px;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -38,7 +38,10 @@ img {
 }
 
 a{
+  transition: all .2s;
+  color: $blue;
   &:hover{
+    // color: darken($blue, 10%);
     cursor: pointer;
   }
 }
@@ -56,8 +59,8 @@ a{
 // Specify the color of the selection
 
 ::selection {
-  //color: $black;
-  //background: #eee;
+  color: #fff;
+  background: $blue;
 }
 
 .media {

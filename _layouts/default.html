@@ -17,104 +17,21 @@
   </head>
 
   <body>
-    <header class="main">
-      <div class="container media media-center">
-        <div class="media-body">
-          <div class="header-logo">
-            <a href="{{ site.baseurl }}/" class="no-underline">
-              <img src="{{ site.baseurl }}/images/logo.png">
-              <p class="header-description">
-                Блог веб разработчика
-              </p>
-            </a>
-          </div>
-        </div>
-
-        <div class="header-search pull-right">
-          <i class="fa fa-search cur" id="search-open"></i>
-
-          <div class="search-overlay" id="search-overlay">
-            <div class="search-wrapper" id="search-wrapper">
-              <div id="search-container" class="">
-                <input type="text" id="search-input" class="" placeholder="поиск...">
-                <ul id="results-container"></ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    {% include header.html %}
 
     <div class="container">
       <div class="row">
         <div class="col-md-9">
           {{ content }}
         </div>
+
         <div class="col-md-3">
-          <nav class="sidebar-nav content-block">
-            <span class="sidebar-title content-block-title">
-              Главное меню
-            </span>
-            <ul class="clearfix lsn pl0">
-              <li{% if page.url == '/' %} class="active"{% endif %}>
-                <a href="{{ site.baseurl }}/">Блог</a>
-              </li>
-
-              <li{% if page.url == '/about/' %} class="active"{% endif %}>
-                <a href="{{ site.baseurl }}/about/">О блоге</a>
-              </li>
-
-              <li{% if page.url == '/resume/' %} class="active"{% endif %}>
-                <a href="{{ site.baseurl }}/resume/">Резюме</a>
-              </li>
-
-              <li{% if page.url == '/archive/' %} class="active"{% endif %}>
-                <a href="{{ site.baseurl }}/archive/">Архив</a>
-              </li>
-
-            </ul>
-          </nav>
-
-          <div class="tags-list content-block">
-            <span class="sidebar-title content-block-title">
-              Теги
-            </span>
-
-            <ul class="lsn pl0">
-              {% assign tags = site.tags | sort %}
-              {% for tag in tags %}
-               <li>
-                  <a href="/tag/{{ tag | first | slugify }}/">
-                    {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
-                  </a>
-              </li>
-              {% endfor %}
-            </ul>
-          </div>
-
-          <div class="tags-list content-block">
-            <span class="content-block-title">
-              Категории
-            </span>
-
-            <ul class="lsn pl0">
-              {% for category in site.categories %}
-                  {% assign name_category = category | first %}
-                   <li>
-                      <a href="/categories/{{name_category}}/">
-                        {{name_category}}
-                      </a>
-                  </li>
-              {% endfor %}
-            </ul>
-          </div>
+          {% include sidebar.html %}
         </div>
       </div>
     </div>
 
-    <footer class="footer">
-      {% include svg-icons.html %}
-    </footer>
+    {% include footer.html %}
 
     {% include analytics.html %}
 
@@ -154,6 +71,8 @@
               document.getElementById("search-overlay").style.display = "none";
           }
       };
+
+      document.getElementById('footer-date').innerHTML = new Date().getFullYear();
     </script>
   </body>
 </html>

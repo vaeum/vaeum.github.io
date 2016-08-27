@@ -1,0 +1,67 @@
+<nav class="sidebar-nav content-block">
+  <span class="sidebar-title content-block-title">
+    Главное меню
+  </span>
+  <ul class="clearfix lsn pl0">
+    <li{% if page.url == '/' %} class="active"{% endif %}>
+      <a href="{{ site.baseurl }}/">Блог</a>
+    </li>
+
+    <li{% if page.url == '/about/' %} class="active"{% endif %}>
+      <a href="{{ site.baseurl }}/about/">О блоге</a>
+    </li>
+
+    <li{% if page.url == '/resume/' %} class="active"{% endif %}>
+      <a href="{{ site.baseurl }}/resume/">Резюме</a>
+    </li>
+
+    <li{% if page.url == '/archive/' %} class="active"{% endif %}>
+      <a href="{{ site.baseurl }}/archive/">Архив</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="tags-list content-block">
+  <span class="sidebar-title content-block-title">
+    Теги
+  </span>
+
+  <ul class="lsn pl0">
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags %}
+     <li>
+        <a href="/tag/{{ tag | first | slugify }}/">
+          {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+        </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="tags-list content-block">
+  <span class="content-block-title">
+    Категории
+  </span>
+
+  <ul class="lsn pl0">
+    {% for category in site.categories %}
+      {% assign name_category = category | first %}
+       <li>
+          <a href="/categories/{{name_category}}/">
+            {{name_category}}
+          </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="sidebar-nav content-block">
+  <span class="sidebar-title content-block-title">
+    Сервисы
+  </span>
+  <ul class="clearfix lsn pl0">
+    <li>
+      <a href="{{ site.baseurl }}/bookmarks/">Закладки</a>
+    </li>
+  </ul>
+</div>

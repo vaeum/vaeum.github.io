@@ -16,17 +16,11 @@ permalink: /archive/
         </span>
         <ul class="pl0 lsn mb0 post-list">
     {% endif %}
-  <li>
-    <a href="{{ post.url }}" class="link">
-      <span class="media media-center">
-        <span class="media-body">
-          <span class="text">{{ post.title }}</span>
-        </span>
-        <span class="time">{{ post.date | localize: "%d %B %Y" }}</span>
-      </span>
+    <li class="wrap">
+      <a a href="{{ post.url }}" class="title">{{ post.title }}</a>
+
       <p class="excerpt">
-        {{ post.content | strip_html | truncatewords: 15 }}
+        {{ post.content | strip_html | truncatewords: 40 }}
       </p>
-    </a>
-  </li>
+    </li>
 {% endfor %}
