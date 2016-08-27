@@ -3564,6 +3564,7 @@ html {
 body {
     margin-bottom: 140px;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 14px;
 }
 
 .h1:first-child, .h2:first-child, .h3:first-child, .h4:first-child,
@@ -3624,4 +3625,10 @@ img {
     background: #999;
     color: #fff;
     padding: 0 10px;
+}
+
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi) {
+    body {
+        font-size: 16px;
+    }
 }
