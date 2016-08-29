@@ -3,6 +3,7 @@ layout: post
 title:  "Использование положительного look-behind условия"
 date:   2016-08-25
 categories: regexp
+uncomplete: true
 ---
 
 Находим все строки у которых последний символ {, и перед ним нет пробела.

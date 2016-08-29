@@ -4,6 +4,7 @@ title:  "Michael Herman - PostgreSQL and NodeJS"
 date:   2016-08-24
 categories: PostgreSQL NodeJS
 tags: npm
+uncomplete: true
 ---
 
 Ссылка на оригинальный пост [link](http://mherman.org/blog/2015/02/12/postgresql-and-nodejs/)
