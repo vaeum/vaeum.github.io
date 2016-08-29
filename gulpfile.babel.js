@@ -113,6 +113,15 @@ gulp.task('html:min', () =>
     .pipe(gulp.dest('./_site/'))
 )
 
+gulp.task('html:include', () =>
+  gulp.src('./_site/**/*.html')
+    .pipe($.fileInclude({
+      prefix: '@@',
+      basepath: './_site'
+    }))
+    .pipe(gulp.dest('./_site/'))
+)
+
 gulp.task('build:style', () => runSequence(
   'build:svg', 'sass', 'bootstrap'
 ))

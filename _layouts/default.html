@@ -9,7 +9,12 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/bootstrap.css" />
+    {% if jekyll.environment == "production" %}
+      <style>@@include('assets/css/bootstrap.css')</style>
+    {% else %}
+      <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/bootstrap.css" />
+    {% endif %}
+
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
