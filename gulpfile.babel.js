@@ -56,7 +56,7 @@ gulp.task('scss', () =>
   gulp.src(['assets/scss/**/style.scss'])
     .pipe($.sass().on('error', $.notify.onError()))
     .pipe($.postcss(PROCESSORS))
-    .pipe($.csso())
+    .pipe($.if(prod, $.csso()))
     .pipe($.if(!prod, $.postcss([perfectionist({})])))
     .pipe(gulp.dest('./assets/css/'))
     .pipe(browserSync.stream())
