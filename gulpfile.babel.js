@@ -36,7 +36,24 @@ const env = {
     ],
     bootstrap: [
       'assets/bootstrap/**/*.scss'
+    ],
+    svg: [
+      'assets/svg/**/*.svg'
     ]
+  },
+  svgSpriteConfig: {
+    mode: {
+      css: {
+        dest: '.',
+        sprite: "../svg/sprite.svg",
+        render: {
+          scss: true,
+          scss: {
+            dest: '../../../assets/scss/_sprite.scss'
+          }
+        }
+      }
+    }
   }
 }
 
@@ -91,8 +108,14 @@ gulp.task('browserSync', () =>
 )
 
 gulp.task('build:style', () => runSequence(
-  'sass', 'bootstrap'
+  'build:svg', 'sass', 'bootstrap'
 ))
+
+gulp.task('build:svg', () =>
+  gulp.src('./assets/svg/**/*.svg')
+    .pipe($.svgSprite(env.svgSpriteConfig))
+    .pipe(gulp.dest('./_site/assets/svg'))
+)
 
 gulp.task('build:js', () =>
   gulp.src(['./assets/js/*.*'])
@@ -114,10 +137,11 @@ gulp.task('build', () => runSequence(
 ))
 
 gulp.task('jekyll-build', () => runSequence(
-  'jekyll', 'sass', 'bootstrap', 'build:font', 'build:js', 'reload'
+  'jekyll', 'build:svg', 'sass', 'bootstrap', 'build:font', 'build:js', 'reload'
 ))
 
 gulp.task('default', ['build'], () => {
+  $.watch(env.watch.svg, () => gulp.start('build:svg'));
   $.watch(env.watch.sass, () => gulp.start('sass'));
   $.watch(env.watch.bootstrap, () => gulp.start('bootstrap'));
   $.watch(env.watch.jekyll, () => gulp.start('jekyll-build'));
