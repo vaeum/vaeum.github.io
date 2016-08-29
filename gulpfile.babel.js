@@ -14,14 +14,30 @@ import autoprefixer    from 'autoprefixer';
 import browserSync     from 'browser-sync';
 import gulpLoadPlugins from 'gulp-load-plugins';
 
-let $ = gulpLoadPlugins({});
+const $ = gulpLoadPlugins({});
+const cp = require('child_process');
+const jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
-var cp = require('child_process');
-
-var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
-var messages = {
-    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
-};
+const env = {
+  messages: {
+    jekyllBuild: 'jekyll build'
+  },
+  watch: {
+    jekyll: [
+      '*.html',
+      '_layouts/*.html',
+      '_posts/*',
+      '_pages/*',
+      '_includes/*'
+    ],
+    sass: [
+      'assets/scss/**/*.scss'
+    ],
+    bootstrap: [
+      'assets/bootstrap/**/*.scss'
+    ]
+  }
+}
 
 let PROCESSORS = [
   autoprefixer({ browsers: ['last 2 versions', '> 1%'] }),
@@ -29,14 +45,6 @@ let PROCESSORS = [
   selector,
   focusHover
 ]
-
-let BOWER_MAIN_FILES_CONFIG = {
-  includeDev: true,
-  paths:{
-    bowerDirectory: './assets/bower',
-    bowerJson: './bower.json'
-  }
-}
 
 gulp.task('bootstrap', () =>
   gulp.src(['./assets/bootstrap/**/*.scss'])
@@ -46,13 +54,13 @@ gulp.task('bootstrap', () =>
     }).on('error', $.notify.onError()))
 
     .pipe($.postcss(PROCESSORS))
-    .pipe($.csso())
+    .pipe($.if(prod, $.csso()))
     .pipe($.if(!prod, $.postcss([perfectionist({})])))
     .pipe(gulp.dest('./_site/assets/css/'))
     .pipe(browserSync.stream())
 )
 
-gulp.task('scss', () =>
+gulp.task('sass', () =>
   gulp.src(['assets/scss/**/style.scss'])
     .pipe($.sass().on('error', $.notify.onError()))
     .pipe($.postcss(PROCESSORS))
@@ -62,13 +70,8 @@ gulp.task('scss', () =>
     .pipe(browserSync.stream())
 )
 
-gulp.task('font', () =>
-  gulp.src(['./assets/bower/font-awesome/fonts/**/*.*'])
-    .pipe(gulp.dest('./assets/fonts/'))
-)
-
 gulp.task('jekyll', (done) => {
-  browserSync.notify(messages.jekyllBuild);
+  browserSync.notify(env.messages.jekyllBuild);
   return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
     .on('close', done);
 })
@@ -77,7 +80,7 @@ gulp.task('reload', () =>
     browserSync.reload()
 )
 
-gulp.task('serve', () =>
+gulp.task('browserSync', () =>
   browserSync({
     open: false,
     server: {
@@ -86,17 +89,36 @@ gulp.task('serve', () =>
   })
 )
 
+gulp.task('build:style', () => runSequence(
+  'sass', 'bootstrap'
+))
+
+gulp.task('build:js', () =>
+  gulp.src(['./assets/js/*.*'])
+    .pipe($.if(prod, $.uglify()))
+    .pipe(gulp.dest('./_site/assets/js/'))
+)
+
+gulp.task('build:font', () =>
+  gulp.src(['./assets/bower/font-awesome/fonts/**/*.*'])
+    .pipe(gulp.dest('./_site/assets/fonts/'))
+)
+
+gulp.task('build:static', () => runSequence(
+  'build:style', 'build:font', 'build:js'
+))
+
 gulp.task('build', () => runSequence(
-  'jekyll', 'scss', 'bootstrap', 'font', 'serve'
+  'jekyll', 'build:static', 'browserSync'
 ))
 
 gulp.task('jekyll-build', () => runSequence(
-  'scss', 'bootstrap', 'jekyll', 'reload'
+  'jekyll', 'sass', 'bootstrap', 'build:font', 'build:js', 'reload'
 ))
 
 gulp.task('default', ['build'], () => {
-    $.watch(['assets/scss/**/*.scss'], () => gulp.start('scss'));
-    $.watch(['assets/bootstrap/**/*.scss'], () => gulp.start('scss'));
-    $.watch(['*.html', '_layouts/*.html', '_posts/*', '_pages/*', '_includes/*'], () => gulp.start('jekyll-build'));
+  $.watch(env.watch.sass, () => gulp.start('sass'));
+  $.watch(env.watch.bootstrap, () => gulp.start('bootstrap'));
+  $.watch(env.watch.jekyll, () => gulp.start('jekyll-build'));
 })
 

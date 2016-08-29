@@ -84,9 +84,7 @@ exclude:
   - package.json
   - Makefile
   - node_modules
-  - assets/bower
-  - assets/scss
-  - assets/bootstrap
+  - assets
   - gulpfile.babel.js
   - bower.json
 
