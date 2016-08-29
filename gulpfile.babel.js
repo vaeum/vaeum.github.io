@@ -48,7 +48,7 @@ gulp.task('bootstrap', () =>
     .pipe($.postcss(PROCESSORS))
     .pipe($.csso())
     .pipe($.if(!prod, $.postcss([perfectionist({})])))
-    .pipe(gulp.dest('./assets/css/'))
+    .pipe(gulp.dest('./_site/assets/css/'))
     .pipe(browserSync.stream())
 )
 
@@ -58,7 +58,7 @@ gulp.task('scss', () =>
     .pipe($.postcss(PROCESSORS))
     .pipe($.if(prod, $.csso()))
     .pipe($.if(!prod, $.postcss([perfectionist({})])))
-    .pipe(gulp.dest('./assets/css/'))
+    .pipe(gulp.dest('./_site/assets/css/'))
     .pipe(browserSync.stream())
 )
 
@@ -87,7 +87,7 @@ gulp.task('serve', () =>
 )
 
 gulp.task('build', () => runSequence(
-  'scss', 'bootstrap', 'font', 'jekyll', 'serve'
+  'jekyll', 'scss', 'bootstrap', 'font', 'serve'
 ))
 
 gulp.task('jekyll-build', () => runSequence(
@@ -95,8 +95,8 @@ gulp.task('jekyll-build', () => runSequence(
 ))
 
 gulp.task('default', ['build'], () => {
-    $.watch(['assets/scss/**/*.scss'], () => gulp.start('jekyll-build'));
-    $.watch(['assets/bootstrap/**/*.scss'], () => gulp.start('jekyll-build'));
+    $.watch(['assets/scss/**/*.scss'], () => gulp.start('scss'));
+    $.watch(['assets/bootstrap/**/*.scss'], () => gulp.start('scss'));
     $.watch(['*.html', '_layouts/*.html', '_posts/*', '_pages/*', '_includes/*'], () => gulp.start('jekyll-build'));
 })
 

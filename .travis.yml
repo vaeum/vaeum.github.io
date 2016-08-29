@@ -12,11 +12,12 @@ before_install:
   - npm i -g bower
   - npm i
   - bower install
-  - NODE_ENV=production gulp scss
-  - NODE_ENV=production gulp bootstrap
 
   - make install
   - make build-prod
+
+  - NODE_ENV=production gulp scss
+  - NODE_ENV=production gulp bootstrap
 
   - rm -rf .git
   - cd _site
