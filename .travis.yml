@@ -16,7 +16,7 @@ before_install:
   - NODE_ENV=production gulp bootstrap
 
   - make install
-  - make build
+  - make build-prod
 
   - rm -rf .git
   - cd _site

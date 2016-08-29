@@ -13,5 +13,8 @@ install:
 	gem install bundler -v 1.11.2
 	bundle install
 
+build-prod:
+	JEKYLL_ENV=production jekyll build
+
 build:
-	jekyll build
+	JEKYLL_ENV=development jekyll build
