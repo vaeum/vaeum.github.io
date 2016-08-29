@@ -79,7 +79,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
-  - README.md
+  # - README.md
   - package.json
   - Makefile
   - node_modules
