@@ -7,5 +7,5 @@ gem 'jekyll', "3.2.1"
 gem 'jekyll-feed'
 gem 'jekyll-sitemap'
 gem 'jekyll-tagging'
-
 gem 'i18n'
+
