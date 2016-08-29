@@ -80,6 +80,7 @@ exclude:
   - Gemfile.lock
   - LICENSE
   # - README.md
+  - Rakefile
   - package.json
   - Makefile
   - node_modules
