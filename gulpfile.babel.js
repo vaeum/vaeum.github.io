@@ -107,6 +107,12 @@ gulp.task('browserSync', () =>
   })
 )
 
+gulp.task('html:min', () =>
+  gulp.src('./_site/**/*.html')
+    .pipe($.htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('./_site/'))
+)
+
 gulp.task('build:style', () => runSequence(
   'build:svg', 'sass', 'bootstrap'
 ))
