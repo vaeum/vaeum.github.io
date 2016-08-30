@@ -1,4 +1,8 @@
-## Local Development
+### Блог Vaeum.com
+
+[![Build Status](https://travis-ci.org/vaeum/vaeum.github.io.svg?branch=dev)](https://travis-ci.org/vaeum/vaeum.github.io)
+
+#### Local Development
 
 1. Install Jekyll and plug-ins in one fell swoop. `gem install github-pages` This mirrors the plug-ins used by GitHub Pages on your local machine including Jekyll, Sass, etc.
 2. Clone down your fork `git clone https://github.com/yourusername/yourusername.github.io.git`
