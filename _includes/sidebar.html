@@ -26,14 +26,10 @@
     Теги
   </span>
 
-  <ul class="lsn pl0">
+  <ul class="lsn pl0 clearfix">
     {% assign tags = site.tags | sort %}
     {% for tag in tags %}
-     <li>
-        <a href="/tag/{{ tag | first | slugify }}/">
-          {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
-        </a>
-    </li>
+      <li><a href="/tag/{{ tag | first | slugify }}/">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a></li>
     {% endfor %}
   </ul>
 </div>
@@ -43,14 +39,10 @@
     Категории
   </span>
 
-  <ul class="lsn pl0">
+  <ul class="lsn pl0 clearfix">
     {% for category in site.categories %}
       {% assign name_category = category | first %}
-       <li>
-          <a href="/categories/{{name_category}}/">
-            {{name_category}}
-          </a>
-      </li>
+        <li><a href="/categories/{{name_category}}/">{{name_category}}</a></li>
     {% endfor %}
   </ul>
 </div>

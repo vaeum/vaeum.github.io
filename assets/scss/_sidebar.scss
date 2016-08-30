@@ -46,13 +46,16 @@
   li {
     //list-style: none;
     // border-bottom: 1px #eee solid;
-    display: inline-block;
+    float: left;
+    margin-right: 5px;
+    // display: inline-block;
 
     &:first-child {
       // border-top: 1px #eee solid;
     }
 
     &:last-child {
+      margin-right: 0;
       a{
         &:after{
           display: none;
