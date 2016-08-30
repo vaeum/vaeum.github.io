@@ -18,9 +18,10 @@ html {
 body {
   margin-bottom: $footer-height;
   // padding-top: $header-height;
-  background: #F6F9FA;
+  background: #f6f9fa;
   font-family: $trebuchet;
-  font-size: 14px;
+  // font-size: 14px;
+  line-height: 1.5em;
 }
 
 h1, h2, h3, h4, h5, h6,
