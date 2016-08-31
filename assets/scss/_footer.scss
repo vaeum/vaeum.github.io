@@ -23,32 +23,4 @@ footer {
       margin-right: 0;
     }
   }
-
-  .fa-linkedin-square{
-    color: #0077b5;
-    &:hover{
-      color: darken(#0077b5, 10%);
-    }
-  }
-
-  .fa-twitter{
-    color: #1da1f2;
-    &:hover{
-      color: darken(#1da1f2, 10%);
-    }
-  }
-
-  .fa-github{
-    color: #333;
-    &:hover{
-      color: darken(#333, 10%);
-    }
-  }
-
-  .fa-rss-square{
-    color: #f26522;
-    &:hover{
-      color: darken(#f26522, 10%);
-    }
-  }
 }
