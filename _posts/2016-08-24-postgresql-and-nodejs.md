@@ -50,7 +50,7 @@ $ npm start
 
 Затем перейдите по адресу [http://localhost:3000/](http://localhost:3000/), и в браузере Вы должны увидеть текст “Welcome to Express”.
 
-#### Настройк	а Postgres
+#### Настройка Postgres
 
 > Если нужно установить Postgres на Mac? Для этого есть [Postgres.app](http://postgresapp.com/)
 
@@ -113,7 +113,6 @@ var connectionString = require(path.join(__dirname, '../', '../', 'config'));
 
 Сейчас мы добавим каждый функциональный блок
 
-{: .table}
 | Function | URL                    | Action                   |
 | -------- | ---------------------- | ------------------------ |
 | CREATE   | /api/v1/todos          | Создаем новую задачу     |
