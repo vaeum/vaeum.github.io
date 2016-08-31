@@ -16,9 +16,9 @@ before_install:
   - bower install
 
   - make install
+  - NODE_ENV=production gulp build:static
   - make build-prod
 
-  - NODE_ENV=production gulp build:static
   - gulp html:include
   - gulp html:min
 

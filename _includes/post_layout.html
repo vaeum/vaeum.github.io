@@ -2,19 +2,16 @@
   <a a href="{{ post.url }}" class="title">{{ post.title }}</a>
 
   <div class="post-meta">
-    {% include ico/calendar.svg %}
-
-    <span class="time">{{ post.date | localize: "%d %B %Y" }}</span>
-
-    &nbsp;|&nbsp;
-
-    {% include ico/folder.svg %}
-
-    {% for category in post.categories %}
-      <a href="/categories/{{category}}/">
-        {{category}}
-      </a>&nbsp;
-    {% endfor %}
+    <ul class="pl0 mb0 clearfix lsn">
+      <li>
+        {% include svg/calendar.svg %}
+        <span>{{ post.date | localize: "%d %B %Y" }}</span>
+      </li>
+      <li>
+        {% include svg/file-directory.svg %}
+        {% for category in post.categories %}<a href="/categories/{{category}}/">{{category}}</a>{% endfor %}
+      </li>
+    </ul>
   </div>
 
 

@@ -3,6 +3,7 @@
 const prod = (process.env.NODE_ENV == "production")?(true):(false);
 
 import gulp            from 'gulp';
+import path            from 'path';
 import del             from 'del';
 import mainBowerFiles  from 'main-bower-files';
 import runSequence     from 'run-sequence';
@@ -28,7 +29,7 @@ const env = {
       '_layouts/*.html',
       '_posts/*',
       '_pages/*',
-      '_includes/**/*.*',
+      '_includes/**/*.html',
       'search.json'
     ],
     sass: [
@@ -41,20 +42,6 @@ const env = {
       'assets/svg/**/*.svg'
     ]
   },
-  svgSpriteConfig: {
-    mode: {
-      css: {
-        dest: '.',
-        sprite: "../svg/sprite.svg",
-        render: {
-          scss: true,
-          scss: {
-            dest: '../../../assets/scss/_sprite.scss'
-          }
-        }
-      }
-    }
-  }
 }
 
 let PROCESSORS = [
@@ -128,8 +115,26 @@ gulp.task('build:style', () => runSequence(
 
 gulp.task('build:svg', () =>
   gulp.src('./assets/svg/**/*.svg')
-    .pipe($.svgSprite(env.svgSpriteConfig))
-    .pipe(gulp.dest('./_site/assets/svg'))
+    .pipe($.svgmin((file)=>{
+      var prefix = path.basename(file.relative, path.extname(file.relative));
+      return {
+        plugins:[
+          {removeDoctype: true},
+          {addClassesToSVGElement: {className: `ico-${prefix}`}},
+          {removeTitle: true},
+          {removeStyleElement: true},
+          {removeAttrs: { attrs: ['id', 'class', 'data-name', 'fill', 'fill-rule'] }},
+          {removeEmptyContainers: true},
+          {sortAttrs: true},
+          {removeUselessDefs: true},
+          {removeEmptyText: true},
+          {removeEditorsNSData: true},
+          {removeEmptyAttrs: true},
+          {removeHiddenElems: true}
+        ]
+      }
+    }))
+    .pipe(gulp.dest('./_includes/svg'))
 )
 
 gulp.task('build:js', () =>
@@ -144,15 +149,15 @@ gulp.task('build:font', () =>
 )
 
 gulp.task('build:static', () => runSequence(
-  'build:style', 'build:font', 'build:js'
+  'build:style', 'build:font', 'build:js', 'build:svg'
 ))
 
 gulp.task('build', () => runSequence(
-  'jekyll', 'build:static', 'browserSync'
+  'build:svg', 'jekyll', 'build:static', 'browserSync'
 ))
 
 gulp.task('jekyll-build', () => runSequence(
-  'jekyll', 'build:svg', 'sass', 'bootstrap', 'build:font', 'build:js', 'reload'
+  'build:svg', 'jekyll', 'sass', 'bootstrap', 'build:font', 'build:js', 'reload'
 ))
 
 gulp.task('default', ['build'], () => {

@@ -10,9 +10,9 @@
   .title {
     //float: left;
     //font-weight: bold;
-    display: block;
+    display: table;
     color: #2f2f2f;
-    font-size: 16px;
+    // font-size: 16px;
     //margin-bottom: 5px;
     margin-bottom: 14px;
     font-size: 2em;
@@ -25,20 +25,28 @@
   }
 
   .post-meta{
-    > * {
-      vertical-align: middle;
+    li{
+      float: left;
+      margin-right: 10px;
+      > * {
+        vertical-align: middle;
+      }
+      a{
+        margin-right: 5px;
+        &:after{
+          content: ','
+        }
+        &:last-child{
+          margin-right: 0;
+          &:after{
+            display: none;
+          }
+        }
+      }
+      &:last-child{
+        margin-right: 0;
+      }
     }
-  }
-
-  .time {
-    //float: right;
-    //color: #333;
-    //background: #333;
-    //padding: 0px 10px;
-    //border-radius: 20px;
-    //color: #fff;
-    //font-family: monospace;
-    // vertical-align: middle;
   }
 
   .post-readmore {
@@ -62,10 +70,6 @@
     color: #999;
     line-height: 1.6em;
     margin: 1.6em 0;
-  }
-
-  .media {
-    //margin-bottom: 5px;
   }
 }
 
