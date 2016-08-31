@@ -17,8 +17,6 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
@@ -26,11 +24,11 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-9">
+        <div class="col col--9-of-12">
           {{ content }}
         </div>
 
-        <div class="col-md-3">
+        <div class="col col--3-of-12">
           {% include sidebar.html %}
         </div>
       </div>

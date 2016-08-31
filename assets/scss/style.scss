@@ -1,4 +1,5 @@
 @import "variables";
+@import "grid";
 @import "layout";
 @import "header";
 @import "footer";
@@ -59,7 +60,16 @@ a{
   // color: $gray;
 }
 
-// Specify the color of the selection
+.container{
+  max-width: 1024px;
+  margin: 0 auto;
+
+  @media (max-width:1024px){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 
 ::selection {
   color: #fff;
