@@ -8,3 +8,4 @@ Gemfile.lock
 node_modules
 assets/bower
 assets/css
+_includes/svg
