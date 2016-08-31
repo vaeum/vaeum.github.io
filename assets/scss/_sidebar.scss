@@ -104,3 +104,26 @@
     display: block;
   }
 }
+
+.sidebar-news{
+  // padding-top: 10px;
+  a{
+    padding: 10px;
+    display: block;
+    &:hover{
+      background: #eee;
+    }
+  }
+  .text {
+    font-weight: bold;
+    display: block;
+    line-height: 20px;
+    color: #333;
+  }
+  .desc {
+    display: block;
+    color: #999;
+    line-height: 13px;
+    font-size: 13px;
+  }
+}

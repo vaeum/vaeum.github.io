@@ -9,7 +9,10 @@ layout: default
 
   <ul class="pl0 lsn mb0 post-list">
     {% for post in site.posts %}
-      {% include post_layout.html %}
+      {% if post.news == true %}
+      {% else %}
+        {% include post_layout.html %}
+      {% endif %}
     {% endfor %}
   </ul>
 </div>

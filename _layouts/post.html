@@ -34,27 +34,32 @@ layout: default
   </div>
 </article>
 
-<div class="content-block _padding">
-  <span class="content-block-title">
-    Информация о посте
-  </span>
+{% if page.news == true %}
+{% else %}
+  <div class="content-block _padding">
+    <span class="content-block-title">
+      Информация о посте
+    </span>
 
-  <dl class="dl-horizontal mb0">
-    <dt>Время для чтения</dt>
-    <dd>
-      {% capture words %}
-        {{ content | number_of_words | minus: 180 }}
-      {% endcapture %}
-      {% unless words contains "-" %}
-        {{ words | plus: 180 | divided_by: 180 | append: " минуты" }}
-      {% endunless %}
-    </dd>
+    <dl class="dl-horizontal mb0">
+      <dt>Время для чтения</dt>
+      <dd>
+        {% capture words %}
+          {{ content | number_of_words | minus: 180 }}
+        {% endcapture %}
+        {% unless words contains "-" %}
+          {{ words | plus: 180 | divided_by: 180 | append: " минуты" }}
+        {% endunless %}
+      </dd>
 
-    <dt>Дата создания</dt>
-    <dd>{{ page.date | localize: "%d %B %Y" }}</dd>
-  </dl>
-</div>
+      <dt>Дата создания</dt>
+      <dd>{{ page.date | localize: "%d %B %Y" }}</dd>
+    </dl>
+  </div>
+{% endif %}
 
+{% if page.news == true %}
+{% else %}
 <div class="content-block _padding">
   {% if page.previous.url %}
     <span class="content-block-title">
@@ -81,38 +86,42 @@ layout: default
     {% endif %}
   </div>
 </div>
+{% endif %}
 
-{% if page.uncomplete %}
-  <div class="content-block _padding">
-    <span class="content-block-title">
-      Внимание!!!
-    </span>
-
-    <p class="mb0">Пост не закончен, вы можете помочь его закончить, буду рад Вашим
-      <a
-        href="https://github.com/vaeum/vaeum.github.io/issues/new?title=Коментарий к статье:%20{{ page.title }}&body=ссылка%20на%20статью%20[{{site.url}}{{page.url}}]({{site.url}}{{page.url}})"
-        target="_blank"
-        aria-hidden="true">
-        коментариям
-      </a>
-      и
-      <a
-        href="https://github.com/vaeum/vaeum.github.io/edit/dev/{{page.path}}"
-        target="_blank"
-        aria-hidden="true">
-        Pull requests
-      </a>
-    </p>
-  </div>
+{% if page.news == true %}
 {% else %}
-  {% if jekyll.environment == "production" %}
+{% if page.uncomplete %}
     <div class="content-block _padding">
       <span class="content-block-title">
-        Комментарии
+        Внимание!!!
       </span>
 
-      {% include disqus.html %}
+      <p class="mb0">Пост не закончен, вы можете помочь его закончить, буду рад Вашим
+        <a
+          href="https://github.com/vaeum/vaeum.github.io/issues/new?title=Коментарий к статье:%20{{ page.title }}&body=ссылка%20на%20статью%20[{{site.url}}{{page.url}}]({{site.url}}{{page.url}})"
+          target="_blank"
+          aria-hidden="true">
+          коментариям
+        </a>
+        и
+        <a
+          href="https://github.com/vaeum/vaeum.github.io/edit/dev/{{page.path}}"
+          target="_blank"
+          aria-hidden="true">
+          Pull requests
+        </a>
+      </p>
     </div>
+  {% else %}
+    {% if jekyll.environment == "production" %}
+      <div class="content-block _padding">
+        <span class="content-block-title">
+          Комментарии
+        </span>
+
+        {% include disqus.html %}
+      </div>
+    {% endif %}
   {% endif %}
 {% endif %}
 
