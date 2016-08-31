@@ -5,6 +5,7 @@
 @import "ico";
 @import "posts";
 @import "sidebar";
+@import "github-markdown";
 @import "highlights";
 @import "svg-icons";
 // @import "../bower/font-awesome/scss/font-awesome";
@@ -19,7 +20,7 @@ body {
   margin-bottom: $footer-height;
   // padding-top: $header-height;
   background: #fafafa;
-  font-family: $trebuchet;
+  font-family: $regular;
   // font-size: 14px;
   line-height: 1.5em;
 }

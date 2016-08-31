@@ -11,12 +11,12 @@
     //float: left;
     //font-weight: bold;
     display: table;
-    color: #2f2f2f;
+    // color: #2f2f2f;
     // font-size: 16px;
     //margin-bottom: 5px;
     margin-bottom: 14px;
     font-size: 2em;
-    color: #565a5f;
+    color: #333;
     text-decoration: none;
     line-height: 1.3em;
     &:hover{
@@ -133,5 +133,13 @@
   .next{
     // float: right;
     text-align: right;
+  }
+}
+
+.share-block{
+  [class^="ico-"]{
+    // color: #fff;
+    // background: #333;
+    width: 30px;
   }
 }

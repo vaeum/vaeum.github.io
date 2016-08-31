@@ -29,10 +29,17 @@ layout: default
     {{ page.title }}
   </h1>
 
-  <div class="entry">
+  <div class="markdown-body">
     {{ content }}
   </div>
 </article>
+
+<!-- <div class="share-block content-block _padding">
+  <a onclick="Share.vkontakte('URL','{{ page.title }}','IMG_PATH','{{ page.content | strip_html | truncatewords: 30 }}')">{% include svg/vk.svg %}</a>
+  <a onclick="Share.facebook('URL','{{ page.title }}','IMG_PATH','{{ page.content | strip_html | truncatewords: 30 }}')">{% include svg/facebook.svg %}</a>
+  <a onclick="Share.odnoklassniki('URL','{{ page.content | strip_html | truncatewords: 30 }}')">{% include svg/odnoklassniki.svg %}</a>
+  <a onclick="Share.twitter('URL','{{ page.title }}')">{% include svg/twitter.svg %}</a>
+</div> -->
 
 {% if page.news == true %}
 {% else %}
