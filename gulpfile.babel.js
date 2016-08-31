@@ -28,7 +28,7 @@ const env = {
       '_layouts/*.html',
       '_posts/*',
       '_pages/*',
-      '_includes/*',
+      '_includes/**/*.*',
       'search.json'
     ],
     sass: [

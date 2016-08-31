@@ -19,7 +19,6 @@
     "bootstrap-sass": "^3.3.7"
   },
   "devDependencies": {
-    "font-awesome": "font-awsome#^4.6.3",
     "css.modifiers": "^0.1.0"
   }
 }

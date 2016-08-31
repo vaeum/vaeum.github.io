@@ -2,12 +2,13 @@
   <a a href="{{ post.url }}" class="title">{{ post.title }}</a>
 
   <div class="post-meta">
-    <i class="fa fa-calendar"></i>
+    {% include ico/calendar.svg %}
+
     <span class="time">{{ post.date | localize: "%d %B %Y" }}</span>
 
     &nbsp;|&nbsp;
 
-    <i class="fa fa-folder"></i>
+    {% include ico/folder.svg %}
 
     {% for category in post.categories %}
       <a href="/categories/{{category}}/">

@@ -3,7 +3,7 @@
     <div class="media-body">
       <div class="header-logo">
         <a href="{{ site.baseurl }}/" class="no-underline">
-          <div class="svg-logo svg-logo-dims"></div>
+          {% include ico/logo.svg %}
           <p class="header-description">
             Блог веб разработчика
           </p>
@@ -11,8 +11,10 @@
       </div>
     </div>
 
-    <div class="header-search pull-right">
-      <i class="fa fa-search cur" id="search-open"></i>
+    <div class="header-search">
+      <span class="cur" id="search-open">
+        {% include ico/search.svg %}
+      </span>
 
       <div class="search-overlay" id="search-overlay">
         <div class="search-wrapper" id="search-wrapper">
