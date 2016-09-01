@@ -88,6 +88,7 @@ gulp.task('reload', () =>
 gulp.task('browserSync', () =>
   browserSync({
     open: false,
+    port: 7778,
     server: {
       baseDir: '_site'
     }
