@@ -30,6 +30,7 @@ before_script:
 
   - gulp html:include
   - gulp html:min
+  - npm run styleguide
 
 script:
   - rm -rf .git
