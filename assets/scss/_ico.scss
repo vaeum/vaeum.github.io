@@ -1,8 +1,9 @@
 [class^="ico-"] {
   vertical-align: middle;
-  color: #333;
+  // color: #333;
   display: inline-block;
   fill: currentColor;
+  color: inherit;
 }
 
 .ico-folder {
@@ -15,16 +16,17 @@
 
 .ico-search {
   width: 30px;
+  height: 30px;
 }
 
 .ico-issue-opened {
   width: 14px;
-  color: #fff;
+  // color: #fff;
 }
 
 .ico-pencil {
   width: 14px;
-  color: #fff;
+  // color: #fff;
 }
 
 .ico-linkedin {
@@ -45,7 +47,8 @@
 }
 
 .ico-rss{
-  width: 24px;
+  width: 30px;
+  height: 30px;
   color: #f26522;
   &:hover{
     color: darken(#f26522, 10%);
@@ -55,4 +58,13 @@
 .ico-github{
   width: 24px;
   color: #333;
+}
+
+.ico-plus-small{
+  width: 16px;
+}
+
+.ico-plus{
+  width: 16px;
+  height: 16px;
 }
