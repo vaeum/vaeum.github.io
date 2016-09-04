@@ -17,22 +17,22 @@ before_install:
   - npm config set depth 0
 
 before_script:
-  - npm i -g gulp
+
+script:
   - npm i -g bower
   - npm i
 
   - bower install
 
-  - NODE_ENV=production gulp build:svg
+  - NODE_ENV=production ./node_modules/.bin/gulp build:svg
   - make build-prod
 
-  - NODE_ENV=production gulp build:static
+  - NODE_ENV=production ./node_modules/.bin/gulp build:static
 
   - gulp html:include
   - gulp html:min
   - npm run styleguide
 
-script:
   - rm -rf .git
   - cd _site
   - git init
