@@ -6,6 +6,12 @@
   font-size: 16px;
   // line-height: 1.5;
   word-wrap: break-word;
+  .annotations{
+    padding: 10px;
+    background: #f7f7f7;
+    border-radius: 4px;
+    font-style: italic;
+  }
 }
 
 .markdown-body .pl-c {

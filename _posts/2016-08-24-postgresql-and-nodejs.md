@@ -7,7 +7,8 @@ tags: npm
 uncomplete: true
 ---
 
-Ссылка на оригинальный пост [link](http://mherman.org/blog/2015/02/12/postgresql-and-nodejs/)
+{: .annotations}
+Это мой перевод хорошей статьи [Michael Herman - PostgreSQL and NodeJS](http://mherman.org/blog/2015/02/12/postgresql-and-nodejs/). В этой статье я постарался как можно проще рассказать о процессе создания приложений с использованием таких технологий, как PostgreSQL и NodeJS.
 
 Сегодня мы собираемся написать одностраничное [CRUD](https://ru.wikipedia.org/wiki/CRUD) Todo приложение  с использованием технологий, Node JS,  Express, Angular JS, и PostgreSQL.
 
