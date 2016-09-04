@@ -1,5 +1,5 @@
 run:
-	jekyll serve
+	gulp
 
 del:
 	rm -rf .git
