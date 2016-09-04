@@ -1,5 +1,5 @@
 run:
-	gulp
+	./node_modules/.bin/gulp
 
 del:
 	rm -rf .git

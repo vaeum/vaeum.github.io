@@ -4,9 +4,7 @@ const prod = (process.env.NODE_ENV == "production")?(true):(false);
 
 import gulp            from 'gulp';
 import path            from 'path';
-import del             from 'del';
 import mainBowerFiles  from 'main-bower-files';
-import runSequence     from 'run-sequence';
 import perfectionist   from 'perfectionist';
 import selector        from 'postcss-custom-selectors';
 import focusHover      from 'postcss-focus-hover';
@@ -25,12 +23,12 @@ const env = {
   },
   watch: {
     jekyll: [
-      '*.html',
-      '_layouts/*.html',
-      '_posts/*',
-      '_pages/*',
-      '_includes/**/*.html',
-      'search.json'
+      './index.html',
+      './search.json',
+      './_layouts/**/*.html',
+      './_posts/**/*.*',
+      './_pages/**/*.*',
+      './_includes/**/*.html',
     ],
     sass: [
       'assets/scss/**/*.scss'
@@ -81,11 +79,12 @@ gulp.task('jekyll', (done) => {
     .on('close', done);
 })
 
-gulp.task('reload', () =>
-    browserSync.reload()
-)
+gulp.task('reload', (cb) => {
+  browserSync.reload()
+  return cb();
+})
 
-gulp.task('browserSync', () =>
+gulp.task('serve', () => {
   browserSync({
     open: false,
     port: 7778,
@@ -93,7 +92,7 @@ gulp.task('browserSync', () =>
       baseDir: '_site'
     }
   })
-)
+})
 
 gulp.task('html:min', () =>
   gulp.src('./_site/**/*.html')
@@ -109,10 +108,6 @@ gulp.task('html:include', () =>
     }))
     .pipe(gulp.dest('./_site/'))
 )
-
-gulp.task('build:style', () => runSequence(
-  'build:svg', 'sass', 'bootstrap'
-))
 
 gulp.task('build:svg', () =>
   gulp.src('./assets/svg/**/*.svg')
@@ -149,22 +144,31 @@ gulp.task('build:font', () =>
     .pipe(gulp.dest('./_site/assets/fonts/'))
 )
 
-gulp.task('build:static', () => runSequence(
-  'build:style', 'build:font', 'build:js', 'build:svg'
+gulp.task('build:style', gulp.series(
+  'sass', 'bootstrap'
 ))
 
-gulp.task('build', () => runSequence(
-  'build:svg', 'jekyll', 'build:static', 'browserSync'
+gulp.task('build:static', gulp.series(
+  'build:style', 'build:font', 'build:js'
 ))
 
-gulp.task('jekyll-build', () => runSequence(
-  'build:svg', 'jekyll', 'sass', 'bootstrap', 'build:font', 'build:js', 'reload'
+gulp.task('build', gulp.series(
+  'build:svg', 'jekyll', 'build:static'
 ))
 
-gulp.task('default', ['build'], () => {
-  $.watch(env.watch.svg, () => gulp.start('build:svg'));
-  $.watch(env.watch.sass, () => gulp.start('sass'));
-  $.watch(env.watch.bootstrap, () => gulp.start('bootstrap'));
-  $.watch(env.watch.jekyll, () => gulp.start('jekyll-build'));
+gulp.task('jekyll-build', gulp.series(
+  'build:svg', 'jekyll', 'build:style',
+  'build:font', 'build:js', 'reload'
+))
+
+gulp.task('watch', () => {
+  gulp.watch(env.watch.svg, gulp.series('build:svg'))
+  gulp.watch(env.watch.sass, gulp.series('sass'))
+  gulp.watch(env.watch.bootstrap, gulp.series('bootstrap'))
+  gulp.watch(env.watch.jekyll, gulp.series('jekyll-build'))
 })
+
+gulp.task('default', gulp.series(
+  'build', gulp.parallel('watch', 'serve')
+));
 
