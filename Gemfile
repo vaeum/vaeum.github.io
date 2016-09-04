@@ -9,4 +9,5 @@ gem 'jekyll-sitemap'
 gem 'jekyll-tagging'
 gem 'i18n'
 gem 'jekyll-paginate'
+gem 'jekyll-auto-image'
 

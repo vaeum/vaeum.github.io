@@ -12,7 +12,7 @@ uncomplete: true
 
 Сегодня мы собираемся написать одностраничное [CRUD](https://ru.wikipedia.org/wiki/CRUD) Todo приложение  с использованием технологий, Node JS,  Express, Angular JS, и PostgreSQL.
 
-![_config.yml]({{ site.baseurl }}/images/node-todo-postges.jpg)
+![first image](/images/node-todo-postges.jpg)
 
 ## Настройка проекта
 

@@ -14,6 +14,9 @@
     </ul>
   </div>
 
+  {% if post.image %}
+    <img src="{{post.image}}">
+  {% endif %}
 
   <p class="excerpt">
     {{ post.content | strip_html | truncatewords: 40 }}
