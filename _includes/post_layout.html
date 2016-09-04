@@ -27,9 +27,10 @@
       <div><a href="{{ post.url }}" class="post-readmore">Читать далее</a></div>
     </div>
     <ul class="pl0 mb0 clearfix lsn post-share-block">
-      <li><a onclick="Share.vkontakte('http://vaeum.com{{ post.url }}','{{ post.title }}','{% if post.image %}http://vaeum.com{{post.image}}{% endif %}','{{ post.content | strip_html | truncatewords: 30 }}')">{% include svg/vk.svg %}</a></li>
-      <li><a onclick="Share.facebook('http://vaeum.com{{ post.url }}','{{ post.title }}','{% if post.image %}http://vaeum.com{{post.image}}{% endif %}','{{ post.content | strip_html | truncatewords: 30 }}')">{% include svg/facebook.svg %}</a></li>
-      <li><a onclick="Share.twitter('http://vaeum.com{{ post.url }}','{{ post.content | strip_html | truncatewords: 20 }}')">{% include svg/twitter.svg %}</a></li>
+      <li><a onclick="Share.vk('http://vaeum.com{{ post.url }}','{{ post.title }}','{% if post.image %}http://vaeum.com{{post.image}}{% endif %}','{{ post.content | strip_html | truncatewords: 30 }}')">{% include svg/vk.svg %}</a></li>
+      <li><a onclick="Share.fb('http://vaeum.com{{ post.url }}','{{ post.title }}','{% if post.image %}http://vaeum.com{{post.image}}{% endif %}','{{ post.content | strip_html | truncatewords: 30 }}')">{% include svg/facebook.svg %}</a></li>
+      <li><a onclick="Share.tw('http://vaeum.com{{ post.url }}','{{ post.content | strip_html | truncatewords: 20 }}')">{% include svg/twitter.svg %}</a></li>
+      <li><a onclick="Share.li('http://vaeum.com{{ post.url }}','{{ post.title }}','{{ post.content | strip_html | truncatewords: 20 }}')">{% include svg/linkedin.svg %}</a></li>
     </ul>
   </div>
 </li>
