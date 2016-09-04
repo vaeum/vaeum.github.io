@@ -8,11 +8,37 @@ layout: default
   </span>
 
   <ul class="pl0 lsn mb0 post-list">
-    {% for post in site.posts %}
-      {% if post.news == true %}
-      {% else %}
-        {% include post_layout.html %}
-      {% endif %}
+    {% for post in paginator.posts %}
+      {% include post_layout.html %}
     {% endfor %}
   </ul>
 </div>
+
+<!-- Pagination links -->
+<nav aria-label="post navigation">
+  {% if paginator.total_pages > 1 %}
+  <ul class="pagination lsn pl0">
+    {% if paginator.previous_page %}
+      <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{% include svg/arrow-left.svg %}</a></li>
+    {% else %}
+      <li><span class="arrow no-select">{% include svg/arrow-left.svg %}</span></li>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <li class="active"><span>{{ page }}</span></li>
+      {% elsif page == 1 %}
+        <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+      {% else %}
+        <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{% include svg/arrow-right.svg %}</a></li>
+    {% else %}
+      <li><span class="arrow no-select">{% include svg/arrow-right.svg %}</span></li>
+    {% endif %}
+  </ul>
+  {% endif %}
+</nav>

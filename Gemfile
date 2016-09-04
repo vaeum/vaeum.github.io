@@ -8,4 +8,5 @@ gem 'jekyll-feed'
 gem 'jekyll-sitemap'
 gem 'jekyll-tagging'
 gem 'i18n'
+gem 'jekyll-paginate'
 

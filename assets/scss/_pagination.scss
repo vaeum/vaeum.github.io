@@ -1,0 +1,24 @@
+.pagination{
+  li{
+    float: left;
+    &.active{
+      padding: 5px 10px;
+      background: $red;
+      border-radius: 4px;
+      color: #fff;
+    }
+    a{
+      display: block;
+      padding: 5px 10px;
+      color: #999;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  .arrow {
+    padding: 5px 10px;
+    display: block;
+    color: #999;
+  }
+}
