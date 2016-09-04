@@ -13,7 +13,7 @@ uncomplete: true
 
 ![_config.yml]({{ site.baseurl }}/images/node-todo-postges.jpg)
 
-#### Настройка проекта
+## Настройка проекта
 
 Для начала нужно установить [генератор Express](http://expressjs.com/starter/generator.html) глобально, если он не установлен:
 
@@ -50,7 +50,7 @@ $ npm start
 
 Затем перейдите по адресу [http://localhost:3000/](http://localhost:3000/), и в браузере Вы должны увидеть текст “Welcome to Express”.
 
-#### Настройка Postgres
+## Настройка Postgres
 
 > Если нужно установить Postgres на Mac? Для этого есть [Postgres.app](http://postgresapp.com/)
 
@@ -100,7 +100,7 @@ Indexes:
 
 Вместе с подключением к базе мы создали таблицу **items**. Теперь переходим к следующему шагу - настройка нашего CRUD приложения.
 
-#### Маршрутизация на стороне сервера:
+## Маршрутизация на стороне сервера:
 
 Следующим шагом мы просто добавим функциональные блоки в файл **index.js**,  который находиться в папке **routes** 
 
@@ -119,4 +119,287 @@ var connectionString = require(path.join(__dirname, '../', '../', 'config'));
 | READ     | /api/v1/todos          | Получаем список задач    |
 | UPDATE   | /api/v1/todos/:todo_id | Обновляем текущюю задачу |
 | DELETE   | /api/v1/todos/:todo_id | Удаляем текущюю задачу   |
+
+### Создание записи
+
+```javascript
+router.post('/api/v1/todos', function(req, res) {
+
+    var results = [];
+
+    // Grab data from http request
+    var data = {text: req.body.text, complete: false};
+
+    // Get a Postgres client from the connection pool
+    pg.connect(connectionString, function(err, client, done) {
+        // Handle connection errors
+        if(err) {
+          done();
+          console.log(err);
+          return res.status(500).json({ success: false, data: err});
+        }
+
+        // SQL Query > Insert Data
+        client.query("INSERT INTO items(text, complete) values($1, $2)", [data.text, data.complete]);
+
+        // SQL Query > Select Data
+        var query = client.query("SELECT * FROM items ORDER BY id ASC");
+
+        // Stream results back one row at a time
+        query.on('row', function(row) {
+            results.push(row);
+        });
+
+        // After all data is returned, close connection and return results
+        query.on('end', function() {
+            done();
+            return res.json(results);
+        });
+
+
+    });
+});
+```
+
+Для тестирования наберите в терминале:
+
+```
+$ curl --data "text=test&complete=false" http://127.0.0.1:3000/api/v1/todos	
+```
+
+Затем убедитесь, что данные были правильно занесены в базу данных с помощью PSQL:
+
+```
+todo=# SELECT * FROM items ORDER BY id ASC;
+ id | text  | complete
+----+-------+----------
+  1 | test  | f
+(1 row)
+```
+
+### Чтение записи
+
+```javascript
+router.get('/api/v1/todos', function(req, res) {
+
+    var results = [];
+
+    // Get a Postgres client from the connection pool
+    pg.connect(connectionString, function(err, client, done) {
+        // Handle connection errors
+        if(err) {
+          done();
+          console.log(err);
+          return res.status(500).json({ success: false, data: err});
+        }
+
+        // SQL Query > Select Data
+        var query = client.query("SELECT * FROM items ORDER BY id ASC;");
+
+        // Stream results back one row at a time
+        query.on('row', function(row) {
+            results.push(row);
+        });
+
+        // After all data is returned, close connection and return results
+        query.on('end', function() {
+            done();
+            return res.json(results);
+        });
+
+    });
+
+});
+```
+
+Добавьте пару пунктов с помощью Curl, и проверьте в браузере по адресу [http://localhost:3000/api/v1/todos](http://localhost:3000/api/v1/todos). Вы должны получить примерно такой результат:
+
+```json
+[
+    {
+        "id": 1,
+        "text": "test",
+        "complete": false
+    },
+    {
+        "id": 2,
+        "text": "test2",
+        "complete": false
+    },
+    {
+        "id": 3,
+        "text": "test3",
+        "complete": false
+    }
+]
+```
+
+### Обновление записей
+
+```javascript
+router.put('/api/v1/todos/:todo_id', function(req, res) {
+
+    var results = [];
+
+    // Grab data from the URL parameters
+    var id = req.params.todo_id;
+
+    // Grab data from http request
+    var data = {text: req.body.text, complete: req.body.complete};
+
+    // Get a Postgres client from the connection pool
+    pg.connect(connectionString, function(err, client, done) {
+        // Handle connection errors
+        if(err) {
+          done();
+          console.log(err);
+          return res.status(500).send(json({ success: false, data: err}));
+        }
+
+        // SQL Query > Update Data
+        client.query("UPDATE items SET text=($1), complete=($2) WHERE id=($3)", [data.text, data.complete, id]);
+
+        // SQL Query > Select Data
+        var query = client.query("SELECT * FROM items ORDER BY id ASC");
+
+        // Stream results back one row at a time
+        query.on('row', function(row) {
+            results.push(row);
+        });
+
+        // After all data is returned, close connection and return results
+        query.on('end', function() {
+            done();
+            return res.json(results);
+        });
+    });
+
+});
+```
+
+Тестирум с помощью Curl:
+
+```
+$ curl -X PUT --data "text=test&complete=true" http://127.0.0.1:3000/api/v1/todos/1
+```
+
+Обновите страницу http://localhost:3000/api/v1/todos в браузере, что бы убедиться что все у нас правильно работает.
+
+```json
+[
+    {
+        "id": 1,
+        "text": "test",
+        "complete": true
+    },
+    {
+        "id": 2,
+        "text": "test2",
+        "complete": false
+    },
+    {
+        "id": 3,
+        "text": "test3",
+        "complete": false
+    }
+]
+```
+
+### Удаление записи
+
+```javascript
+router.delete('/api/v1/todos/:todo_id', function(req, res) {
+
+    var results = [];
+
+    // Grab data from the URL parameters
+    var id = req.params.todo_id;
+
+
+    // Get a Postgres client from the connection pool
+    pg.connect(connectionString, function(err, client, done) {
+        // Handle connection errors
+        if(err) {
+          done();
+          console.log(err);
+          return res.status(500).json({ success: false, data: err});
+        }
+
+        // SQL Query > Delete Data
+        client.query("DELETE FROM items WHERE id=($1)", [id]);
+
+        // SQL Query > Select Data
+        var query = client.query("SELECT * FROM items ORDER BY id ASC");
+
+        // Stream results back one row at a time
+        query.on('row', function(row) {
+            results.push(row);
+        });
+
+        // After all data is returned, close connection and return results
+        query.on('end', function() {
+            done();
+            return res.json(results);
+        });
+    });
+
+});
+```
+
+Финальный Curl запрос для проверки наших роутеров:
+
+```
+$ curl -X DELETE http://127.0.0.1:3000/api/v1/todos/3
+```
+
+Мы видим следующий результат:
+
+```json
+[
+    {
+        "id": 1,
+        "text": "test",
+        "complete": true
+    },
+    {
+        "id": 2,
+        "text": "test2",
+        "complete": false
+    }
+]
+```
+
+## Рефакторинг нашего TODO приложения
+
+Перед тем, как перейти к клиентской стороне нашего приложения, нужно добавить Angular JS, имейте в виду, что наш код должен быть переработан, чтобы решить несколько проблем. Но это отличная возможность реорганизовать код по своему усмотрению. Удачи!
+
+## Angular JS на стороне клиента
+
+Давайте начнем работу с Angular JS
+
+> Учтите что этот урок не является полноценным учебным пособием для изучения Angular JS. Если вы новичек в Angular JS, то я предлагаю посмотреть мой учебник "Angular JS на примере" - [Building a Bitcoin Investment Calculator](https://github.com/mjhea0/thinkful-angular).
+
+### Создание модуля
+
+Создайте файл с именем **app.js** в папке **public/javascripts**. В нем мы будем создавать наши модули и контроллеры для Angular JS
+
+```javascript
+angular.module('nodeTodo', [])
+
+.controller('mainController', function($scope, $http) {
+
+    $scope.formData = {};
+    $scope.todoData = {};
+
+    // Get all todos
+    $http.get('/api/v1/todos')
+        .success(function(data) {
+            $scope.todoData = data;
+            console.log(data);
+        })
+        .error(function(error) {
+            console.log('Error: ' + error);
+        });
+});
+```
 
