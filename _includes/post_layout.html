@@ -19,7 +19,14 @@
     {{ post.content | strip_html | truncatewords: 40 }}
   </p>
 
-  <p>
-    <a href="{{ post.url }}" class="post-readmore">Читать далее</a>
-  </p>
+  <div class="media media-center">
+    <div class="media-body">
+      <div><a href="{{ post.url }}" class="post-readmore">Читать далее</a></div>
+    </div>
+    <ul class="pl0 mb0 clearfix lsn post-share-block">
+      <li><a onclick="Share.vkontakte('URL','http://vaeum.com{{ post.url }}','IMG_PATH','{{ post.content | strip_html | truncatewords: 30 }}')">{% include svg/vk.svg %}</a></li>
+      <li><a onclick="Share.facebook('URL','http://vaeum.com{{ post.url }}','IMG_PATH','{{ post.content | strip_html | truncatewords: 30 }}')">{% include svg/facebook.svg %}</a></li>
+      <li><a onclick="Share.twitter('URL','http://vaeum.com{{ post.url }}')">{% include svg/twitter.svg %}</a></li>
+    </ul>
+  </div>
 </li>

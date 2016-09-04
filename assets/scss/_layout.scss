@@ -10,29 +10,10 @@
   background: #fff;
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 
-  &:last-child{
-    // margin-bottom: 0;
-  }
-
-  // &:after{
-  //   position: absolute;
-  //   content: '';
-  //   height: 3px;
-  //   bottom: -3px;
-  //   left: 5px;
-  //   right: 5px;
-  //   background: #eee;
-  //   border-bottom-left-radius: 4px;
-  //   border-bottom-right-radius: 4px;
-  // }
-
   &-title{
-    // padding-bottom: 10px;
-    // margin-bottom: 20px;
     position: absolute;
     top: 0%;
     left: 15px;
-    // font-size: 16px;
     background: $red;
     border-radius: 4px;
     padding: 0 10px;
@@ -71,13 +52,12 @@
     position: absolute;
     top: 0%;
     right: 15px;
-    font-size: 16px;
     background: $red;
     border-radius: 4px;
     padding: 0 10px;
     color: #fff;
     height: 24px;
-    line-height: 24px;
+    // line-height: 24px;
     transform: translateY(-50%);
   }
 }
@@ -104,5 +84,22 @@
 
   svg{
     vertical-align: baseline;
+  }
+}
+
+.post-share-block{
+  li{
+    float: left;
+    margin-right: 10px;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  a{
+    display: block;
+  }
+  .ico-vk, .ico-facebook, .ico-twitter{
+    color: #ddd;
   }
 }

@@ -1,6 +1,6 @@
 [class^="ico-"] {
   vertical-align: middle;
-  // color: #333;
+  //color: #333;
   display: inline-block;
   fill: currentColor;
   color: inherit;
@@ -21,12 +21,12 @@
 
 .ico-issue-opened {
   width: 14px;
-  // color: #fff;
+  //color: #fff;
 }
 
 .ico-pencil {
   width: 14px;
-  // color: #fff;
+  //color: #fff;
 }
 
 .ico-linkedin {
@@ -40,31 +40,49 @@
 
 .ico-twitter {
   width: 24px;
-  color: #1da1f2;
+  color: $bc-twitter;
+
   &:hover {
-    color: darken(#1da1f2, 10%);
+    color: darken($bc-twitter, 10%);
   }
 }
 
-.ico-rss{
+.ico-rss {
   width: 30px;
   height: 30px;
-  color: #f26522;
-  &:hover{
-    color: darken(#f26522, 10%);
+  color: $bc-rss-2;
+
+  &:hover {
+    color: darken($bc-rss-2, 10%);
   }
 }
 
-.ico-github{
+.ico-github {
   width: 24px;
   color: #333;
 }
 
-.ico-plus-small{
+.ico-plus-small {
   width: 16px;
 }
 
-.ico-plus{
+.ico-plus {
   width: 16px;
   height: 16px;
+}
+
+.ico-vk {
+  width: 24px;
+  color: $bc-vkontakte;
+  &:hover{
+    color: $bc-vkontakte;
+  }
+}
+
+.ico-facebook {
+  width: 24px;
+  color: $bc-facebook;
+  &:hover{
+    color: darken($bc-facebook, 10%);
+  }
 }
