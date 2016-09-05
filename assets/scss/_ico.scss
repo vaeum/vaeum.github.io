@@ -86,3 +86,12 @@
     color: darken($bc-facebook, 10%);
   }
 }
+
+.ico-mail {
+  width: 30px;
+  height: 30px;
+  color: #333;
+  &:hover{
+    color: darken(#333, 10%);
+  }
+}
