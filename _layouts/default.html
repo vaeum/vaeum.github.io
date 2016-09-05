@@ -11,11 +11,12 @@
 
     {% if jekyll.environment == "production" %}
       <style>@@include('css/bootstrap.css')</style>
+      <style>@@include('css/style.css')</style>
     {% else %}
       <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/bootstrap.css" />
+      <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" />
     {% endif %}
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
   </head>
 
