@@ -4,7 +4,7 @@
   "description": "> March, 2016: If you're on an old version of Jekyll Now and run into a) build warnings or b) syntax highlighting issues caused by [Jekyll 3 and GitHub Pages updates](https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0), just :sparkles:[update your _config.yml](https://github.com/barryclark/jekyll-now/pull/445/files):sparkles: and you'll be set!",
   "main": "index.js",
   "scripts": {
-    "start": "JEKYLL_ENV=development jekyll serve -w",
+    "start": "./node_modules/.bin/gulp",
     "build": "jekyll build",
     "styleguide": "./node_modules/nucleus-styleguide/bin.js  --title StyleBook --target ./_site/styleguide nucleus --css ./assets/**/*.scss"
   },
