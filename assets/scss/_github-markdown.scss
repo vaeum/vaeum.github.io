@@ -2,7 +2,7 @@
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
-  color: #333;
+  // color: #333;
   font-size: 16px;
   // line-height: 1.5;
   word-wrap: break-word;
@@ -30,7 +30,7 @@
 
 .markdown-body .pl-smi,
 .markdown-body .pl-s .pl-s1 {
-  color: #333;
+  // color: #333;
 }
 
 .markdown-body .pl-ent {
@@ -86,12 +86,12 @@
 
 .markdown-body .pl-mi {
   font-style: italic;
-  color: #333;
+  // color: #333;
 }
 
 .markdown-body .pl-mb {
   font-weight: bold;
-  color: #333;
+  // color: #333;
 }
 
 .markdown-body .pl-md {
@@ -138,8 +138,8 @@
 }
 
 .markdown-body h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  // font-size: 2em;
+  // margin: 0.67em 0;
 }
 
 .markdown-body img {
@@ -153,7 +153,7 @@
 .markdown-body code,
 .markdown-body kbd,
 .markdown-body pre {
-  font-family: monospace, monospace;
+  font-family: $monospace;
   font-size: 1em;
 }
 
@@ -185,7 +185,7 @@
 }
 
 .markdown-body * {
-  box-sizing: border-box;
+  // box-sizing: border-box;
 }
 
 .markdown-body input {
@@ -218,14 +218,14 @@
 }
 
 .markdown-body hr::before {
-  display: table;
-  content: "";
+  // display: table;
+  // content: "";
 }
 
 .markdown-body hr::after {
-  display: table;
-  clear: both;
-  content: "";
+  // display: table;
+  // clear: both;
+  // content: "";
 }
 
 .markdown-body table {
@@ -244,43 +244,43 @@
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-  margin-top: 0;
-  margin-bottom: 0;
+  // margin-top: 0;
+  // margin-bottom: 0;
 }
 
 .markdown-body h1 {
-  font-size: 32px;
-  font-weight: 600;
+  // font-size: 32px;
+  // font-weight: 600;
 }
 
 .markdown-body h2 {
-  font-size: 24px;
-  font-weight: 600;
+  // font-size: 24px;
+  // font-weight: 600;
 }
 
 .markdown-body h3 {
-  font-size: 20px;
-  font-weight: 600;
+  // font-size: 20px;
+  // font-weight: 600;
 }
 
 .markdown-body h4 {
-  font-size: 16px;
-  font-weight: 600;
+  // font-size: 16px;
+  // font-weight: 600;
 }
 
 .markdown-body h5 {
-  font-size: 14px;
-  font-weight: 600;
+  // font-size: 14px;
+  // font-weight: 600;
 }
 
 .markdown-body h6 {
-  font-size: 12px;
-  font-weight: 600;
+  // font-size: 12px;
+  // font-weight: 600;
 }
 
 .markdown-body p {
-  margin-top: 0;
-  margin-bottom: 10px;
+  // margin-top: 0;
+  // margin-bottom: 10px;
 }
 
 .markdown-body blockquote {
@@ -311,14 +311,15 @@
 }
 
 .markdown-body code {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: $monospace;
   font-size: 12px;
 }
 
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 0;
-  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  // font-size: 12px;
+  font-family: $monospace;
 }
 
 .markdown-body .octicon {
@@ -335,14 +336,14 @@
 }
 
 .markdown-body::before {
-  display: table;
-  content: "";
+  // display: table;
+  // content: "";
 }
 
 .markdown-body::after {
-  display: table;
-  clear: both;
-  content: "";
+  // display: table;
+  // clear: both;
+  // content: "";
 }
 
 .markdown-body>*:first-child {
@@ -422,10 +423,10 @@
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-  margin-top: 24px;
-  margin-bottom: 16px;
-  font-weight: 600;
-  line-height: 1.25;
+  // margin-top: 24px;
+  // margin-bottom: 16px;
+  // font-weight: 600;
+  // line-height: 1.25;
 }
 
 .markdown-body h1 .octicon-link,
@@ -434,9 +435,9 @@
 .markdown-body h4 .octicon-link,
 .markdown-body h5 .octicon-link,
 .markdown-body h6 .octicon-link {
-  color: #000;
-  vertical-align: middle;
-  visibility: hidden;
+  // color: #000;
+  // vertical-align: middle;
+  // visibility: hidden;
 }
 
 .markdown-body h1:hover .anchor,
@@ -445,7 +446,7 @@
 .markdown-body h4:hover .anchor,
 .markdown-body h5:hover .anchor,
 .markdown-body h6:hover .anchor {
-  text-decoration: none;
+  // text-decoration: none;
 }
 
 .markdown-body h1:hover .anchor .octicon-link,
@@ -454,36 +455,36 @@
 .markdown-body h4:hover .anchor .octicon-link,
 .markdown-body h5:hover .anchor .octicon-link,
 .markdown-body h6:hover .anchor .octicon-link {
-  visibility: visible;
+  // visibility: visible;
 }
 
 .markdown-body h1 {
   padding-bottom: 0.3em;
-  font-size: 2em;
+  // font-size: 2em;
   border-bottom: 1px solid #eee;
 }
 
 .markdown-body h2 {
   padding-bottom: 0.3em;
-  font-size: 1.5em;
+  // font-size: 1.5em;
   border-bottom: 1px solid #eee;
 }
 
 .markdown-body h3 {
-  font-size: 1.25em;
+  // font-size: 1.25em;
 }
 
 .markdown-body h4 {
-  font-size: 1em;
+  // font-size: 1em;
 }
 
 .markdown-body h5 {
-  font-size: 0.875em;
+  // font-size: 0.875em;
 }
 
 .markdown-body h6 {
-  font-size: 0.85em;
-  color: #777;
+  // font-size: 0.85em;
+  // color: #777;
 }
 
 .markdown-body ul,
@@ -600,8 +601,8 @@
 .markdown-body pre {
   padding: 16px;
   overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
+  // font-size: 85%;
+  // line-height: 1.45;
   background-color: #f7f7f7;
   border-radius: 3px;
 }
@@ -659,7 +660,8 @@
 .markdown-body kbd {
   display: inline-block;
   padding: 3px 5px;
-  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 11px;
+  font-family: $monospace;
   line-height: 10px;
   color: #555;
   vertical-align: middle;

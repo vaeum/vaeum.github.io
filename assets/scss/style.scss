@@ -10,7 +10,6 @@
 @import "sidebar";
 @import "github-markdown";
 @import "highlights";
-// @import "../bower/font-awesome/scss/font-awesome";
 @import "../bower/css.modifiers/src/modifiers";
 
 html {
@@ -20,15 +19,14 @@ html {
 
 body {
   margin-bottom: $footer-height;
-  // padding-top: $header-height;
   background: #fafafa;
-  font-family: $regular;
-  // font-size: 14px;
+  font-family: $sans-serif;
   line-height: 1.5em;
 }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $serif;
   &:first-child {
     margin-top: 0px;
   }
@@ -51,16 +49,6 @@ a{
   }
 }
 
-// Fixes images in popup boxes from Google Translate
-.gmnoprint img {
-  // max-width: none;
-}
-
-.date {
-  // font-style: italic;
-  // color: $gray;
-}
-
 .container{
   max-width: 1024px;
   margin: 0 auto;
@@ -70,7 +58,6 @@ a{
     padding-right: 15px;
   }
 }
-
 
 ::selection {
   color: #fff;

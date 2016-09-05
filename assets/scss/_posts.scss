@@ -7,18 +7,11 @@
     border-top: 1px solid #eee;
   }
 
-  .title {
-    //float: left;
-    //font-weight: bold;
+  .title a{
     display: table;
-    // color: #2f2f2f;
-    // font-size: 16px;
-    //margin-bottom: 5px;
     margin-bottom: 14px;
-    font-size: 2em;
     color: #333;
     text-decoration: none;
-    line-height: 1.3em;
     &:hover{
       color: $blue;
     }
@@ -56,7 +49,6 @@
     border-radius: 4px;
     background: #f5f8f9;
     color: #999;
-    // text-shadow: 0 1px #fff;
     text-decoration: none;
 
     &:hover {
