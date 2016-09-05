@@ -59,7 +59,7 @@ gulp.task('bootstrap', () =>
     .pipe($.postcss(PROCESSORS))
     .pipe($.if(prod, $.csso()))
     .pipe($.if(!prod, $.postcss([perfectionist({})])))
-    .pipe(gulp.dest('./_site/assets/css/'))
+    .pipe(gulp.dest('./_site/css/'))
     .pipe(browserSync.stream())
 )
 
@@ -69,7 +69,7 @@ gulp.task('sass', () =>
     .pipe($.postcss(PROCESSORS))
     .pipe($.if(prod, $.csso()))
     .pipe($.if(!prod, $.postcss([perfectionist({})])))
-    .pipe(gulp.dest('./_site/assets/css/'))
+    .pipe(gulp.dest('./_site/css/'))
     .pipe(browserSync.stream())
 )
 
@@ -136,7 +136,7 @@ gulp.task('build:svg', () =>
 gulp.task('build:js', () =>
   gulp.src(['./assets/js/*.*'])
     .pipe($.if(prod, $.uglify()))
-    .pipe(gulp.dest('./_site/assets/js/'))
+    .pipe(gulp.dest('./_site/js/'))
 )
 
 gulp.task('build:font', () =>
