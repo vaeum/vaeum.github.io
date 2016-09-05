@@ -1,0 +1,19 @@
+@function opacity($color, $opacity) {
+  @return transparentize($color, $opacity);
+}
+
+@function black($opacity) {
+  @if $opacity == 1 {
+    @return #000;
+  } @else {
+    @return rgba(0, 0, 0, $opacity);
+  }
+}
+
+@function white($opacity) {
+  @if $opacity == 1 {
+    @return #fff;
+  } @else {
+    @return rgba(255, 255, 255, $opacity);
+  }
+}

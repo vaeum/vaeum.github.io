@@ -17,8 +17,5 @@
   ],
   "dependencies": {
     "bootstrap-sass": "^3.3.7"
-  },
-  "devDependencies": {
-    "css.modifiers": "^0.1.0"
   }
 }

@@ -1,0 +1,20 @@
+.text-underline {
+  @extend %text-decoration-underline;
+  &:--press{
+    @extend %text-decoration-none;
+  }
+}
+
+.text-line {
+  @extend %text-decoration-none;
+  &:--press{
+    @extend %text-decoration-underline;
+  }
+}
+
+.no-underline {
+  @extend %text-decoration-none;
+  &:--press{
+    @extend %text-decoration-none;
+  }
+}

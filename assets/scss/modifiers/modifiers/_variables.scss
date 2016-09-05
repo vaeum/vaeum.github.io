@@ -1,0 +1,20 @@
+$px: px;
+$rem: rem;
+$need_outline: true;
+$base_font: 14;
+
+// custom selectors
+@custom-selector :--enter :hover, :focus;
+@custom-selector :--press :hover, :focus, :active;
+@custom-selector :--headers h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6;
+@custom-selector :--button button, .button;
+@custom-selector :--link a, a.link, span.link;
+@custom-selector :--textInput input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"];
+
+// font stacks
+$georgia: "Georgia", "Cambria", "Times New Roman", "Times", serif;
+$helvetica: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+$lucida-grande: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
+$monospace: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
+$verdana: "Verdana", "Geneva", sans-serif;
+$trebuchet: 'Trebuchet MS', Helvetica, sans-serif;

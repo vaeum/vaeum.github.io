@@ -1,0 +1,113 @@
+%margin-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%display-block {
+  display: block;
+}
+
+%display-inline-block {
+  display: inline-block;
+}
+
+%display-table {
+  display: table;
+}
+
+%display-none {
+  display: none;
+}
+
+%text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+%text-ellipsis {
+  text-overflow: ellipsis;
+}
+
+%position-relative {
+  position: relative;
+}
+
+%position-absolute {
+  position: absolute;
+}
+
+%position-fixed {
+  position: fixed;
+}
+
+%position-static {
+  position: static;
+}
+
+%outline-none{
+  outline: none !important;
+}
+
+%user-select-none{
+  user-select:none;
+}
+
+%fluid{
+  width: 100%;
+}
+
+%text-decoration-none{
+  text-decoration: none;
+}
+
+%text-decoration-underline{
+  text-decoration: underline;
+}
+
+%float-left{
+  float: left;
+}
+
+%float-right{
+  float: right;
+}
+
+%float-none{
+  float: none;
+}
+
+%text-smoothing{
+  // http://habrahabr.ru/post/154465/
+  text-shadow:-1px -1px 1px rgba(255,255,255,0.2), // наверх и влево
+    1px 1px 1px rgba(255,255,255,0.2), // вниз и вправо
+    1px 1px 1px rgba(0,0,0,0.7); // тёмная тень
+}
+
+// http://nicolasgallagher.com/micro-clearfix-hack/
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+%list-style-none{
+  list-style: none;
+}
+
+// http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+%hard-hide {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}

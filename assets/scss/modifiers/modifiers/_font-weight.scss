@@ -1,0 +1,9 @@
+$font_step: 100;
+$font_min: 1;
+$font_max: 900 / $font_step;
+
+@for $i from $font_min through $font_max {
+  .fw#{$i * $font_step} {
+    font-weight: $i * $font_step;
+  }
+}

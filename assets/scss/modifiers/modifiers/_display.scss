@@ -1,0 +1,15 @@
+.db {
+  @extend %display-block;
+}
+
+.dib {
+  @extend %display-inline-block;
+}
+
+.dt {
+  @extend %display-table;
+}
+
+.dn {
+  @extend %display-none;
+}

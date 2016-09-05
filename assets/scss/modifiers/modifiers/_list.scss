@@ -1,0 +1,18 @@
+.lsn {
+  li {
+    @extend %list-style-none;
+  }
+}
+
+ul.menu-list {
+  padding-left: 0;
+  margin-bottom: 0;
+  @extend %clearfix;
+  > li {
+    @extend %list-style-none;
+    @extend %float-left;
+    > a {
+      @extend %display-block;
+    }
+  }
+}
