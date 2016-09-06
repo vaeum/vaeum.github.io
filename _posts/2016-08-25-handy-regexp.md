@@ -6,6 +6,8 @@ categories: regexp
 uncomplete: false
 ---
 
+![first image](https://www.mullie.eu/public/posts/regex-2.png)
+
 Находим все строки у которых последний символ {, и перед ним нет пробела.
 
 Недавно мне попался кейс, в нем надо было найти все строки в css файлах,  и добавить пробел до символа `{`.

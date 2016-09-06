@@ -1,6 +1,6 @@
 .content-block{
   border: 1px solid #ddd;
-  border-top: 4px solid $red;
+  border-top: 4px solid $blue;
   border-radius: 4px;
   margin-bottom: 40px;
   position: relative;
@@ -12,7 +12,7 @@
     position: absolute;
     top: 0%;
     left: 15px;
-    background: $red;
+    background: $blue;
     border-radius: 4px;
     padding: 0 10px;
     color: #fff;
@@ -50,38 +50,12 @@
     position: absolute;
     top: 0%;
     right: 15px;
-    background: $red;
+    background: $blue;
     border-radius: 4px;
     padding: 0 10px;
     color: #fff;
     height: 24px;
-    // line-height: 24px;
     transform: translateY(-50%);
-  }
-}
-
-.post-edit-links{
-  padding-top: 4px;
-  padding-bottom: 4px;
-
-  a{
-    color: #fff;
-    margin-right: 5px;
-    line-height: 16px;
-    border-right: 1px #fff solid;
-    padding-right: 5px;
-    &:hover{
-      color: #fff;
-    }
-    &:last-child{
-      padding-right: 0px;
-      margin-right: 0;
-      border-right: none;
-    }
-  }
-
-  svg{
-    vertical-align: baseline;
   }
 }
 

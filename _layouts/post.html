@@ -11,6 +11,31 @@ layout: default
     {{ content }}
   </div>
 
+  {% if page.news == true %}
+  {% else %}
+    <div class="hr">
+      <span class="hr-text">Информация о посте</span>
+    </div>
+
+    <dl class="dl-horizontal mb0">
+      <dt>Время для чтения</dt>
+      <dd>
+        {% capture words %}
+          {{ content | number_of_words | minus: 180 }}
+        {% endcapture %}
+        {% unless words contains "-" %}
+          {{ words | plus: 180 | divided_by: 180 | append: " минуты" }}
+        {% endunless %}
+      </dd>
+
+      <dt>Колличество слов</dt>
+      <dd>{{ page.content | number_of_words }}</dd>
+
+      <dt>Дата создания</dt>
+      <dd>{{ page.date | localize: "%d %B %Y" }}</dd>
+    </dl>
+  {% endif %}
+
   <div class="hr">
     <!-- <span class="hr-text">Категории</span> -->
   </div>
@@ -35,33 +60,6 @@ layout: default
     </ul>
   </div>
 </article>
-
-{% if page.news == true %}
-{% else %}
-  <div class="content-block _padding">
-    <span class="content-block-title">
-      Информация о посте
-    </span>
-
-    <dl class="dl-horizontal mb0">
-      <dt>Время для чтения</dt>
-      <dd>
-        {% capture words %}
-          {{ content | number_of_words | minus: 180 }}
-        {% endcapture %}
-        {% unless words contains "-" %}
-          {{ words | plus: 180 | divided_by: 180 | append: " минуты" }}
-        {% endunless %}
-      </dd>
-
-      <!-- <dt>Колличество слов</dt>
-      <dd>{{ page.content | number_of_words }}</dd> -->
-
-      <dt>Дата создания</dt>
-      <dd>{{ page.date | localize: "%d %B %Y" }}</dd>
-    </dl>
-  </div>
-{% endif %}
 
 {% if page.news == true %}
 {% else %}
