@@ -45,10 +45,10 @@
   .post-readmore {
     display: inline-block;
     line-height: 1em;
-    padding: 6px 15px;
+    padding: 5px 15px;
     border-radius: 4px;
-    background: #f5f8f9;
-    color: #999;
+    background: lighten($blue, 5%);
+    color: #fff;
     text-decoration: none;
 
     &:hover {

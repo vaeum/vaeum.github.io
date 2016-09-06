@@ -1,4 +1,7 @@
-.sidebar-nav {
+.sidebar {
+  > *:last-child {
+    margin-bottom: 20px;
+  }
 
   .ico-plus {
     width: 16px;
@@ -13,30 +16,27 @@
     margin-right: 5px;
     color: #bbb;
   }
-
-  hr {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
 }
 
 .widget-menu {
   li {
     &.active {
       a {
-        background: #eee;
+        background: lighten($blue, 40%);
+        border-left: 2px $blue solid;
       }
     }
   }
 
   a {
-    padding: 5px 15px;
+    padding: 5px 15px 5px 13px;
+    border-left: 2px transparent solid;
     display: block;
-    color: #2f2f2f;
+    color: #333;
+    text-decoration: none;
 
-    &:hover {
-      background: #eee;
-      text-decoration: none;
+    &:only-hover {
+      background: lighten($blue, 40%);
     }
   }
 }
@@ -54,9 +54,9 @@
     }
   }
 
-  li{
+  li {
     &:last-child {
-      a{
+      a {
         &:after {
           display: none;
         }
@@ -88,7 +88,7 @@
     display: block;
 
     &:hover {
-      background: #eee;
+      background: lighten($blue, 40%);
     }
   }
 
@@ -99,16 +99,15 @@
   }
 }
 
-.widget-buttons{
-
+.widget-buttons {
   a {
     padding: 5px 15px;
     display: block;
-    color: #2f2f2f;
+    color: #333;
+    text-decoration: none;
 
-    &:hover {
-      background: #eee;
-      text-decoration: none;
+    &:only-hover {
+      background: lighten($blue, 40%);
     }
   }
 }

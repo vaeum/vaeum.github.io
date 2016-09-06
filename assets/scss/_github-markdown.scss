@@ -153,8 +153,8 @@
 .markdown-body code,
 .markdown-body kbd,
 .markdown-body pre {
-  font-family: $monospace;
-  font-size: 1em;
+  // font-family: $monospace;
+  // font-size: 1em;
 }
 
 .markdown-body hr {
@@ -312,7 +312,7 @@
 
 .markdown-body code {
   font-family: $monospace;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .markdown-body pre {
@@ -563,9 +563,9 @@
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   margin: 0;
-  font-size: 85%;
+  // font-size: 85%;
   background-color: rgba(0,0,0,0.04);
-  border-radius: 3px;
+  // border-radius: 3px;
 }
 
 .markdown-body code::before,
@@ -581,7 +581,7 @@
 .markdown-body pre>code {
   padding: 0;
   margin: 0;
-  font-size: 100%;
+  // font-size: 100%;
   word-break: normal;
   white-space: pre;
   background: transparent;
