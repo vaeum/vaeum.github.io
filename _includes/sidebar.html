@@ -25,23 +25,35 @@
     <span class="hr-text">Теги</span>
   </div>
 
-  <ul class="lsn mb0 widget-tags">
-    {% assign tags = site.tags | sort %}
-    {% for tag in tags %}
-      <li class="dib"><a href="/tag/{{ tag | first | slugify }}/">{{ tag[0] | replace:'-', ' ' }}</a></li>
-    {% endfor %}
-  </ul>
+  <div class="widget-tags">
+    <ul class="lsn mb0">
+      {% assign tags = site.tags | sort %}
+      {% for tag in tags limit: 10%}
+        <li class="dib"><a href="/tag/{{ tag | first | slugify }}/">{{ tag[0] | replace:'-', ' ' }}</a></li>
+      {% endfor %}
+    </ul>
+
+    {% if site.tags.size > 10 %}
+      <a href="/tags/" class="more-link">Все теги</a>
+    {% endif %}
+  </div>
 
   <div class="hr">
     <span class="hr-text">Категории</span>
   </div>
 
-  <ul class="lsn mb0 widget-tags">
-    {% for category in site.categories %}
-      {% assign name_category = category | first %}
-        <li class="dib"><a href="/categories/{{name_category}}/">{{name_category}}</a></li>
-    {% endfor %}
-  </ul>
+  <div class="widget-tags">
+    <ul class="lsn mb0">
+      {% for category in site.categories limit: 10%}
+        {% assign name_category = category | first %}
+          <li class="dib"><a href="/categories/{{name_category}}/">{{name_category}}</a></li>
+      {% endfor %}
+    </ul>
+
+    {% if site.categories.size > 10 %}
+      <a href="/categories/" class="more-link">Все категории</a>
+    {% endif %}
+  </div>
 
   <div class="hr">
     <span class="hr-text">Статистика</span>

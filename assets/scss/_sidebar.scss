@@ -42,25 +42,39 @@
 }
 
 .widget-tags {
-  padding: 0 10px;
+  ul {
+    padding: 0 10px;
 
-  a {
-    display: inline-block;
-    padding: 0 5px;
-    color: #333;
+    a {
+      display: inline-block;
+      padding: 0 5px;
+      color: #333;
 
-    &:after {
-      content: ',';
+      &:after {
+        content: ',';
+      }
+    }
+
+    li {
+      &:last-child {
+        a {
+          &:after {
+            display: none;
+          }
+        }
+      }
     }
   }
 
-  li {
-    &:last-child {
-      a {
-        &:after {
-          display: none;
-        }
-      }
+  .more-link{
+    display: block;
+    text-align: center;
+    margin: 5px auto;
+    padding: 0 15px;
+    color: #999;
+    text-decoration: none;
+    &:hover{
+      background: lighten($blue, 40%);
     }
   }
 }
