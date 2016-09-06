@@ -1,8 +1,9 @@
-<nav class="sidebar-nav content-block">
-  <span class="sidebar-title content-block-title">
-    Главное меню
-  </span>
-  <ul class="clearfix lsn pl0">
+<nav class="sidebar-nav content-block _padding-none">
+  <div class="hr">
+    <span class="hr-text">Меню</span>
+  </div>
+
+  <ul class="lsn pl0 mb0 widget-menu">
     <li{% if page.url == '/' %} class="active"{% endif %}>
       <a href="{{ site.baseurl }}/">Блог</a>
     </li>
@@ -19,39 +20,34 @@
       <a href="{{ site.baseurl }}/archive/">Архив</a>
     </li>
   </ul>
-</nav>
 
-<div class="tags-list content-block">
-  <span class="sidebar-title content-block-title">
-    Теги
-  </span>
+  <div class="hr">
+    <span class="hr-text">Теги</span>
+  </div>
 
-  <ul class="lsn pl0 clearfix">
+  <ul class="lsn mb0 widget-tags">
     {% assign tags = site.tags | sort %}
     {% for tag in tags %}
-      <li><a href="/tag/{{ tag | first | slugify }}/">{{ tag[0] | replace:'-', ' ' }}</a></li>
+      <li><a href="/tag/{{ tag | first | slugify }}/">{% include svg/tag.svg %}{{ tag[0] | replace:'-', ' ' }}</a></li>
     {% endfor %}
   </ul>
-</div>
 
-<div class="tags-list content-block">
-  <span class="content-block-title">
-    Категории
-  </span>
+  <div class="hr">
+    <span class="hr-text">Категории</span>
+  </div>
 
-  <ul class="lsn pl0 clearfix">
+  <ul class="lsn mb0 widget-tags">
     {% for category in site.categories %}
       {% assign name_category = category | first %}
-        <li><a href="/categories/{{name_category}}/">{{name_category}}</a></li>
+        <li><a href="/categories/{{name_category}}/">{% include svg/tag.svg %}{{name_category}}</a></li>
     {% endfor %}
   </ul>
-</div>
 
-<div class="sidebar-statistic content-block">
-  <span class="sidebar-title content-block-title">
-    Статистика блога
-  </span>
-  <ul class="clearfix lsn pl0">
+  <div class="hr">
+    <span class="hr-text">Статистика</span>
+  </div>
+
+  <ul class="lsn pl0 mb0 clearfix widget-statistic">
     <li>
       <span class="count">{{ site.posts | size }}</span>
       <div class="text">Постов</div>
@@ -65,29 +61,28 @@
       <div class="text">Тегов</div>
     </li>
   </ul>
-</div>
 
-<div class="sidebar-news content-block">
-  <span class="sidebar-title content-block-title">
-    Новости блога
-  </span>
+  <div class="hr">
+    <span class="hr-text">Новости</span>
+  </div>
 
-  <ul class="clearfix lsn pl0 mb0">
+  <ul class="lsn pl0 mb0 widget-news">
     {% for post in site.posts %}
       {% if post.news == true %}
         <li>
           <a href="{{ post.url }}" class="no-underline">
             <span class="text">{{ post.title }}</span>
-            <span class="desc">{{ post.content | strip_html | truncatewords: 10 }}</span>
           </a>
         </li>
       {% endif %}
     {% endfor %}
   </ul>
-</div>
 
-<div class="sidebar-nav content-block _padding-none">
-  <ul class="clearfix lsn pl0">
+  <div class="hr">
+    <span class="hr-text">Кнопки</span>
+  </div>
+
+  <ul class="lsn pl0 mb0 widget-buttons">
     <li>
       <a href="https://github.com/vaeum/vaeum.github.io/new/dev/_posts" target="_blank">
         {% include svg/plus.svg %}Добавить статью
@@ -99,4 +94,6 @@
       </a>
     </li>
   </ul>
-</div>
+
+  <hr>
+</nav>
