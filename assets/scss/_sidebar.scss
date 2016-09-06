@@ -65,7 +65,6 @@
   a {
     display: inline-block;
     padding: 0 5px;
-    vertical-align: middle;
     color: #333;
 
     &:after {
@@ -74,8 +73,6 @@
   }
 
   li{
-    display: inline-block;
-
     &:last-child {
       a{
         &:after {
@@ -83,10 +80,6 @@
         }
       }
     }
-  }
-
-  .ico-tag{
-    margin-right: 5px;
   }
 }
 

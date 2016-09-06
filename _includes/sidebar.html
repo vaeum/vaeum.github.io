@@ -28,7 +28,7 @@
   <ul class="lsn mb0 widget-tags">
     {% assign tags = site.tags | sort %}
     {% for tag in tags %}
-      <li><a href="/tag/{{ tag | first | slugify }}/">{% include svg/tag.svg %}{{ tag[0] | replace:'-', ' ' }}</a></li>
+      <li class="dib"><a href="/tag/{{ tag | first | slugify }}/">{{ tag[0] | replace:'-', ' ' }}</a></li>
     {% endfor %}
   </ul>
 
@@ -39,7 +39,7 @@
   <ul class="lsn mb0 widget-tags">
     {% for category in site.categories %}
       {% assign name_category = category | first %}
-        <li><a href="/categories/{{name_category}}/">{% include svg/tag.svg %}{{name_category}}</a></li>
+        <li class="dib"><a href="/categories/{{name_category}}/">{{name_category}}</a></li>
     {% endfor %}
   </ul>
 
