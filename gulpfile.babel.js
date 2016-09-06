@@ -38,6 +38,9 @@ const env = {
     ],
     svg: [
       'assets/svg/**/*.svg'
+    ],
+    js: [
+      'assets/js/**/*.js'
     ]
   },
 }
@@ -166,6 +169,7 @@ gulp.task('watch', () => {
   gulp.watch(env.watch.sass, gulp.series('sass'))
   gulp.watch(env.watch.bootstrap, gulp.series('bootstrap'))
   gulp.watch(env.watch.jekyll, gulp.series('jekyll-build'))
+  gulp.watch(env.watch.js, gulp.series('build:js'))
 })
 
 gulp.task('default', gulp.series(
