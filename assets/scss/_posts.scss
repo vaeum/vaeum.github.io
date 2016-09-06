@@ -17,10 +17,15 @@
     }
   }
 
+  .post-img{
+    margin-top: 20px;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .post-meta{
-    & + img{
-      margin-top: 20px;
-    }
     li{
       float: left;
       margin-right: 10px;
