@@ -4,7 +4,6 @@ const prod = (process.env.NODE_ENV == "production")?(true):(false);
 
 import gulp            from 'gulp';
 import path            from 'path';
-import mainBowerFiles  from 'main-bower-files';
 import perfectionist   from 'perfectionist';
 import selector        from 'postcss-custom-selectors';
 import focusHover      from 'postcss-focus-hover';
@@ -15,7 +14,7 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 
 const $ = gulpLoadPlugins({});
 const cp = require('child_process');
-const jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
 const env = {
   messages: {
