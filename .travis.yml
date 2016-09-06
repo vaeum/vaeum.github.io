@@ -26,8 +26,9 @@ script:
 
   - NODE_ENV=production ./node_modules/.bin/gulp build:static
 
-  - gulp html:include
-  - gulp html:min
+  - ./node_modules/.bin/gulp html:include
+  - ./node_modules/.bin/gulp html:min
+  - ./node_modules/.bin/gulp json:min
   - npm run styleguide
 
   - rm -rf .git

@@ -96,6 +96,12 @@ gulp.task('serve', () => {
   })
 })
 
+gulp.task('json:min', () =>
+  gulp.src('./_site/search.json')
+    .pipe($.jsonminify())
+    .pipe(gulp.dest('./_site/'))
+)
+
 gulp.task('html:min', () =>
   gulp.src('./_site/**/*.html')
     .pipe($.htmlmin({collapseWhitespace: true}))
