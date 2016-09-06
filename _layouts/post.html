@@ -3,23 +3,6 @@ layout: default
 ---
 
 <article class="content-block _padding">
-  <span class="content-block-title">
-    Статья
-  </span>
-
-  <div class="content-block__settings post-edit-links">
-    <div class="media media-center">
-       <a
-         href="https://github.com/vaeum/vaeum.github.io/issues/new?title=Error%20in%20blog%20article&body=link%20to%20file%20{{page.path}}"
-         target="_blank"
-         class="no-underline media-body">{% include svg/issue-opened.svg %}</a>
-       <a
-         href="https://github.com/vaeum/vaeum.github.io/edit/dev/{{page.path}}"
-         target="_blank"
-         class="no-underline">{% include svg/pencil.svg %}</a>
-    </div>
-  </div>
-
   <h1 class="post-title">
     {{ page.title }}
   </h1>
@@ -28,8 +11,22 @@ layout: default
     {{ content }}
   </div>
 
+  <div class="hr">
+    <!-- <span class="hr-text">Категории</span> -->
+  </div>
+
   <div class="media media-center">
-    <div class="media-body"></div>
+    <div class="media-body">
+      <a
+        href="https://github.com/vaeum/vaeum.github.io/issues/new?title=Error%20in%20blog%20article&body=link%20to%20file%20{{page.path}}"
+        target="_blank"
+        class="no-underline media-body">Сообщить о баге</a>
+      |
+      <a
+        href="https://github.com/vaeum/vaeum.github.io/edit/dev/{{page.path}}"
+        target="_blank"
+        class="no-underline">Редактировать статью</a>
+    </div>
     <ul class="pl0 mb0 clearfix lsn post-share-block">
       <li><a onclick="Share.vk('http://vaeum.com{{ page.url }}','{{ page.title }}','{% if page.image %}http://vaeum.com{{page.image}}{% endif %}','{{ page.content | strip_html | truncatewords: 30 }}')">{% include svg/vk.svg %}</a></li>
       <li><a onclick="Share.fb('http://vaeum.com{{ page.url }}','{{ page.title }}','{% if page.image %}http://vaeum.com{{page.image}}{% endif %}','{{ page.content | strip_html | truncatewords: 30 }}')">{% include svg/facebook.svg %}</a></li>

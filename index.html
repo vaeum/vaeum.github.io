@@ -3,10 +3,6 @@ layout: default
 ---
 
 <div class="posts content-block">
-  <span class="content-block-title">
-    Записи блога
-  </span>
-
   <ul class="pl0 lsn mb0 post-list">
     {% for post in paginator.posts %}
       {% include post_layout.html %}
