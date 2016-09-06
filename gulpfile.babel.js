@@ -55,7 +55,7 @@ gulp.task('bootstrap', () =>
   gulp.src(['./assets/bootstrap/**/*.scss'])
 
     .pipe($.sass({
-        includePaths: ['assets/bower/bootstrap-sass/assets/stylesheets/']
+        includePaths: ['node_modules/bootstrap-sass/assets/stylesheets/']
     }).on('error', $.notify.onError()))
 
     .pipe($.postcss(PROCESSORS))

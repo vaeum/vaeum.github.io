@@ -23,6 +23,7 @@
     "autoprefixer": "^6.4.1",
     "babel-core": "^6.14.0",
     "babel-preset-es2015": "^6.14.0",
+    "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.14.3",
     "css-mqpacker": "^5.0.1",
     "gulp": "github:gulpjs/gulp#4.0",

@@ -12,7 +12,6 @@ del:
 install:
 	gem install bundler -v 1.11.2
 	bundle install
-	bower install
 	npm install
 
 build-prod:

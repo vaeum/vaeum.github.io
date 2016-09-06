@@ -19,10 +19,7 @@ before_install:
 before_script:
 
 script:
-  - npm i -g bower
   - npm i
-
-  - bower install
 
   - NODE_ENV=production ./node_modules/.bin/gulp build:svg
   - make build-prod
