@@ -12,9 +12,12 @@ permalink: /archive/
 
       <div class="posts content-block">
         <span class="content-block-title">
-          {{ post.date | localize: "%b %Y" }}
+          <span class="capitalize-first-letter dib">
+            {{ post.date | localize: "%b" }}
+          </span>
+          {{ post.date | localize: "%Y" }}
         </span>
         <ul class="pl0 lsn mb0 post-list">
     {% endif %}
-      {% include post_layout.html %}
+      {% include post_layout_small.html %}
 {% endfor %}

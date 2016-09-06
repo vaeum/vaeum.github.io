@@ -95,3 +95,9 @@ a{
     transform: translateY(-50%);
   }
 }
+
+.capitalize-first-letter{
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
