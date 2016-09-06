@@ -3,7 +3,7 @@ layout: post
 title:  "Учимся пользоваться ES6 spread"
 date:   2016-09-06
 categories:  JavaScript
-tags: es6 babel
+tags: ES6 Babel
 uncomplete: true
 ---
 

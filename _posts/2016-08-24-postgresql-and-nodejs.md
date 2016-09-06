@@ -2,8 +2,8 @@
 layout: post
 title:  "Michael Herman - PostgreSQL and NodeJS"
 date:   2016-08-24
-categories: PostgreSQL NodeJS
-tags: npm
+categories: Превод
+tags: NPM PostgreSQL NodeJS
 uncomplete: true
 ---
 

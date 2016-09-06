@@ -2,7 +2,7 @@
 layout: post
 title:  "Использование положительного look-behind условия"
 date:   2016-08-25
-categories: regexp
+categories: Regexp
 uncomplete: false
 ---
 
