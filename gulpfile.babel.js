@@ -30,16 +30,16 @@ const env = {
       './_includes/**/*.html',
     ],
     sass: [
-      'assets/scss/**/*.scss'
+      '_assets/scss/**/*.scss'
     ],
     bootstrap: [
-      'assets/bootstrap/**/*.scss'
+      '_assets/bootstrap/**/*.scss'
     ],
     svg: [
-      'assets/svg/**/*.svg'
+      '_assets/svg/**/*.svg'
     ],
     js: [
-      'assets/js/**/*.js'
+      '_assets/js/**/*.js'
     ]
   },
 }
@@ -52,7 +52,7 @@ let PROCESSORS = [
 ]
 
 gulp.task('bootstrap', () =>
-  gulp.src(['./assets/bootstrap/**/*.scss'])
+  gulp.src(['./_assets/bootstrap/**/*.scss'])
 
     .pipe($.sass({
         includePaths: ['node_modules/bootstrap-sass/assets/stylesheets/']
@@ -66,7 +66,7 @@ gulp.task('bootstrap', () =>
 )
 
 gulp.task('sass', () =>
-  gulp.src(['assets/scss/**/style.scss'])
+  gulp.src(['_assets/scss/**/style.scss'])
     .pipe($.sass().on('error', $.notify.onError()))
     .pipe($.postcss(PROCESSORS))
     .pipe($.if(prod, $.csso()))
@@ -118,7 +118,7 @@ gulp.task('html:include', () =>
 )
 
 gulp.task('build:svg', () =>
-  gulp.src('./assets/svg/**/*.svg')
+  gulp.src('./_assets/svg/**/*.svg')
     .pipe($.svgmin((file)=>{
       var prefix = path.basename(file.relative, path.extname(file.relative));
       return {
@@ -142,13 +142,13 @@ gulp.task('build:svg', () =>
 )
 
 gulp.task('build:js', () =>
-  gulp.src(['./assets/js/*.*'])
+  gulp.src(['./_assets/js/*.*'])
     .pipe($.if(prod, $.uglify()))
     .pipe(gulp.dest('./_site/js/'))
 )
 
 gulp.task('build:font', () =>
-  gulp.src(['./assets/bower/font-awesome/fonts/**/*.*'])
+  gulp.src(['./_assets/bower/font-awesome/fonts/**/*.*'])
     .pipe(gulp.dest('./_site/assets/fonts/'))
 )
 
