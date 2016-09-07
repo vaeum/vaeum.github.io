@@ -32,9 +32,6 @@ const env = {
     sass: [
       '_assets/scss/**/*.scss'
     ],
-    bootstrap: [
-      '_assets/bootstrap/**/*.scss'
-    ],
     svg: [
       '_assets/svg/**/*.svg'
     ],
@@ -51,22 +48,8 @@ let PROCESSORS = [
   focusHover
 ]
 
-gulp.task('bootstrap', () =>
-  gulp.src(['./_assets/bootstrap/**/*.scss'])
-
-    .pipe($.sass({
-        includePaths: ['node_modules/bootstrap-sass/assets/stylesheets/']
-    }).on('error', $.notify.onError()))
-
-    .pipe($.postcss(PROCESSORS))
-    .pipe($.if(prod, $.csso()))
-    .pipe($.if(!prod, $.postcss([perfectionist({})])))
-    .pipe(gulp.dest('./_site/css/'))
-    .pipe(browserSync.stream())
-)
-
 gulp.task('sass', () =>
-  gulp.src(['_assets/scss/**/style.scss'])
+  gulp.src(['_assets/scss/**/*.scss'])
     .pipe($.sass().on('error', $.notify.onError()))
     .pipe($.postcss(PROCESSORS))
     .pipe($.if(prod, $.csso()))
@@ -153,7 +136,7 @@ gulp.task('build:font', () =>
 )
 
 gulp.task('build:style', gulp.series(
-  'sass', 'bootstrap'
+  'sass'
 ))
 
 gulp.task('build:static', gulp.series(
@@ -172,7 +155,6 @@ gulp.task('jekyll-build', gulp.series(
 gulp.task('watch', () => {
   gulp.watch(env.watch.svg, gulp.series('build:svg'))
   gulp.watch(env.watch.sass, gulp.series('sass'))
-  gulp.watch(env.watch.bootstrap, gulp.series('bootstrap'))
   gulp.watch(env.watch.jekyll, gulp.series('jekyll-build'))
   gulp.watch(env.watch.js, gulp.series('build:js'))
 })
