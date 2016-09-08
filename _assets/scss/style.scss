@@ -1,103 +1,21 @@
-@import "variables";
-@import "brandcolors";
-@import "grid";
-@import "layout";
-@import "header";
-@import "footer";
-@import "pagination";
-@import "ico";
-@import "posts";
-@import "sidebar";
-@import "github-markdown";
-@import "highlights";
+// variabless
+@import "common/variables";
+@import "common/brandcolors";
+
+@import "common/base";
+@import "common/grid";
+@import "common/layout";
+@import "common/header";
+@import "common/footer";
+@import "common/pagination";
+@import "common/ico";
+@import "common/posts";
+@import "common/sidebar";
+
+// highlights style
+@import "common/github-markdown";
+@import "common/highlights";
+
+// modifiers
 @import "modifiers/modifiers";
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: $footer-height;
-  background: #fafafa;
-  font-family: $sans-serif;
-  line-height: 1.5em;
-}
-
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  // font-family: $serif;
-  &:first-child {
-    margin-top: 0px;
-  }
-
-  &:last-child {
-    margin-bottom: 0px;
-  }
-}
-
-img {
-  max-width: 100%;
-}
-
-a{
-  transition: all .2s;
-  color: $blue;
-  &:hover{
-    // color: darken($blue, 10%);
-    cursor: pointer;
-  }
-}
-
-.container{
-  max-width: 1024px;
-  margin: 0 auto;
-
-  @media (max-width:1024px){
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
-::selection {
-  color: #fff;
-  background: $blue;
-}
-
-.media {
-  display: flex;
-  align-items: flex-start;
-}
-
-.media-center {
-  align-items: center;
-}
-
-.media-body{
-  flex: 1;
-}
-
-.hr {
-  height: 1px;
-  background: #ddd;
-  position: relative;
-  margin-top: 30px;
-  margin-bottom: 20px;
-
-  .hr-text {
-    left: 15px;
-    position: absolute;
-    font-size: 13px;
-    background: #fff;
-    color: #999;
-    padding: 0 5px;
-    // top: 50%;
-    transform: translateY(-50%);
-  }
-}
-
-.capitalize-first-letter{
-  &:first-letter {
-    text-transform: uppercase;
-  }
-}
