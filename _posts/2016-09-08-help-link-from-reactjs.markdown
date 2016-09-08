@@ -20,3 +20,8 @@ uncomplete: true
 
 - [React Bootstrap **EN**](https://react-bootstrap.github.io/)
 - [Роутинг в react-приложениях **RU**](https://maxfarseer.gitbooks.io/react-router-course-ru/content/)
+
+Сборники компонентов:
+
+- [Awesome react components](https://github.com/brillout/awesome-react-components)
+- [JS coach / react](https://js.coach/react)
