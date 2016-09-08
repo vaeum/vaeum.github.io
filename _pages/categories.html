@@ -1,9 +1,19 @@
 ---
 layout: page
-title: Список всех категорий
+title: Все теги блога
 permalink: /categories/
 ---
 
-<div class="resume">
-    Lorem ipsum dolor sit amet, consectetur
+<div class="page-tags">
+  <ul class="lsn mb0 pl0 clearfix">
+    {% for category in site.categories limit: 10%}
+      {% assign name_category = category | first %}
+      <li>
+        <a href="/categories/{{name_category}}/">
+          {% include svg/tag.svg %}
+          <span class="text">{{name_category}}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 </div>
