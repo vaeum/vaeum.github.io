@@ -13,15 +13,31 @@ uncomplete: true
 Документация:
 
 - [Оффициальная документация Facebook **EN**](https://facebook.github.io/react/)
+- [Перевод офф. документции **RU**](http://tftf.ru/stati/javascript/reactjs/)
 - [React.js курс для начинающих **RU**](https://maxfarseer.gitbooks.io/react-course-ru/content/)
-- [Паттерны React JS **RU**](https://habrahabr.ru/post/309422/)
+- [Роутинг в react-приложениях **RU**](https://maxfarseer.gitbooks.io/react-router-course-ru/content/)
 
-Плагины для React JS
+Компоненты для React JS
 
 - [React Bootstrap **EN**](https://react-bootstrap.github.io/)
-- [Роутинг в react-приложениях **RU**](https://maxfarseer.gitbooks.io/react-router-course-ru/content/)
+- [Rebass — большой набор полностью настраиваемых интерфейсных компонентов для React. **EN**](http://jxnblk.com/rebass/)
 
 Сборники компонентов:
 
 - [Awesome react components](https://github.com/brillout/awesome-react-components)
 - [JS coach / react](https://js.coach/react)
+
+Блоги:
+
+- [Прогрессор - блог о фронтенте](http://prgssr.ru/)
+
+Статьи:
+
+- [Паттерны React JS перевод http://reactpatterns.com/ **RU**](https://habrahabr.ru/post/309422/)
+- [Паттерны React JS **EN**](http://reactpatterns.com/)
+- [ReactJS для глупых людей **RU**](https://habrahabr.ru/post/249107/)
+- [Год использования ReactJS: подводим итоги **RU**](https://habrahabr.ru/company/Voximplant/blog/308118/)
+- [How to ReactJS **RU**](https://habrahabr.ru/post/275227/)
+- [Using ReactJS without Webpack **EN**](http://javascriptplayground.com/blog/2016/04/react-no-webpack/)
+- [ReactJS 15.0.2 Tutorial **RU**](https://habrahabr.ru/post/282874/)
+
