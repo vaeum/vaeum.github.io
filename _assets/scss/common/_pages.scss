@@ -1,0 +1,41 @@
+.page-tags{
+  .ico-tag{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+
+  ul{
+    margin-top: 20px;
+  }
+
+  li{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  a{
+    font-size: 16px;
+    color: #333;
+    background: #fafafa;
+    padding: 5px 20px;
+    display: block;
+    border-radius: 100px;
+    text-decoration: none;
+    border: 1px #ddd solid;
+
+    &:hover{
+      background: $blue;
+      color: #fff;
+    }
+  }
+
+  .text{
+    vertical-align: middle;
+  }
+}

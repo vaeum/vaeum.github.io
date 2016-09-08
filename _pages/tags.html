@@ -1,9 +1,19 @@
 ---
 layout: page
-title: Резюме
+title: Все теги блога
 permalink: /tags/
 ---
 
-<div class="resume">
-    Lorem ipsum dolor sit amet, consectetur
+<div class="page-tags">
+  <ul class="lsn mb0 pl0 clearfix">
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags limit: 10%}
+      <li class="dib">
+        <a href="/tag/{{ tag | first | slugify }}/">
+          {% include svg/tag.svg %}
+          <span class="text">{{ tag[0] | replace:'-', ' ' }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 </div>
