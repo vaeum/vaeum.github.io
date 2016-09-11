@@ -1,7 +1,7 @@
 ---
 title: "Полезные ссылки для React разработчика"
 layout: post
-tag: React JS
+tags: React JS
 categories: Links
 uncomplete: true
 ---

@@ -3,7 +3,7 @@ layout: post
 title:  "Новости от 31 августа"
 date:   2016-08-31
 categories: News
-tag: News
+tags: News
 news: true
 ---
 
