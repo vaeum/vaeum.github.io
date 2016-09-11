@@ -40,4 +40,6 @@ uncomplete: true
 - [How to ReactJS **RU**](https://habrahabr.ru/post/275227/)
 - [Using ReactJS without Webpack **EN**](http://javascriptplayground.com/blog/2016/04/react-no-webpack/)
 - [ReactJS 15.0.2 Tutorial **RU**](https://habrahabr.ru/post/282874/)
+- [Мир недокументированного React.js. Context **RU**](https://habrahabr.ru/post/266407/)
+- [Умные и глупые компоненты React **RU**](https://habrahabr.ru/post/266559/)
 
