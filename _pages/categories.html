@@ -6,7 +6,7 @@ permalink: /categories/
 
 <div class="page-tags">
   <ul class="lsn mb0 pl0 clearfix">
-    {% for category in site.categories limit: 10%}
+    {% for category in site.categories %}
       {% assign name_category = category | first %}
       <li>
         <a href="/categories/{{name_category}}/">
