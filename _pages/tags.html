@@ -7,7 +7,7 @@ permalink: /tags/
 <div class="page-tags">
   <ul class="lsn mb0 pl0 clearfix">
     {% assign tags = site.tags | sort %}
-    {% for tag in tags limit: 10%}
+    {% for tag in tags %}
       <li>
         <a href="/tag/{{ tag | first | slugify }}/">
           {% include svg/tag.svg %}
