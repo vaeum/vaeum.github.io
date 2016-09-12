@@ -111,3 +111,7 @@
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
+
+%border-box {
+  box-sizing: border-box;
+}
