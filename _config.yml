@@ -94,6 +94,7 @@ exclude:
   - assets
   - gulpfile.babel.js
   - bower.json
+  - run.sh
 
 include:
   - _pages
