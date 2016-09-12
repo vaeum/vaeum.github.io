@@ -29,7 +29,9 @@ uncomplete: true
 
 Блоги:
 
+- [Хабрахабр](https://habrahabr.ru/)
 - [Прогрессор - блог о фронтенте](http://prgssr.ru/)
+- [Frontender Magazine](http://frontender.info/)
 
 Статьи:
 
@@ -42,4 +44,5 @@ uncomplete: true
 - [ReactJS 15.0.2 Tutorial **RU**](https://habrahabr.ru/post/282874/)
 - [Мир недокументированного React.js. Context **RU**](https://habrahabr.ru/post/266407/)
 - [Умные и глупые компоненты React **RU**](https://habrahabr.ru/post/266559/)
+- [React-компоненты с привкусом БЭМ **RU**](http://frontender.info/simple-react-components-generator-with-bem-flavour/)
 
