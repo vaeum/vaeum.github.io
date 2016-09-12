@@ -7,7 +7,7 @@ tags: ES6 Babel
 uncomplete: true
 ---
 
-![first image](https://blog.codepen.io/wp-content/uploads/2015/05/babel.png)
+![first image](http://s018.radikal.ru/i502/1609/8f/48b18529d537.jpg)
 
 Сегодня по говорим о таком нововведении в язык JavaScript операторов рашрирений или по другому **spead operator**. 
 Это довольно удобный оператор и используется часто, особенно в React JS приложениях. 

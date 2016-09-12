@@ -86,7 +86,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
-  # - README.md
   - Rakefile
   - package.json
   - Makefile
@@ -95,6 +94,7 @@ exclude:
   - gulpfile.babel.js
   - bower.json
   - run.sh
+  - install.sh
 
 include:
   - _pages
