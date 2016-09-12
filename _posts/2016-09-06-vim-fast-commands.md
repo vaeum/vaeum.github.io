@@ -7,7 +7,7 @@ tags: Vim
 uncomplete: true
 ---
 
-![first image](http://zenway.ru/uploads/obzori/vim.png)
+![first image](http://s019.radikal.ru/i612/1609/d0/d5ac80e8cfb2.jpg)
 
 В этой статье я приведу список команд этого текстового редактора. 
 Важно понимать что не все команды работают с режимом эмуляции Vim. 
