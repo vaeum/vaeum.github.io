@@ -7,7 +7,7 @@ tags: News
 news: true
 ---
 
-![first image](https://trupartnercu.org/wp-content/uploads/2015/03/01.jpg)
+![first image](http://i82.fastpic.ru/big/2016/0912/60/7dd8ab90404e6018f6cf24872cdfc960.jpg)
 
 С этого дня буду выкладывать новости и изменения, которые произошли с проектом.
 Давно это хотел сделать но руки все не доходили, и сегодня мне хватило времени.
