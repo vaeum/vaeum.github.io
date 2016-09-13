@@ -1,11 +1,49 @@
-### Блог Vaeum.com
+## Блог Vaeum.com
 
 [![Build Status](https://travis-ci.org/vaeum/vaeum.github.io.svg?branch=dev)](https://travis-ci.org/vaeum/vaeum.github.io)
 
-#### Local Development
+### Установка
 
-1. Install Jekyll and plug-ins in one fell swoop. `gem install github-pages` This mirrors the plug-ins used by GitHub Pages on your local machine including Jekyll, Sass, etc.
-2. Clone down your fork `git clone https://github.com/yourusername/yourusername.github.io.git`
-3. Serve the site and watch for markup/sass changes `jekyll serve`
-4. View your website at http://127.0.0.1:4000/
-5. Commit any changes and push everything to the master branch of your GitHub user repository. GitHub Pages will then rebuild and serve your website.
+- Скачиваем и устанавливаем Node JS и NPM [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+- Обновляем NPM до 3 версии `npm install -g npm`
+- Устанавливаем Ruby [https://www.ruby-lang.org/en/](https://www.ruby-lang.org/en/)
+- Клонируем репозиторий `git@github.com:vaeum/vaeum.github.io.git vaeum.blog`
+- `cd vaeum.blog`
+- `make install` или `./install.sh`
+
+### Запуск проекта
+
+- `npm start` или `make`
+
+###  Дополнительные команды
+
+- `npm run styleguide` сгенерировать styleguide
+
+### Файлы и папки
+
+- **_assets** - папка с исходниками стилей и скриптов
+- **_includes** - папка с частями кода для вставки в проект
+- **_layouts** - папка с шаблонами
+- **_locales** - папка с локализациями
+- **_pages** - папка со страницами
+- **_plugins** - папка для плагинов
+- **_posts** - папка для постов
+- **_templates **
+- **images** - папка для хранения картинок
+- **.babelrc ** 
+- **.editorconfig**
+- **.gitignore**
+- **.travis.yml**
+- **CNAME**
+- **Gemfile**
+- **Makefile**
+- **README.md**
+- **Rakefile**
+- **_config.yml**
+- **feed.xml**
+- **gulpfile.babel.js**
+- **index.html**
+- **install.sh**
+- **package.json**
+- **run.sh**
+- **search.json**
