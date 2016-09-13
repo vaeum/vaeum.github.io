@@ -28,22 +28,22 @@
 - **_pages** - папка со страницами
 - **_plugins** - папка для плагинов
 - **_posts** - папка для постов
-- **_templates **
+- **_templates** - 
 - **images** - папка для хранения картинок
-- **.babelrc ** 
-- **.editorconfig**
-- **.gitignore**
+- **.babelrc** 
+- **.editorconfig** - настройка редактора по умолчанию
+- **.gitignore** - файл для игнорирования папок и файлов
 - **.travis.yml**
-- **CNAME**
+- **CNAME** - файл для хостинга
 - **Gemfile**
-- **Makefile**
+- **Makefile** - файл для выполнения команд
 - **README.md**
-- **Rakefile**
-- **_config.yml**
-- **feed.xml**
-- **gulpfile.babel.js**
-- **index.html**
-- **install.sh**
-- **package.json**
-- **run.sh**
-- **search.json**
+- **Rakefile** - запуск тестов
+- **_config.yml** - файл Jekyll конфигурации
+- **feed.xml** - шаблон ленты новостей
+- **gulpfile.babel.js** - файл с задачами для Gulp
+- **index.html** - главный файл блога
+- **install.sh** - Bash скрипт для установки зависимостей (для WebStorm)
+- **package.json** - файл с NPM пакетами
+- **run.sh** - Bash скрипт для запуска проекта (для WebStorm)
+- **search.json** - Json файл для генерирования поиска по блогу
