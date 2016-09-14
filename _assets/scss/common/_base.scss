@@ -63,25 +63,6 @@ a{
   flex: 1;
 }
 
-.hr {
-  height: 1px;
-  background: #ddd;
-  position: relative;
-  margin-top: 30px;
-  margin-bottom: 20px;
-
-  .hr-text {
-    left: 15px;
-    position: absolute;
-    font-size: 13px;
-    background: #fff;
-    color: #999;
-    padding: 0 5px;
-    // top: 50%;
-    transform: translateY(-50%);
-  }
-}
-
 .capitalize-first-letter{
   &:first-letter {
     text-transform: uppercase;

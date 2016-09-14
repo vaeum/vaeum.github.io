@@ -153,7 +153,7 @@
 .markdown-body code,
 .markdown-body kbd,
 .markdown-body pre {
-  // font-family: $monospace;
+  // font-family: $font-monospace;
   // font-size: 1em;
 }
 
@@ -311,7 +311,7 @@
 }
 
 .markdown-body code {
-  font-family: $monospace;
+  font-family: $font-monospace;
   font-size: 14px;
 }
 
@@ -319,7 +319,7 @@
   margin-top: 0;
   margin-bottom: 0;
   // font-size: 12px;
-  font-family: $monospace;
+  font-family: $font-monospace;
 }
 
 .markdown-body .octicon {
@@ -661,7 +661,7 @@
   display: inline-block;
   padding: 3px 5px;
   font-size: 11px;
-  font-family: $monospace;
+  font-family: $font-monospace;
   line-height: 10px;
   color: #555;
   vertical-align: middle;

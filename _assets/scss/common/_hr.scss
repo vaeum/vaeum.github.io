@@ -1,0 +1,27 @@
+/**
+ * @atom hr
+ * @section Navigation > hr
+ * @markup
+ *   <div class="hr">
+ *     <span class="hr-text">Теги</span>
+ *   </div>
+ */
+
+.hr {
+ height: 1px;
+ background: #ddd;
+ position: relative;
+ margin-top: 30px;
+ margin-bottom: 20px;
+
+ .hr-text {
+   left: 15px;
+   position: absolute;
+   font-size: 13px;
+   background: #fff;
+   color: #999;
+   padding: 0 5px;
+   // top: 50%;
+   transform: translateY(-50%);
+ }
+}
