@@ -1,19 +1,20 @@
 {
   "name": "vaeum.github.io",
   "version": "1.0.0",
-  "description": "> March, 2016: If you're on an old version of Jekyll Now and run into a) build warnings or b) syntax highlighting issues caused by [Jekyll 3 and GitHub Pages updates](https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0), just :sparkles:[update your _config.yml](https://github.com/barryclark/jekyll-now/pull/445/files):sparkles: and you'll be set!",
+  "description": "Small jekyll blog",
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/gulp",
     "build": "jekyll build",
-    "styleguide": "./node_modules/nucleus-styleguide/bin.js  --title StyleBook --target ./_site/styleguide nucleus --css ./assets/**/*.scss"
+    "styleguide": "./node_modules/nucleus-styleguide/bin.js  --title StyleBook --target ./_site/styleguide nucleus --css ./assets/**/*.scss",
+    "init": "gem install bundler -v 1.11.2; bundle install; npm install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vaeum/vaeum.github.io.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["blog"],
+  "author": "vaeum",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vaeum/vaeum.github.io/issues"
