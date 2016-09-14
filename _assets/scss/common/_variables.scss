@@ -1,23 +1,44 @@
-// color stack
-$red: #d14;
-$dark: #333;
-$gray: #eee;
+/** @color Blue color */
 $blue: #5D83C1;
+
+/** @color Black color */
+$black: #000;
+
+/** @color Dark color*/
+$dark: #333;
+
+/** @color Red color */
+$red: #d14;
+
+/** @color Gray color */
+$gray: #eee;
+
+/** @color Green color */
 $green: #56AB7A;
+
+/** @color Yellow color */
 $yellow: #F1D7AD;
+
+/** @color White color */
 $white: #fff;
 
-// Mobile breakpoints
-@mixin mobile {
-  @media screen and (max-width: 640px) {
-    @content;
-  }
-}
-
+/**
+ * The header height variabless
+ *
+ * @nuclide Image-Folder
+ * @section Config > Height
+ */
 $header-height: 50px;
+
+/**
+ * The footer height variabless
+ *
+ * @nuclide Image-Folder
+ * @section Config > Footer
+ */
 $footer-height: 100px;
 
-// Font stacks
+
 $trebuchet: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 $sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
