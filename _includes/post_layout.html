@@ -17,15 +17,8 @@
   </div>
 
   {% if post.image %}
-    <img src="{{post.image}}" class="post-img" onerror="defaultImage(this);">
+    <img src="{{post.image}}" class="post-img" onerror="this.src='/images/default.jpg'">
   {% endif %}
-
-  <script>
-    function defaultImage(img){
-      img.onerror = "";
-      img.src = '/images/default.jpg';
-    }
-  </script>
 
   <p class="excerpt">
     {{ post.content | strip_html | truncatewords: 40 }}
