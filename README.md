@@ -5,7 +5,7 @@
 
 ### Установка
 
-- Скачиваем и устанавливаем Node JS и NPM [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+- Скачиваем и устанавливаем Node JS и NPM [https://nodejs.org/en/download/current/](https://nodejs.org/en/download/current/)
 - Обновляем NPM до 3 версии `npm install -g npm`
 - Устанавливаем Ruby [https://www.ruby-lang.org/en/](https://www.ruby-lang.org/en/)
 - Клонируем репозиторий `git@github.com:vaeum/vaeum.github.io.git vaeum.blog`
