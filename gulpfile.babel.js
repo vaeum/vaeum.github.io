@@ -60,7 +60,7 @@ gulp.task('sass', () =>
 
 gulp.task('jekyll', (done) => {
   browserSync.notify(env.messages.jekyllBuild);
-  return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
+  return cp.spawn( jekyll , ['build', '--incremental'], {stdio: 'inherit'})
     .on('close', done);
 })
 
@@ -101,7 +101,7 @@ gulp.task('html:include', () =>
 )
 
 gulp.task('build:svg', () =>
-  gulp.src('./_assets/svg/**/*.svg')
+  gulp.src('./_assets/svg/**/*.svg', {since: gulp.lastRun('build:svg')})
     .pipe($.svgmin((file)=>{
       var prefix = path.basename(file.relative, path.extname(file.relative));
       return {
@@ -125,7 +125,7 @@ gulp.task('build:svg', () =>
 )
 
 gulp.task('build:js', () =>
-  gulp.src(['./_assets/js/*.*'])
+  gulp.src(['./_assets/js/*.*'], {since: gulp.lastRun('build:js')})
     .pipe($.if(prod, $.uglify()))
     .pipe(gulp.dest('./_site/js/'))
 )
@@ -156,7 +156,7 @@ gulp.task('watch', () => {
   gulp.watch(env.watch.svg, gulp.series('build:svg'))
   gulp.watch(env.watch.sass, gulp.series('sass'))
   gulp.watch(env.watch.jekyll, gulp.series('jekyll-build'))
-  gulp.watch(env.watch.js, gulp.series('build:js'))
+  gulp.watch(env.watch.js, gulp.series('build:js', 'reload'))
 })
 
 gulp.task('default', gulp.series(
