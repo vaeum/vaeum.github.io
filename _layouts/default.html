@@ -41,6 +41,13 @@
 
     {% include analytics.html %}
 
+    <script>
+      var elements = document.querySelectorAll("img");
+      Array.prototype.forEach.call(elements, function(el, i){
+        el.setAttribute("onerror", "this.src='/images/notfound.jpg'")
+      });
+    </script>
+
     <!-- Optimized loading JS Start -->
     <script>var scr = {"scripts":[
       {"src" : "{{ site.baseurl }}/js/main.js", "async" : false},
