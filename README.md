@@ -10,7 +10,7 @@
 - Устанавливаем Ruby [https://www.ruby-lang.org/en/](https://www.ruby-lang.org/en/)
 - Клонируем репозиторий `git@github.com:vaeum/vaeum.github.io.git vaeum.blog`
 - `cd vaeum.blog`
-- `make install` или `./install.sh`
+- `make install` или `./install.sh` или `npm run init`
 
 ### Запуск проекта
 
