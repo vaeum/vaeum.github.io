@@ -1,6 +1,7 @@
 # Блог Vaeum.com
 
 [![Build Status](https://travis-ci.org/vaeum/vaeum.github.io.svg?branch=dev)](https://travis-ci.org/vaeum/vaeum.github.io)
+[![Gitter](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://gitter.im/vaeum/blog?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ### Установка
 
