@@ -125,7 +125,7 @@ gulp.task('build:svg', () =>
 )
 
 gulp.task('build:js', () =>
-  gulp.src(['./_assets/js/*.*'], {since: gulp.lastRun('build:js')})
+  gulp.src(['./_assets/js/*.*'])
     .pipe($.if(prod, $.uglify()))
     .pipe(gulp.dest('./_site/js/'))
 )
