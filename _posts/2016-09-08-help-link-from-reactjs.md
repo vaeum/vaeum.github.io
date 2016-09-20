@@ -46,4 +46,5 @@ uncomplete: true
 - [Умные и глупые компоненты React **RU**](https://habrahabr.ru/post/266559/)
 - [React-компоненты с привкусом БЭМ **RU**](http://frontender.info/simple-react-components-generator-with-bem-flavour/)
 - [Как добавить ReactJS в существующее веб-приложение **RU**](http://prgssr.ru/development/kak-dobavit-reactjs-v-sushestvuyushee-veb-prilozhenie.html)
+- [Работа с AJAX запросами в React — где и когда загружать данные **EN**](https://daveceddia.com/ajax-requests-in-react/)
 
