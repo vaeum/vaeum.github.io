@@ -3,7 +3,6 @@ layout: post
 title:  "Дневник начинающего разработчика. Статья 1 Вводная часть."
 categories: Swift Xcode
 tags: Swift Xcode  
-uncomplete: true
 ---
 
 ![first image](http://s020.radikal.ru/i712/1609/b2/1777a35cfac8.jpg)

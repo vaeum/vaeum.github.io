@@ -1,9 +1,7 @@
 ---
 layout: post
 title:  "Использование положительного look-behind условия"
-date:   2016-08-25
 categories: Regexp
-uncomplete: false
 ---
 
 ![first image](https://www.mullie.eu/public/posts/regex-2.png)

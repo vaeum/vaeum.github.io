@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  "Michael Herman - PostgreSQL and NodeJS"
-date:   2016-08-24
 categories: Translation
 tags: NPM PostgreSQL NodeJS
-uncomplete: true
 ---
 
 {: .annotations}

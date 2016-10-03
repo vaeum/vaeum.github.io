@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  "Краткий список команд Vim для быстрого редактирования текста"
-date:   2016-09-06
 categories:  TextEditors
 tags: Vim
-uncomplete: true
 ---
 
 ![first image](http://s019.radikal.ru/i612/1609/d0/d5ac80e8cfb2.jpg)

@@ -3,7 +3,6 @@ title: "Полезные ссылки для React разработчика"
 layout: post
 tags: React JS
 categories: Links
-uncomplete: true
 ---
 
 ![first image](http://s61.radikal.ru/i174/1609/93/55d940245e96.png)
