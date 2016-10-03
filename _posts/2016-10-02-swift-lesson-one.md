@@ -1,5 +1,5 @@
 ---
-****layout: post
+layout: post
 title:  "Дневник начинающего разработчика. Урок 1 Вывод значние в label."
 categories: Swift Xcode
 tags: Swift Xcode  
