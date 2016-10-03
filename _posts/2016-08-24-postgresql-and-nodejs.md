@@ -6,19 +6,19 @@ tags: NPM PostgreSQL NodeJS
 ---
 
 {: .annotations}
-Это мой перевод хорошей статьи 
-[Michael Herman - PostgreSQL and NodeJS](http://mherman.org/blog/2015/02/12/postgresql-and-nodejs/). 
-В этой статье я постарался как можно проще рассказать о процессе создания 
+Это мой перевод хорошей статьи
+[Michael Herman - PostgreSQL and NodeJS](http://mherman.org/blog/2015/02/12/postgresql-and-nodejs/).
+В этой статье я постарался как можно проще рассказать о процессе создания
 приложений с использованием таких технологий, как PostgreSQL и NodeJS.
 
-Сегодня мы собираемся написать одностраничное [CRUD](https://ru.wikipedia.org/wiki/CRUD) Todo приложение  
+Сегодня мы собираемся написать одностраничное [CRUD](https://ru.wikipedia.org/wiki/CRUD) Todo приложение
 с использованием технологий, Node JS,  Express, Angular JS, и PostgreSQL.
 
 ![first image](https://raw.githubusercontent.com/mjhea0/node-postgres-todo/master/_blog/node-todo-postges.jpg)
 
 ## Настройка проекта
 
-Для начала нужно установить [генератор Express](http://expressjs.com/starter/generator.html) 
+Для начала нужно установить [генератор Express](http://expressjs.com/starter/generator.html)
 глобально, если он не установлен:
 
 ```
@@ -53,14 +53,14 @@ $ npm install supervisor -g
 $ npm start
 ```
 
-Затем перейдите по адресу [http://localhost:3000/](http://localhost:3000/), 
+Затем перейдите по адресу [http://localhost:3000/](http://localhost:3000/),
 и в браузере Вы должны увидеть текст “Welcome to Express”.
 
 ## Настройка Postgres
 
 > Если нужно установить Postgres на Mac? Для этого есть [Postgres.app](http://postgresapp.com/)
 
-После запуска Postgres сервера на порту 5432, для легкого подключения к базе 
+После запуска Postgres сервера на порту 5432, для легкого подключения к базе
 нужно установить [pg](https://www.npmjs.com/package/pg) библиотеку
 
 ```
@@ -81,13 +81,13 @@ query.on('end', function() { client.end(); });
 
 Сохраните его как **database.js** файл, в новой папке **models**, в корне проекта.
 
-В этом файле мы создали экземпляр класса `Client` для взаимодействия с базой данных, а 
-затем установили связь с ним с помощью `connect()` метода. После чего мы запускаем SQL 
-запрос с помощью `query()` метода. Связь закрывается с помощью `end()`метода. Обязательно 
+В этом файле мы создали экземпляр класса `Client` для взаимодействия с базой данных, а
+затем установили связь с ним с помощью `connect()` метода. После чего мы запускаем SQL
+запрос с помощью `query()` метода. Связь закрывается с помощью `end()`метода. Обязательно
 ознакомьтесь с разделом [документации](https://github.com/brianc/node-postgres/wiki/Client) 
 для получения дополнительной информации.
 
-Убедитесь, что у вас есть база данных под названием "TODO", а затем запускаем скрипт 
+Убедитесь, что у вас есть база данных под названием "TODO", а затем запускаем скрипт
 для настройки таблицы и последующих полей:
 
 ```
@@ -114,7 +114,7 @@ Indexes:
 
 ## Маршрутизация на стороне сервера:
 
-Следующим шагом мы просто добавим функциональные блоки в файл **index.js**,  который находиться в папке **routes** 
+Следующим шагом мы просто добавим функциональные блоки в файл **index.js**,  который находиться в папке **routes**
 
 ```javascript
 var express = require('express');
@@ -176,7 +176,7 @@ router.post('/api/v1/todos', function(req, res) {
 Для тестирования наберите в терминале:
 
 ```
-$ curl --data "text=test&complete=false" http://127.0.0.1:3000/api/v1/todos	
+$ curl --data "text=test&complete=false" http://127.0.0.1:3000/api/v1/todos
 ```
 
 Затем убедитесь, что данные были правильно занесены в базу данных с помощью PSQL:
@@ -224,8 +224,8 @@ router.get('/api/v1/todos', function(req, res) {
 });
 ```
 
-Добавьте пару пунктов с помощью Curl, и проверьте в браузере по адресу 
-[http://localhost:3000/api/v1/todos](http://localhost:3000/api/v1/todos). 
+Добавьте пару пунктов с помощью Curl, и проверьте в браузере по адресу
+[http://localhost:3000/api/v1/todos](http://localhost:3000/api/v1/todos).
 Вы должны получить примерно такой результат:
 
 ```json
@@ -385,7 +385,7 @@ $ curl -X DELETE http://127.0.0.1:3000/api/v1/todos/3
 
 ## Рефакторинг нашего TODO приложения
 
-Перед тем, как перейти к клиентской стороне нашего приложения, нужно добавить Angular JS, 
+Перед тем, как перейти к клиентской стороне нашего приложения, нужно добавить Angular JS,
 имейте в виду, что наш код должен быть переработан, чтобы решить несколько проблем. 
 Но это отличная возможность реорганизовать код по своему усмотрению. Удачи!
 
@@ -393,13 +393,13 @@ $ curl -X DELETE http://127.0.0.1:3000/api/v1/todos/3
 
 Давайте начнем работу с Angular JS
 
-> Учтите что этот урок не является полноценным учебным пособием для изучения Angular JS. 
-> Если вы новичек в Angular JS, то я предлагаю посмотреть мой учебник "Angular JS на 
+> Учтите что этот урок не является полноценным учебным пособием для изучения Angular JS.
+> Если вы новичек в Angular JS, то я предлагаю посмотреть мой учебник "Angular JS на
 > примере" - [Building a Bitcoin Investment Calculator](https://github.com/mjhea0/thinkful-angular).
 
 ### Создание модуля
 
-Создайте файл с именем **app.js** в папке **public/javascripts**. 
+Создайте файл с именем **app.js** в папке **public/javascripts**.
 В нем мы будем создавать наши модули и контроллеры для Angular JS
 
 ```javascript
@@ -422,7 +422,7 @@ angular.module('nodeTodo', [])
 });
 ```
 
-Здесь мы определили наш модуль в нашем контроллере. А в контроллере мы 
-используем [$http](https://code.angularjs.org/1.5.6/docs/api/ng/service/$http) 
+Здесь мы определили наш модуль в нашем контроллере. А в контроллере мы
+используем [$http](https://code.angularjs.org/1.5.6/docs/api/ng/service/$http)
 сервис для создания AJAX запроса к '/api/v1/todos' и обновляем $scope.
 

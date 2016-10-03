@@ -35,7 +35,6 @@ document.onkeydown = function(evt) {
 
 document.getElementById('footer-date').innerHTML = new Date().getFullYear();
 
-
 var Share = {
   vk: function(purl, ptitle, pimg, text) {
     url  = 'http://vkontakte.ru/share.php?';
@@ -87,3 +86,11 @@ var Share = {
     window.open(url,'','toolbar=0,status=0,width=626,height=436');
   }
 };
+
+$(function() {
+  var elements = document.querySelectorAll("img");
+  Array.prototype.forEach.call(elements, function(el, i){
+    el.setAttribute("onerror", "this.src='/images/notfound.jpg'")
+  });
+});
+
