@@ -3,7 +3,6 @@ layout: post
 title:  "Сборник ссылок на он-лайн сервисы"
 categories:
 tags:
-uncomplete: true
 ---
 
 В этом посте 

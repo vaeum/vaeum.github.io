@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  "Учимся пользоваться ES6 spread"
-date:   2016-09-06
 categories:  JavaScript
 tags: ES6 Babel
-uncomplete: true
 ---
 
 ![first image](http://s018.radikal.ru/i502/1609/8f/48b18529d537.jpg)
