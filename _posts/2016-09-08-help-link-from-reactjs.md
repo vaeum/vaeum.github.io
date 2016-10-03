@@ -11,7 +11,7 @@ categories: Links
 
 Документация:
 
-- [Оффициальная документация Facebook **EN**](https://facebook.github.io/react/)
+- [Официальная документация Facebook **EN**](https://facebook.github.io/react/)
 - [Перевод офф. документции **RU**](http://tftf.ru/stati/javascript/reactjs/)
 - [React.js курс для начинающих **RU**](https://maxfarseer.gitbooks.io/react-course-ru/content/)
 - [Роутинг в react-приложениях **RU**](https://maxfarseer.gitbooks.io/react-router-course-ru/content/)
