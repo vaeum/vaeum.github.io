@@ -94,7 +94,7 @@ tags: Swift Xcode
 
 Добавьте код:
 
-```
+```swift
 **addButton**
 
 @IBAction func addButton(_ sender: UIButton) {
