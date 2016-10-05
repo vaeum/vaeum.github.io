@@ -22,6 +22,17 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
+@for $i from 1 through 6{
+  h#{$i}, .h#{$i}{
+    @media(max-width: 992px){
+      font-size: 36 - (3 * $i) + px;
+    }
+    @media(max-width: 768px){
+      font-size: 28 - (3 * $i) + px;
+    }
+  }
+}
+
 img {
   max-width: 100%;
 }
@@ -53,14 +64,14 @@ a{
 .media {
   display: flex;
   align-items: flex-start;
-}
 
-.media-center {
-  align-items: center;
-}
+  &-center {
+    align-items: center;
+  }
 
-.media-body{
-  flex: 1;
+  &-body{
+    flex: 1;
+  }
 }
 
 .capitalize-first-letter{

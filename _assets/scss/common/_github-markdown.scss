@@ -6,6 +6,11 @@
   font-size: 16px;
   // line-height: 1.5;
   word-wrap: break-word;
+
+  @media(max-width: 768px){
+    font-size: 14px;
+  }
+
   .annotations{
     padding: 10px;
     background: #f7f7f7;
