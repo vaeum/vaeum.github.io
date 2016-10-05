@@ -28,7 +28,7 @@ categories: Links
 
 Блоги:
 
-- [Хабрахабр](https://habrahabr.ru/)
+- [Хабрахабр](https://habrahabr.ru/hub/reactjs/)
 - [Прогрессор - блог о фронтенте](http://prgssr.ru/)
 - [Frontender Magazine](http://frontender.info/)
 
@@ -46,4 +46,6 @@ categories: Links
 - [React-компоненты с привкусом БЭМ **RU**](http://frontender.info/simple-react-components-generator-with-bem-flavour/)
 - [Как добавить ReactJS в существующее веб-приложение **RU**](http://prgssr.ru/development/kak-dobavit-reactjs-v-sushestvuyushee-veb-prilozhenie.html)
 - [Работа с AJAX запросами в React — где и когда загружать данные **EN**](https://daveceddia.com/ajax-requests-in-react/)
-
+- [Новый уровень React: React Router **RU**](http://getinstance.info/articles/react/learning-react-router/)
+- [Новый уровень React: Компоненты-контейнеры **RU**](http://getinstance.info/articles/react/learning-react-container-components/)
+- [Новый уровень React: Redux **RU**](http://getinstance.info/articles/react/learning-react-redux/)
