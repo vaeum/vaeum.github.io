@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Практическое примение ES6"
+title:  "Практическое примение ES6 (стрелочные функции и шаблонные строки)"
 categories: JavaScript
 tags: es6
 ---
@@ -198,7 +198,7 @@ const bar = 34;
 
 const baz = `У нас есть ${foo + bar} яблок`;
 
-console.log(baz) // "57 яблок":
+console.log(baz) // "У нас есть 57 яблок":
 ```
 
 Произошло следующее, Babel перевел это в следующий код
@@ -210,16 +210,11 @@ var foo = 23;
 var bar = 34;
 
 var baz = "У нас есть " + (foo + bar) + " яблок";
+console.log(baz) // "У нас есть 57 яблок":
 ```
 
-
-
-
-
-
-const toggleEditMode = ((bool) =>
-  data(type.settingsTypes.SETTINGS_TOGGLE_EDIT_MODE, bool)
-);
+В этом примере видно, что писать такие строки стало легче, не нужно думать 
+добавиться ли пробел или нет, теперь попробуем использовать это на приктике.
 
 ```javascript
 const guid = () => {
@@ -228,24 +223,21 @@ const guid = () => {
 }
 ```
 
-function todoApp(state = initialState, action) {
-// Пока не обрабатываем никаких действий
-// и просто возвращаем состояние, которое приняли в качестве параметра
-return state
+Это функция для генерации GUID, при каждом вызове этой функции будет 
+сгенерирован новый GUID, а теперь посмотрим как бы выглядел код без шаблонной 
+строки
+
+```javascript
+const guid = () => {
+  const s4 = () => Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+  return s4() + s4() + "-" + s4() + "-" + s4() + "-" + s4() + "-" + (s4() + s4() + s4());;
 }
+```
 
-enumTemplate = enumData.map((item, index) => {
-  return (<option key={index} value={item.value}>{item.name}</option>)
-});
+Сегодня мы разобрали стрелочные функции и шаблонные строки, но это лишь малая 
+часть всех нововведений, что было добавленно в язык JavaScript, эта статья 
+будет еще дорабатываться и корректироваться.
 
-var old = {
-  new: 2
-}
-
-var obj = {...old, new:343, new2}
-
-p => ({ foo: 'bar' });
-
-#### Ссылки для 
+#### Дополнительные ссылки 
 
 Спецификация [ECMAScript](http://www.ecma-international.org/ecma-262/6.0/)
