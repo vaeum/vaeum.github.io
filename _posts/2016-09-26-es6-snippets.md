@@ -158,7 +158,7 @@ const data = [
     {data.map((item, index) => {
         return(
             <li key={index}>
-                <a href={{item.url}}>
+                <a href={item.url}>
                     {item.title}
                 </a>
             </li>
@@ -175,7 +175,7 @@ const data = [
 <ul className="menu">
     {data.map((item, index) =>
         <li key={index}>
-            <a href={{item.url}}>
+            <a href={item.url}>
                 {item.title}
             </a>
         </li>
