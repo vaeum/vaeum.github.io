@@ -33,8 +33,6 @@ document.onkeydown = function(evt) {
     }
 };
 
-document.getElementById('footer-date').innerHTML = new Date().getFullYear();
-
 var Share = {
   vk: function(purl, ptitle, pimg, text) {
     url  = 'http://vkontakte.ru/share.php?';
