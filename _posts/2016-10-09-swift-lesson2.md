@@ -5,7 +5,7 @@ categories: Swift Xcode
 tags: Swift Xcode
 ---
 
-![lesson 2](http://s020.radikal.ru/i710/1610/65/9dba01e19ffb.jpg)
+![lesson 2](http://s017.radikal.ru/i407/1610/35/e37c09f4842e.jpg)
 
 
 
