@@ -1,14 +1,34 @@
 <header class="main">
-  <div class="container media media-center">
-    <div class="media-body">
-      <div class="header-logo">
-        <a href="{{ site.baseurl }}/" class="no-underline">
-          {% include svg/logo.svg %}
-          <p class="header-description">
-            Блог веб разработчика
-          </p>
-        </a>
-      </div>
+  <div class="container clearfix">
+    <div class="header-logo">
+      <a href="{{ site.baseurl }}/" class="no-underline db">
+        <span class="header-logo-text">Vaeum.com</span>
+        <p class="header-description">
+          Блог веб разработчика
+        </p>
+      </a>
+    </div>
+
+    <div class="header-menu">
+      <ul class="lsn clearfix pl0 mb0">
+        <li{% if page.url == '/' %} class="active"{% endif %}>
+          <a href="{{ site.baseurl }}/">Блог</a>
+        </li>
+
+        <!-- <li{% if page.url == '/about/' %} class="active"{% endif %}>
+          <a href="{{ site.baseurl }}/about/">О блоге</a>
+        </li> -->
+
+        <!-- <li{% if page.url == '/resume/' %} class="active"{% endif %}>
+          <a href="{{ site.baseurl }}/resume/">Резюме</a>
+        </li> -->
+
+        <li><a href="http://vaeum.com/styleguide/" target="_blank">Style Book</a></li>
+
+        <li{% if page.url == '/archive/' %} class="active"{% endif %}>
+          <a href="{{ site.baseurl }}/archive/">Архив</a>
+        </li>
+      </ul>
     </div>
 
     <div class="header-search">

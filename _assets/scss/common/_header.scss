@@ -1,26 +1,73 @@
 header.main{
-  padding: 20px 0;
+  // padding: 20px 0;
   margin-bottom: 20px;
+  // background: #333;
 }
 
 .header-description{
-  text-transform: uppercase;
+  // text-transform: uppercase;
   color: #999;
-  padding-left: 10px;
+  // padding-left: 10px;
   padding-top: 5px;
+  margin-bottom: 0;
   text-align: center;
+  // font-size: 13px;
+
+  // display: none;
 }
 
 .header-logo{
   float: left;
+  padding: 20px;
+  padding-left: 0;
+  // border-left: 1px #ddd solid;
+  // border-right: 1px #ddd solid;
+  // border-bottom: 1px #ddd solid;
   .ico-logo{
+    // color: #fff;
+    height: 30px;
+    width: auto;
+  }
+}
+
+.header-logo-text{
+  // text-transform: uppercase;
+  color: #333;
+  font-size: 30px;
+  display: block;
+  line-height: 1;
+}
+
+.header-search{
+  float: right;
+
+  .ico-search{
     color: #333;
   }
 }
 
-.header-search{
-  .fa-search{
-    font-size: 20px;
+.header-menu{
+  float: left;
+  padding-left: 20px;
+  li{
+    float: left;
+    margin-right: 15px;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &.active{
+      a{
+        color: red;
+      }
+    }
+  }
+
+  a{
+    font-size: 16px;
+    display: block;
+    padding: 38px 10px;
   }
 }
 
