@@ -6,8 +6,6 @@ tags: Swift Xcode
 ---
 ![Swift-lesson4](http://s017.radikal.ru/i435/1610/b4/f6fcf70848d3.jpg)
 
-
-
 Всем привет!
 
 Сегодня я расскажу как выводить выбранный элемент в **Label** с помощью **PickerView**.
@@ -76,8 +74,6 @@ tags: Swift Xcode
 
 ![](http://s011.radikal.ru/i316/1610/1d/e46dacb7839e.jpg)
 
-
-
 Теперь осталось добавить **Constraints** к **Label**, тут ничего сложного, в прошлых уроках
 это описывал, думаю тут не возникнет сложности.
 
@@ -122,37 +118,43 @@ var cities = ["Москва", "Санкт-Петербург", "Токио", "Б
 Теперь спускаемся ниже к методу **viewDidLoad** и пишем. 
 
 ```swift
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		picker.delegate = self
-		picker.dataSource = self
-	}
+override func viewDidLoad() {
+	super.viewDidLoad()
+	picker.delegate = self
+	picker.dataSource = self
+}
 ```
 
 Потом добавляем 
 
-		override func viewDidLoad() {
-			super.viewDidLoad()
-			picker.delegate = self
-			picker.dataSource = self
-		}
+```swift
+override func viewDidLoad() {
+	super.viewDidLoad()
+	picker.delegate = self
+	picker.dataSource = self
+}
+```
+
 Потом добавляем функции.
 
-	func numberOfComponents(in pickerView: UIPickerView) -> Int {
-		return 1
-	}
-	
-	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-		return cities.count
-	}
-	
-	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-		return cities[row]
-	}
-	
-	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-		cityesLabel.text = cities[row]
-	}
+```swift
+func numberOfComponents(in pickerView: UIPickerView) -> Int {
+	return 1
+}
+
+func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+	return cities.count
+}
+
+func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+	return cities[row]
+}
+
+func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+	cityesLabel.text = cities[row]
+}
+```
+
 **Подробнее,  что мы сделали.**
 
 1. Функция **numberOfComponents** нужна для того, чтобы указать количество ячеек, в которых
