@@ -119,9 +119,9 @@ var cities = ["Москва", "Санкт-Петербург", "Токио", "Б
 
 ```swift
 override func viewDidLoad() {
-	super.viewDidLoad()
-	picker.delegate = self
-	picker.dataSource = self
+    super.viewDidLoad()
+    picker.delegate = self
+    picker.dataSource = self
 }
 ```
 
@@ -129,9 +129,9 @@ override func viewDidLoad() {
 
 ```swift
 override func viewDidLoad() {
-	super.viewDidLoad()
-	picker.delegate = self
-	picker.dataSource = self
+    super.viewDidLoad()
+    picker.delegate = self
+    picker.dataSource = self
 }
 ```
 
@@ -139,19 +139,19 @@ override func viewDidLoad() {
 
 ```swift
 func numberOfComponents(in pickerView: UIPickerView) -> Int {
-	return 1
+    return 1
 }
 
 func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-	return cities.count
+    return cities.count
 }
 
 func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-	return cities[row]
+    return cities[row]
 }
 
 func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-	cityesLabel.text = cities[row]
+    cityesLabel.text = cities[row]
 }
 ```
 
