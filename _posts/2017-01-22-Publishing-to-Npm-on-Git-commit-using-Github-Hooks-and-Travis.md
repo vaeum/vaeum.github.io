@@ -75,14 +75,14 @@ $ travis setup npm
 После этой команды `Travis CLI` задаст несколько вопросов для настройки публикации
 наших модумей в NPM
 
-- Detected repository as ${your repo name}, is this correct? |yes| - жмем enter
+- Detected repository as ${your repo name}, is this correct? \|yes\| - жмем enter
 - NPM email address: - вводим свой email
 - NPM api key: - вставляем свой api key
-- release only tagged commits? |yes|
+- release only tagged commits? \|yes\|
   - если ввести **yes**, то Travis будет публиковать модули только если создан Git Tag,
   - если ввести **no**, то Travis будет публиковать модули после любого коммита
-- Release only from ${your repo name}? |yes| - жмем enter
-- Encrypt API key? |yes| - жмем enter для того чтобы Travis зашифровал наш API key
+- Release only from ${your repo name}? \|yes\| - жмем enter
+- Encrypt API key? \|yes\| - жмем enter для того чтобы Travis зашифровал наш API key
 
 #### Шаг 8
 
