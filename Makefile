@@ -11,3 +11,6 @@ build-prod:
 
 build:
 	JEKYLL_ENV=development jekyll build
+
+styleguide:
+	./node_modules/nucleus-styleguide/bin.js  --title StyleBook --target ./_site/styleguide nucleus --css ./_assets/scss/**/*.scss --template ./_templates/styleguide

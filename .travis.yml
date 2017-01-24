@@ -19,8 +19,6 @@ before_install:
 before_script:
 
 script:
-  - npm i
-
   - NODE_ENV=production ./node_modules/.bin/gulp build:svg
   - make build-prod
 
@@ -29,7 +27,9 @@ script:
   - ./node_modules/.bin/gulp html:include
   - ./node_modules/.bin/gulp html:min
   - ./node_modules/.bin/gulp json:min
-  - npm run styleguide
+  - make styleguide
+
+  - NODE_ENV=production ./node_modules/.bin/gulp minifyHTML
 
   - rm -rf .git
   - cd _site

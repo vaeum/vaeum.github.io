@@ -39,14 +39,14 @@ const env = {
       '_assets/js/**/*.js'
     ]
   },
-}
+};
 
 let PROCESSORS = [
   autoprefixer({ browsers: ['last 2 versions', '> 1%'] }),
   mqpacker,
   selector,
   focusHover
-]
+];
 
 gulp.task('sass', () =>
   gulp.src(['_assets/scss/**/*.scss'])
@@ -56,18 +56,18 @@ gulp.task('sass', () =>
     .pipe($.if(!prod, $.postcss([perfectionist({})])))
     .pipe(gulp.dest('./_site/css/'))
     .pipe(browserSync.stream())
-)
+);
 
 gulp.task('jekyll', (done) => {
   browserSync.notify(env.messages.jekyllBuild);
   return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
     .on('close', done);
-})
+});
 
 gulp.task('reload', (cb) => {
-  browserSync.reload()
+  browserSync.reload();
   return cb();
-})
+});
 
 gulp.task('serve', () => {
   browserSync({
@@ -77,19 +77,19 @@ gulp.task('serve', () => {
       baseDir: '_site'
     }
   })
-})
+});
 
 gulp.task('json:min', () =>
   gulp.src('./_site/search.json')
     .pipe($.jsonminify())
     .pipe(gulp.dest('./_site/'))
-)
+);
 
 gulp.task('html:min', () =>
   gulp.src('./_site/**/*.html')
     .pipe($.htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('./_site/'))
-)
+);
 
 gulp.task('html:include', () =>
   gulp.src('./_site/**/*.html')
@@ -98,12 +98,12 @@ gulp.task('html:include', () =>
       basepath: './_site'
     }))
     .pipe(gulp.dest('./_site/'))
-)
+);
 
 gulp.task('build:svg', () =>
   gulp.src(['./node_modules/octicons/build/svg/*.svg', '_assets/svg/**/*.svg'], {since: gulp.lastRun('build:svg')})
     .pipe($.svgmin((file)=>{
-      var prefix = path.basename(file.relative, path.extname(file.relative));
+      let prefix = path.basename(file.relative, path.extname(file.relative));
       return {
         plugins:[
           {removeDoctype: true},
@@ -122,42 +122,48 @@ gulp.task('build:svg', () =>
       }
     }))
     .pipe(gulp.dest('./_includes/svg'))
-)
+);
+
+gulp.task('minifyHTML', function() {
+  return gulp.src('./_site/**/*.html')
+    .pipe($.htmlmin({collapseWhitespace: false}))
+    .pipe(gulp.dest('./_site'));
+});
 
 gulp.task('build:js', () =>
   gulp.src(['./_assets/js/*.*'])
     .pipe($.if(prod, $.uglify()))
     .pipe(gulp.dest('./_site/js/'))
-)
+);
 
 gulp.task('build:font', () =>
   gulp.src(['./_assets/bower/font-awesome/fonts/**/*.*'])
     .pipe(gulp.dest('./_site/assets/fonts/'))
-)
+);
 
 gulp.task('build:style', gulp.series(
   'sass'
-))
+));
 
 gulp.task('build:static', gulp.series(
   'build:style', 'build:font', 'build:js'
-))
+));
 
 gulp.task('build', gulp.series(
   'build:svg', 'jekyll', 'build:static'
-))
+));
 
 gulp.task('jekyll-build', gulp.series(
   'build:svg', 'jekyll', 'build:style',
   'build:font', 'build:js', 'reload'
-))
+));
 
 gulp.task('watch', () => {
-  gulp.watch(env.watch.svg, gulp.series('build:svg'))
-  gulp.watch(env.watch.sass, gulp.series('sass'))
-  gulp.watch(env.watch.jekyll, gulp.series('jekyll-build'))
-  gulp.watch(env.watch.js, gulp.series('build:js', 'reload'))
-})
+  gulp.watch(env.watch.svg, gulp.series('build:svg'));
+  gulp.watch(env.watch.sass, gulp.series('sass'));
+  gulp.watch(env.watch.jekyll, gulp.series('jekyll-build'));
+  gulp.watch(env.watch.js, gulp.series('build:js', 'reload'));
+});
 
 gulp.task('default', gulp.series(
   'build', gulp.parallel('watch', 'serve')
