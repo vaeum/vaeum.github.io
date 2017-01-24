@@ -57,11 +57,24 @@ let PROCESSORS = [
   require('postcss-discard-comments')({ removeAll: true }),
 ];
 
+const STYLE_SOURCE = [
+  './node_modules/bootstrap-only-css/lib/scaffolding.css',
+  './node_modules/bootstrap-only-css/lib/utilities.css',
+  './node_modules/bootstrap-only-css/lib/normalize.css',
+  './node_modules/bootstrap-only-css/lib/type.css',
+  './node_modules/bootstrap-only-css/lib/grid.css',
+  './node_modules/bootstrap-only-css/lib/responsive-utilities.css',
+  '_assets/scss/**/*.scss',
+  './node_modules/css.modifiers/dist/modifiers.css'
+];
+
 gulp.task('sass', () =>
-  gulp.src(['_assets/scss/**/*.scss'])
+  gulp.src(STYLE_SOURCE)
     .pipe($.sass().on('error', $.notify.onError()))
+    .pipe($.concat('style.css'))
     .pipe($.postcss(PROCESSORS))
     .pipe($.if(prod, $.csso()))
+    .pipe($.cssPurge())
     .pipe($.if(!prod, $.postcss([perfectionist({})])))
     .pipe(gulp.dest('./_site/css/'))
     .pipe(browserSync.stream())

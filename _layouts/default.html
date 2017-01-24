@@ -12,10 +12,8 @@
     <![endif]-->
 
     {% if jekyll.environment == "production" %}
-      <style>@@include('css/bootstrap.css')</style>
       <style>@@include('css/style.css')</style>
     {% else %}
-      <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/bootstrap.css" />
       <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" />
     {% endif %}
 
@@ -27,11 +25,11 @@
 
     <div class="container">
       <div class="row">
-        <div class="col col--9-of-12">
+        <div class="col-md-9">
           {{ content }}
         </div>
 
-        <div class="col col--3-of-12">
+        <div class="col-md-3">
           {% include sidebar.html %}
         </div>
       </div>
