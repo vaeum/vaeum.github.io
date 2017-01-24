@@ -12,11 +12,11 @@ tags: GIT travis NPM
 
 #### Шаг 1
 
-Создаем Github аккаунт и логинимся с помощью него на сервис https://travis-ci.org/
+Создаем Github аккаунт и логинимся с помощью него на сервис [https://travis-ci.org/](https://travis-ci.org/)
 
 #### Шаг 2
 
-Добавляем репозиторий с NPM модулем в своем профиле https://travis-ci.org/profile/,
+Добавляем репозиторий с NPM модулем в своем профиле [https://travis-ci.org/profile/](https://travis-ci.org/profile/),
 нажав на переключатеть
 
 ![Alt text](https://monosnap.com/file/xPdx1aVPgE0WAWmC70s221ulDSQvyt.png)
