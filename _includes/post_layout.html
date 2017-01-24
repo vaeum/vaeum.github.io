@@ -7,11 +7,17 @@
     <ul class="pl0 mb0 clearfix lsn">
       <li>
         {% include svg/calendar.svg %}
+      </li>
+      <li>
         <span>{{ post.date | localize: "%d %B %Y" }}</span>
       </li>
       <li>
         {% include svg/file-directory.svg %}
-        {% for category in post.categories %}<a href="/categories/{{category}}/">{{category}}</a>{% endfor %}
+      </li>
+      <li>
+        {% for category in post.categories %}
+          <a href="/categories/{{category}}/">{{category}}</a>
+        {% endfor %}
       </li>
     </ul>
   </div>
