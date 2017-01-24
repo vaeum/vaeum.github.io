@@ -30,7 +30,7 @@ script:
   - ./node_modules/.bin/gulp json:min
   - make styleguide
 
-  - NODE_ENV=production ./node_modules/.bin/gulp minifyHTML
+  - NODE_ENV=production ./node_modules/.bin/gulp htmlclean
 
   - rm -rf .git
   - cd _site

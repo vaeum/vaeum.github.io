@@ -124,9 +124,9 @@ gulp.task('build:svg', () =>
     .pipe(gulp.dest('./_includes/svg'))
 );
 
-gulp.task('minifyHTML', function() {
+gulp.task('htmlclean', function() {
   return gulp.src('./_site/**/*.html')
-    .pipe($.htmlmin({collapseWhitespace: false}))
+    .pipe($.htmlclean({collapseWhitespace: false}))
     .pipe(gulp.dest('./_site'));
 });
 
