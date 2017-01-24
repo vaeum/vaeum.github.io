@@ -52,6 +52,7 @@
     "octicons": "^5.0.1",
     "perfectionist": "^2.4.0",
     "postcss-custom-selectors": "^3.0.0",
+    "postcss-discard-comments": "^2.0.4",
     "postcss-focus-hover": "0.0.2",
     "postcss-pxtorem": "^4.0.0"
   }

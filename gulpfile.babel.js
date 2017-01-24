@@ -5,16 +5,24 @@ const prod = (process.env.NODE_ENV == "production")?(true):(false);
 import gulp            from 'gulp';
 import path            from 'path';
 import perfectionist   from 'perfectionist';
-import selector        from 'postcss-custom-selectors';
 import focusHover      from 'postcss-focus-hover';
-import mqpacker        from "css-mqpacker";
-import autoprefixer    from 'autoprefixer';
 import browserSync     from 'browser-sync';
 import gulpLoadPlugins from 'gulp-load-plugins';
 
 const $ = gulpLoadPlugins({});
 const cp = require('child_process');
 const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+
+const AUTOPREFIXER = [
+  'Android 2.3',
+  'Android >= 4',
+  'Chrome >= 35',
+  'Firefox >= 31',
+  'Explorer >= 9',
+  'iOS >= 7',
+  'Opera >= 12',
+  'Safari >= 7.1',
+];
 
 const env = {
   messages: {
@@ -42,10 +50,11 @@ const env = {
 };
 
 let PROCESSORS = [
-  autoprefixer({ browsers: ['last 2 versions', '> 1%'] }),
-  mqpacker,
-  selector,
-  focusHover
+  require('autoprefixer')({ browsers: AUTOPREFIXER }),
+  require('css-mqpacker')(),
+  require('postcss-focus-hover')(),
+  require('postcss-custom-selectors')(),
+  require('postcss-discard-comments')({ removeAll: true }),
 ];
 
 gulp.task('sass', () =>
@@ -85,12 +94,6 @@ gulp.task('json:min', () =>
     .pipe(gulp.dest('./_site/'))
 );
 
-gulp.task('html:min', () =>
-  gulp.src('./_site/**/*.html')
-    .pipe($.htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('./_site/'))
-);
-
 gulp.task('html:include', () =>
   gulp.src('./_site/**/*.html')
     .pipe($.fileInclude({
@@ -126,7 +129,7 @@ gulp.task('build:svg', () =>
 
 gulp.task('htmlclean', function() {
   return gulp.src('./_site/**/*.html')
-    .pipe($.htmlclean({collapseWhitespace: false}))
+    .pipe($.htmlclean())
     .pipe(gulp.dest('./_site'));
 });
 
