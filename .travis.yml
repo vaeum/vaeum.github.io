@@ -17,6 +17,7 @@ before_install:
   - npm config set depth 0
 
 before_script:
+  - npm i
 
 script:
   - NODE_ENV=production ./node_modules/.bin/gulp build:svg
