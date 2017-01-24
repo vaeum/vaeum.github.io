@@ -101,7 +101,7 @@ gulp.task('html:include', () =>
 )
 
 gulp.task('build:svg', () =>
-  gulp.src('./_assets/svg/**/*.svg', {since: gulp.lastRun('build:svg')})
+  gulp.src(['./node_modules/octicons/build/svg/*.svg', '_assets/svg/**/*.svg'], {since: gulp.lastRun('build:svg')})
     .pipe($.svgmin((file)=>{
       var prefix = path.basename(file.relative, path.extname(file.relative));
       return {
