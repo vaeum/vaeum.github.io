@@ -19,6 +19,12 @@
           <a href="/categories/{{category}}/">{{category}}</a>
         {% endfor %}
       </li>
+      <li>
+        {% include svg/comment.svg %}
+      </li>
+      <li>
+        <a href="{{ post.url }}index.html#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
+      </li>
     </ul>
   </div>
 
