@@ -12,13 +12,11 @@ tags: Swift Xcode CoreData
 Я обещал своим читателями, что следующая статья будет о CoreData. Таким образом, эта статья
 написана для тех, кто никогда не использовал Core Data раньше.
 
-
-
 **Почему CoreData?**
 
 CoreData — это просто фрейворк, как **UIKit**. Он используется для управления данными/моделями.
 
-**Есть несколько заметных встроенных функций, таких как:** 
+**Есть несколько заметных встроенных функций, таких как:**
 
 1. Отслеживание изменений данных
 2. Отмена и повтор данных
@@ -26,11 +24,9 @@ CoreData — это просто фрейворк, как **UIKit**. Он исп
 4. Сохранение на диске
 5. Частичная загрузка в отличие от UserDefaults.
 
-Это правда, что существуют и другие фреймворки, построенные инженерами, не из компании Apple, таких как **[Realm](https://realm.io)**, который действует как **Core Data**. Не надо стестняться использовать другие
-фреймворки. Я не буду говорить о преимуществах и недостатках в этой статье. (Я так же многое
-из этого не знаю)
-
-
+Это правда, что существуют и другие фреймворки, построенные инженерами, не из компании Apple,
+таких как **[Realm](https://realm.io)**, который действует как **Core Data**. Не надо стестняться использовать другие
+фреймворки. Я не буду говорить о преимуществах и недостатках в этой статье. (Я так же многое из этого не знаю)
 
 **Я думаю вы узнаете**
 
@@ -45,11 +41,7 @@ CoreData — это просто фрейворк, как **UIKit**. Он исп
 
 [Create Default Table in iOS 10](https://www.youtube.com/watch?v=PeBZKH-FORI)
 
-
-
 [Error Handling, Optionals, TypeCasting](https://www.youtube.com/playlist?list=PL8btZwalbjYlRZh8Q1VK80Ly0YsZ7PZxx)
-
-
 
 **UI**
 
@@ -68,11 +60,9 @@ CoreData — это просто фрейворк, как **UIKit**. Он исп
 Я отправил исходный код для вас в конце этой статьи, так что не стесняйтесь читать этот урок,
 затем поиграйте с ним.
 
-
-
 **Давайте начнем!**
 
-При создании проекта, вы должны упомянуть, что вы собираетесь использовать Core Data. 
+При создании проекта, вы должны упомянуть, что вы собираетесь использовать Core Data.
 
 ![](https://cdn-images-1.medium.com/max/800/1*eXDHkA9pZPAGdPwUyOQx4w.png)
 
@@ -89,7 +79,8 @@ CoreData — это просто фрейворк, как **UIKit**. Он исп
 
 Конечно, в целях экономии, мы должны иметь доступ кядру **CoreData**. Есть два страшных слова,
 которые вы должны помнить: **NSPersistentContainer** и **NSManagedObjectContext**.
-Отношения довольно прямо пропорциональны. **Container** как коробка, которая содержит ядро **CoreData** и **Context** как отверстие в коробке, что позволяет пользователям сохранять /
+Отношения довольно прямо пропорциональны. **Container** как коробка, которая содержит ядро
+**CoreData** и **Context** как отверстие в коробке, что позволяет пользователям сохранять /
 извлекать данные из коробки.
 
 Кстати, если вы нажмете на AppDelegate.swift, вы увидите похожие методы и свойства основных
@@ -101,62 +92,41 @@ CoreData — это просто фрейворк, как **UIKit**. Он исп
 его встроенную функцию **saveContext** для сохранения данных, когда пользователь пишет,
 что-то в текстовом поле, а затем нажимает на кнопку.
 
-Код в файле **AddTaskViewController**: 
+Код в файле **AddTaskViewController**:
 
 ```swift
 class AddTaskViewController: UIViewController {
-
  @IBOutlet weak var taskTextField: UITextField!
-
  override func viewDidLoad() {
-
  super.viewDidLoad()
-
 }
-
  @IBAction func buttonTapped(_ sender: UIButton) {
-
   let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
   let task = Task(context: context) // Link Task & Context
-
   task.name = taskTextField.text!
 
  // Save the data to coredata
-
   (UIApplication.shared.delegate as! AppDelegate).saveContext()
 
   let _ = navigationController?.popViewController(animated: true)
-
  }
-
 }
-
 ```
-
 Поскольку задача была связана с контекстом, то **saveContext** функция используется, чтобы указать
 контекст для хранения его имя. Кстати, это, как **saveContext** выглядит в **AppDelegate.swift**
 (не нужно запоминать, но полезно посмотреть)
 
 ```swift
 func saveContext () {
-
  let context = persistentContainer.viewContext
-
  if context.hasChanges {
 
   do {
-
   try context.save()
-
   } catch {
-
    let nserror = error as NSError
-
-   fatalError("Unresolved error (nserror), (nserror.userInfo)")
-
+   fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
  }
-
 }
 ```
 
@@ -167,29 +137,19 @@ func saveContext () {
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
  @IBOutlet weak var tableView: UITableView!
-
  let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
  var tasks: [Task] = []
 
  override func viewDidLoad() {
-
  super.viewDidLoad()
-
   tableView.delegate = self
-
   tableView.dataSource = self
-
  }
 
  override func viewWillAppear(_ animated: Bool) {
-
   getData()
-
   tableView.reloadData()
-
  }
-
 ```
 
 Это верно, как же **GetData()** выглядит? Да, это часть получение данных. Мы собираемся извлечь
@@ -212,7 +172,7 @@ func getData() {
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
  let cell = UITableViewCell()
  let task = tasks[indexPath.row]
- 
+
  if let myName = task.name {
   cell.textLabel?.text = myName
   }
@@ -220,10 +180,13 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 }
  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
  return tasks.count
-}? После того, как вы закончили выборку данных, все остальное в значительной степени то же самое. Но, как об удалении?
+}
 ```
 
-Что-то тут есть? Теперь мы должны удалить через "дыру" с помощью, **NSManagedObjectContext**,
+Что-то тут есть? После того, как вы закончили выборку данных, все остальное в значительной
+степени то же самое. Но, как об удалении?
+
+Теперь мы должны удалить через "дыру" с помощью, **NSManagedObjectContext**,
 а затем получить запрос и перезагрузить таблицу еще раз.
 
 ```swift
@@ -232,7 +195,7 @@ func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEdi
    let task = tasks[indexPath.row]
    context.delete(task)
    (UIApplication.shared.delegate as! AppDelegate).saveContext()
-   
+
    do {
      tasks = try context.fetch(Task.fetchRequest())
    } catch {
@@ -252,4 +215,4 @@ func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEdi
 
 Автор статьи: **Bob Lee**.
 
-Оригинальная статья: [Beginner’s Guide to Core Data in Swift 3](https://medium.com/ios-geek-community/beginners-guide-to-core-data-in-swift-3-85292ef4edd#.s40wltm2c).
+Оригинальная статья: [Beginner’s Guide to Core Data in Swift 3](https://medium.com/ios-geek-community/beginners-guide-to-core-data-in-swift-3-85292ef4edd).
