@@ -1,8 +1,8 @@
 ---
 title: Beginner’s Guide to Core Data in Swift 3 (Перевод)
 layout: post
-categories: Swift Xcode
-tags: Swift Xcode
+categories: Swift Xcode CoreData
+tags: Swift Xcode CoreData
 ---
 
 ![](https://cdn-images-1.medium.com/max/2000/1*LAb-OGYZz970dONldZz7NA.png)
