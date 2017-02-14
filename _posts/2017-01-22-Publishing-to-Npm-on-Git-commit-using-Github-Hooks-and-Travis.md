@@ -82,7 +82,7 @@ $ travis setup npm
   - если ввести **yes**, то Travis будет публиковать модули только если создан Git Tag,
   - если ввести **no**, то Travis будет публиковать модули после любого коммита
 - Release only from ${your repo name}? \|yes\| - жмем enter
-- Encrypt API key? \|yes\| - жмем enter для того чтобы Travis зашифровал наш API key
+- Encrypt API key? \|yes\| - жмем enter для того, чтобы Travis зашифровал наш API key
 
 #### Шаг 8
 
