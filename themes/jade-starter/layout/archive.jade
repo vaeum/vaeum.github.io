@@ -1,0 +1,11 @@
+extends base
+
+prepend site_title
+  | Archive &mdash;&nbsp;
+
+block site_body
+  h2.content__title Archive
+
+  include _partial/post/list
+
+  include _partial/post/list_pagination

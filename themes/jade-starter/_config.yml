@@ -1,0 +1,17 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+rss: /rss2.xml
+
+# Content
+excerpt_link: Read More
+fancybox: false
+
+# Miscellaneous
+google_analytics:
+favicon: /favicon.png
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:
