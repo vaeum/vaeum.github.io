@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://vaeum.com
 root: /
 permalink: blog/:year/:month/:day/:title/
 permalink_defaults:
@@ -70,3 +70,13 @@ theme: jade-starter
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+sitemap:
+  path: sitemap.xml
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
