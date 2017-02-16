@@ -1,1 +1,11 @@
-
+#Host: vaeum.com
+User-agent: *
+Disallow: /cgi-bin
+Disallow: www.vaeum.com/tag/xcode-base/
+Disallow: www.vaeum.com/test/mana/
+Disallow: www.vaeum.com/blog/speed-paint/
+Disallow: www.vaeum.com/postgresql-and-nodejs/
+Disallow: www.vaeum.com/portfolio
+Disallow: wwwvaeum.com/test/aquamarine/news.html
+Disallow: wwwvaeum.com/blog/tag/paint-tool-sai/
+Host: www.vaeum.com
