@@ -8,3 +8,5 @@ Gemfile.lock
 node_modules
 _includes/svg
 .idea
+db.json
+public/
