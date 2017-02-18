@@ -11,4 +11,4 @@ gem 'i18n'
 gem 'jekyll-paginate'
 gem 'jekyll-auto-image'
 gem 'jekyll-gist'
-
+gem 'jekyll-seo-tag'
