@@ -40,7 +40,6 @@ _.chunk(['a', 'b', 'c', 'd'], 2);
 
 _.chunk(['a', 'b', 'c', 'd'], 3);
 // => [['a', 'b', 'c'], ['d']]
-
 ```
 ---
 ## _.compact(array)
@@ -68,7 +67,6 @@ _.chunk(['a', 'b', 'c', 'd'], 3);
 ```javascript
 _.compact([0, 1, false, 2, '', 3]);
 // => [1, 2, 3]
-
 ```
 ---
 ## _.concat(array, [values])
@@ -104,7 +102,6 @@ console.log(other);
 
 console.log(array);
 // => [1]
-
 ```
 ---
 
@@ -133,7 +130,6 @@ console.log(array);
 ```javascript
 _.difference([2, 1], [2, 3]);
 // => [1]
-
 ```
 ---
 
@@ -172,7 +168,6 @@ _.differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor);
 // The `_.property` iteratee shorthand.
 _.differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], 'x');
 // => [{ 'x': 2 }]
-
 ```
 ---
 
@@ -209,7 +204,6 @@ var objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
 
 _.differenceWith(objects, [{ 'x': 1, 'y': 2 }], _.isEqual);
 // => [{ 'x': 2, 'y': 1 }]
-
 ```
 ---
 
@@ -246,7 +240,6 @@ _.drop([1, 2, 3], 5);
 
 _.drop([1, 2, 3], 0);
 // => [1, 2, 3]
-
 ```
 ---
 
@@ -283,7 +276,6 @@ _.dropRight([1, 2, 3], 5);
 
 _.dropRight([1, 2, 3], 0);
 // => [1, 2, 3]
-
 ```
 ---
 
@@ -333,7 +325,6 @@ _.dropRightWhile(users, ['active', false]);
 // The `_.property` iteratee shorthand.
 _.dropRightWhile(users, 'active');
 // => objects for ['barney', 'fred', 'pebbles']
-
 ```
 ---
 
