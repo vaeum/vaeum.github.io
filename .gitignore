@@ -10,3 +10,5 @@ _includes/svg
 .idea
 db.json
 public/
+
+.tweet-cache
