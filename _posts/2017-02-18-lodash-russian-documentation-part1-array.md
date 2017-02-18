@@ -1,5 +1,5 @@
 ---
-title: Lodash документация (Перевод) - Массивы часть 1
+title: Lodash документация на русском
 layout: post
 categories: Lodash
 tags: Lodash Документация
@@ -7,7 +7,7 @@ tags: Lodash Документация
 
 ![Lodash документация на русском](https://udemy-images.udemy.com/course/750x422/420218_4a8a_2.jpg)
 
-# “Массивы” Методы - часть 1
+# “Массивы” - часть 1
 
 ***
 
