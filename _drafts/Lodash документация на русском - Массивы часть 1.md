@@ -7,13 +7,11 @@ tags: Lodash Документация
 
 ![](https://udemy-images.udemy.com/course/750x422/420218_4a8a_2.jpg)
 
-#“Массивы” Методы
+#“Массивы” Методы - часть 1
 
 ***
 
 ##_.chunk 
-
-**Синтаксис:**
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L6856),
 [npm package](https://www.npmjs.com/package/lodash.chunk).
@@ -258,7 +256,6 @@ _.drop([1, 2, 3], 0);
 [npm package](https://www.npmjs.com/package/lodash.dropright).
 
 Возвращает фрагмент массива с начиная с `n` элемента правого края массива.
-
 
 **Версия:** *3.0.0*
 
