@@ -5,7 +5,7 @@ categories: Swift Xcode MapKit
 tags: Swift Xcode MapKit 
 ---
 
-![Alt text](https://monosnap.com/file/mqI5Xl60up7h06IKAg6homuqIfbQMD.png)
+![Фотография, iphone в руке](https://monosnap.com/file/mqI5Xl60up7h06IKAg6homuqIfbQMD.png)
 
 Фрейворк **MapKit** предоставляет APIs для разработчиков, чтобы работать с картами:
 отображать карты, перемещаться по карте, добавлять аннотации для определенных
@@ -33,24 +33,24 @@ tags: Swift Xcode MapKit
 
 В навигаторе проекта, выберите проект, а затем выбирете проект в пункте **Target**. После этого вы можете включить **Maps** в разделе **Capabilities**. Просто сдвиньте переключатель в положение **ON**, и Xcode автоматически настроит ваш проект для использования **MapKit**.
 
-![Alt text](https://monosnap.com/file/Q0zMn08vRDwh67JwKxRyFctuoabn0m.png)
+![Скриншот подключение MapKit](https://monosnap.com/file/Q0zMn08vRDwh67JwKxRyFctuoabn0m.png)
 
 ### Добавление интерфейса Map в ваше приложение
 То, что мы собираемся сделать, это добавить не интерактивную карту в нижний колонтитул таблицы в экране **Подробно о ресторане**. Когда пользователь нажимает на карту, приложение переходит к экрану показать полную карту местоположения ресторана.
 
-![Alt text](https://monosnap.com/file/9m5dIgpyj0Q5rPyElVWqiqHV3oS46w.png)
+![Экраны с финальным функционалом](https://monosnap.com/file/9m5dIgpyj0Q5rPyElVWqiqHV3oS46w.png)
 
 Теперь откройте **Main.Storyboard** и перетащите вид карты из библиотеки объектов в конец таблицы экране **RestaurantDetailViewController**. После добавление карты, он должен появится прямо под ячейкой.
 
-![Alt text](https://monosnap.com/file/7EB8RGWq8R0ieoKvQAk0J6xvjXBFRO.png)
+![Добавление map в таблицу](https://monosnap.com/file/7EB8RGWq8R0ieoKvQAk0J6xvjXBFRO.png)
 
 Выберете карту и измените её размер, чтобы сделать её немного больше. Вы можете установить его высоту во вкладке **Size inspector** до 135 пунктов. 
 
-![Alt text](https://monosnap.com/file/N1P0pk5iwdic6F1iMMJ1mDXTOTe1Qb.png)
+![Установка размеров для карты](https://monosnap.com/file/N1P0pk5iwdic6F1iMMJ1mDXTOTe1Qb.png)
 
 Вид карты предоставляет различные варианты, такие как масштабирование и прокрутка для настройки функции карты. В **Interface Builder** выберете вид карты, и вы можете редактировать параметры, перейдя в инспектор атрибутов. 
 
-![Alt text](https://monosnap.com/file/SWLhzf5hIcugKqQ4TuvJ3iK4pqHds1.png)
+![Доступные настройки карты](https://monosnap.com/file/SWLhzf5hIcugKqQ4TuvJ3iK4pqHds1.png)
 
 Я знаю вы не можете ждать, чтобы проверить изменения. Давайте нажмем на кнопку **Run**, чтобы запустить приложение. При выборе ресторана вы перейдете к детальному виду, но интерфейс не изменится. Где же наша карта?
 
@@ -63,19 +63,19 @@ tableView.tableFooterView = UIView(frame: CGRect.zero)
 
 После того, как вы сделали это, приложение должно отображать карту в таблице колонтитула. Круто, не так ли? Это сила MapKit. Не написав ни одной строки кода, вы уже вставили карту в ваше приложении, хотя отображается карта по умолчанию.
 
-![Alt text](https://monosnap.com/file/sEsjaCbTocMB7w0CLfsnowjhwsztyR.png)
+![Отображение карты при билде приложения](https://monosnap.com/file/sEsjaCbTocMB7w0CLfsnowjhwsztyR.png)
 
 После этого, давайте реализуем интерфейс полного экрана карты.
 
 Для получение полного экрана с картой, мы реализуем его в виде отдельного **ViewControllera.** Таким образом, перетащите **ViewController** из библиотеки объектов на наш **Storyboard**. Измените размер карты, чтобы карта заполнило весь экран **ViewControllera**, и затем кликните **"Resolve Auto Layout Issues" > "Add Missing Constraints"**, чтобы добавить необходимые ограничения объекта.
 
-![Alt text](https://monosnap.com/file/YRnlKcBpEesCEqT4YNalwKYHCpgel7.png)
+![Вид карты в storyboard](https://monosnap.com/file/YRnlKcBpEesCEqT4YNalwKYHCpgel7.png)
 
 Логика экрана с полной карты, когда пользователь нажимает на не интерактивную карту в колонтитуле таблицы, мы должны создать **Seque** между контроллерами.
 
 Теперь, удерживая клавишу **Control** и перетащите из **Restaurant Detail View Controller** на новый контроллер с картой, чтобы создать **seque**. В появившимся меню выберете **Show** в качестве типа **Seque**. Для созданного **Segue**, установите идентификатор **showMap** внутри атрибут инспектора.
 
-![Alt text](https://monosnap.com/file/vPOWk1WJYQs0n5HNNjzDOYpAJVrtbs.png)
+![Установка индефикатора](https://monosnap.com/file/vPOWk1WJYQs0n5HNNjzDOYpAJVrtbs.png)
 
 Вы можете задаться вопросом, почему мы не создали **Seque** картой в колонтитуле таблицы и **ViewController** с картой. Вид верхнего и нижнего колонтитула таблицы не выбираются. Таким образом, мы не можем перетащить удерживая клавишу **Control**  из карты в таблице на **ViewController** с картой. В этой случае мы создали **Seque** между контролерами. В дальнейшем мы будем инициировать переход программно.
 
