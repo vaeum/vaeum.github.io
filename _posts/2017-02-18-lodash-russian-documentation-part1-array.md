@@ -7,11 +7,14 @@ tags: lodash documentation
 
 ![Lodash документация на русском](/images/post/Lo-Dash_array_part1.jpg)
 
+* TOC
+{:toc}
+
 # “Массивы” - часть 1
 
 ***
 
-## _.chunk
+## .chunk
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L6856),
 [npm package](https://www.npmjs.com/package/lodash.chunk).
@@ -42,7 +45,7 @@ _.chunk(['a', 'b', 'c', 'd'], 3);
 // => [['a', 'b', 'c'], ['d']]
 ```
 ---
-## _.compact(array)
+## .compact(array)
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L6891),
 [npm package](https://www.npmjs.com/package/lodash.compact).
@@ -69,7 +72,7 @@ _.compact([0, 1, false, 2, '', 3]);
 // => [1, 2, 3]
 ```
 ---
-## _.concat(array, [values])
+## .concat(array, [values])
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L6928),
 [npm package](https://www.npmjs.com/package/lodash.concat).
@@ -105,7 +108,7 @@ console.log(array);
 ```
 ---
 
-## _.difference(array, [values])
+## .difference(array, [values])
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L6964),
 [npm package](https://www.npmjs.com/package/lodash.difference).
@@ -134,7 +137,7 @@ _.difference([2, 1], [2, 3]);
 ```
 ---
 
-## _.differenceBy(array, [values], [iteratee=_.identity])
+## .differenceBy(array, [values], [iteratee=_.identity])
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L6996),
 [npm package](https://www.npmjs.com/package/lodash.differenceby).
@@ -174,7 +177,7 @@ _.differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], 'x');
 ```
 ---
 
-## _.differenceWith(array, [values], [comparator])
+## .differenceWith(array, [values], [comparator])
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7029),
 [npm package](https://www.npmjs.com/package/lodash.differencewith).
@@ -211,7 +214,7 @@ _.differenceWith(objects, [{ 'x': 1, 'y': 2 }], _.isEqual);
 ```
 ---
 
-## _.drop(array, [n=1])
+## .drop(array, [n=1])
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7064),
 [npm package](https://www.npmjs.com/package/lodash.drop).
@@ -247,7 +250,7 @@ _.drop([1, 2, 3], 0);
 ```
 ---
 
-## _.dropRight(array, [n=1])
+## .dropRight(array, [n=1])
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7098),
 [npm package](https://www.npmjs.com/package/lodash.dropright).
@@ -283,7 +286,7 @@ _.dropRight([1, 2, 3], 0);
 ```
 ---
 
-## _.dropRightWhile(array, [predicate=_.identity])
+## .dropRightWhile(array, [predicate=_.identity])
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7143),
 [npm package](https://www.npmjs.com/package/lodash.droprightwhile).
@@ -332,7 +335,7 @@ _.dropRightWhile(users, 'active');
 ```
 ---
 
-## _.dropWhile(array, [predicate=_.identity])
+## .dropWhile(array, [predicate=_.identity])
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7184),
 [npm package](https://www.npmjs.com/package/lodash.dropwhile).

@@ -33,13 +33,18 @@
   {% endif %}
 
   <p class="excerpt">
-    {{ post.content | strip_html | truncatewords: 40 }}
+    {% if post.excerpt_text %}
+      {{ post.excerpt_text }}
+    {% else %}
+      {{ post.content | strip_html | truncatewords: 40 }}
+    {% endif %}
   </p>
 
   <div class="media media-center">
     <div class="media-body">
       <div><a href="{{ post.url }}" class="post-readmore">Читать далее</a></div>
     </div>
+
     <ul class="pl0 mb0 clearfix lsn post-share-block">
       <li><a onclick="Share.vk('http://vaeum.com{{ post.url }}','{{ post.title }}','{% if post.image %}http://vaeum.com{{post.image}}{% endif %}','{{ post.content | strip_html | truncatewords: 30 }}')">{% include svg/vk.svg %}</a></li>
       <li><a onclick="Share.fb('http://vaeum.com{{ post.url }}','{{ post.title }}','{% if post.image %}http://vaeum.com{{post.image}}{% endif %}','{{ post.content | strip_html | truncatewords: 30 }}')">{% include svg/facebook.svg %}</a></li>
