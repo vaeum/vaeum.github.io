@@ -5,7 +5,7 @@ categories: Lodash
 tags: Lodash Документация
 ---
 
-![Lodash документация на русском](https://udemy-images.udemy.com/course/750x422/420218_4a8a_2.jpg)
+![Lodash документация на русском](/images/post/Lo-Dash_array_part1.jpg)
 
 # “Массивы” - часть 1
 
