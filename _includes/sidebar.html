@@ -96,6 +96,23 @@
     {% endfor %}
   </ul>
 
+  {% if content and page.related %}
+    <div class="hr">
+      <span class="hr-text">Связанные посты</span>
+    </div>
+    <ul class="lsn pl0 mb0 widget-news">
+    {% for post in site.posts %}
+        {% if page.related contains post.title %}
+            <li>
+              <a href="{{ post.url }}" class="no-underline" title="{{ post.title }}">
+                <span class="text">{{ post.title }}</span>
+              </a>
+            </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+  {% endif %}
+
   <div class="hr">
     <span class="hr-text">Кнопки</span>
   </div>
