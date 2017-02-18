@@ -1,4 +1,4 @@
---
+---
 title: Beginner’s Guide to Core Data in Swift 3 (Перевод)
 layout: post
 categories: Swift Xcode CoreData
@@ -215,3 +215,5 @@ func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEdi
 Автор статьи: **Bob Lee**.
 
 Оригинальная статья: [Beginner’s Guide to Core Data in Swift 3](https://medium.com/ios-geek-community/beginners-guide-to-core-data-in-swift-3-85292ef4edd).
+
+
