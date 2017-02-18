@@ -5,7 +5,7 @@ categories: Swift Xcode CoreData
 tags: Swift Xcode CoreData
 ---
 
-![](https://cdn-images-1.medium.com/max/2000/1*LAb-OGYZz970dONldZz7NA.png)
+![](/images/post/beginner-guide-to-core-data-in-swift-3.jpg)
 
 **Это не должно быть так сложно**
 
