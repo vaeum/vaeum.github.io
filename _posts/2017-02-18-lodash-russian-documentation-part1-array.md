@@ -1,8 +1,8 @@
 ---
 title: Lodash документация на русском
 layout: post
-categories: Lodash
-tags: Lodash Документация
+categories: lodash
+tags: lodash documentation
 ---
 
 ![Lodash документация на русском](/images/post/Lo-Dash_array_part1.jpg)
