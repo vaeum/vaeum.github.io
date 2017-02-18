@@ -1,13 +1,68 @@
 html {
-  position: relative;
-  min-height: 100%;
+  // position: relative;
+  // min-height: 100%;
 }
 
 body {
-  margin-bottom: $footer-height;
+  // margin-bottom: $footer-height;
   background: #fafafa;
   font-family: $font-san-francisco;
   line-height: 1.5em;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.header, .footer {
+  // background: #eee;
+  // padding: 10px;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content{
+  padding-right: 10px;
+  padding-bottom: 30px;
+}
+
+.sidebar {
+  padding-left: 10px;
+}
+
+.sidebar {
+  // background: seagreen;
+  a {
+    // color: #fff;
+    // display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    flex-direction: row-reverse;
+  }
+
+  .main-content {
+    flex: 1;
+    width: 75%;
+  }
+
+  .sidebar {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container{
+    width: 100%;
+  }
 }
 
 h1, h2, h3, h4, h5, h6,

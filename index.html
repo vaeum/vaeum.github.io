@@ -13,7 +13,7 @@ layout: default
 <!-- Pagination links -->
 <nav aria-label="post navigation">
   {% if paginator.total_pages > 1 %}
-  <ul class="pagination lsn pl0">
+  <ul class="pagination lsn pl0 clearfix">
     {% if paginator.previous_page %}
       <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{% include svg/arrow-left.svg %}</a></li>
     {% else %}
