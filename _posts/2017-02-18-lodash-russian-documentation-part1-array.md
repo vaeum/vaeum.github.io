@@ -159,7 +159,7 @@ _.difference([2, 1], [2, 3]);
 
 `[values] (...Array)`: Значения для исключения.
 
-`[iteratee=_.identity] (Function)`: `iteratee` ссылка на елемент.
+`[iteratee=_.identity] (Function)`: `iteratee` ссылка на элемент.
 
 **Возвращает**
 
@@ -198,7 +198,7 @@ _.differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], 'x');
 
 `[values] (...Array)`: Значения для исключения.
 
-`[comparator] (Function)`: `comparator` ссылка на елемент.
+`[comparator] (Function)`: `comparator` ссылка на элемент.
 
 **Возвращает**
 
