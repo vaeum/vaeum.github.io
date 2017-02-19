@@ -83,6 +83,7 @@ gems:
   - jekyll-auto-image
   - jekyll-gist
   - jekyll-seo-tag
+  - jekyll-twitter-plugin
 
 # Exclude these files from your production _site
 exclude:
