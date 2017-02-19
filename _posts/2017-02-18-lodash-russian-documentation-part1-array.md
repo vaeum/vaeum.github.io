@@ -12,8 +12,6 @@ tags: lodash documentation
 
 # “Массивы” - часть 1
 
-***
-
 ## .chunk
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L6856),
@@ -44,7 +42,7 @@ _.chunk(['a', 'b', 'c', 'd'], 2);
 _.chunk(['a', 'b', 'c', 'd'], 3);
 // => [['a', 'b', 'c'], ['d']]
 ```
----
+
 ## .compact(array)
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L6891),
@@ -71,7 +69,7 @@ _.chunk(['a', 'b', 'c', 'd'], 3);
 _.compact([0, 1, false, 2, '', 3]);
 // => [1, 2, 3]
 ```
----
+
 ## .concat(array, [values])
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L6928),
@@ -106,7 +104,7 @@ console.log(other);
 console.log(array);
 // => [1]
 ```
----
+
 
 ## .difference(array, [values])
 
@@ -135,7 +133,7 @@ console.log(array);
 _.difference([2, 1], [2, 3]);
 // => [1]
 ```
----
+
 
 ## .differenceBy(array, [values], [iteratee=_.identity])
 
@@ -175,7 +173,7 @@ _.differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor);
 _.differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], 'x');
 // => [{ 'x': 2 }]
 ```
----
+
 
 ## .differenceWith(array, [values], [comparator])
 
@@ -212,7 +210,7 @@ var objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
 _.differenceWith(objects, [{ 'x': 1, 'y': 2 }], _.isEqual);
 // => [{ 'x': 2, 'y': 1 }]
 ```
----
+
 
 ## .drop(array, [n=1])
 
@@ -248,7 +246,7 @@ _.drop([1, 2, 3], 5);
 _.drop([1, 2, 3], 0);
 // => [1, 2, 3]
 ```
----
+
 
 ## .dropRight(array, [n=1])
 
@@ -284,7 +282,7 @@ _.dropRight([1, 2, 3], 5);
 _.dropRight([1, 2, 3], 0);
 // => [1, 2, 3]
 ```
----
+
 
 ## .dropRightWhile(array, [predicate=_.identity])
 
@@ -333,7 +331,7 @@ _.dropRightWhile(users, ['active', false]);
 _.dropRightWhile(users, 'active');
 // => objects for ['barney', 'fred', 'pebbles']
 ```
----
+
 
 ## .dropWhile(array, [predicate=_.identity])
 
@@ -382,4 +380,4 @@ _.dropWhile(users, ['active', false]);
 _.dropWhile(users, 'active');
 // => objects for ['barney', 'fred', 'pebbles']
 ```
----
+
