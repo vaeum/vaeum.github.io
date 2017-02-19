@@ -1,8 +1,10 @@
 ---
-title: Lodash документация на русском
+title: Lodash документация на русском (массивы) часть 1
 layout: post
 categories: Lodash
 tags: Lodash Documentation
+description: "Вольный перевод документации библиотеки Lodash, в данной статье переведено 10 методов, которые помогают работать с массивами. Расмотренны следующие методы .compact .concat .difference .differenceBy .differenceWith .drop .dropRight .dropRightWhile .dropWhile"
+excerpt_text: "Вольный перевод документации библиотеки Lodash, в данной статье переведено 10 методов, которые помогают работать с массивами. Расмотренны следующие методы .compact .concat .difference .differenceBy .differenceWith .drop .dropRight .dropRightWhile .dropWhile"
 ---
 
 ![Lodash документация на русском](/images/post/Lo-Dash_array_part1.jpg)

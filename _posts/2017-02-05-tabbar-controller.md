@@ -3,6 +3,7 @@ title: Работаем с Tab Bar Controller
 layout: post
 categories: Swift Xcode
 tags: Swift Xcode Xcode_base
+description: ""
 ---
 
 ![](http://s42.radikal.ru/i096/1702/34/adecf13af595.jpg)
@@ -78,7 +79,7 @@ Xcode сразу подставил по умочанию два **View Controll
 
 Теперь выделаем **Tab Bar Controller Scene**, зажимаем клавишу **ctrl** и **левый клик мыши**, чтобы
 была голубая линия и перености на экран **Table View Controller**. И в открывшем меню жмем
-на **View Controllers** и мы подключили новый экран. 
+на **View Controllers** и мы подключили новый экран.
 
 ![](http://s009.radikal.ru/i307/1702/6e/37986e0ec4f8.gif)
 

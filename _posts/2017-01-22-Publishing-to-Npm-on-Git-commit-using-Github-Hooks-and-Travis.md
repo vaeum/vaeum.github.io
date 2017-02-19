@@ -3,6 +3,7 @@ title: Настраиваем автоматическую публикацию 
 layout: post
 categories: GIT Travis
 tags: GIT Travis NPM
+description: ""
 ---
 
 Сервис Travis CI может публиковать или обновлять ваши NPM модули автоматически,

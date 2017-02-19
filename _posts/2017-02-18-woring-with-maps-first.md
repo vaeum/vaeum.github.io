@@ -3,6 +3,7 @@ title: Woring With Maps (Перевод). Часть первая.
 layout: post
 categories: Swift Xcode MapKit
 tags: Swift Xcode MapKit
+description: ""
 ---
 
 ![Фотография, iphone в руке](https://monosnap.com/file/mqI5Xl60up7h06IKAg6homuqIfbQMD.png)

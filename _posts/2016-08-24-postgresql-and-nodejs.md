@@ -3,6 +3,7 @@ layout: post
 title:  "Michael Herman - PostgreSQL and NodeJS"
 categories: Translation
 tags: NPM PostgreSQL NodeJS
+description: ""
 ---
 
 {: .annotations}
