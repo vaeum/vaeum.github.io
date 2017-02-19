@@ -2,7 +2,7 @@
 title: Как создать пустую ветку в GIT
 layout: post
 categories: GIT
-tags: GIT branch
+tags: GIT Branch
 ---
 
 Во многих проектах код содержится в одном репозитории, а документация в другом.

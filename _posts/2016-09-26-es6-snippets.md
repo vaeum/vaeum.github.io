@@ -2,7 +2,7 @@
 layout: post
 title:  "Практическое примение ES6 (стрелочные функции и шаблонные строки)"
 categories: JavaScript
-tags: es6
+tags: ES6
 ---
 
 Новый версия стандарта языка JavaScript вышла еще в июне 2015 года,

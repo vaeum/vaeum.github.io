@@ -2,7 +2,7 @@
 title: Настраиваем автоматическую публикацию NPM модуля с помощью Travis CI
 layout: post
 categories: GIT Travis
-tags: GIT travis NPM
+tags: GIT Travis NPM
 ---
 
 Сервис Travis CI может публиковать или обновлять ваши NPM модули автоматически,
