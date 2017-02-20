@@ -29,6 +29,13 @@ footer-links:
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
+social:
+  name: Vaeum
+  links:
+    - https://twitter.com/vaeum
+    - https://www.facebook.com/vaeum
+    - https://www.linkedin.com/in/vaeum
+    - https://github.com/vaeum
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
