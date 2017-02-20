@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 # A sample Gemfile
-source "https://rubygems.org"
+source "http://rubygems.org"
 
 # gem "rails"
 gem 'jekyll', "3.4.0"
