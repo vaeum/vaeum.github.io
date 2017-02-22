@@ -1,17 +1,20 @@
 ---
-title: Lodash документация на русском - Массивы часть 2
+title: Lodash документация на русском (массивы) часть 2
 layout: post
 categories: Lodash
-tags: Lodash Документация
+tags: Lodash Documentation
+description: "Вольный перевод документации библиотеки Lodash, в данной статье переведено 10 методов, которые помогают работать с массивами. Расмотренны следующие методы .fill .findIndex .findLastIndex .flatten .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial"
+excerpt_text: "Вольный перевод документации библиотеки Lodash, в данной статье переведено 10 методов, которые помогают работать с массивами. Расмотренны следующие методы .fill .findIndex .findLastIndex .flatten .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial"
 ---
 
-![Lodash документация на русском](https://udemy-images.udemy.com/course/750x422/420218_4a8a_2.jpg)
+![Lodash документация на русском](/images/post/Lo-Dash_array_part1.jpg)
 
-#“Массивы” Методы - часть 2
+* TOC
+{:toc}
 
-***
+# “Массивы” - часть 2
 
-##_.fill(array, value, [start=0], [end=array.length])
+## .fill(array, value, [start=0], [end=array.length])
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7219),
 [npm package](https://www.npmjs.com/package/lodash.fill).
@@ -38,7 +41,7 @@ tags: Lodash Документация
 
 `(Array)`: Возвращает массив.
 
-###Пример
+### Пример
 
 ```javascript
 var array = [1, 2, 3];
@@ -54,9 +57,8 @@ _.fill([4, 6, 8, 10], '*', 1, 3);
 // => [4, '*', '*', 10]
 ```
 
----
 
-##_.findIndex(array, [predicate=_.identity], [fromIndex=0])
+## .findIndex(array, [predicate=_.identity], [fromIndex=0])
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7266),
 [npm package](https://www.npmjs.com/package/lodash.findindex).
@@ -78,7 +80,7 @@ _.fill([4, 6, 8, 10], '*', 1, 3);
 
 `(number)`: Возвращает индекс найденного элемента, в остальных случаях возвращает -1.
 
-###Пример
+### Пример
 
 ```javascript
 var users = [
@@ -103,9 +105,8 @@ _.findIndex(users, 'active');
 // => 2
 ```
 
----
 
-##_.findLastIndex(array, [predicate=_.identity], [fromIndex=array.length-1])
+## .findLastIndex(array, [predicate=_.identity], [fromIndex=array.length-1])
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7313),
 [npm package](https://www.npmjs.com/package/lodash.findlastindex).
@@ -126,7 +127,7 @@ _.findIndex(users, 'active');
 
 `(number)`: Возвращает индекс найденного элемента, в остальных случаях возвращает -1.
 
-###Пример
+### Пример
 
 ```javascript
 var users = [
@@ -151,9 +152,8 @@ _.findLastIndex(users, 'active');
 // => 0
 ```
 
----
 
-##_.flatten(array)
+## .flatten(array)
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7342),
 [npm package](https://www.npmjs.com/package/lodash.flatten).
@@ -170,16 +170,15 @@ _.findLastIndex(users, 'active');
 
 `(Array)`: Возвращает новый сглаженный массив.
 
-###Пример
+### Пример
 
 ```javascript
 _.flatten([1, [2, [3, [4]], 5]]);
 // => [1, 2, [3, [4]], 5]
 ```
 
----
 
-##_.flattenDeep(array)
+## .flattenDeep(array)
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7361),
 [npm package](https://www.npmjs.com/package/lodash.flattendeep).
@@ -196,16 +195,15 @@ _.flatten([1, [2, [3, [4]], 5]]);
 
 `(Array)`: Возвращает новый сглаженный массив.
 
-###Пример
+### Пример
 
 ```javascript
 _.flattenDeep([1, [2, [3, [4]], 5]]);
 // => [1, 2, 3, 4, 5]
 ```
 
----
 
-##_.flattenDepth(array, [depth=1])
+## .flattenDepth(array, [depth=1])
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7386),
 [npm package](https://www.npmjs.com/package/lodash.flattendepth).
@@ -224,7 +222,7 @@ _.flattenDeep([1, [2, [3, [4]], 5]]);
 
 `(Array)`: Возвращает новый сглаженный массив.
 
-###Пример
+### Пример
 
 ```javascript
 var array = [1, [2, [3, [4]], 5]];
@@ -236,9 +234,8 @@ _.flattenDepth(array, 2);
 // => [1, 2, 3, [4], 5]
 ```
 
----
 
-##_.fromPairs(pairs)
+## .fromPairs(pairs)
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7410),
 [npm package](https://www.npmjs.com/package/lodash.frompairs).
@@ -255,16 +252,15 @@ _.flattenDepth(array, 2);
 
 `(Object)`: Возвращает новый объект.
 
-###Пример
+### Пример
 
 ```javascript
 _.fromPairs([['a', 1], ['b', 2]]);
 // => { 'a': 1, 'b': 2 }
 ```
 
----
 
-##_.head(array)
+## .head(array)
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7440),
 [npm package](https://www.npmjs.com/package/lodash.head).
@@ -283,7 +279,7 @@ _.fromPairs([['a', 1], ['b', 2]]);
 
 `(*)`: Возвращает первый элемент массива.
 
-###Пример
+### Пример
 
 ```javascript
 _.head([1, 2, 3]);
@@ -293,9 +289,8 @@ _.head([]);
 // => undefined
 ```
 
----
 
-##_.indexOf(array, value, [fromIndex=0])
+## .indexOf(array, value, [fromIndex=0])
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7467),
 [npm package](https://www.npmjs.com/package/lodash.indexof).
@@ -318,7 +313,7 @@ _.head([]);
 
 `(number)`: Возвращает индекс найденного элемента, в остальных случаях возвращает -1.
 
-###Пример
+### Пример
 
 ```javascript
 _.indexOf([1, 2, 1, 2], 2);
@@ -329,9 +324,8 @@ _.indexOf([1, 2, 1, 2], 2, 2);
 // => 3
 ```
 
----
 
-##_.initial(array)
+## .initial(array)
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7493),
 [npm package](https://www.npmjs.com/package/lodash.initial).
@@ -348,39 +342,9 @@ _.indexOf([1, 2, 1, 2], 2, 2);
 
 `(Array)`: Возвращает фрагмент массива.
 
-###Пример
+### Пример
 
 ```javascript
 _.initial([1, 2, 3]);
 // => [1, 2]
 ```
-
----
-
-##_.intersection([arrays])
-
-[source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7515),
-[npm package](https://www.npmjs.com/package/lodash.intersection).
-
-Создает новый массив из значений встречающихся в во всех проверяемых массивах используя сравнение на равенство каждого значения.
-
-Порядок вывода значений определят первый указанный массив.
-
-**Версия:** *0.1.0*
-
-**Аргументы**
-
-`[arrays] (...Array)`: Массив для проверки.
-
-**Возвращает**
-
-`(Array)`: Возвращает новый массив из пересекающихся значений.
-
-###Пример
-
-```javascript
-_.intersection([2, 1], [2, 3]);
-// => [2]
-```
-
----

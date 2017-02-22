@@ -3,8 +3,8 @@ title: Lodash документация на русском (массивы) ча
 layout: post
 categories: Lodash
 tags: Lodash Documentation
-description: "Вольный перевод документации библиотеки Lodash, в данной статье переведено 10 методов, которые помогают работать с массивами. Расмотренны следующие методы .compact .concat .difference .differenceBy .differenceWith .drop .dropRight .dropRightWhile .dropWhile"
-excerpt_text: "Вольный перевод документации библиотеки Lodash, в данной статье переведено 10 методов, которые помогают работать с массивами. Расмотренны следующие методы .compact .concat .difference .differenceBy .differenceWith .drop .dropRight .dropRightWhile .dropWhile"
+description: "Вольный перевод документации библиотеки Lodash, в данной статье переведено 10 методов, которые помогают работать с массивами. Расмотренны следующие методы .chunk .compact .concat .difference .differenceBy .differenceWith .drop .dropRight .dropRightWhile .dropWhile"
+excerpt_text: "Вольный перевод документации библиотеки Lodash, в данной статье переведено 10 методов, которые помогают работать с массивами. Расмотренны следующие методы .chunk .compact .concat .difference .differenceBy .differenceWith .drop .dropRight .dropRightWhile .dropWhile"
 ---
 
 ![Lodash документация на русском](/images/post/Lo-Dash_array_part1.jpg)
@@ -382,4 +382,3 @@ _.dropWhile(users, ['active', false]);
 _.dropWhile(users, 'active');
 // => objects for ['barney', 'fred', 'pebbles']
 ```
-
