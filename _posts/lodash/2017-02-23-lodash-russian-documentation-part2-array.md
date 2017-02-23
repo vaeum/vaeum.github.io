@@ -21,7 +21,7 @@ excerpt_text: "Вольный перевод документации библи
 
 Заполняет элементы массива значениями от начала до, не включая конец.
 
-**Заметки** 
+**Заметки**
 
 Этот метод видоизменяет массив.
 
@@ -45,14 +45,14 @@ excerpt_text: "Вольный перевод документации библи
 
 ```javascript
 var array = [1, 2, 3];
- 
+
 _.fill(array, 'a');
 console.log(array);
 // => ['a', 'a', 'a']
- 
+
 _.fill(Array(3), 2);
 // => [2, 2, 2]
- 
+
 _.fill([4, 6, 8, 10], '*', 1, 3);
 // => [4, '*', '*', 10]
 ```
@@ -63,7 +63,8 @@ _.fill([4, 6, 8, 10], '*', 1, 3);
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7266),
 [npm package](https://www.npmjs.com/package/lodash.findindex).
 
-Этот метод похож на [_.find](https://lodash.com/docs/4.17.4#find) за исключением того что он возвращает индекс первого элемента.
+Этот метод похож на [_.find](https://lodash.com/docs/4.17.4#find) за исключением
+того что он возвращает индекс первого элемента.
 `predicate` возвращает истину а не сам элемент.
 
 **Версия:** *1.1.0*
@@ -88,18 +89,18 @@ var users = [
   { 'user': 'fred',    'active': false },
   { 'user': 'pebbles', 'active': true }
 ];
- 
+
 _.findIndex(users, function(o) { return o.user == 'barney'; });
 // => 0
- 
+
 // The `_.matches` iteratee shorthand.
 _.findIndex(users, { 'user': 'fred', 'active': false });
 // => 1
- 
+
 // The `_.matchesProperty` iteratee shorthand.
 _.findIndex(users, ['active', false]);
 // => 0
- 
+
 // The `_.property` iteratee shorthand.
 _.findIndex(users, 'active');
 // => 2
@@ -111,7 +112,8 @@ _.findIndex(users, 'active');
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7313),
 [npm package](https://www.npmjs.com/package/lodash.findlastindex).
 
-Этот метод похож на [_.findIndex](https://lodash.com/docs/4.17.4#findIndex) за исключением того, что он перебирает элементы массива справа налево.
+Этот метод похож на [_.findIndex](https://lodash.com/docs/4.17.4#findIndex) за
+исключением того, что он перебирает элементы массива справа налево.
 
 **Версия:** *2.0.0*
 
@@ -135,18 +137,18 @@ var users = [
   { 'user': 'fred',    'active': false },
   { 'user': 'pebbles', 'active': false }
 ];
- 
+
 _.findLastIndex(users, function(o) { return o.user == 'pebbles'; });
 // => 2
- 
+
 // The `_.matches` iteratee shorthand.
 _.findLastIndex(users, { 'user': 'barney', 'active': true });
 // => 0
- 
+
 // The `_.matchesProperty` iteratee shorthand.
 _.findLastIndex(users, ['active', false]);
 // => 2
- 
+
 // The `_.property` iteratee shorthand.
 _.findLastIndex(users, 'active');
 // => 0
@@ -226,21 +228,21 @@ _.flattenDeep([1, [2, [3, [4]], 5]]);
 
 ```javascript
 var array = [1, [2, [3, [4]], 5]];
- 
+
 _.flattenDepth(array, 1);
 // => [1, 2, [3, [4]], 5]
- 
+
 _.flattenDepth(array, 2);
 // => [1, 2, 3, [4], 5]
 ```
-
 
 ## .fromPairs(pairs)
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7410),
 [npm package](https://www.npmjs.com/package/lodash.frompairs).
 
-Инверсивная версия метода [_.toPairs](https://lodash.com/docs/4.17.4#toPairs);  этот метод возвращает объект, состоящий из пар ключ-значение.
+Инверсивная версия метода [_.toPairs](https://lodash.com/docs/4.17.4#toPairs);
+этот метод возвращает объект, состоящий из пар ключ-значение.
 
 **Версия:** *4.0.0*
 
@@ -258,7 +260,6 @@ _.flattenDepth(array, 2);
 _.fromPairs([['a', 1], ['b', 2]]);
 // => { 'a': 1, 'b': 2 }
 ```
-
 
 ## .head(array)
 
@@ -284,18 +285,18 @@ _.fromPairs([['a', 1], ['b', 2]]);
 ```javascript
 _.head([1, 2, 3]);
 // => 1
- 
+
 _.head([]);
 // => undefined
 ```
-
 
 ## .indexOf(array, value, [fromIndex=0])
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7467),
 [npm package](https://www.npmjs.com/package/lodash.indexof).
 
-Возвращает индекс места в массиве, в котором в первые встречается искомое значения используя принцип сравнение на равенство каждого значения. 
+Возвращает индекс места в массиве, в котором в первые встречается искомое значения
+используя принцип сравнение на равенство каждого значения.
 
 Если `fromindex` отрицательный, поиск начинается с конца массива.
 
@@ -318,12 +319,11 @@ _.head([]);
 ```javascript
 _.indexOf([1, 2, 1, 2], 2);
 // => 1
- 
+
 // Search from the `fromIndex`.
 _.indexOf([1, 2, 1, 2], 2, 2);
 // => 3
 ```
-
 
 ## .initial(array)
 
