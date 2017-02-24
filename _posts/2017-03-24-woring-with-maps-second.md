@@ -3,6 +3,7 @@ title: Woring With Maps (Перевод). Часть Вторая.
 layout: post
 categories: Swift Xcode MapKit
 tags: Swift Xcode MapKit
+description: "Вторая часть перевода главы, в которой объясняется как работать с MapKit."
 ---
 
 ![Фотография, iphone в руке, часть вторая.](https://monosnap.com/file/mqI5Xl60up7h06IKAg6homuqIfbQMD.png)
