@@ -184,6 +184,8 @@ MKCoordinateRegionMakeWithDistance(annotation.coordinate, 250, 250)
 Если вы запустите приложение сейчас, оно должно правильно отображать
 местоположение ресторана на карте.
 
+[Ссылка на проект.](https://github.com/allakin/FoodPin-2)
+
 ![Отображение пина на картер](https://monosnap.com/file/IBBWZQfa7407Y4sD6rSIDjddONx0IA.png)
 
 Завершающее продолжение в следующей части перевода.
