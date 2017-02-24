@@ -382,3 +382,5 @@ _.dropWhile(users, ['active', false]);
 _.dropWhile(users, 'active');
 // => objects for ['barney', 'fred', 'pebbles']
 ```
+[Ссылка на вторую часть.](http://vaeum.com/blog/2017/02/23/lodash-russian-documentation-part2-array/)
+

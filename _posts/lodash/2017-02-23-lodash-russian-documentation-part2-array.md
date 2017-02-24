@@ -348,3 +348,5 @@ _.indexOf([1, 2, 1, 2], 2, 2);
 _.initial([1, 2, 3]);
 // => [1, 2]
 ```
+[Ссылка на первую часть.](http://vaeum.com/blog/2017/02/18/lodash-russian-documentation-part1-array/)
+
