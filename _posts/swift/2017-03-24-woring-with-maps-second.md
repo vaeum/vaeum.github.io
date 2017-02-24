@@ -35,9 +35,9 @@ mapView.addGestureRecognizer(tapGestureRecognizer)
 **showMap**, так, что добавьте этот код в класс **RestaurantDetailViewController**.
 
 ```swift
- func showMap() {
-		performSegue(withIdentifier: "showMap", sender: self)
-	}
+func showMap() {
+    performSegue(withIdentifier: "showMap", sender: self)
+}
 ```
 Этот метод прост, мы программно вызываем **showMap** через **seque** путем вызова
 **preformSeque** с идентификатором, который указывали при создании **seque**
@@ -45,7 +45,7 @@ mapView.addGestureRecognizer(tapGestureRecognizer)
 будет вызываться. Следовательно, **showMap** срабатывает.
 
 И, наконец, вернемся к **Main.Storyboard** и установим связь между картой (в
-колонтитуле таблицы) и **mapView Outlet**. 
+колонтитуле таблицы) и **mapView Outlet**.
 
 ![Установим связь между картой и mapView Outlet](https://monosnap.com/file/XXkMdQLADTxa6cOWvpvcEeG6KJk1q8.png)
 
@@ -67,7 +67,7 @@ mapView.addGestureRecognizer(tapGestureRecognizer)
 текстовый адрес, известные как метки, в глобальную координату. Этот процесс обычно
 называют **вперед-геокодирование**. С другой стороны, вы можете использовать
 **Geocoder** для преобразования широты и долготы значения, обратно в метки.
-Этот процесс известен как **обратное-геокодирование**. 
+Этот процесс известен как **обратное-геокодирование**.
 
 Для того, чтобы инициировать запрос **вперед-геокодирование** с помощью класса
 **CLGeocoder**, все, что вам нужно сделать, это создать экземпляр **CLGeocoder**,
@@ -78,7 +78,7 @@ let geoCoder = CLGeocoder()
 geoCoder.geocodeAddressString("524 Ct St, Brooklyn, NY 11231",
 completionHandler: { placemarks, error in
 // Process the placemark
-}) 
+})
 ```
 Там не назначен формат адреса. Метод представляет указанные данные о
 местоположении на сервер геокодиронивания асинхронно. Затем сервер анализирует
@@ -89,7 +89,6 @@ completionHandler: { placemarks, error in
 
 C помощью объекта, которая является экземпляром класса **CLPlacemark**, вы можете
 легко получить географические координаты адреса, используя следующий код:
-
 
 ```swift
 let coordinate = placemark.location?.coordinate
@@ -121,7 +120,7 @@ let coordinate = placemark.location?.coordinate
 не нужно создавать свой собственный, если вы не хотите, чтобы потом настроить
 аннотацию. В простейшей форме, в стандартной аннотации появляется пин без
 изображений и пузырьков выноски. Чтобы добавить пин на карте, вам просто нужно
-несколько строк кода: 
+несколько строк кода:
 
 ```swift
 let annotation = MKPointAnnotation()
@@ -142,15 +141,14 @@ if let location = placemark.location {
 В файле **RestaurantDetailViewController.swift**, вставьте следующий код
 в **viewDidLoad()** метод:
 
-
 ```swift
 let geoCoder = CLGeocoder()
 geoCoder.geocodeAddressString(restaurant.location, completionHandler: {
 placemarks, error in
     if error != nil {
         print(error)
-return 
-} 
+return
+}
     if let placemarks = placemarks {
         // Get the first placemark
         let placemark = placemarks[0]
@@ -165,8 +163,9 @@ return
 MKCoordinateRegionMakeWithDistance(annotation.coordinate, 250, 250)
             self.mapView.setRegion(region, animated: false)
         }
-} }) 
+} })
 ```
+
 Я не буду вдаваться в код, который опубликован выше по каждой строке, как
 мы обсуждали использование геокодером и аннотацией ранее. Короче говоря,
 сначала мы преобразуем адрес выбранного ресторана(т.е. **restaurant.location**)
