@@ -6,7 +6,7 @@ tags: Swift Xcode MapKit
 description: "Вторая часть перевода главы, в которой объясняется как работать с MapKit."
 ---
 
-![Фотография, iphone в руке, часть вторая.](https://monosnap.com/file/mqI5Xl60up7h06IKAg6homuqIfbQMD.png)
+![Работае и MapKit framework.](/images/post/Simon-Ng-Beginning-iOS-10-Programming-with-Swift.jpg)
 
 Продолжаем перевод главы. [Первая часть перевода.](http://vaeum.com/blog/2017/02/18/woring-with-maps-first/)
 Теперь откройте **RestaurantDetailViewController.swift**. Напомню, что мы

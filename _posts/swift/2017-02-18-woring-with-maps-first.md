@@ -6,7 +6,7 @@ tags: Swift Xcode MapKit
 description: "Первая часть перевода главы, в которой объясняется как работать с MapKit."
 ---
 
-![Фотография, iphone в руке](https://monosnap.com/file/mqI5Xl60up7h06IKAg6homuqIfbQMD.png)
+![Работае и MapKit framework.](/images/post/Simon-Ng-Beginning-iOS-10-Programming-with-Swift.jpg)
 
 Фреймворк **MapKit** предоставляет APIs для разработчиков, чтобы работать с картами:
 отображать карты, перемещаться по карте, добавлять аннотации для определенных
