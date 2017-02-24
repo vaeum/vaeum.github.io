@@ -17,6 +17,7 @@ description: "Вторая часть перевода главы, в котор
 ```swift
 import MapKit
 ```
+
 Затем надо объявить **Оutlet** переменную для **MapView**:
 
 ``` swift
