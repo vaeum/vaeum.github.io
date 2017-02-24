@@ -123,6 +123,7 @@ tableView.tableFooterView = UIView(frame: CGRect.zero)
 На этом первая часть перевода заканчивается.
 
 Продолжение в следующей части перевода.
+[Ссылка на вторую часть.](http://vaeum.com/blog/2017/02/24/woring-with-maps-second/)
 
 Перевод главы из книги: [Beginning iOS 10 Programming with Swift 3](https://www.amazon.com/Beginning-iOS-10-Programming-Swift/dp/1520222599/ref=sr_1_1?s=books&ie=UTF8&qid=1487189058&sr=1-1&keywords=Simon+Ng)
 

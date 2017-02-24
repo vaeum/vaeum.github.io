@@ -189,8 +189,7 @@ MKCoordinateRegionMakeWithDistance(annotation.coordinate, 250, 250)
 ![Отображение пина на картер](https://monosnap.com/file/IBBWZQfa7407Y4sD6rSIDjddONx0IA.png)
 
 Завершающее продолжение в следующей части перевода.
-
-Ссылка на [первую часть](http://vaeum.com/blog/2017/02/18/woring-with-maps-first/).
+[Ссылка на вторую часть.](http://vaeum.com/blog/2017/02/18/woring-with-maps-first/)
 
 Перевод главы из книги: [Beginning iOS 10 Programming with Swift 3](https://www.amazon.com/Beginning-iOS-10-Programming-Swift/dp/1520222599/ref=sr_1_1?s=books&ie=UTF8&qid=1487189058&sr=1-1&keywords=Simon+Ng)
 
