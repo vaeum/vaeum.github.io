@@ -3,7 +3,7 @@ layout: post
 title:  "Дневник начинающего разработчика. Урок 3 Скролл или как отобразить кучу информации на экране."
 categories: Swift Xcode
 tags: Swift Xcode
-description: ""
+description: "Урок 3 Скролл или как отобразить кучу информации на экране."
 ---
 
 ![Lesson_3](http://i023.radikal.ru/1610/bf/290c4c00b39a.jpg)

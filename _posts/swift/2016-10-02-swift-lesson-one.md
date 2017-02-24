@@ -3,7 +3,7 @@ layout: post
 title:  "Дневник начинающего разработчика. Урок 1. Вывод текста в label с помощью Button."
 categories: Swift Xcode
 tags: Swift Xcode
-description: ""
+description: "Урок 1. Вывод текста в label с помощью Button."
 ---
 
 ![lesson-one](http://s011.radikal.ru/i318/1610/d7/68e7ebe990b6.jpg)
@@ -114,3 +114,5 @@ description: ""
 ![](http://s018.radikal.ru/i517/1610/b0/5fcc9524436b.gif)
 
 На этом урок закончен, встретимся через неделю.
+
+

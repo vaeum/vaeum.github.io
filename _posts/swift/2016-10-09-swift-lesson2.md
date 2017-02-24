@@ -3,7 +3,7 @@ layout: post
 title:  "Дневник начинающего разработчика. Урок 2 Рандомный вывод изображений в Imageview."
 categories: Swift Xcode
 tags: Swift Xcode
-description: ""
+description: "Урок 2 Рандомный вывод изображений в Imageview."
 ---
 
 ![lesson 2](http://s017.radikal.ru/i407/1610/35/e37c09f4842e.jpg)
@@ -229,3 +229,5 @@ nameLabel.text = randomImage[9]
 ![](http://s011.radikal.ru/i318/1610/c8/5b8e2ab9c804.gif)
 
 Всем спасибо! Увидимся через неделю.
+
+

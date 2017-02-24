@@ -3,7 +3,7 @@ layout: post
 title:  "Дневник начинающего разработчика. Урок 4 работа с элементом PickerView."
 categories: Swift Xcode
 tags: Swift Xcode
-description: ""
+description: "Урок 4 работа с элементом PickerView."
 ---
 
 ![Swift-lesson4](http://s017.radikal.ru/i435/1610/b4/f6fcf70848d3.jpg)
@@ -177,3 +177,5 @@ func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent c
 ![](http://s011.radikal.ru/i317/1610/36/d0f9eaaa0bc4.gif)
 
 Всем спасибо! Увидимся через неделю.
+
+

@@ -3,7 +3,7 @@ title: Работаем с Tab Bar Controller
 layout: post
 categories: Swift Xcode
 tags: Swift Xcode Xcode_base
-description: ""
+description: "Работа с Tab Bar Controller"
 ---
 
 ![](http://s42.radikal.ru/i096/1702/34/adecf13af595.jpg)
@@ -103,3 +103,5 @@ Xcode сразу подставил по умочанию два **View Controll
 
 И вот теперь можно создавать и подлючать файлы к контролерам и продолжать работу уже с тремя экранами.
 Всем спасибо! Встретимся в следующей статье.
+
+
