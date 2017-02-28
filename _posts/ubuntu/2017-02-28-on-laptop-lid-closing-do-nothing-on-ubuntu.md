@@ -52,7 +52,12 @@ HandleLidSwitch=ignore
 ```
 sudo service systemd-logind stop
 ```
+
 И после запускаем этот сервис
+
+```
+sudo service systemd-logind start
+```
 
 
 И для уверености можно перезагрузить сам ноутбук, командой
