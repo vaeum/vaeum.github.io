@@ -3,8 +3,8 @@ title: Lodash документация на русском (массивы) ча
 layout: post
 categories: Lodash
 tags: Lodash Documentation
-description: "Вольный перевод документации библиотеки Lodash, в данной статье переведено 10 методов, которые помогают работать с массивами. Расмотренны следующие методы .fill .findIndex .findLastIndex .flatten .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial"
-excerpt_text: "Вольный перевод документации библиотеки Lodash, в данной статье переведено 10 методов, которые помогают работать с массивами. Расмотренны следующие методы .fill .findIndex .findLastIndex .flatten .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial"
+description: "Вольный перевод документации библиотеки Lodash. В данной статье переведено 10 методов, которые помогают работать с массивами. Расмотренны следующие методы .fill .findIndex .findLastIndex .flatten .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial"
+excerpt_text: "Вольный перевод документации библиотеки Lodash, В данной статье переведено 10 методов, которые помогают работать с массивами. Расмотренны следующие методы .fill .findIndex .findLastIndex .flatten .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial"
 ---
 
 ![Lodash документация на русском](/images/post/Lo-Dash_array_part2.jpg)
@@ -31,7 +31,7 @@ excerpt_text: "Вольный перевод документации библи
 
 `array (Array)`: Массив для заполнения.
 
-`value (*)`: Значения которыми будет заполнен массив.
+`value (*)`: Значения, которыми будет заполнен массив.
 
 `[start=0] (number)`: Начальная позиция заполнения.
 
@@ -64,8 +64,8 @@ _.fill([4, 6, 8, 10], '*', 1, 3);
 [npm package](https://www.npmjs.com/package/lodash.findindex).
 
 Этот метод похож на [_.find](https://lodash.com/docs/4.17.4#find) за исключением
-того что он возвращает индекс первого элемента.
-`predicate` возвращает истину а не сам элемент.
+того, что он возвращает индекс первого элемента.
+`predicate` возвращает истину, а не сам элемент.
 
 **Версия:** *1.1.0*
 
@@ -73,7 +73,7 @@ _.fill([4, 6, 8, 10], '*', 1, 3);
 
 `array (Array)`: Массив для обработки.
 
-`[predicate=_.identity] (Function)`: Функция вызываемая на каждой итерации.
+`[predicate=_.identity] (Function)`: Функция, вызываемая на каждой итерации.
 
 `[fromIndex=0] (number)`: Индекс начальной позиции поиска.
 
@@ -121,7 +121,7 @@ _.findIndex(users, 'active');
 
 `array (Array)`: Массив для обработки.
 
-`[predicate=_.identity] (Function)`: Функция вызываемая на каждой итерации.
+`[predicate=_.identity] (Function)`: Функция, вызываемая на каждой итерации.
 
 `[fromIndex=array.length-1] (number)`: Индекс начальной позиции поиска.
 
@@ -295,8 +295,8 @@ _.head([]);
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7467),
 [npm package](https://www.npmjs.com/package/lodash.indexof).
 
-Возвращает индекс места в массиве, в котором в первые встречается искомое значения
-используя принцип сравнение на равенство каждого значения.
+Возвращает индекс места в массиве, в котором впервые встречается искомое значение,
+используя принцип сравнения на равенство каждого значения.
 
 Если `fromindex` отрицательный, поиск начинается с конца массива.
 
