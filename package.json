@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/vaeum/vaeum.github.io#readme",
   "devDependencies": {
-    "autoprefixer": "^6.7.0",
+    "autoprefixer": "^6.7.6",
     "babel-core": "^6.22.1",
     "babel-preset-es2015": "^6.22.0",
     "bootstrap-only-css": "^1.0.0",
