@@ -3,8 +3,8 @@ title: Lodash документация на русском (массивы) ча
 layout: post
 categories: Lodash
 tags: Lodash Documentation
-description: "Вольный перевод документации библиотеки Lodash. В данной статье переведено 10 методов, которые помогают работать с массивами. Расмотренны следующие методы .fill .findIndex .findLastIndex .flatten .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial"
-excerpt_text: "Вольный перевод документации библиотеки Lodash, В данной статье переведено 10 методов, которые помогают работать с массивами. Расмотренны следующие методы .fill .findIndex .findLastIndex .flatten .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial"
+description: "Вольный перевод документации библиотеки Lodash. В данной статье переведено 10 методов, которые помогают работать с массивами. Рассмотрены следующие методы .fill .findIndex .findLastIndex .flatten .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial"
+excerpt_text: "Вольный перевод документации библиотеки Lodash, В данной статье переведено 10 методов, которые помогают работать с массивами. Рассмотрены следующие методы .fill .findIndex .findLastIndex .flatten .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial"
 ---
 
 ![Lodash документация на русском](/images/post/Lo-Dash_array_part2.jpg)
