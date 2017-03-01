@@ -41,6 +41,9 @@ sudo vim /etc/systemd/logind.conf
 ```
 HandleLidSwitch=ignore
 ```
+Должно получиться вот так:
+
+![Конечный результат](https://monosnap.com/file/YMrYSKGLIqOyyGoNetq8n4obNeXRdi.png)
 
 Отличия второй строки от первой - в отсутсвии знака `#` впереди и вместо слова `suspend`,
 стоит слово `ignore`.
