@@ -2,7 +2,7 @@
 title: Работаем с Tab Bar Controller
 layout: post
 categories: Swift Xcode
-tags: Swift Xcode Xcode_base
+tags: Swift Xcode Xcode-base
 description: "Работа с Tab Bar Controller"
 ---
 
