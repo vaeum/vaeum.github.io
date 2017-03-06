@@ -9,7 +9,7 @@ layout: post
 примере React JS компонента, один из способов как можно сделать свой плагин для
 вывода таблиц с сортировкой. Существуют несколько видов сортировок, по убыванию и по возрастанию, мы реализуем оба вида.
 
-### Шаг первый
+### Шаг первый - создаем структуру данных
 
 Начнем с нашей структуры данных которыми мы будем оперировать, мы
 будем работать с многомерными массивами. Они выглядят так
@@ -24,7 +24,7 @@ const arr = [
 
 Как видите это массив массивов. Если у вас другая структура приведите ее к такому виду.
 
-### Шаг второй
+### Шаг второй - создаем компоненты
 
 Создадим компонент под нашу таблицу. Начнем с
 
@@ -98,6 +98,7 @@ export default class SortableTable React.Component {
 
     this.state = {
       data: [],
+      columns: [],
     }
   }
 
@@ -126,8 +127,21 @@ export default class SortableTable React.Component {
 Для начала вынесем в начало файла, после обьявления React, нашу переменную с текстом шапки таблицы
 
 ```javascript
-const TABLE_COLUMNS = ['Name', 'ID', 'Count'];
+const TABLE_COLUMNS = [
+  {
+    label: 'Name',
+    sort: 'default',
+  },{
+    label: 'ID',
+    sort: 'default',
+  },{
+    label: 'Count',
+    sort: 'default',
+  }
+];
 ```
+
+В поле `label` находиться сам текст, а в поле `sort` тип сортировки, по умолчанию он равен `default`.
 
 Создадим в том же файле два компонента:
 
@@ -137,7 +151,7 @@ const SortableHeader = (props) => {
     <thead>
       <tr>
         {TABLE_COLUMNS.map((element, index) =>
-          <th key={index}>{element}</th>
+          <th key={index}>{element.label}</th>
         )}
       </tr>
     </thead>
@@ -177,19 +191,45 @@ const SortableBody = ({data}) => {
 - перебираем массив в переданных props от родительского компонента `SortableTable`
 - перебираем вложенные массивы с данными
 
+#### Немного меняем наш локальный state 
+
+Для доступа и изменение даных, надо добавить **TABLE_COLUMNS** в **this.state**
+
+```javascript
+constructor(props) {
+  super(props);
+
+  this.state = {
+    data: [],
+    column: TABLE_COLUMNS,
+  }
+}
+```
+
 Наш файл выглядет так:
 
 ```javascript
 import React from 'react';
 
-const TABLE_COLUMNS = ['Name', 'ID', 'Count'];
+const TABLE_COLUMNS = [
+  {
+    label: 'Name',
+    sort: 'default',
+  },{
+    label: 'ID',
+    sort: 'default',
+  },{
+    label: 'Count',
+    sort: 'default',
+  }
+];
 
 const SortableHeader = (props) => {
   return(
     <thead>
       <tr>
         {TABLE_COLUMNS.map((element, index) =>
-          <th key={index}>{element}</th>
+          <th key={index}>{element.label}</th>
         )}
       </tr>
     </thead>
@@ -220,6 +260,7 @@ export default class SortableTable React.Component {
 
     this.state = {
       data: [],
+      column: TABLE_COLUMNS,
     }
   }
 
@@ -241,7 +282,7 @@ export default class SortableTable React.Component {
 }
 ```
 
-### Шаг третий
+### Шаг третий - добавляем стили для отображения стрелок
 
 Создаем стрелки для показа пользователя в каком направлении идет сортировка.
 
@@ -253,16 +294,128 @@ export default class SortableTable React.Component {
 const cn = require('bem-cn')('table');
 ```
 
-Перепишем наш render метод в SortableTable компоненте
+Добавляем в проект файл со стилями, такого содержания:
+
+```scss
+.sorting-block{
+  position: relative;
+  padding-right: 20px !important;
+  cursor: pointer;
+  user-select: none;
+
+  &.is-sortASC{
+    &:before{
+      border-bottom-color: #333;
+    }
+  }
+
+  &.is-sortDESC{
+    &:after{
+      border-top-color: #333;
+    }
+  }
+
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    right: 5px;
+  }
+
+  &:before{
+    top: 50%;
+    margin-top: -5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #eee transparent;
+  }
+
+  &:after{
+    top: 50%;
+    margin-top: 1px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #eee transparent transparent transparent;
+  }
+}
+```
+
+Этот код добавит две стрелочки к названию и они не будут активны, но как только кликнем, в зависимости от направления сортировки примениться соответствующий класс и мы увидим активную стрелочку. Если вид сортировки **asc**, то добавляем класс **sortASC**, и на оборот, если сортируем по **desc**, добавляем класс **sortDESC**. По умолчанию у нас не добавляется ни какого класса. С динамическим добавлением или удалением класса хорошо справляется модуль `bem-cn`. Он за нас сделаем много работы.
+
+### Шаг четвертый - добавляем обработчик
+
+Перепишем наш render метод в **SortableTable** компоненте
 
 ```javascript
 render() {
   return (
     <table className={cn}>
-      <SortableHeader />
+      <SortableHeader columns={this.state.columns} />
       <SortableBody data={this.state.data} />
     </table>
   );
+}
+```
+
+Передадим на вход данные о наших столбцах в column props. А также добавим обработчик по клику на элемент, так же через props.
+
+```javascript
+<SortableHeader columns={this.state.columns} onClick={this.sortTableFunc} />
+```
+
+Напишем нашу функцию-обработчик
+
+```javascript
+sortTableFunc = (id, sortMethod) => {
+  const { data, column } = this.state;
+
+  let currentSortMethod = 'default';
+
+  switch (sortMethod) {
+    case 'default':
+      currentSortMethod = 'asc';
+      break;
+    case 'asc':
+      currentSortMethod = 'desc';
+      break;
+    case 'desc':
+      currentSortMethod = 'asc';
+      break;
+    default:
+      currentSortMethod = 'asc';
+  }
+
+  const changeColumn = column.map((e, i) =>
+    ({ ...e, sort: i == id ? currentSortMethod : 'default' })
+  )
+
+  const sortData = sortMultidimensionalArrayFunc(data, id, currentSortMethod)
+
+  this.setState({
+    data: sortData,
+    column: changeColumn,
+  });
+}
+```
+
+А так же перепишем наш `SortableHeader` компонент
+
+```javascript
+const SortableHeader = (props) => {
+  const { columns } = props;
+ 
+  return(
+    <thead>
+      <tr>
+        {columns.map((element, index) =>
+          <th key={index}>{element.label}</th>
+        )}
+      </tr>
+    </thead>
+  )
 }
 ```
 
