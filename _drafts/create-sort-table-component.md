@@ -88,7 +88,7 @@ ComponentWillMount сработает когда React смотирует ком
 ```javascript
 import React from 'react';
 
-export default class SortableTable React.Component {
+export default class SortableTable extends React.Component {
   static propTypes = {
     data: React.PropTypes.array,
   };
@@ -215,13 +215,15 @@ const TABLE_COLUMNS = [
   {
     label: 'Name',
     sort: 'default',
-  },{
+  },
+  {
     label: 'ID',
     sort: 'default',
-  },{
+  },
+  {
     label: 'Count',
     sort: 'default',
-  }
+  },
 ];
 
 const SortableHeader = (props) => {
@@ -250,9 +252,9 @@ const SortableBody = ({data}) => {
   )
 }
 
-export default class SortableTable React.Component {
+export default class SortableTable extends React.Component {
   static propTypes = {
-    data: React.PropTypes.aray,
+    data: React.PropTypes.array,
   };
 
   constructor(props) {
@@ -260,7 +262,7 @@ export default class SortableTable React.Component {
 
     this.state = {
       data: [],
-      column: TABLE_COLUMNS,
+      columns: TABLE_COLUMNS,
     }
   }
 
@@ -370,7 +372,7 @@ render() {
 
 ```javascript
 sortTableFunc = (id, sortMethod) => {
-  const { data, column } = this.state;
+  const { data, columns } = this.state;
 
   let currentSortMethod = 'default';
 
@@ -388,15 +390,15 @@ sortTableFunc = (id, sortMethod) => {
       currentSortMethod = 'asc';
   }
 
-  const changeColumn = column.map((e, i) =>
+  const changeColumn = columns.map((e, i) =>
     ({ ...e, sort: i == id ? currentSortMethod : 'default' })
-  )
+  );
 
-  const sortData = sortMultidimensionalArrayFunc(data, id, currentSortMethod)
+  const sortData = sortMultidimensionalArrayFunc(data, id, currentSortMethod);
 
   this.setState({
     data: sortData,
-    column: changeColumn,
+    columns: changeColumn,
   });
 }
 ```
@@ -405,17 +407,155 @@ sortTableFunc = (id, sortMethod) => {
 
 ```javascript
 const SortableHeader = (props) => {
-  const { columns } = props;
- 
+  const { columns, onClick } = props;
+
   return(
     <thead>
-      <tr>
-        {columns.map((element, index) =>
-          <th key={index}>{element.label}</th>
-        )}
-      </tr>
+    <tr>
+      {columns.map((element, index) =>
+        <th
+          key={index}
+          onClick={() => onClick(index, element.sort)}
+        >
+          {element.label}
+        </th>
+      )}
+    </tr>
     </thead>
-  )
+  );
+}
+```
+
+```javascript
+import React from 'react';
+import sortMultidimensionalArrayFunc from 'sort-multidimensional-array-func';
+const cn = require('bem-cn')('table');
+
+const TABLE_COLUMNS = [
+  {
+    label: 'Name',
+    sort: 'default',
+  },
+  {
+    label: 'ID',
+    sort: 'default',
+  },
+  {
+    label: 'Count',
+    sort: 'default',
+  },
+];
+
+const SortableHeader = (props) => {
+  const { columns, onClick } = props;
+
+  return(
+    <thead>
+    <tr>
+      {columns.map((element, index) =>
+        <th
+          key={index}
+          className={cn('sorting').state({
+            sortASC: element.sort == 'asc',
+            sortDESC: element.sort == 'desc',
+          }).mix('sorting-block text-nowrap')}
+          onClick={() => onClick(index, element.sort)}
+        >
+          {element.label}
+        </th>
+      )}
+    </tr>
+    </thead>
+  );
+}
+
+const SortableBody = (props) => {
+  const { data } = props;
+
+  return(
+    <tbody>
+      {data.map((element, index) =>
+        <tr key={index}>
+          {element.map((item, i) =>
+            <td key={i}>{item}</td>
+          )}
+        </tr>
+      )}
+    </tbody>
+  );
+}
+
+export default class SortableTable extends React.Component {
+  static propTypes = {
+    data: React.PropTypes.array,
+  };
+
+  static defaultProps = {
+    data: [
+      ['Alexander', 345345, 887423],
+      ['Paul', 2347, 76323],
+      ['Larisa', 745, 54234],
+    ],
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: [],
+      columns: TABLE_COLUMNS,
+    };
+  }
+
+  componentWillMount() {
+    const { data } = this.props;
+    this.setState({ data });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { data } = nextProps;
+    this.setState({ data });
+  }
+
+  render() {
+    return (
+      <table className={cn}>
+        <SortableHeader columns={this.state.columns} onClick={this.sortTableFunc} />
+        <SortableBody data={this.state.data} />
+      </table>
+    );
+  }
+
+  sortTableFunc = (id, sortMethod) => {
+    const { data, columns } = this.state;
+
+    let currentSortMethod = 'default';
+
+    switch (sortMethod) {
+      case 'default':
+        currentSortMethod = 'asc';
+        break;
+      case 'asc':
+        currentSortMethod = 'desc';
+        break;
+      case 'desc':
+        currentSortMethod = 'asc';
+        break;
+      default:
+        currentSortMethod = 'asc';
+    }
+
+    const changeColumn = columns.map((e, i) =>
+      ({ ...e, sort: i == id ? currentSortMethod : 'default' })
+    );
+
+    const sortData = sortMultidimensionalArrayFunc(data, id, currentSortMethod);
+
+    this.setState({
+      data: sortData,
+      columns: changeColumn,
+    });
+  }
 }
 ```
 
