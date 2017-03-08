@@ -20,7 +20,7 @@ description: ""
 Добавляем репозиторий с NPM модулем в своем профиле [https://travis-ci.org/profile/](https://travis-ci.org/profile/),
 нажав на переключатеть
 
-![Alt text](https://monosnap.com/file/xPdx1aVPgE0WAWmC70s221ulDSQvyt.png)
+![Alt text](/images/post/publishing-to-npm-on-git-commit-using-github-hooks-and-travis1.png)
 
 #### Шаг 3
 
@@ -139,4 +139,4 @@ $ git push origin master
 После нашего пуша в репозиторий, Travis пересоберет проект и попытается опубликовать
 модуль в репозитории NPM, это скриншот удачной регистрации нашего модуля:
 
-![Alt text](https://monosnap.com/file/1MUT2aK8w0PdAMMmprTymoeIl2PJLh.png)
+![Alt text](/images/post/publishing-to-npm-on-git-commit-using-github-hooks-and-travis2.png)
