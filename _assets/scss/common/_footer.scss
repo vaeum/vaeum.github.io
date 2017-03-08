@@ -1,16 +1,28 @@
 footer.main-footer {
-  padding: 20px 0;
+  padding: 20px 15px;
   border-top: 1px solid #eceff2;
   color: #565a5f;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.footer-links{
-  a{
-    font-size: 25px;
-    display: inline-block;
-    margin-right: 5px;
-    &:last-child{
-      margin-right: 0;
+.footer{
+  &-copyright{
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+
+  &-links{
+    a{
+      font-size: 25px;
+      display: inline-block;
+      margin-right: 5px;
+      &:last-child{
+        margin-right: 0;
+      }
     }
   }
 }
