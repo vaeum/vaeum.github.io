@@ -3,7 +3,7 @@ title: Introduction to Static Table Views, UIimagePickerContorller and NSLayoutC
 layout: post
 categories: Swift Xcode StaticTableView
 tags: Swift Xcode StaticTableView
-description: "Работа  с Static Table Views, UIimagePickerContorller and NSLayoutConstraint."
+description: "Работа с Static Table Views, UIimagePickerContorller and NSLayoutConstraint. Часть первая."
 ---
 
 ![Работа  с Static Table Views, UIimagePickerContorller and NSLayoutConstraint.](/images/post/StaticTableView.jpg)
