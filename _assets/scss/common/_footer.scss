@@ -7,6 +7,10 @@ footer.main-footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  position: relative;
+  z-index: 100;
+  background: #f7f7f7;
 }
 
 .footer{

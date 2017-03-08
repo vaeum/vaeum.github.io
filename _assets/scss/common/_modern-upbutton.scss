@@ -1,0 +1,108 @@
+.modern-upbutton {
+  /* основной стиль кнопки  */
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100px;
+  margin-right: 50px;
+  box-sizing: border-box;
+  transition: background .5s;
+  cursor: pointer;
+  display: none;
+  > div {
+    /* видимая область кнопки, узкая полоска  */
+    transition: background .5s;
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 75px;
+  }
+  &:hover > div {
+    background: #f2f2f2;
+  }
+  .subscripted-arrow {
+    /* стрелка с надписью "наверх"  */
+    padding-left: 4px;
+    color: #9a9ca0;
+    position: absolute;
+    width: 100%;
+    top: 12px;
+    left: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 11px;
+  }
+  .modern-upbutton-disable {
+    /* для выключения кнопки  */
+    display: none;
+    color: rgb(189, 189, 189);
+    font-size: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    left: 0;
+    text-align: center;
+    transition: display .5s;
+    span {
+      border-bottom: 1px dashed rgb(189, 189, 189);
+    }
+  }
+  &:hover .modern-upbutton-disable {
+    display: block;
+  }
+  .modern-upbutton-disable span:hover {
+    color: #0079C2;
+    border-color: #0079C2;
+  }
+  &[data-scroll=down] .subscripted-arrow span {
+    display: none;
+  }
+  &[data-scroll=up] .subscripted-arrow {
+    /* стрелка направлена вверх  */
+    // background: url(/img/modern-upbutton.png) 8px center no-repeat;
+  }
+  &[data-scroll=down] .subscripted-arrow {
+    /* стрелка направлена вниз  */
+    // background: url(/img/modern-downbutton.png) 8px center no-repeat;
+    height: 10px;
+  }
+}
+
+.modern-upbutton-was-disabled {
+  /* юзер скрыл кнопку  */
+  display: none !important;
+}
+
+.modern-upbutton.its-a-mobile-modern-upbutton {
+  > div {
+    /* для планшетов  */
+    width: 50px;
+    background: #f2f2f2;
+    z-index: 100;
+    &:active {
+      background: rgb(219, 219, 219);
+    }
+  }
+  .subscripted-arrow {
+    height: 20px;
+    padding: 0;
+    span {
+      display: none;
+    }
+  }
+  &[data-scroll=down] .subscripted-arrow {
+    /* планшет, стрелка вниз  */
+    background: url(/img/modern-downbutton-mobile2.png) center center no-repeat;
+    height: 20px;
+    padding: 0;
+  }
+  &[data-scroll=up] .subscripted-arrow {
+    /* планшет, стрелка вверх  */
+    background: url(/img/modern-upbutton-mobile2.png) center center no-repeat;
+  }
+  .modern-upbutton-disable {
+    display: block;
+  }
+}

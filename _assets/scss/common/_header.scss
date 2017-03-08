@@ -17,6 +17,10 @@ header.main-header{
   justify-content: center;
   align-items: center;
 
+  @media(max-width: 768px){
+    position: absolute;
+  }
+
   .ico-search{
     color: #fff;
   }
