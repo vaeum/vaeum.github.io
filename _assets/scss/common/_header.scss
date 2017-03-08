@@ -62,7 +62,7 @@ header.main-header{
 
       &.active{
         a{
-          border-bottom: 2px $blue solid;
+          background: $blue;
         }
       }
     }
@@ -70,9 +70,9 @@ header.main-header{
     a{
       display: block;
       color: #fff;
-      padding: 3px 5px;
-      border-bottom: 2px transparent solid;
+      padding: 3px 10px;
       text-decoration: none;
+      border-radius: 4px;
     }
   }
 
