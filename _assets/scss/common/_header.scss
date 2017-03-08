@@ -73,6 +73,10 @@ header.main-header{
       padding: 3px 10px;
       text-decoration: none;
       border-radius: 4px;
+      
+      &:hover{
+        background: lighten($blue, 10%);
+      }
     }
   }
 
