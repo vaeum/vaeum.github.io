@@ -1,29 +1,68 @@
 <header class="main-header">
-  <div class="container media media-center">
-    <div class="media-body">
-      <div class="header-logo">
-        <a href="{{ site.baseurl }}/" class="no-underline">
-          {% include svg/logo.svg %}
-          <p class="header-description">
-            Блог веб разработчика
-          </p>
-        </a>
-      </div>
-    </div>
+  <div class="header-logo-block">
+    <a href="/" class="header-logo">
+      Vaeum.com
+    </a>
+  </div>
 
-    <div class="header-search">
-      <span class="cur" id="search-open">
-        {% include svg/search.svg %}
-      </span>
+  <ul class="lsn pl0 mb0 header-menu">
+    <li{% if page.url == '/' %} class="active"{% endif %}>
+      <a href="{{ site.baseurl }}/" title="Блог">Главная</a>
+    </li>
 
-      <div class="search-overlay" id="search-overlay">
-        <div class="search-wrapper" id="search-wrapper">
-          <div id="search-container" class="">
-            <input type="text" id="search-input" class="" placeholder="поиск...">
-            <ul id="results-container"></ul>
-          </div>
-        </div>
-      </div>
+    <!-- <li{% if page.url == '/about/' %} class="active"{% endif %}>
+      <a href="{{ site.baseurl }}/about/" title="О блоге">О блоге</a>
+    </li> -->
+
+    <!-- <li{% if page.url == '/resume/' %} class="active"{% endif %}>
+      <a href="{{ site.baseurl }}/resume/" title="Резюме">Резюме</a>
+    </li> -->
+
+    <li>
+      <a href="http://vaeum.com/styleguide/" target="_blank" title="Style Book">
+        Style Book
+      </a>
+    </li>
+
+    <li{% if page.url == '/archive/' %} class="active"{% endif %}>
+      <a href="{{ site.baseurl }}/archive/" title="Архив">Архив</a>
+    </li>
+
+    <li{% if page.url == '/twitter/' %} class="active"{% endif %}>
+      <a href="{{ site.baseurl }}/twitter/" title="twitter">Twitter</a>
+    </li>
+  </ul>
+
+  {% if page.excerpt %}
+    <a
+      href="http://prose.io/#vaeum/vaeum.github.io/edit/dev/{{page.path}}"
+      target="_blank"
+      class="header-action-button"
+    >
+      Редактировать
+    </a>
+  {% else %}
+    <a
+      href="http://prose.io/#vaeum/vaeum.github.io/new/dev/_posts"
+      target="_blank"
+      class="header-action-button"
+    >
+      Добавить статью
+    </a>
+  {% endif %}
+
+  <!-- <div class="header-search">
+    <span class="cur" id="search-open">
+      {% include svg/search.svg %}
+    </span>
+  </div> -->
+</header>
+
+<div class="search-overlay" id="search-overlay">
+  <div class="search-wrapper" id="search-wrapper">
+    <div id="search-container" class="">
+      <input type="text" id="search-input" class="" placeholder="поиск...">
+      <ul id="results-container"></ul>
     </div>
   </div>
-</header>
+</div>

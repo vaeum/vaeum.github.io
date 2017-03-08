@@ -1,37 +1,5 @@
 <nav class="sidebar">
   <div class="hr">
-    <span class="hr-text">Меню</span>
-  </div>
-
-  <ul class="lsn pl0 mb0 widget-menu">
-    <li{% if page.url == '/' %} class="active"{% endif %}>
-      <a href="{{ site.baseurl }}/" title="Блог">Блог</a>
-    </li>
-
-    <!-- <li{% if page.url == '/about/' %} class="active"{% endif %}>
-      <a href="{{ site.baseurl }}/about/" title="О блоге">О блоге</a>
-    </li> -->
-
-    <!-- <li{% if page.url == '/resume/' %} class="active"{% endif %}>
-      <a href="{{ site.baseurl }}/resume/" title="Резюме">Резюме</a>
-    </li> -->
-
-    <li>
-      <a href="http://vaeum.com/styleguide/" target="_blank" title="Style Book">
-        Style Book
-      </a>
-    </li>
-
-    <li{% if page.url == '/archive/' %} class="active"{% endif %}>
-      <a href="{{ site.baseurl }}/archive/" title="Архив">Архив</a>
-    </li>
-
-    <li{% if page.url == '/twitter/' %} class="active"{% endif %}>
-      <a href="{{ site.baseurl }}/twitter/" title="twitter">Twitter</a>
-    </li>
-  </ul>
-
-  <div class="hr">
     <span class="hr-text">Теги</span>
   </div>
 
@@ -122,11 +90,6 @@
   </div>
 
   <ul class="lsn pl0 mb0 widget-buttons">
-    <li>
-      <a href="https://github.com/vaeum/vaeum.github.io/new/dev/_posts" target="_blank">
-        {% include svg/plus.svg %}Добавить статью
-      </a>
-    </li>
     <li>
       <a href="https://github.com/vaeum/vaeum.github.io/issues/new" target="_blank">
         {% include svg/issue-opened.svg %}Добавить issue

@@ -8,6 +8,7 @@ body {
   background: #fafafa;
   font-family: $font-san-francisco;
   line-height: 1.5em;
+  padding-top: 100px;
 }
 
 body {
@@ -134,3 +135,17 @@ a{
     text-transform: uppercase;
   }
 }
+
+.fake-table{
+  display: table;
+
+  &-row{
+    display: table-row;
+  }
+
+  &-cell{
+    display: table-cell;
+  }
+}
+
+

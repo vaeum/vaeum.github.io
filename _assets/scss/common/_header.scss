@@ -1,26 +1,89 @@
 header.main-header{
-  padding: 20px 0;
+  padding: 10px 15px;
   // margin-bottom: 20px;
-}
 
-.header-description{
-  text-transform: uppercase;
-  color: #999;
-  padding-left: 10px;
-  padding-top: 5px;
-  text-align: center;
-}
+  background: darken($blue, 20%);
+  width: 100%;
+  z-index: 20;
+  // font-size: .875rem;
+  // font-weight: 400;
+  top: 0;
+  border-bottom: none;
+  position: fixed;
+  // height: 64px;
 
-.header-logo{
-  float: left;
-  .ico-logo{
-    color: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .ico-search{
+    color: #fff;
   }
 }
 
-.header-search{
-  .fa-search{
-    font-size: 20px;
+.header{
+  &-description{
+    text-transform: uppercase;
+    color: #999;
+    padding-left: 10px;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  &-logo-block{
+    flex-grow: 1;
+  }
+
+  &-logo{
+    // float: left;
+    color: #fff;
+    font-size: 30px;
+
+    &:hover{
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  &-menu{
+    margin-right: 20px;
+
+    li{
+      float: left;
+      margin-right: 20px;
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+      &.active{
+        a{
+          border-bottom: 2px $blue solid;
+        }
+      }
+    }
+
+    a{
+      display: block;
+      color: #fff;
+      padding: 3px 5px;
+      border-bottom: 2px transparent solid;
+      text-decoration: none;
+    }
+  }
+
+  &-action-button{
+    color: #fff;
+    padding: 8px 20px;
+    background: $green;
+    border-radius: 4px;
+
+    &:hover{
+      background: darken($green, 5%);
+      color: #fff;
+      text-decoration: none;
+    }
   }
 }
 
