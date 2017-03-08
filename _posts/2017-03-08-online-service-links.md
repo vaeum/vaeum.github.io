@@ -1,15 +1,17 @@
 ---
 layout: post
 title:  "Сборник ссылок на он-лайн сервисы"
-categories:
-tags:
+categories: Links
+tags: Links
+description: "Сборник полезных онлайн сервисов"
 ---
 
-В этом посте 
+В этом посте, я собираю ссылки на полезные онлайн сервисы, которые помогают мне
+в работе. Эта заметка будет пополняться новыми сервисами.
 
-CSS генераторы 
-
+CSS генераторы
 - [Enjoycss.com](http://enjoycss.com/) (Большой генератор для css, есть возможность экспорта в scss, less)
+- [css2sass](http://css2sass.herokuapp.com/) (Конвертирует sass код из css)
 
 Создание он-лайн сниппетов и публикация их
 - [Plunker](http://plnkr.co/)
@@ -23,6 +25,7 @@ CSS генераторы
 Совместное редактирование кода
 - [Floobits.com](https://floobits.com/)
 - [Kobra.io](https://kobra.io/)
+- [Trycode.pw](https://trycode.pw/)
 
 Генерирование JSON
 - [Json-generator](http://www.json-generator.com/)
@@ -40,4 +43,4 @@ Base64 конвертер
 - [Base64-image.de](https://www.base64-image.de/)
 
 Сжатие картинок
-- [tinypng](https://tinypng.com/)
+- [tinypng](https://tinypng.com/) (Сжимает PNG файлы)
