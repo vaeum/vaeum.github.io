@@ -43,7 +43,7 @@ HandleLidSwitch=ignore
 ```
 Должно получиться вот так:
 
-![Конечный результат](https://monosnap.com/file/YMrYSKGLIqOyyGoNetq8n4obNeXRdi.png)
+![Конечный результат](/images/post/on-laptop-lid-closing-do-nothing-on-ubuntu-image2.png)
 
 Отличия второй строки от первой - в отсутсвии знака `#` впереди и вместо слова `suspend`,
 стоит слово `ignore`.
