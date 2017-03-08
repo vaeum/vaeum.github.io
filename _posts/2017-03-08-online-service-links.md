@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "Сборник ссылок на он-лайн сервисы"
+title: Сборник ссылок на он-лайн сервисы
 categories: Links
 tags: Links
-description: "Сборник полезных онлайн сервисов"
+description: Сборник полезных онлайн сервисов
+published: true
 ---
 
 В этом посте, я собираю ссылки на полезные онлайн сервисы, которые помогают мне
@@ -43,4 +44,5 @@ Base64 конвертер
 - [Base64-image.de](https://www.base64-image.de/)
 
 Сжатие картинок
-- [tinypng](https://tinypng.com/) (Сжимает PNG файлы)
+- [Tinypng](https://tinypng.com/) (Сжимает PNG файлы, имеется пакетная обработка, а также сохранение в dropbox)
+- [Tinyjpg](https://tinyjpg.com/) (Сжимает JPG файлы, имеется пакетная обработка, а также сохранение в dropbox)
