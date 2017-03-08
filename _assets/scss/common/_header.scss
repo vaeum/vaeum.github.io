@@ -40,9 +40,8 @@ header.main-header{
   }
 
   &-logo{
-    // float: left;
     color: #fff;
-    font-size: 30px;
+    display: table;
 
     &:hover{
       color: #fff;
