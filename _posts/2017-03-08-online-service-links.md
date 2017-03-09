@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Сборник ссылок на он-лайн сервисы
+title: Сборник ссылок на онлайн сервисы
 categories: Links
 tags: Links
 description: Сборник полезных онлайн сервисов
