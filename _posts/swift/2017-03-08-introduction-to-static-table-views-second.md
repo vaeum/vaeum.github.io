@@ -1,9 +1,14 @@
 ---
-title: Introduction to Static Table Views, UIimagePickerContorller and NSLayoutConstraint(Перевод) Часть вторая.
+title: >-
+  Introduction to Static Table Views, UIimagePickerContorller and
+  NSLayoutConstraint(Перевод) Часть вторая.
 layout: post
 categories: Swift Xcode StaticTableView
 tags: Swift Xcode StaticTableView
-description: "Работа с Static Table Views, UIimagePickerContorller and NSLayoutConstraint. Часть вторая."
+description: >-
+  Работа с Static Table Views, UIimagePickerContorller and NSLayoutConstraint.
+  Часть вторая.
+published: true
 ---
 
 ![Работа  с Static Table Views, UIimagePickerContorller and NSLayoutConstraint.](/images/post/StaticTableView.jpg)
@@ -20,7 +25,7 @@ description: "Работа с Static Table Views, UIimagePickerContorller and NS
 
 ![Static Table Views](https://monosnap.com/file/UGCKnvUNHSpQsrBoxWMRNzKQCLx1p4.png)
 
-> **Примечание:** панель кнопок (UIBarButtonItem) очень похож на стандартную кнопку (UIButon). Тем не менее, панель кнопок разработанна специально для панелей навигации и панели инструментов.
+> **Примечание:** панель кнопок (UIBarButtonItem) очень похож на стандартную кнопку (UIButon). Тем не менее, панель кнопок разработана специально для панели навигации и панели инструментов.
 
 Затем, удерживая клавишу управления, перетащите иконку **+** в контроллер
 навигации нового ресторана. Отпустите кнопки и выберете **present modally**
@@ -33,36 +38,27 @@ description: "Работа с Static Table Views, UIimagePickerContorller and NS
 Подобно контроллеру модального представления, который сделали ранее, мы должны
 предоставить пользователям возможность отклонить контроллер. На панели навигации
 контроллера **New Restaurant** добавьте элемент в виде значка в верхний левый
-угол. В **Attribute inspector** установите для него идентификатор **Cancel**
-белого цвета.
+угол. В **Attribute inspector** установите для него идентификатор **Cancel**.
 Когда пользователь нажимает на кнопку **Cancel**, модальный вид будет отключен.
-Для этого мы создадим функцию отмены. Выберете файл**RestaurantTableViewController.swift**
-создайте следующие действие отмены:
-
+Для этого мы создадим функцию отмены. Выберете файл **RestaurantTableViewController.swift** создайте следующие действие отмены:
 
 ```swift
 @IBAction func unwindToHomeScreen(segue:UIStoryboardSegue) {
 }
 ```
-После добавление этого метода, **Interface Builder** может распознать действие
-отмены. Теперь вернемся к **Main.storyboard**. Удерживая **control key**,
-перетащите его от кнопки **Cancel** к значку **Exit**. В раскрывающемся меню
-выберете параметр **unwindToHomeScreenWithSegue:** для создание действия.
+После добавление этого метода, **Interface Builder** может распознать действие отмены. Теперь вернемся к **Main.storyboard**. Удерживая **control key**, перетащите курсор от кнопки **Cancel** к значку **Exit**. В раскрывающемся меню выберете параметр **unwindToHomeScreenWithSegue:** для подключения функции.
 ![Подклчение unwindToHomeScreenWithSegue](http://s56.radikal.ru/i154/1703/ff/cae7d8783179.gif)
 
-Теперь давайте запустим проект и посмотрим как работает выход из модального
-преставления. После запуска приложения нажмите значок **"+"**. Вы должны
-увидеть экран **New Restaurant screen**.
+Теперь давайте запустим проект и посмотрим как работает выход из модального преставления. После запуска приложения нажмите значок **"+"**. Вы должны увидеть экран **New Restaurant screen**.
 
 ![Анимация работы выхода из модального представления](http://s019.radikal.ru/i638/1703/62/6ca7644b9baf.gif)
 
 ### Отображение бибилиотеки фотографий с помощью UIImagePickerController
 
-Когда вызывается первая ячейка просмотра таблицы, мы хотим отобразить встроенную
-бибиотеку фотографий и позволить пользователям выбирать фотографию. В
+Когда пользователь кликает на первую ячейку просмотра таблицы, мы хотим отобразить встроенную бибиотеку фотографий и позволить пользователям выбрать фотографию. В
 **UIKit framework** предусмотрен удобный API по названием **UIImagePickerController**
 для загрузки фотографий из библиотеки. Замечательно то, что один и тот же
-API может использоваться для отображения интерфейса камеры для съемки.
+API может использоваться для отображения интерфейса камеры и фотографий.
 
 Симулятор не поддерживает функцию камеры. Если вы хотите протестировать
 приложение, которое использует встроенную камеру, вам понадобится реальное
@@ -77,8 +73,7 @@ API может использоваться для отображения инт
 контроллер **Add Restaurant** и в графе **custom class** задайте
 **AddRestaurantController**.
 
-В файле **AddRestaurantController.swift**, удалите следующие сгенерированные
-методы, поскольку они не нужны для статического табличного представления:
+В файле **AddRestaurantController.swift**, удалите следующие сгенерированные методы, поскольку они не нужны для статического табличного представления:
 
 ```swift
 override func numberOfSections(in tableView: UITableView) -> Int {
@@ -91,8 +86,7 @@ section: Int) -> Int {
 return 0 } 
 ```
 
-Затем добавьте следующий метод, чтобы обнаружить касание и загрузить библиотеку
-фотографий: 
+Затем добавьте следующий метод, который вызывается когда ячейка выбрана и загружается библиотека фотографий: 
 
 ```swift
 override func tableView(_ tableView: UITableView, didSelectRowAt indexPath:
@@ -112,7 +106,7 @@ IndexPath) {
 выбрана первая ячейка. Таким образом, у нас есть условная проверка в самом начале.
 Чтобы загрузить библиотеку фотографий, все, что вам нужно сделать, это создать
 экземпляр **UIImagePickerController** и установить его **sourceType** в 
-**.photoLibary**. Затем вызывается метод **present(_:animated:completion:)**
+**.photoLibary**. Затем отобразить метод **present(_:animated:completion:)**
 для вызова библиотеки фотографий.
 
 Вот и все. Легко правда? Иногда пользователь может запретить вам доступ к
@@ -125,31 +119,25 @@ IndexPath) {
 
 ```
 [access] This app has crashed because it attempted to access privacy-sensitive
-data without a usage description.  The app's Info.plist must contain an
+data without a usage description. The app's Info.plist must contain an
 NSPhotoLibraryUsageDescription key with a string value explaining to the user
 how the app uses this data.
 ```
 
 В **IOS 10** или более поздней версии в целях конфиденциальности вы должны
 явно указать причину, по которой ваше приложение обращается к библиотеки
-фотографий пользователя. Если вы не сделали это, вы увидите вышеприведенную
-ошибку.
+фотографий пользователя. Если вы не сделали это, вы увидите выше приведенную ошибку.
 
 Чтобы исправить это, вам нужно добавить ключ **(NSPhotoLibraryUsageDescription)**
 в файл **Info.plist** и указать причину.
 
-Теперь выберете файл **Info.plist** в навигаторе проектов. Щелкните правой кнопкой
-мыши в любую пустую область в редакторе и выберете **Add Row**. Выберете
-**Privacy - Photo Library Usage Description** ключ и установите значение:
+Теперь выберете файл **Info.plist** в навигаторе проектов. Щелкните правой кнопкой мыши в любую пустую область в редакторе и выберете **Add Row**. Выберете **Privacy - Photo Library Usage Description** ключ и установите значение:
 
 > You need to grant the app access to your photo library so you can pick your favorite restaurant photo. 
 
 ![Add Row Privacy Photo Library Usage Description](https://monosnap.com/file/0bn9DTWKO39DAfocs76fzCc8bSdDG8.png)
 
-Теперь скомпилируйте и запустите приложение. Нажав на ячейку с фотографией
-должна вызываться встроенная библиотека фотографий. При появлении запроса не
-забудьте нажать **"OK"**, чтобы ваше приложение получило доступ к библиотеки.
-Если вы хотите добавить свои фотографии, то просто перетащите их из **Finder**
+Теперь скомпилируйте и запустите приложение. Нажав на ячейку с фотографией, должна вызываться встроенная библиотека фотографий. При появлении запроса не забудьте нажать **"OK"**, чтобы ваше приложение получило доступ к библиотеки. Если вы хотите добавить свои фотографии, то просто перетащите их из **Finder**
 в симулятор. Это автоматически добавит фотографии в приложение.
 
 ![Add Row Privacy Photo Library Usag](https://monosnap.com/file/ksvsF2EbBa7ehGF8GicqgNWMI3nch3.png)
@@ -230,5 +218,3 @@ imagePicker.delegate = self
 Перевод главы из книги: [Beginning iOS 10 Programming with Swift 3](https://www.amazon.com/Beginning-iOS-10-Programming-Swift/dp/1520222599/ref=sr_1_1?s=books&ie=UTF8&qid=1487189058&sr=1-1&keywords=Simon+Ng)
 
 Автор книги: Simon Ng
-
-
