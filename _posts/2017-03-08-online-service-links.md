@@ -19,12 +19,13 @@ CSS генераторы
 - [Jsfiddle](http://jsfiddle.net/)
 - [Jsbin](https://jsbin.com)
 - [Codepen](http://codepen.io)
+- [Webpackbin](https://www.webpackbin.com/)
 
 Обфускация JS кода
 - [Javascript Obfuscator](https://www.javascriptobfuscator.com/Javascript-Obfuscator.aspx)
 
 Совместное редактирование кода
-- [Floobits.com](https://floobits.com/)
+- [Floobits.com](https://floobits.com/) - большой сервис, имеется плагины для популярных редакторов кода
 - [Kobra.io](https://kobra.io/)
 - [Trycode.pw](https://trycode.pw/)
 
@@ -44,5 +45,5 @@ Base64 конвертер
 - [Base64-image.de](https://www.base64-image.de/)
 
 Сжатие картинок
-- [Tinypng](https://tinypng.com/) (Сжимает PNG файлы, имеется пакетная обработка, а также сохранение в dropbox)
-- [Tinyjpg](https://tinyjpg.com/) (Сжимает JPG файлы, имеется пакетная обработка, а также сохранение в dropbox)
+- [Tinypng](https://tinypng.com/) - Сжимает PNG файлы, имеется пакетная обработка, а также сохранение в dropbox
+- [Tinyjpg](https://tinyjpg.com/) - (Сжимает JPG файлы, имеется пакетная обработка, а также сохранение в dropbox
