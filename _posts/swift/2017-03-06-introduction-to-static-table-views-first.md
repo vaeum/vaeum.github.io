@@ -1,16 +1,21 @@
 ---
-title: Introduction to Static Table Views, UIimagePickerContorller and NSLayoutConstraint(Перевод) Часть первая.
+title: >-
+  Introduction to Static Table Views, UIimagePickerContorller and
+  NSLayoutConstraint(Перевод) Часть первая.
 layout: post
 categories: Swift Xcode StaticTableView
 tags: Swift Xcode StaticTableView
-description: "Работа с Static Table Views, UIimagePickerContorller and NSLayoutConstraint. Часть первая."
+description: >-
+  Работа с Static Table Views, UIimagePickerContorller and NSLayoutConstraint.
+  Часть первая.
+published: true
 ---
 
 ![Работа  с Static Table Views, UIimagePickerContorller and NSLayoutConstraint.](/images/post/StaticTableView.jpg)
 
 [Ссылка на исходный проект.](https://github.com/allakin/FoodPin-3)
 
-До сих пор приложение **FoodPin** способно отображать только содержимое.
+111111До сих пор приложение **FoodPin** способно отображать только содержимое.
 Нам нужно найти способ, чтобы добавить новый ресторан. В этой главе мы
 создадим новый экран, который отображает форму ввода для сбора информации
 о ресторане. В этой форме, пользователь сможет сам выбрать ресторан и
@@ -119,5 +124,3 @@ description: "Работа с Static Table Views, UIimagePickerContorller and NS
 Перевод главы из книги: [Beginning iOS 10 Programming with Swift 3](https://www.amazon.com/Beginning-iOS-10-Programming-Swift/dp/1520222599/ref=sr_1_1?s=books&ie=UTF8&qid=1487189058&sr=1-1&keywords=Simon+Ng)
 
 Автор книги: Simon Ng
-
-
