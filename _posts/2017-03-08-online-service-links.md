@@ -11,18 +11,21 @@ published: true
 в работе. Эта заметка будет пополняться новыми сервисами.
 
 CSS генераторы
-- [Enjoycss.com](http://enjoycss.com/) (Большой генератор для css, есть возможность экспорта в scss, less)
-- [css2sass](http://css2sass.herokuapp.com/) (Конвертирует sass код из css)
+- [Enjoycss.com](http://enjoycss.com/) - Большой генератор для css, есть возможность экспорта в scss, less
+- [css2sass](http://css2sass.herokuapp.com/) - Конвертирует sass код из css
 
-Создание он-лайн сниппетов и публикация их
+Создание онлайн сниппетов и публикация их
 - [Plunker](http://plnkr.co/)
 - [Jsfiddle](http://jsfiddle.net/)
 - [Jsbin](https://jsbin.com)
 - [Codepen](http://codepen.io)
 - [Webpackbin](https://www.webpackbin.com/)
 
+Редакторы изображений
+- [Pixlr.com](https://pixlr.com/editor/) - хорош когда лень открывать фотошоп
+
 Обфускация JS кода
-- [Javascript Obfuscator](https://www.javascriptobfuscator.com/Javascript-Obfuscator.aspx)
+- [Javascript Obfuscator](https://www.javascriptobfuscator.com/Javascript-Obfuscator.aspx) - 
 
 Совместное редактирование кода
 - [Floobits.com](https://floobits.com/) - большой сервис, имеется плагины для популярных редакторов кода
@@ -32,7 +35,7 @@ CSS генераторы
 Генерирование JSON
 - [Json-generator](http://www.json-generator.com/)
 
-Создание он-лайн анимаций на CSS
+Создание онлайн анимаций на CSS
 - [Bouncejs.com](http://bouncejs.com/)
 
 Генератор favicon
@@ -46,4 +49,4 @@ Base64 конвертер
 
 Сжатие картинок
 - [Tinypng](https://tinypng.com/) - Сжимает PNG файлы, имеется пакетная обработка, а также сохранение в dropbox
-- [Tinyjpg](https://tinyjpg.com/) - (Сжимает JPG файлы, имеется пакетная обработка, а также сохранение в dropbox
+- [Tinyjpg](https://tinyjpg.com/) - Сжимает JPG файлы, имеется пакетная обработка, а также сохранение в dropbox
