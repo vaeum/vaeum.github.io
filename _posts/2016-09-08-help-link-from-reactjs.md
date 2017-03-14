@@ -6,7 +6,7 @@ categories: Links
 published: true
 ---
 
-![cover image]({{site.baseurl}}/images/post/55d940245e96.png)
+![cover image](/images/post/55d940245e96.png)
 
 Это сборник ссылок на материалы для разработки интерфейсов с помощью библиотеки React JS.
 
