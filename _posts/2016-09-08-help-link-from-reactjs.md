@@ -1,12 +1,12 @@
 ---
-title: "Полезные ссылки для React разработчика"
+title: Полезные ссылки для React разработчика
 layout: post
 tags: React JS
 categories: Links
-description: ""
+published: true
 ---
 
-![first image](http://s61.radikal.ru/i174/1609/93/55d940245e96.png)
+![cover image]({{site.baseurl}}/images/post/55d940245e96.png)
 
 Это сборник ссылок на материалы для разработки интерфейсов с помощью библиотеки React JS.
 
