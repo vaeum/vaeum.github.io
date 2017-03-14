@@ -6,7 +6,7 @@ tags: Vim
 published: true
 ---
 
-![cover image]({{site.baseurl}}/images/post/d5ac80e8cfb2.jpg)
+![cover image](/images/post/d5ac80e8cfb2.jpg)
 
 В этой статье я приведу список команд этого текстового редактора.
 Важно понимать, что не все команды работают с режимом эмуляции Vim.
