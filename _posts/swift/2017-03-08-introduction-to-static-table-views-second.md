@@ -9,7 +9,7 @@ description: >-
   Работа с Static Table Views, UIimagePickerContorller and NSLayoutConstraint.
   Часть вторая.
 published: true
-related: ["<Static Table Views(Перевод) Часть первая., Static Table Views(Перевод) Часть вторая., Static Table Views(Перевод) Часть третья.>"]
+related: ["Static Table Views(Перевод) Часть первая.", "Static Table Views(Перевод) Часть вторая.", "Static Table Views(Перевод) Часть третья."]
 ---
 
 ![Работа  с Static Table Views, UIimagePickerContorller and NSLayoutConstraint.](/images/post/StaticTableView.jpg)
