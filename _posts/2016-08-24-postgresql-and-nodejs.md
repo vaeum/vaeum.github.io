@@ -18,7 +18,7 @@ published: true
 Сегодня мы собираемся написать одностраничное [CRUD](https://ru.wikipedia.org/wiki/CRUD) Todo приложение
 с использованием технологий, Node JS,  Express, Angular JS, и PostgreSQL.
 
-![node-todo-postges.jpg]({{site.baseurl}}/images/post/node-todo-postges.jpg)
+![node-todo-postges.jpg](/images/post/node-todo-postges.jpg)
 
 ## Настройка проекта
 
