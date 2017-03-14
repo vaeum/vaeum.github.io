@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Michael Herman - PostgreSQL and NodeJS"
+title: Michael Herman - PostgreSQL and NodeJS
 categories: Translation
 tags: NPM PostgreSQL NodeJS
-description: ""
+published: true
 ---
 
 {: .annotations}
@@ -18,7 +18,7 @@ description: ""
 Сегодня мы собираемся написать одностраничное [CRUD](https://ru.wikipedia.org/wiki/CRUD) Todo приложение
 с использованием технологий, Node JS,  Express, Angular JS, и PostgreSQL.
 
-![first image](https://raw.githubusercontent.com/mjhea0/node-postgres-todo/master/_blog/node-todo-postges.jpg)
+![node-todo-postges.jpg]({{site.baseurl}}/images/post/node-todo-postges.jpg)
 
 ## Настройка проекта
 
@@ -429,4 +429,3 @@ angular.module('nodeTodo', [])
 Здесь мы определили наш модуль в нашем контроллере. А в контроллере мы
 используем [$http](https://code.angularjs.org/1.5.6/docs/api/ng/service/$http)
 сервис для создания AJAX запроса к '/api/v1/todos' и обновляем $scope.
-
