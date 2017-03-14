@@ -9,6 +9,7 @@ description: >-
   Работа с Static Table Views, UIimagePickerContorller and NSLayoutConstraint.
   Часть вторая.
 published: true
+related: ["<Static Table Views(Перевод) Часть первая., Static Table Views(Перевод) Часть вторая., Static Table Views(Перевод) Часть третья.>"]
 ---
 
 ![Работа  с Static Table Views, UIimagePickerContorller and NSLayoutConstraint.](/images/post/StaticTableView.jpg)
@@ -217,3 +218,5 @@ imagePicker.delegate = self
 Перевод главы из книги: [Beginning iOS 10 Programming with Swift 3](https://www.amazon.com/Beginning-iOS-10-Programming-Swift/dp/1520222599/ref=sr_1_1?s=books&ie=UTF8&qid=1487189058&sr=1-1&keywords=Simon+Ng)
 
 Автор книги: Simon Ng
+
+
