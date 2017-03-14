@@ -5,9 +5,8 @@ categories: Swift Xcode MapKit
 tags: Swift Xcode MapKit
 description: 'Третья часть перевода главы, в которой объясняется как работать с MapKit.'
 related:
-  - >-
-    Woring With Maps(Перевод). Часть первая. - Woring With Maps(Перевод). Часть
-    вторая.
+  - Woring With Maps(Перевод). Часть первая.
+  - Woring With Maps(Перевод). Часть вторая.
 published: true
 ---
 
