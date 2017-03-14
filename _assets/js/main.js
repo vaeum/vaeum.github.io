@@ -96,7 +96,7 @@ $(function() {
 function modern_upbutton_resize(){
   var ourwidth_screen = $(window).width(); // взяли ширину окна
   if(ourwidth_screen >= 1007) { // здесь и ниже число пикселей будет вашим, так как зависит от ширины сайта
-    $('.modern-upbutton').css('width',(ourwidth_screen-860)/2); // окно большое, подогнали под размер
+    $('.modern-upbutton').css('width', (ourwidth_screen-1000)/2); // окно большое, подогнали под размер
     smallscreen = false;
   } else if (ourwidth_screen >= 955) {
     $('.modern-upbutton').addClass('its-a-mobile-modern-upbutton'); // маленькое окно или планшет
@@ -199,4 +199,3 @@ $(function() {
     modern_upbutton_disable(); // убиваем кнопку
   });
 });
-
