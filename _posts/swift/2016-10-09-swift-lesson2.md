@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Дневник начинающего разработчика. Урок 2 Рандомный вывод изображений в Imageview."
+title:  "Дневник начинающего разработчика. Урок 2. Рандомный вывод изображений в Imageview."
 categories: Swift Xcode
 tags: Swift Xcode
 description: "Урок 2 Рандомный вывод изображений в Imageview."
