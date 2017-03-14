@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Краткий список команд Vim для быстрого редактирования текста"
-categories:  TextEditors
+title: Краткий список команд Vim для быстрого редактирования текста
+categories: TextEditors
 tags: Vim
-description: ""
+published: true
 ---
 
-![first image](http://s019.radikal.ru/i612/1609/d0/d5ac80e8cfb2.jpg)
+![cover image]({{site.baseurl}}/images/post/d5ac80e8cfb2.jpg)
 
 В этой статье я приведу список команд этого текстового редактора.
 Важно понимать, что не все команды работают с режимом эмуляции Vim.
