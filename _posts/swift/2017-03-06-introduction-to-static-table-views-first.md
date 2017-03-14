@@ -1,7 +1,7 @@
 ---
 title: >-
   Introduction to Static Table Views, UIimagePickerContorller and
-  NSLayoutConstraint(Перевод) Часть первая.
+  NSLayoutConstraint(Перевод). Часть первая.
 layout: post
 categories: Swift Xcode StaticTableView
 tags: Swift Xcode StaticTableView
