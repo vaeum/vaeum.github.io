@@ -3,10 +3,17 @@ title: Lodash документация на русском (массивы) ча
 layout: post
 categories: Lodash
 tags: Lodash Documentation
-description: "Вольный перевод документации библиотеки Lodash. В данной статье переведено 10 методов, которые помогают работать с массивами. Рассмотрены следующие методы .pullAllWith .pullAt .remove .reverse .slice .sortedIndex .sortedIndexBy .sortedIndexOf .sortedLastIndex .sortedLastIndexBy"
-
-excerpt_text: "Вольный перевод документации библиотеки Lodash. В данной статье переведено 10 методов, которые помогают работать с массивами. Рассмотрены следующие 
-методы .pullAllWith .pullAt .remove .reverse .slice .sortedIndex .sortedIndexBy .sortedIndexOf .sortedLastIndex .sortedLastIndexBy"
+description: >-
+  Вольный перевод документации библиотеки Lodash. В данной статье переведено 10
+  методов, которые помогают работать с массивами. Рассмотрены следующие методы
+  .pullAllWith .pullAt .remove .reverse .slice .sortedIndex .sortedIndexBy
+  .sortedIndexOf .sortedLastIndex .sortedLastIndexBy
+excerpt_text: >-
+  Вольный перевод документации библиотеки Lodash. В данной статье переведено 10
+  методов, которые помогают работать с массивами. Рассмотрены следующие  методы
+  .pullAllWith .pullAt .remove .reverse .slice .sortedIndex .sortedIndexBy
+  .sortedIndexOf .sortedLastIndex .sortedLastIndexBy
+published: true
 ---
 
 ![Lodash документация на русском](/images/post/Lo-Dash_array_part4.jpg)
