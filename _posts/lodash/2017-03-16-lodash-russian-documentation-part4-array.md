@@ -14,7 +14,7 @@ excerpt_text: "Вольный перевод документации библи
 * TOC
 {:toc}
 
-# “Массивы” - часть 3
+# “Массивы” - часть 4
 
 ## .pullAllWith(array, values, [comparator])
 
