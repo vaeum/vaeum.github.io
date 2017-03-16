@@ -3,17 +3,10 @@ title: Lodash документация на русском (массивы) ча
 layout: post
 categories: Lodash
 tags: Lodash Documentation
-description: >-
-  Вольный перевод документации библиотеки Lodash. В данной статье переведено 10
-  методов, которые помогают работать с массивами. Рассмотрены следующие методы
-  .pullAllWith .pullAt .remove .reverse .slice .sortedIndex .sortedIndexBy
-  .sortedIndexOf .sortedLastIndex .sortedLastIndexBy
-excerpt_text: >-
-  Вольный перевод документации библиотеки Lodash. В данной статье переведено 10
-  методов, которые помогают работать с массивами. Рассмотрены следующие  методы
-  .pullAllWith .pullAt .remove .reverse .slice .sortedIndex .sortedIndexBy
-  .sortedIndexOf .sortedLastIndex .sortedLastIndexBy
-published: true
+description: "Вольный перевод документации библиотеки Lodash. В данной статье переведено 7 методов, которые помогают работать с массивами. Рассмотрены следующие методы .pullAllWith .pullAt .remove .reverse .slice .sortedIndex .sortedIndexBy"
+
+excerpt_text: "Вольный перевод документации библиотеки Lodash. В данной статье переведено 7 методов, которые помогают работать с массивами. Рассмотрены следующие 
+методы .pullAllWith .pullAt .remove .reverse .slice .sortedIndex .sortedIndexBy"
 ---
 
 ![Lodash документация на русском](/images/post/Lo-Dash_array_part4.jpg)
@@ -131,47 +124,6 @@ console.log(array);
  
 console.log(pulled);
 // => ['b', 'd']
-
-```
-
-## .remove(array, [predicate=_.identity])
-
-[source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7864),
-[npm package](https://www.npmjs.com/package/lodash.remove).
-
-Удаляет все элементы из массива `predicate` которых возвращает истину и возвращает массив из удаленных элементов. 
-
-`predicate` вызывается с тремя аргументами: (value, index, array).
-
-**Заметка:**
-
-В отличие от [_.filter](https://lodash.com/docs/4.17.4#filter), этот метод изменяет массив. Используйте [_.pull](https://lodash.com/docs/4.17.4#pull) чтобы вытащить элементы из массива по значению.
-
-**Версия:** *2.0.0*
-
-**Аргументы**
-
-`array (Array)`: Массив для изменения.
-`[predicate=_.identity] (Function)`: Функция вызывается на каждой итерации.
-
-**Возвращает**
-
-`(Array)`: Возвращает новый массив из удаленных элементов.
-
-### Пример
-
-```javascript
-
-var array = [1, 2, 3, 4];
-var evens = _.remove(array, function(n) {
-  return n % 2 == 0;
-});
- 
-console.log(array);
-// => [1, 3]
- 
-console.log(evens);
-// => [2, 4]
 
 ```
 
