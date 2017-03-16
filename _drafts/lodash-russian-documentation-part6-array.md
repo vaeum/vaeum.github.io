@@ -14,7 +14,7 @@ excerpt_text: "Вольный перевод документации библи
 * TOC
 {:toc}
 
-# “Массивы” - часть 5
+# “Массивы” - часть 6
 
 ## .sortedLastIndexOf(array, value)
 
@@ -315,41 +315,6 @@ _.takeWhile(users, 'active');
 
 _.union([2], [1, 2]);
 // => [2, 1]
-
-```
-
-## .unionBy([arrays], [iteratee=_.identity])
-
-[source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L8354),
-[npm package](https://www.npmjs.com/package/lodash.unionby).
-
-что он создан и оптимизирован для отсортированных массивов.
-
-Этот метод подобен [_.union](https://lodash.com/docs/4.17.4#union) за исключением того что `iteratee` вызывается для каждого элемента каждого массива, чтобы создать критерий, по которому вычисляется уникальность.
-
-Значения выбираются из первого массива, в котором значение происходит. В `iteratee` вызывается с одним аргументом: (value).
-
-**Версия:** *4.0.0*
-
-**Аргументы**
-
-`[arrays] (...Array)`: Массив для проверки.
-`[iteratee=_.identity] (Function)`: `iteratee` ссылаться на элемент.
-
-**Возвращает**
-
-`(Array)`: Возвращает новый массив из комбинированных значений.
-
-### Пример
-
-```javascript
-
-_.unionBy([2.1], [1.2, 2.3], Math.floor);
-// => [2.1, 1.2]
- 
-// The `_.property` iteratee shorthand.
-_.unionBy([{ 'x': 1 }], [{ 'x': 2 }, { 'x': 1 }], 'x');
-// => [{ 'x': 1 }, { 'x': 2 }]
 
 ```
 
