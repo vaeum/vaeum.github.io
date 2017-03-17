@@ -1,13 +1,13 @@
 ---
 title: >-
-  Working with Core Data(Перевод) Часть первая.
+  Working with Core Data(Перевод). Часть первая.
 layout: post
 categories: Swift Xcode CoreData
 tags: Swift Xcode CoreData
 description: >-
   Работа с Core Data.
 related: [
-    "<Working with Core Data(Перевод) Часть первая.>",
+    "Working with Core Data(Перевод) Часть первая."
 ]
 ---
 
