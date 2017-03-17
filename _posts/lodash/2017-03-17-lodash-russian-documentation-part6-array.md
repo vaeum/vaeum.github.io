@@ -353,9 +353,9 @@ _.zipWith([1, 2], [10, 20], [100, 200], function(a, b, c) {
 
 
 [Часть 1](http://vaeum.com/blog/2017/02/18/lodash-russian-documentation-part1-array/)
-[Часть 2](http://vaeum.com/blog/2017/02/23/-lodash-russian-documentation-part2-array/)
-[Часть 3](http://vaeum.com/blog/2017/02/26/-lodash-russian-documentation-part3-array/)
-[Часть 4](http://vaeum.com/blog/2017/03/16/-lodash-russian-documentation-part4-array/)
-[Часть 5](http://vaeum.com/blog/2017/03/16/-lodash-russian-documentation-part4-array/)
+[Часть 2](http://vaeum.com/blog/2017/02/23/lodash-russian-documentation-part2-array/)
+[Часть 3](http://vaeum.com/blog/2017/02/26/lodash-russian-documentation-part3-array/)
+[Часть 4](http://vaeum.com/blog/2017/03/16/lodash-russian-documentation-part4-array/)
+[Часть 5](http://vaeum.com/blog/2017/03/16/lodash-russian-documentation-part5-array/)
 
 

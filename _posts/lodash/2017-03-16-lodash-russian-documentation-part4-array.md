@@ -253,6 +253,6 @@ _.sortedIndexBy(objects, { 'x': 4 }, 'x');
 
 
 [Часть 1](http://vaeum.com/blog/2017/02/18/lodash-russian-documentation-part1-array/)
-[Часть 2](http://vaeum.com/blog/2017/02/23/-lodash-russian-documentation-part2-array/)
-[Часть 3](http://vaeum.com/blog/2017/02/26/-lodash-russian-documentation-part3-array/)
+[Часть 2](http://vaeum.com/blog/2017/02/23/lodash-russian-documentation-part2-array/)
+[Часть 3](http://vaeum.com/blog/2017/02/26/lodash-russian-documentation-part3-array/)
 
