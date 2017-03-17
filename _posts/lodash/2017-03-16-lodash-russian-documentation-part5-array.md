@@ -303,7 +303,7 @@ _.takeWhile(users, 'active');
 
 **Аргументы**
 
-`[arrays] (...Array)`: Массив для проверки.
+`[arrays] (...Array)`: Массивы для проверки.
 
 **Возвращает**
 
@@ -333,7 +333,7 @@ _.union([2], [1, 2]);
 
 **Аргументы**
 
-`[arrays] (...Array)`: Массив для проверки.
+`[arrays] (...Array)`: Массивы для проверки.
 `[iteratee=_.identity] (Function)`: `iteratee` ссылаться на элемент.
 
 **Возвращает**
@@ -357,6 +357,6 @@ _.unionBy([{ 'x': 1 }], [{ 'x': 2 }, { 'x': 1 }], 'x');
 [Часть 1](http://vaeum.com/blog/2017/02/18/lodash-russian-documentation-part1-array/)
 [Часть 2](http://vaeum.com/blog/2017/02/23/-lodash-russian-documentation-part2-array/)
 [Часть 3](http://vaeum.com/blog/2017/02/26/-lodash-russian-documentation-part3-array/)
-[Часть 4](http://vaeum.com/blog/2017/03/13/-lodash-russian-documentation-part4-array/)
+[Часть 4](http://vaeum.com/blog/2017/03/16/-lodash-russian-documentation-part4-array/)
 
 
