@@ -3,8 +3,10 @@ title: Lodash документация на русском (массивы) ча
 layout: post
 categories: Lodash
 tags: Lodash Documentation
-description: "Вольный перевод документации библиотеки Lodash, в данной статье переведено 10 методов, которые помогают работать с массивами. Расмотренны следующие методы .chunk .compact .concat .difference .differenceBy .differenceWith .drop .dropRight .dropRightWhile .dropWhile"
-excerpt_text: "Вольный перевод документации библиотеки Lodash, в данной статье переведено 10 методов, которые помогают работать с массивами. Расмотренны следующие методы .chunk .compact .concat .difference .differenceBy .differenceWith .drop .dropRight .dropRightWhile .dropWhile"
+description: "Перевод документации библиотеки Lodash. Это первая часть посвященная переводу методов работы с Массивами в которой представлено 10 методов, которые помогут вам в работе с массивами."
+
+excerpt_text: "Перевод документации библиотеки Lodash. Это первая часть посвященная переводу методов работы с Массивами в которой представлено 10 методов, которые помогут вам в работе с массивами.
+Расмотренны следующие методы .chunk .compact .concat .difference .differenceBy .differenceWith .drop .dropRight .dropRightWhile .dropWhile"
 ---
 
 ![Lodash документация на русском](/images/post/Lo-Dash_array_part1.jpg)
@@ -382,5 +384,11 @@ _.dropWhile(users, ['active', false]);
 _.dropWhile(users, 'active');
 // => objects for ['barney', 'fred', 'pebbles']
 ```
-[Ссылка на вторую часть.](http://vaeum.com/blog/2017/02/23/lodash-russian-documentation-part2-array/)
+
+
+[Часть 2](http://vaeum.com/blog/2017/02/23/lodash-russian-documentation-part2-array/)
+[Часть 3](http://vaeum.com/blog/2017/02/26/lodash-russian-documentation-part3-array/)
+[Часть 4](http://vaeum.com/blog/2017/03/16/lodash-russian-documentation-part4-array/)
+[Часть 5](http://vaeum.com/blog/2017/03/16/lodash-russian-documentation-part5-array/)
+[Часть 6](http://vaeum.com/blog/2017/03/17/lodash-russian-documentation-part6-array/)
 

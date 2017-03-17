@@ -3,8 +3,10 @@ title: Lodash документация на русском (массивы) ча
 layout: post
 categories: Lodash
 tags: Lodash Documentation
-description: "Вольный перевод документации библиотеки Lodash. В данной статье переведено 10 методов, которые помогают работать с массивами. Рассмотрены следующие методы .fill .findIndex .findLastIndex .flatten .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial"
-excerpt_text: "Вольный перевод документации библиотеки Lodash, В данной статье переведено 10 методов, которые помогают работать с массивами. Рассмотрены следующие методы .fill .findIndex .findLastIndex .flatten .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial"
+description: "Перевод документации библиотеки Lodash. Это вторая часть посвященная переводу методов работы с Массивами в которой представлено 10 методов, которые помогут вам в работе с массивами."
+
+excerpt_text: "Перевод документации библиотеки Lodash. Это вторая часть посвященная переводу методов работы с Массивами в которой представлено 10 методов, которые помогут вам в работе с массивами. 
+Рассмотрены следующие методы .fill .findIndex .findLastIndex .flatten .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial"
 ---
 
 ![Lodash документация на русском](/images/post/Lo-Dash_array_part2.jpg)
@@ -348,5 +350,11 @@ _.indexOf([1, 2, 1, 2], 2, 2);
 _.initial([1, 2, 3]);
 // => [1, 2]
 ```
+
+
 [Часть 1](http://vaeum.com/blog/2017/02/18/lodash-russian-documentation-part1-array/)
+[Часть 3](http://vaeum.com/blog/2017/02/26/lodash-russian-documentation-part3-array/)
+[Часть 4](http://vaeum.com/blog/2017/03/16/lodash-russian-documentation-part4-array/)
+[Часть 5](http://vaeum.com/blog/2017/03/16/lodash-russian-documentation-part5-array/)
+[Часть 6](http://vaeum.com/blog/2017/03/17/lodash-russian-documentation-part6-array/)
 

@@ -3,9 +3,10 @@ title: Lodash документация на русском (массивы) ча
 layout: post
 categories: Lodash
 tags: Lodash Documentation
-description: "Вольный перевод документации библиотеки Lodash. В данной статье переведено 14 методов, которые помогают работать с массивами. Рассмотрены следующие методы .unionWith .uniq .uniqBy .uniqWith .unzip .unzipWith .without .xor .xorBy .xorWith .zip .zipObject .zipObjectDeep .zipWith"
+description: "Перевод документации библиотеки Lodash. Это шестая часть посвященная переводу методов работы с Массивами в которой представлено 10 методов, которые помогут вам в работе с массивами."
 
-excerpt_text: "Вольный перевод документации библиотеки Lodash. В данной статье переведено 14 методов, которые помогают работать с массивами. Рассмотрены следующие 
+excerpt_text: "Перевод документации библиотеки Lodash. Это шестая часть посвященная переводу методов работы с Массивами в которой представлено 10 методов, которые помогут вам в работе с массивами.
+Рассмотрены следующие 
 методы .unionWith .uniq .uniqBy .uniqWith .unzip .unzipWith .without .xor .xorBy .xorWith .zip .zipObject .zipObjectDeep .zipWith"
 ---
 

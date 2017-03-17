@@ -3,9 +3,10 @@ title: Lodash документация на русском (массивы) ча
 layout: post
 categories: Lodash
 tags: Lodash Documentation
-description: "Вольный перевод документации библиотеки Lodash. В данной статье переведено 7 методов, которые помогают работать с массивами. Рассмотрены следующие методы .pullAllWith .pullAt .remove .reverse .slice .sortedIndex .sortedIndexBy"
+description: "Перевод документации библиотеки Lodash. Это четвертая часть посвященная переводу методов работы с Массивами в которой представлено 7 методов, которые помогут вам в работе с массивами."
 
-excerpt_text: "Вольный перевод документации библиотеки Lodash. В данной статье переведено 7 методов, которые помогают работать с массивами. Рассмотрены следующие 
+excerpt_text: "Перевод документации библиотеки Lodash. Это четвертая часть посвященная переводу методов работы с Массивами в которой представлено 7 методов, которые помогут вам в работе с массивами. 
+Рассмотрены следующие 
 методы .pullAllWith .pullAt .remove .reverse .slice .sortedIndex .sortedIndexBy"
 ---
 
@@ -255,4 +256,6 @@ _.sortedIndexBy(objects, { 'x': 4 }, 'x');
 [Часть 1](http://vaeum.com/blog/2017/02/18/lodash-russian-documentation-part1-array/)
 [Часть 2](http://vaeum.com/blog/2017/02/23/lodash-russian-documentation-part2-array/)
 [Часть 3](http://vaeum.com/blog/2017/02/26/lodash-russian-documentation-part3-array/)
+[Часть 5](http://vaeum.com/blog/2017/03/16/lodash-russian-documentation-part5-array/)
+[Часть 6](http://vaeum.com/blog/2017/03/17/lodash-russian-documentation-part6-array/)
 
