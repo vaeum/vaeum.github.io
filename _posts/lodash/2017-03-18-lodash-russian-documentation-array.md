@@ -5,8 +5,7 @@ categories: Lodash
 tags: Lodash Documentation
 description: "Перевод документации библиотеки Lodash. В этой статье на русский язык переведены все методы для работы с Массивами в Lodash."
 
-excerpt_text: "Перевод документации библиотеки Lodash. В этой статье на русский язык переведены все методы для работы с Массивами в Lodash.
-Рассмотрены следующие 
+excerpt_text: "Перевод документации библиотеки Lodash. В этой статье на русский язык переведены все методы для работы с Массивами в Lodash. Рассмотрены следующие
 методы .chunk .compact .concat .difference .differenceBy .differenceWith .drop .dropRight .dropRightWhile .dropWhile .fill .findIndex .findLastIndex .flatten .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial .intersection .intersectionBy .intersectionWith .join .last .lastIndexOf .nth .pull .pullAll .pullAllBy .pullAllWith .pullAt .remove .reverse .slice .sortedIndex .sortedIndexBy .sortedLastIndexOf .sortedUniq .sortedUniqBy .tail .take .takeRight .takeRightWhile .takeWhile .uniq .uniqBy .uniqWith .unzip .unzipWith .without .xor .xorBy .xorWith .zip .zipObject .zipObjectDeep .zipWith"
 ---
 
