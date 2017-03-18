@@ -199,3 +199,18 @@ $(function() {
     modern_upbutton_disable(); // убиваем кнопку
   });
 });
+
+function goToByScroll(id){
+  $('html,body').animate({
+    scrollTop: $(id).offset().top - 80,
+  }, 'slow');
+}
+
+$(function() {
+  if ($('#markdown-toc').length) {
+    $("#markdown-toc a").on("click", function(e){
+    	e.preventDefault();
+    	goToByScroll($(this).attr("href"));
+    })
+  }
+});
