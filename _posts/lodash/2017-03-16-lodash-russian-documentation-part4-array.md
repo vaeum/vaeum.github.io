@@ -258,4 +258,5 @@ _.sortedIndexBy(objects, { 'x': 4 }, 'x');
 [Часть 3](http://vaeum.com/blog/2017/02/26/lodash-russian-documentation-part3-array/)
 [Часть 5](http://vaeum.com/blog/2017/03/16/lodash-russian-documentation-part5-array/)
 [Часть 6](http://vaeum.com/blog/2017/03/17/lodash-russian-documentation-part6-array/)
+[Все методы Массивов](http://vaeum.com/blog/2017/03/18/lodash-russian-documentation-array/)
 

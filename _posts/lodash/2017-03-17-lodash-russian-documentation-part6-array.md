@@ -358,5 +358,5 @@ _.zipWith([1, 2], [10, 20], [100, 200], function(a, b, c) {
 [Часть 3](http://vaeum.com/blog/2017/02/26/lodash-russian-documentation-part3-array/)
 [Часть 4](http://vaeum.com/blog/2017/03/16/lodash-russian-documentation-part4-array/)
 [Часть 5](http://vaeum.com/blog/2017/03/16/lodash-russian-documentation-part5-array/)
-
+[Все методы Массивов](http://vaeum.com/blog/2017/03/18/lodash-russian-documentation-array/)
 

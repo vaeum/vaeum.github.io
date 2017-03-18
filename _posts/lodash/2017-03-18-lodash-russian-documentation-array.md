@@ -2036,4 +2036,3 @@ _.zipWith([1, 2], [10, 20], [100, 200], function(a, b, c) {
 [Часть 5](http://vaeum.com/blog/2017/03/16/lodash-russian-documentation-part5-array/)
 [Часть 6](http://vaeum.com/blog/2017/03/17/lodash-russian-documentation-part6-array/)
 
-
