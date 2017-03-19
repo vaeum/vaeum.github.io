@@ -1,5 +1,5 @@
 ---
-title: Woring With Maps(Перевод). Часть первая.
+title: Woring With Maps (Перевод). Часть первая.
 layout: post
 categories: Swift Xcode MapKit
 tags: Swift Xcode MapKit
