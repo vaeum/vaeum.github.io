@@ -14,22 +14,25 @@
       <li>
         {% include svg/file-directory.svg %}
       </li>
-      <li>
-        {% for category in post.categories %}
-          <a href="/categories/{{category}}/">{{category}}</a>
-        {% endfor %}
-      </li>
+      {% for category in post.categories %}
+        <li>
+            <a href="/categories/{{category}}/">{{category}}</a>
+        </li>
+      {% endfor %}
       <li>
         {% include svg/comment.svg %}
       </li>
       <li>
-        <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread">0</a>
+        <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread"></a>
       </li>
     </ul>
   </div>
 
   {% if post.image %}
-    <img src="{{post.image}}" class="post-img" alt="cover img">
+    <div class="post-img">
+      <span>{{ post.title }}</span>
+      <img src="{{post.image}}" alt="cover img">
+    </div>
   {% endif %}
 
   <p class="excerpt">

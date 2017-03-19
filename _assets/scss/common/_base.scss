@@ -7,14 +7,14 @@ body {
   // margin-bottom: $footer-height;
   background: #fafafa;
   font-family: $font-san-francisco;
-  line-height: 1.5em;
+  // line-height: 1.5em;
   // padding-top: 100px;
 }
 
 body {
-  display: flex;
+  // display: flex;
   min-height: 100vh;
-  flex-direction: column;
+  // flex-direction: column;
 }
 
 .header, .footer {
@@ -47,6 +47,10 @@ body {
     // color: #fff;
     // display: block;
   }
+}
+
+a, button, svg{
+  transition: all 0.17s ease-in-out;
 }
 
 @media screen and (min-width: 768px) {

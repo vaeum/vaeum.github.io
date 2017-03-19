@@ -38,11 +38,15 @@ $off-canvas-width: 250px;
   }
 
   &-content {
-    min-height: 100%;
+    min-height: 100vh;
+    // min-height: 100%;
     //background: #fefefe;
     transition: transform 0.5s ease;
     backface-visibility: hidden;
     z-index: 1;
+
+    flex-direction: column;
+    display: flex;
     // box-shadow: 0 0 10px rgba(10,10,10,0.5);
   }
 }
