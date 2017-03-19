@@ -1,4 +1,5 @@
 let smallscreen = false;
+let pos_to_scroll = null;
 
 //подстраиваем кнопку "наверх" под размер окна
 function modern_upbutton_resize(){
