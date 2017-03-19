@@ -158,7 +158,9 @@ gulp.task('htmlclean', function() {
 });
 
 gulp.task('build:js', () =>
-  gulp.src(['./_assets/js/*.*'])
+  gulp.src(['./_assets/js/main.js'])
+    .pipe($.include())
+    .pipe($.babel({ presets: ['es2015'] }))
     .pipe($.if(prod, $.uglify()))
     .pipe(gulp.dest('./_site/js/'))
 );
