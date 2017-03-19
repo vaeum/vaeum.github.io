@@ -1,10 +1,14 @@
 ---
-title: Woring With Maps(Перевод). Часть вторая.
+title: Woring With Maps (Перевод). Часть вторая.
 layout: post
 categories: Swift Xcode MapKit
 tags: Swift Xcode MapKit
-description: "Вторая часть перевода главы, в которой объясняется как работать с MapKit."
-related: ["<Woring With Maps. Часть первая., Woring With Maps. Часть вторая., Woring With Maps. Часть третья.>"]
+description: 'Вторая часть перевода главы, в которой объясняется как работать с MapKit.'
+related:
+  - >-
+    <Woring With Maps. Часть первая., Woring With Maps. Часть вторая., Woring
+    With Maps. Часть третья.>
+published: true
 ---
 
 ![Работае и MapKit framework.](/images/post/Simon-Ng-Beginning-iOS-10-Programming-with-Swift.jpg)
@@ -194,6 +198,3 @@ MKCoordinateRegionMakeWithDistance(annotation.coordinate, 250, 250)
 Перевод главы из книги: [Beginning iOS 10 Programming with Swift 3](https://www.amazon.com/Beginning-iOS-10-Programming-Swift/dp/1520222599/ref=sr_1_1?s=books&ie=UTF8&qid=1487189058&sr=1-1&keywords=Simon+Ng)
 
 Автор книги: Simon Ng
-
-
-
