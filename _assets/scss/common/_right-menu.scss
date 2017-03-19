@@ -1,0 +1,48 @@
+.off-canvas.position-right{
+  background: darken($blue, 20%);
+}
+
+.right-menu{
+  padding: 10px;
+
+  &-action-button{
+    @extend %green-action-button;
+    display: block;
+  }
+
+  &-list{
+    li{
+      &.active{
+        a{
+          &:before{
+            background-color: #fff;
+          }
+        }
+      }
+    }
+
+    a{
+      text-transform: uppercase;
+      color: #fff;
+      display: block;
+      padding: 10px 15px;
+      position: relative;
+
+      &:before{
+        content:'';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: rgba(#fff, .4);
+        left: 0;
+        top: 50%;
+        margin-top: -3px;
+        border-radius: 100%;
+      }
+
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}

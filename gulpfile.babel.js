@@ -4,8 +4,6 @@ const prod = (process.env.NODE_ENV == "production")?(true):(false);
 
 import gulp            from 'gulp';
 import path            from 'path';
-import perfectionist   from 'perfectionist';
-import focusHover      from 'postcss-focus-hover';
 import browserSync     from 'browser-sync';
 import gulpLoadPlugins from 'gulp-load-plugins';
 
@@ -24,10 +22,11 @@ const AUTOPREFIXER = [
   'Safari >= 7.1',
 ];
 
-const env = {
+const config = {
   messages: {
     jekyllBuild: 'jekyll build'
   },
+
   watch: {
     jekyll: [
       './index.html',
@@ -47,41 +46,53 @@ const env = {
       '_assets/js/**/*.js'
     ]
   },
+
+  src: {
+    svg: [
+      './node_modules/octicons/build/svg/*.svg',
+      '_assets/svg/**/*.svg'
+    ],
+    sass: [
+      './node_modules/bootstrap-only-css/lib/scaffolding.css',
+      './node_modules/bootstrap-only-css/lib/utilities.css',
+      './node_modules/bootstrap-only-css/lib/normalize.css',
+      './node_modules/bootstrap-only-css/lib/type.css',
+      './node_modules/bootstrap-only-css/lib/grid.css',
+      './node_modules/bootstrap-only-css/lib/responsive-utilities.css',
+      '_assets/scss/**/*.scss',
+      './node_modules/css.modifiers/dist/modifiers.css'
+    ],
+  },
+
+  processors: {
+    perfectionist: [
+      require('perfectionist')
+    ],
+    common: [
+      require('autoprefixer')({ browsers: AUTOPREFIXER }),
+      require('css-mqpacker')(),
+      require('postcss-focus-hover')(),
+      require('postcss-custom-selectors')(),
+      require('postcss-discard-comments')({ removeAll: true }),
+    ],
+  },
 };
 
-let PROCESSORS = [
-  require('autoprefixer')({ browsers: AUTOPREFIXER }),
-  require('css-mqpacker')(),
-  require('postcss-focus-hover')(),
-  require('postcss-custom-selectors')(),
-  require('postcss-discard-comments')({ removeAll: true }),
-];
-
-const STYLE_SOURCE = [
-  './node_modules/bootstrap-only-css/lib/scaffolding.css',
-  './node_modules/bootstrap-only-css/lib/utilities.css',
-  './node_modules/bootstrap-only-css/lib/normalize.css',
-  './node_modules/bootstrap-only-css/lib/type.css',
-  './node_modules/bootstrap-only-css/lib/grid.css',
-  './node_modules/bootstrap-only-css/lib/responsive-utilities.css',
-  '_assets/scss/**/*.scss',
-  './node_modules/css.modifiers/dist/modifiers.css'
-];
-
 gulp.task('sass', () =>
-  gulp.src(STYLE_SOURCE)
-    .pipe($.sass().on('error', $.notify.onError()))
+  gulp.src(config.src.sass)
+    .pipe($.sass()
+      .on('error', $.notify.onError()))
     .pipe($.concat('style.css'))
-    .pipe($.postcss(PROCESSORS))
+    .pipe($.postcss(config.processors.common))
     .pipe($.cssPurge())
     .pipe($.if(prod, $.csso()))
-    .pipe($.if(!prod, $.postcss([perfectionist({})])))
+    .pipe($.if(!prod, $.postcss(config.processors.perfectionist)))
     .pipe(gulp.dest('./_site/css/'))
     .pipe(browserSync.stream())
 );
 
 gulp.task('jekyll', (done) => {
-  browserSync.notify(env.messages.jekyllBuild);
+  browserSync.notify(config.messages.jekyllBuild);
   return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
     .on('close', done);
 });
@@ -117,7 +128,7 @@ gulp.task('html:include', () =>
 );
 
 gulp.task('build:svg', () =>
-  gulp.src(['./node_modules/octicons/build/svg/*.svg', '_assets/svg/**/*.svg'], {since: gulp.lastRun('build:svg')})
+  gulp.src(config.src.svg, {since: gulp.lastRun('build:svg')})
     .pipe($.svgmin((file)=>{
       let prefix = path.basename(file.relative, path.extname(file.relative));
       return {
@@ -175,13 +186,12 @@ gulp.task('jekyll-build', gulp.series(
 ));
 
 gulp.task('watch', () => {
-  gulp.watch(env.watch.svg, gulp.series('build:svg'));
-  gulp.watch(env.watch.sass, gulp.series('sass'));
-  gulp.watch(env.watch.jekyll, gulp.series('jekyll-build'));
-  gulp.watch(env.watch.js, gulp.series('build:js', 'reload'));
+  gulp.watch(config.watch.svg, gulp.series('build:svg'));
+  gulp.watch(config.watch.sass, gulp.series('sass'));
+  gulp.watch(config.watch.jekyll, gulp.series('jekyll-build'));
+  gulp.watch(config.watch.js, gulp.series('build:js', 'reload'));
 });
 
 gulp.task('default', gulp.series(
   'build', gulp.parallel('watch', 'serve')
 ));
-

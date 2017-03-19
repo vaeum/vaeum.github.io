@@ -1,0 +1,76 @@
+$off-canvas-width: 250px;
+
+.off-canvas {
+  position: absolute;
+  // background: $color-black;
+  z-index: 1;
+  // z-index: -1;
+  max-height: 100%;
+  overflow-y: auto;
+  transform: translateX(0px);
+
+  &.position-left {
+    left: -$off-canvas-width;
+    top: 0;
+    width: $off-canvas-width;
+    bottom: 0;
+  }
+
+  &.position-right {
+    right: -$off-canvas-width;
+    top: 0;
+    width: $off-canvas-width;
+    bottom: 0;
+  }
+
+  &-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    backface-visibility: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    &-inner {
+      position: relative;
+      width: 100%;
+      transition: transform 0.5s ease;
+    }
+  }
+
+  &-content {
+    min-height: 100%;
+    //background: #fefefe;
+    transition: transform 0.5s ease;
+    backface-visibility: hidden;
+    z-index: 1;
+    // box-shadow: 0 0 10px rgba(10,10,10,0.5);
+  }
+}
+
+.js-off-canvas-exit {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(254,254,254,0.25);
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+.is-off-canvas-open .js-off-canvas-exit {
+  display: block;
+}
+
+.is-open-left {
+  transform: translateX($off-canvas-width);
+}
+
+.is-open-right {
+  transform: translateX(-$off-canvas-width);
+}
+
+[data-whatinput='mouse'] .off-canvas {
+  outline: 0;
+}

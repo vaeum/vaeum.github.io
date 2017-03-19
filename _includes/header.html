@@ -6,31 +6,7 @@
   </div>
 
   <ul class="lsn pl0 mb0 header-menu">
-    <li{% if page.url == '/' %} class="active"{% endif %}>
-      <a href="{{ site.baseurl }}/" title="Блог">Главная</a>
-    </li>
-
-    <!-- <li{% if page.url == '/about/' %} class="active"{% endif %}>
-      <a href="{{ site.baseurl }}/about/" title="О блоге">О блоге</a>
-    </li> -->
-
-    <!-- <li{% if page.url == '/resume/' %} class="active"{% endif %}>
-      <a href="{{ site.baseurl }}/resume/" title="Резюме">Резюме</a>
-    </li> -->
-
-    <li>
-      <a href="http://vaeum.com/styleguide/" target="_blank" title="Style Book">
-        Style Book
-      </a>
-    </li>
-
-    <li{% if page.url == '/archive/' %} class="active"{% endif %}>
-      <a href="{{ site.baseurl }}/archive/" title="Архив">Архив</a>
-    </li>
-
-    <li{% if page.url == '/twitter/' %} class="active"{% endif %}>
-      <a href="{{ site.baseurl }}/twitter/" title="twitter">Twitter</a>
-    </li>
+    {% include main-menu.html %}
   </ul>
 
   {% if page.excerpt %}
@@ -50,6 +26,17 @@
       Добавить статью
     </a>
   {% endif %}
+
+  <div class="header-hamburger cur" data-show="right">
+    <div class="header-hamburger-icon">
+      <div class="header-hamburger-icon-item"></div>
+      <div class="header-hamburger-icon-item"></div>
+      <div class="header-hamburger-icon-item"></div>
+    </div>
+    <div class="header-hamburger-title">
+      Меню
+    </div>
+  </div>
 
   <!-- <div class="header-search">
     <span class="cur" id="search-open">

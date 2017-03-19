@@ -21,15 +21,25 @@
   </head>
 
   <body>
-    {% include header.html %}
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner">
+        <div class="off-canvas position-left"></div>
+        <div class="off-canvas-content">
+          {% include header.html %}
+          <main class="main container">
+            {% include sidebar.html %}
 
-    <main class="main container">
-      {% include sidebar.html %}
-
-      <div class="main-content">
-        {{ content }}
+            <div class="main-content">
+              {{ content }}
+            </div>
+          </main>
+          <div class="js-off-canvas-exit"></div>
+        </div>
+        <div class="off-canvas position-right">
+          {% include right-mobile-menu.html %}
+        </div>
       </div>
-    </main>
+    </div>
 
     {% include footer.html %}
 

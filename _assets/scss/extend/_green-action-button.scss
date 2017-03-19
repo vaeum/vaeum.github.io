@@ -1,0 +1,13 @@
+%green-action-button{
+  color: #fff;
+  padding: 8px 20px;
+  background: $green;
+  border-radius: 4px;
+  text-align: center;
+
+  &:hover{
+    background: darken($green, 5%);
+    color: #fff;
+    text-decoration: none;
+  }
+}

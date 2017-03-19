@@ -1,4 +1,9 @@
 .sidebar {
+
+  @media(max-width: 992px){
+    display: none;
+  }
+
   > *:last-child {
     margin-bottom: 20px;
   }

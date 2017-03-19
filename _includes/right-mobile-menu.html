@@ -1,0 +1,23 @@
+<div class="right-menu">
+  {% if page.excerpt %}
+    <a
+      href="http://prose.io/#vaeum/vaeum.github.io/edit/dev/{{page.path}}"
+      target="_blank"
+      class="right-menu-action-button"
+    >
+      Редактировать статью
+    </a>
+  {% else %}
+    <a
+      href="http://prose.io/#vaeum/vaeum.github.io/new/dev/_drafts"
+      target="_blank"
+      class="right-menu-action-button"
+    >
+      Добавить статью
+    </a>
+  {% endif %}
+
+  <ul class="lsn pl0 mb0 right-menu-list">
+    {% include main-menu.html %}
+  </ul>
+</div>
