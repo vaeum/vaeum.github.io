@@ -1,14 +1,12 @@
 ---
-title: >-
-  Working with Core Data(Перевод). Часть первая.
+title: Working with Core Data (Перевод). Часть первая.
 layout: post
 categories: Swift Xcode CoreData
 tags: Swift Xcode CoreData
-description: >-
-  Работа с Core Data.
-related: [
-    "Working with Core Data(Перевод) Часть первая."
-]
+description: Работа с Core Data.
+related:
+  - Working with Core Data(Перевод) Часть первая.
+published: true
 ---
 
 ![Работа с Core Data.](/images/post/codedata.jpg)
@@ -137,5 +135,3 @@ import CoreData
 Перевод главы из книги: [Beginning iOS 10 Programming with Swift 3](https://www.amazon.com/Beginning-iOS-10-Programming-Swift/dp/1520222599/ref=sr_1_1?s=books&ie=UTF8&qid=1487189058&sr=1-1&keywords=Simon+Ng)
 
 Автор книги: Simon Ng
-
-
