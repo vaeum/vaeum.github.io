@@ -3,6 +3,7 @@
 //= include up-button.js
 //= include search.js
 //= include off-canvas.js
+//= include is-on-screen.js
 
 $(function() {
   var elements = document.querySelectorAll("img");

@@ -27,11 +27,9 @@
         <div class="off-canvas-content">
           {% include header.html %}
           <main class="main container">
-            {% include sidebar.html %}
+            {{ content }}
 
-            <div class="main-content">
-              {{ content }}
-            </div>
+            {% include sidebar.html %}
           </main>
 
           {% include footer.html %}
