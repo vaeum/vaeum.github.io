@@ -2,6 +2,10 @@
   background: darken($blue, 20%);
 }
 
+.js-off-canvas-exit{
+  z-index: 30;
+}
+
 .right-menu{
   padding: 10px;
 
