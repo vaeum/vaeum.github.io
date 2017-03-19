@@ -1,3 +1,5 @@
+let smallscreen = false;
+
 //подстраиваем кнопку "наверх" под размер окна
 function modern_upbutton_resize(){
   var ourwidth_screen = $(window).width(); // взяли ширину окна
