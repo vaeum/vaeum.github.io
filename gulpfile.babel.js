@@ -160,9 +160,9 @@ gulp.task('htmlclean', function() {
 gulp.task('build:js', () =>
   gulp.src(['./_assets/js/main.js'])
     .pipe($.include())
-      .on('error', $.notify.onError()))
+      .on('error', $.notify.onError())
     .pipe($.babel({ presets: ['es2015'] }))
-      .on('error', $.notify.onError()))
+      .on('error', $.notify.onError())
     .pipe($.if(prod, $.uglify()))
     .pipe(gulp.dest('./_site/js/'))
 );
