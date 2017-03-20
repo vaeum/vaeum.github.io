@@ -38,7 +38,7 @@ $(function() {
         });
 
         $(".sidebar").css({
-          right: '0px'
+          right: '15px'
         })
       }
     }
