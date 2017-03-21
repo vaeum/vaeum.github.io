@@ -13,14 +13,15 @@ $.fn.isOnScreen = function(){
   bounds.right = bounds.left + this.outerWidth();
   bounds.bottom = bounds.top + this.outerHeight();
 
-  return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+  return (!(viewport.right < bounds.left
+    || viewport.left > bounds.right
+    || viewport.bottom < bounds.top
+    || viewport.top > bounds.bottom));
 };
 
 
 
 $(function() {
-
-  //управление показом и скрытием стрелки
   $(window).scroll(function() {
     if ($(window).width() > 992) {
       if (!$(".sidebar").isOnScreen()){
