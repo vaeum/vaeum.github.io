@@ -3,11 +3,17 @@ title: Lodash документация на русском (массивы) ча
 layout: post
 categories: Lodash
 tags: Lodash Documentation
-description: "Перевод документации библиотеки Lodash. Это шестая часть посвященная переводу методов работы с Массивами в которой представлено 10 методов, которые помогут вам в работе с массивами."
-
-excerpt_text: "Перевод документации библиотеки Lodash. Это шестая часть посвященная переводу методов работы с Массивами в которой представлено 10 методов, которые помогут вам в работе с массивами.
-Рассмотрены следующие 
-методы .unionWith .uniq .uniqBy .uniqWith .unzip .unzipWith .without .xor .xorBy .xorWith .zip .zipObject .zipObjectDeep .zipWith"
+description: >-
+  Перевод документации библиотеки Lodash. Это шестая часть посвященная переводу
+  методов работы с Массивами в которой представлено 10 методов, которые помогут
+  вам в работе с массивами.
+excerpt_text: >-
+  Перевод документации библиотеки Lodash. Это шестая часть посвященная переводу
+  методов работы с Массивами в которой представлено 10 методов, которые помогут
+  вам в работе с массивами. Рассмотрены следующие  методы .unionWith .uniq
+  .uniqBy .uniqWith .unzip .unzipWith .without .xor .xorBy .xorWith .zip
+  .zipObject .zipObjectDeep .zipWith
+published: true
 ---
 
 ![Lodash документация на русском](/images/post/Lo-Dash_array_part6.jpg)
@@ -147,7 +153,7 @@ _.without([2, 1, 2, 3], 1, 2);
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L8576),
 [npm package](https://www.npmjs.com/package/lodash.xor).
 
-Создает массив из уникальных значений, которые является [symmetric difference](https://en.wikipedia.org/wiki/Symmetric_difference) из данных массивов.
+Создает массив из уникальных значений, которые являются [symmetric difference](https://en.wikipedia.org/wiki/Symmetric_difference) из данных массивов.
 
 Порядок значения результатов определяется тем, в каком порядке они расположены в массивах.
 
@@ -175,7 +181,7 @@ _.xor([2, 1], [2, 3]);
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L8603),
 [npm package](https://www.npmjs.com/package/lodash.xorby).
 
-Этот метод подобен [_.xor](https://lodash.com/docs/4.17.4#xor) кроме того, что он принимает `iteratee`, который вызывается для каждого элемента каждого массива, чтобы создать критерий, по котором они сравниваются.
+Этот метод подобен [_.xor](https://lodash.com/docs/4.17.4#xor) кроме того, что он принимает `iteratee`, который вызывается для каждого элемента каждого массива, чтобы создать критерий, по которому они сравниваются.
 
 Порядок значения результатов определяется тем, как они расположены в массивах.
 
@@ -359,4 +365,3 @@ _.zipWith([1, 2], [10, 20], [100, 200], function(a, b, c) {
 [Часть 4](http://vaeum.com/blog/2017/03/16/lodash-russian-documentation-part4-array/)
 [Часть 5](http://vaeum.com/blog/2017/03/16/lodash-russian-documentation-part5-array/)
 [Все методы Массивов](http://vaeum.com/blog/2017/03/18/lodash-russian-documentation-array/)
-
