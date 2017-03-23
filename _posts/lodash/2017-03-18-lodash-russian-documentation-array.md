@@ -3,10 +3,22 @@ title: Lodash документация на русском (массивы)
 layout: post
 categories: Lodash
 tags: Lodash Documentation
-description: "Перевод документации библиотеки Lodash. В этой статье на русский язык переведены все методы для работы с Массивами в Lodash."
-
-excerpt_text: "Перевод документации библиотеки Lodash. В этой статье на русский язык переведены все методы для работы с Массивами в Lodash. Рассмотрены следующие
-методы .chunk .compact .concat .difference .differenceBy .differenceWith .drop .dropRight .dropRightWhile .dropWhile .fill .findIndex .findLastIndex .flatten .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial .intersection .intersectionBy .intersectionWith .join .last .lastIndexOf .nth .pull .pullAll .pullAllBy .pullAllWith .pullAt .remove .reverse .slice .sortedIndex .sortedIndexBy .sortedLastIndexOf .sortedUniq .sortedUniqBy .tail .take .takeRight .takeRightWhile .takeWhile .uniq .uniqBy .uniqWith .unzip .unzipWith .without .xor .xorBy .xorWith .zip .zipObject .zipObjectDeep .zipWith"
+description: >-
+  Перевод документации библиотеки Lodash. В этой статье на русский язык
+  переведены все методы для работы с Массивами в Lodash.
+excerpt_text: >-
+  Перевод документации библиотеки Lodash. В этой статье на русский язык
+  переведены все методы для работы с Массивами в Lodash. Рассмотрены следующие
+  методы .chunk .compact .concat .difference .differenceBy .differenceWith .drop
+  .dropRight .dropRightWhile .dropWhile .fill .findIndex .findLastIndex .flatten
+  .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial .intersection
+  .intersectionBy .intersectionWith .join .last .lastIndexOf .nth .pull .pullAll
+  .pullAllBy .pullAllWith .pullAt .remove .reverse .slice .sortedIndex
+  .sortedIndexBy .sortedLastIndexOf .sortedUniq .sortedUniqBy .tail .take
+  .takeRight .takeRightWhile .takeWhile .uniq .uniqBy .uniqWith .unzip
+  .unzipWith .without .xor .xorBy .xorWith .zip .zipObject .zipObjectDeep
+  .zipWith
+published: true
 ---
 
 ![Lodash документация на русском](/images/post/Lo-Dash_array.jpg)
@@ -21,7 +33,7 @@ excerpt_text: "Перевод документации библиотеки Loda
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L6856),
 [npm package](https://www.npmjs.com/package/lodash.chunk).
 
-Объединяет элементы в массив с заданной длинной, длинна массива указывается в атрибуте `size`.
+Объединяет элементы в массив с заданной длиной, длина массива указывается в атрибуте `size`.
 
 Если массив не может быть объединен равномерно, финальный чанк запишет в него оставшиеся элементы.
 
@@ -31,11 +43,11 @@ excerpt_text: "Перевод документации библиотеки Loda
 
 `array (Array)`: Массив для обработки.
 
-`[size=1] (number)`: Длинна каждого массива.
+`[size=1] (number)`: Длина каждого массива.
 
 **Возвращает**
 
-`(Array)`: Возвращает чанк с массивами указанной длинны сгруппированных из указанных элементов.
+`(Array)`: Возвращает чанк с массивами указанной длины сгруппированных из указанных элементов.
 
 ### Пример
 
@@ -55,7 +67,7 @@ _.chunk(['a', 'b', 'c', 'd'], 3);
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L6891),
 [npm package](https://www.npmjs.com/package/lodash.compact).
 
-Создает массив в котором все ложные значения будут удалены.
+Создает массив, в котором все ложные значения будут удалены.
 
 К ложным значениям относятся:
 `false, null, 0, "", undefined, NaN`
@@ -121,7 +133,7 @@ console.log(array);
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L6964),
 [npm package](https://www.npmjs.com/package/lodash.difference).
 
-Создает новый массив из уникальных не дублируемых в проверяемых массивах значений
+Создает новый массив из уникальных не дублируемых в проверяемых массивах значений,
 используя сравнение на равенство каждого значения.
 
 Порядок вывода значений определят первый указанный массив.
@@ -131,7 +143,7 @@ console.log(array);
 **Аргументы**
 
 `array (Array)`: Массив для проверки.
-`[values] (...Array)`: Значения которые будут исключены.
+`[values] (...Array)`: Значения, которые будут исключены.
 
 **Возвращает**
 
@@ -156,7 +168,7 @@ _.difference([2, 1], [2, 3]);
 который вызывается для каждого элемента массива и значения для формирования критерия,
 по которому они сравниваются.
 
-Порядок вывода результат значений определяет первый массив. `iteratee` вызывается с одним аргументом:
+Порядок вывода результата значений определяет первый массив. `iteratee` вызывается с одним аргументом:
 `(value)`.
 
 **Заметка**: В отличии от `_.pullAllBy`, этот метод возвращает новый массив.
@@ -194,10 +206,10 @@ _.differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], 'x');
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7029),
 [npm package](https://www.npmjs.com/package/lodash.differencewith).
 
-Этот метод похож на `_.difference` за исключением того, что он принимает `comparator `
+Этот метод похож на `_.difference` за исключением того, что он принимает `comparator `,
 который вызывается для сравнивания элементов массива по значению.
 
-Порядок вывода результат значений определяет первый массив. `comparator`
+Порядок вывода результата значений определяет первый массив. `comparator`
 вызывается с двумя аргументами: `(arrVal, othVal)`.
 
 **Заметка**: В отличии от `_.pullAllWith`, этот метод возвращает новый массив.
@@ -309,9 +321,9 @@ _.dropRight([1, 2, 3], 0);
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7143),
 [npm package](https://www.npmjs.com/package/lodash.droprightwhile).
 
-Возвращает фрагмент массива исключая элементы добавляемые в конец массива.
+Возвращает фрагмент массива, исключая элементы добавляемые в конец массива.
 
-Элементы исключаются до тех пор пока `predicate` возвращает ложные значения.
+Элементы исключаются до тех пор, пока `predicate` возвращает ложные значения.
 
 `predicate` вызывается с тремя аргументами: `(value, index, array)`.
 
@@ -321,7 +333,7 @@ _.dropRight([1, 2, 3], 0);
 
 `array (Array)`: Массив запросов.
 
-`[predicate=_.identity] (Function)`: Функция вызываемая на каждой итерации.
+`[predicate=_.identity] (Function)`: Функция, вызываемая на каждой итерации.
 
 **Возвращает**
 
@@ -362,7 +374,7 @@ _.dropRightWhile(users, 'active');
 
 Возвращает фрагмент массива, кроме элементов, добавленных с начала массива.
 
-Элементы исключаются до тех пор пока `predicate` возвращает ложные значения.
+Элементы исключаются до тех пор, пока `predicate` возвращает ложные значения.
 
 `predicate` вызывается с тремя аргументами: `(value, index, array)`.
 
@@ -1147,7 +1159,7 @@ console.log(array);
 **Аргументы**
 
 `array (Array)`: Массив для изменения.
-`[indexes] (...(number|number[]))`: Индексы элементов которые будут удалить.
+`[indexes] (...(number|number[]))`: Индексы элементов, которые будут удалять.
 
 **Возвращает**
 
@@ -1174,7 +1186,7 @@ console.log(pulled);
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7864),
 [npm package](https://www.npmjs.com/package/lodash.remove).
 
-Удаляет все элементы из массива `predicate` которых возвращает истину и возвращает массив из удаленных элементов. 
+Удаляет все элементы из массива ,`predicate` которых возвращает истину и возвращает массив из удаленных элементов. 
 
 `predicate` вызывается с тремя аргументами: (value, index, array).
 
@@ -1187,7 +1199,7 @@ console.log(pulled);
 **Аргументы**
 
 `array (Array)`: Массив для изменения.
-`[indexes] (...(number|number[]))`: Индексы элементов которые будут удалены.
+`[indexes] (...(number|number[]))`: Индексы элементов, которые будут удалены.
 
 **Возвращает**
 
@@ -1255,15 +1267,15 @@ console.log(array);
 
 **Заметка:**
 
-Этот метод используется вместо [Array#slice](https://mdn.io/Array/slice) чтобы обеспечить плотность возвращаемому массиву.
+Этот метод используется вместо [Array#slice](https://mdn.io/Array/slice), чтобы обеспечить плотность возвращаемому массиву.
 
 
 **Версия:** *3.0.0*
 
 **Аргументы**
 
-`array (Array)`: Массив для брезки.
-`[start=0] (number)`: Стартая позиция.
+`array (Array)`: Массив для срезки.
+`[start=0] (number)`: Стартовая позиция.
 `[end=array.length] (number)`: Конечная позиция.
 
 **Возвращает**
@@ -1287,7 +1299,7 @@ console.log(array);
 
 **Возвращает**
 
-`(number)`: Возвращает индекс значения которое должно быть вставлено в массив.
+`(number)`: Возвращает индекс значения, которое должно быть вставлено в массив.
 
 ### Пример
 
@@ -1304,7 +1316,7 @@ _.sortedIndex([30, 50], 40);
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7990),
 [npm package](https://www.npmjs.com/package/lodash.sortedindexby).
 
-В отличие от [_.sortedIndex](https://lodash.com/docs/4.17.4#sortedIndex) за исключением того, что он принимает `iteratee` который вызывается по значению которая вызывается для каждого элемента массива для вычисления их корректного ранжирования. 
+В отличие от [_.sortedIndex](https://lodash.com/docs/4.17.4#sortedIndex) за исключением того, что он принимает `iteratee`, который вызывается по значению  для каждого элемента массива для вычисления их корректного ранжирования. 
 
 `iteratee` вызывается с одним аргументом: (value).
 
@@ -1318,7 +1330,7 @@ _.sortedIndex([30, 50], 40);
 
 **Возвращает**
 
-`(number)`: Возвращает индекс на какое значение должен быть вставлен в массив.
+`(number)`: Возвращает индекс, на какое значение должен быть вставлен в массив.
 
 ### Пример
 
@@ -1527,7 +1539,7 @@ _.takeRight([1, 2, 3], 0);
 
 Создает срез массива из `n` элементов, взятых с конца массива.
 
-Элементы принимаются до тех пор пока `predicate` возвращает лож.
+Элементы принимаются до тех пор, пока `predicate` возвращает лож.
 
 `predicate` вызывается с тремя аргументами: (value, index, array).
 
@@ -1577,7 +1589,7 @@ _.takeRightWhile(users, 'active');
 
 Создает срез массива из `n` элементов, взятых с начала массива.
 
-Элементы принимаются до тех пор пока `predicate` возвращает лож.
+Элементы принимаются до тех пор, пока `predicate` возвращает лож.
 
 `predicate` вызывается с тремя аргументами: (value, index, array).
 
@@ -1654,7 +1666,7 @@ _.union([2], [1, 2]);
 
 что он создан и оптимизирован для отсортированных массивов.
 
-Этот метод подобен [_.union](https://lodash.com/docs/4.17.4#union) за исключением того что `iteratee` вызывается для каждого элемента каждого массива, чтобы создать критерий, по которому вычисляется уникальность.
+Этот метод подобен [_.union](https://lodash.com/docs/4.17.4#union) за исключением того, что `iteratee` вызывается для каждого элемента каждого массива, чтобы создать критерий, по которому вычисляется уникальность.
 
 Значения выбираются из первого массива, в котором значение происходит. В `iteratee` вызывается с одним аргументом: (value).
 
@@ -1817,7 +1829,7 @@ _.without([2, 1, 2, 3], 1, 2);
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L8576),
 [npm package](https://www.npmjs.com/package/lodash.xor).
 
-Создает массив из уникальных значений, которые является [symmetric difference](https://en.wikipedia.org/wiki/Symmetric_difference) из данных массивов.
+Создает массив из уникальных значений, которые являются [symmetric difference](https://en.wikipedia.org/wiki/Symmetric_difference) из данных массивов.
 
 Порядок значения результатов определяется тем, в каком порядке они расположены в массивах.
 
@@ -1846,7 +1858,7 @@ _.xor([2, 1], [2, 3]);
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L8603),
 [npm package](https://www.npmjs.com/package/lodash.xorby).
 
-Этот метод подобен [_.xor](https://lodash.com/docs/4.17.4#xor) кроме того, что он принимает `iteratee`, который вызывается для каждого элемента каждого массива, чтобы создать критерий, по котором они сравниваются.
+Этот метод подобен [_.xor](https://lodash.com/docs/4.17.4#xor), кроме этого он принимает `iteratee`, который вызывается для каждого элемента каждого массива, чтобы создать критерий, по которому они сравниваются.
 
 Порядок значения результатов определяется тем, как они расположены в массивах.
 
@@ -1944,7 +1956,7 @@ _.zip(['a', 'b'], [1, 2], [true, false]);
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L8672),
 [npm package](https://www.npmjs.com/package/lodash.zipobject).
 
-Этот метод подобен [_.fromPairs](https://lodash.com/docs/4.17.4#fromPairs) кроме того, что он принимает два массива, один из идентификаторов свойств и одно из соответствующих значений.
+Этот метод подобен [_.fromPairs](https://lodash.com/docs/4.17.4#fromPairs), кроме этого он принимает два массива, один из идентификаторов свойств и одно из соответствующих значений.
 
 **Версия:** *0.4.0*
 
@@ -2035,4 +2047,3 @@ _.zipWith([1, 2], [10, 20], [100, 200], function(a, b, c) {
 [Часть 4](http://vaeum.com/blog/2017/03/16/lodash-russian-documentation-part4-array/)
 [Часть 5](http://vaeum.com/blog/2017/03/16/lodash-russian-documentation-part5-array/)
 [Часть 6](http://vaeum.com/blog/2017/03/17/lodash-russian-documentation-part6-array/)
-
