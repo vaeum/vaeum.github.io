@@ -3,11 +3,16 @@ title: Lodash документация на русском (массивы) ча
 layout: post
 categories: Lodash
 tags: Lodash Documentation
-description: "Перевод документации библиотеки Lodash. Это четвертая часть посвященная переводу методов работы с Массивами в которой представлено 7 методов, которые помогут вам в работе с массивами."
-
-excerpt_text: "Перевод документации библиотеки Lodash. Это четвертая часть посвященная переводу методов работы с Массивами в которой представлено 7 методов, которые помогут вам в работе с массивами. 
-Рассмотрены следующие 
-методы .pullAllWith .pullAt .remove .reverse .slice .sortedIndex .sortedIndexBy"
+description: >-
+  Перевод документации библиотеки Lodash. Это четвертая часть посвященная
+  переводу методов работы с Массивами в которой представлено 7 методов, которые
+  помогут вам в работе с массивами.
+excerpt_text: >-
+  Перевод документации библиотеки Lodash. Это четвертая часть посвященная
+  переводу методов работы с Массивами в которой представлено 7 методов, которые
+  помогут вам в работе с массивами.  Рассмотрены следующие  методы .pullAllWith
+  .pullAt .remove .reverse .slice .sortedIndex .sortedIndexBy
+published: true
 ---
 
 ![Lodash документация на русском](/images/post/Lo-Dash_array_part4.jpg)
@@ -22,7 +27,7 @@ excerpt_text: "Перевод документации библиотеки Loda
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7795),
 [npm package](https://www.npmjs.com/package/lodash.pullallwith).
 
-Этот метод подобен [_.pullAll](https://lodash.com/docs/4.17.4#pullAll) кроме того, что он принимает `comparator` которая вызывается, чтобы сравнить элементы от `array` до `values`. Вызов `comparator` производится с двумя аргументами: (arrVal, othVal).
+Этот метод подобен [_.pullAll](https://lodash.com/docs/4.17.4#pullAll) кроме этого он принимает `comparator`, который вызывается, чтобы сравнить элементы от `array` до `values`. Вызов `comparator` производится с двумя аргументами: (arrVal, othVal).
 
 **Заметка:**
 
@@ -57,7 +62,7 @@ console.log(array);
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7825),
 [npm package](https://www.npmjs.com/package/lodash.pullat).
 
-Удаляет элементы из `array` соответствующие по индексам и возвращает массив из удаленных элементов.
+Удаляет элементы из `array`, соответствующие по индексам, и возвращает массив из удаленных элементов.
 
 **Заметка:**
 
@@ -68,7 +73,7 @@ console.log(array);
 **Аргументы**
 
 `array (Array)`: Массив для изменения.
-`[indexes] (...(number|number[]))`: Индексы элементов которые будут удалить.
+`[indexes] (...(number|number[]))`: Индексы элементов, которые будут удалять.
 
 **Возвращает**
 
@@ -94,7 +99,7 @@ console.log(pulled);
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7864),
 [npm package](https://www.npmjs.com/package/lodash.remove).
 
-Удаляет все элементы из массива `predicate` которых возвращает истину и возвращает массив из удаленных элементов. 
+Удаляет все элементы из массива `predicate`, который возвращает истину и возвращает массив из удаленных элементов. 
 
 `predicate` вызывается с тремя аргументами: (value, index, array).
 
@@ -107,7 +112,7 @@ console.log(pulled);
 **Аргументы**
 
 `array (Array)`: Массив для изменения.
-`[indexes] (...(number|number[]))`: Индексы элементов которые будут удалены.
+`[indexes] (...(number|number[]))`: Индексы элементов, которые будут удалены.
 
 **Возвращает**
 
@@ -173,15 +178,15 @@ console.log(array);
 
 **Заметка:**
 
-Этот метод используется вместо [Array#slice](https://mdn.io/Array/slice) чтобы обеспечить плотность возвращаемому массиву.
+Этот метод используется вместо [Array#slice](https://mdn.io/Array/slice), чтобы обеспечить плотность возвращаемому массиву.
 
 
 **Версия:** *3.0.0*
 
 **Аргументы**
 
-`array (Array)`: Массив для брезки.
-`[start=0] (number)`: Стартая позиция.
+`array (Array)`: Массив для срезки.
+`[start=0] (number)`: Стартовая позиция.
 `[end=array.length] (number)`: Конечная позиция.
 
 **Возвращает**
@@ -205,7 +210,7 @@ console.log(array);
 
 **Возвращает**
 
-`(number)`: Возвращает индекс значения которое должно быть вставлено в массив.
+`(number)`: Возвращает индекс значения, которое должно быть вставлено в массив.
 
 ### Пример
 
@@ -221,7 +226,7 @@ _.sortedIndex([30, 50], 40);
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L7990),
 [npm package](https://www.npmjs.com/package/lodash.sortedindexby).
 
-В отличие от [_.sortedIndex](https://lodash.com/docs/4.17.4#sortedIndex) за исключением того, что он принимает `iteratee` который вызывается по значению которая вызывается для каждого элемента массива для вычисления их корректного ранжирования. 
+В отличие от [_.sortedIndex](https://lodash.com/docs/4.17.4#sortedIndex) за исключением того, что он принимает `iteratee`, который вызывается по значению и для каждого элемента массива для вычисления их корректного ранжирования. 
 
 `iteratee` вызывается с одним аргументом: (value).
 
@@ -235,7 +240,7 @@ _.sortedIndex([30, 50], 40);
 
 **Возвращает**
 
-`(number)`: Возвращает индекс на какое значение должен быть вставлен в массив.
+`(number)`: Возвращает индекс, на какое значение должен быть вставлен в массив.
 
 ### Пример
 
@@ -259,4 +264,3 @@ _.sortedIndexBy(objects, { 'x': 4 }, 'x');
 [Часть 5](http://vaeum.com/blog/2017/03/16/lodash-russian-documentation-part5-array/)
 [Часть 6](http://vaeum.com/blog/2017/03/17/lodash-russian-documentation-part6-array/)
 [Все методы Массивов](http://vaeum.com/blog/2017/03/18/lodash-russian-documentation-array/)
-
