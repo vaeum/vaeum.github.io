@@ -6,7 +6,7 @@ tags: Swift Xcode CoreData
 description: Работа с Core Data.
 related:
   - Working with Core Data(Перевод). Часть третья.
-published: true
+published: true
 ---
 
 ![Работа с Core Data.](/images/post/codedata.jpg)
