@@ -222,7 +222,7 @@ NSFetchedResultsController<NSFetchRequestResult>) {
 
 Вот и все. Теперь запустите приложение и создайте несколько ресторанов. Приложение должно реагировать на изменение мгновенно.
 
-![Работа с Core Data.](/images/post/work_add_restaurants.jpg)
+![Работа с Core Data.](/images/post/working-with-core-data/work_add_restaurants.jpg)
 
 
 ### Удаление данных из Core Data
@@ -287,7 +287,7 @@ indexPath)
 
 Я намеренно оставил поле номера телефона для вашей реализации. В настоящее время пользователи не могут вводить номер телефона. Ваше упражнение заключается в добавлении поля **Phone Number field** на экране **New Restaurant screen** и сохранении информации с использованием **CoreData**.
 
-![Работа с Core Data.](/images/post/add_telephone_number_in_the_core_data.jpg)
+![Работа с Core Data.](/images/post/working-with-core-data/add_telephone_number_in_the_core_data.jpg)
 
 Если не получилось, то можно посмотреть с решением [тут](http://www.appcoda.com/resources/swift3/FoodPinCoreDataFinal.zip).
 
