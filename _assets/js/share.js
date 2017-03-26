@@ -1,3 +1,5 @@
+var url = '';
+
 var Share = {
   vk: function(purl, ptitle, pimg, text) {
     url  = 'http://vkontakte.ru/share.php?';
@@ -8,12 +10,14 @@ var Share = {
     url += '&noparse=true';
     Share.popup(url);
   },
+
   ok: function(purl, text) {
     url  = 'http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1';
     url += '&st.comments=' + encodeURIComponent(text);
     url += '&st._surl='    + encodeURIComponent(purl);
     Share.popup(url);
   },
+
   fb: function(purl, ptitle, pimg, text) {
     url  = 'http://www.facebook.com/sharer.php?s=100';
     url += '&p[title]='     + encodeURIComponent(ptitle);
@@ -22,6 +26,7 @@ var Share = {
     url += '&p[images][0]=' + encodeURIComponent(pimg);
     Share.popup(url);
   },
+
   tw: function(purl, ptitle) {
     url  = 'http://twitter.com/share?';
     url += 'text='      + encodeURIComponent(ptitle);
@@ -29,6 +34,7 @@ var Share = {
     url += '&counturl=' + encodeURIComponent(purl);
     Share.popup(url);
   },
+
   mailru: function(purl, ptitle, pimg, text) {
     url  = 'http://connect.mail.ru/share?';
     url += 'url='          + encodeURIComponent(purl);
@@ -37,6 +43,7 @@ var Share = {
     url += '&imageurl='    + encodeURIComponent(pimg);
     Share.popup(url)
   },
+
   li: function(purl, ptitle, psummary) {
     url =  'http://www.linkedin.com/shareArticle?mini=true';
     url += '&url=' + encodeURIComponent(purl);
