@@ -292,7 +292,7 @@ indexPath)
 Если не получилось, то можно посмотреть с решением [тут](http://www.appcoda.com/resources/swift3/FoodPinCoreDataFinal.zip).
 
 На этом перевод главы закончен.
-[Первая часть.](http://vaeum.com/blog/2017/03/16/working-with-core-data-first/) [Первая вторая.](http://vaeum.com/blog/2017/03/19/working-with-core-data-second/)
+[Первая часть.](http://vaeum.com/blog/2017/03/16/working-with-core-data-first/) [Вторая часть.](http://vaeum.com/blog/2017/03/19/working-with-core-data-second/)
 
 Перевод главы из книги: [Beginning iOS 10 Programming with Swift 3](https://www.amazon.com/Beginning-iOS-10-Programming-Swift/dp/1520222599/ref=sr_1_1?s=books&ie=UTF8&qid=1487189058&sr=1-1&keywords=Simon+Ng)
 
