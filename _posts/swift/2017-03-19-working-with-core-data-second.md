@@ -139,7 +139,7 @@ restaurantImageView.image = UIImage(data: restaurant.image as! Data)
 Поскольку данные о ресторанах отсутствуют, ваше приложение должно отображать пустую таблицу при запуске. Затем мы реализуем класс **AddTableViewController** и сохраним новый ресторан в базе данных.
 
 На этом перевод второй части главы закончен.
-[Первая часть.](http://vaeum.com/blog/2017/03/16/working-with-core-data-first/) [Третья часть.](http://vaeum.com/blog/2017/03/16/working-with-core-data-third/)
+[Первая часть.](http://vaeum.com/blog/2017/03/16/working-with-core-data-first/) [Третья часть.](http://vaeum.com/blog/2017/03/26/working-with-core-data-third/)
 
 Перевод главы из книги: [Beginning iOS 10 Programming with Swift 3](https://www.amazon.com/Beginning-iOS-10-Programming-Swift/dp/1520222599/ref=sr_1_1?s=books&ie=UTF8&qid=1487189058&sr=1-1&keywords=Simon+Ng)
 
