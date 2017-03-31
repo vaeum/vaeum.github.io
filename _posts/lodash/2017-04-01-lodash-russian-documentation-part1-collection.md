@@ -1,15 +1,13 @@
 ---
-title: Lodash документация на русском (Коллекции)
+title: Lodash документация на русском (Коллекции) часть 1
 layout: post
 categories: Lodash
 tags: Lodash Documentation
 description: >-
-  Перевод документации библиотеки Lodash. В этой статье на русский язык
-  переведены 10 методов для работы с Коллекциями в Lodash.
+	Это первая часть посвященная переводу 10ти методов для работы с Коллекциями в Lodash на русский язык.
 excerpt_text: >-
-  Перевод документации библиотеки Lodash. В этой статье на русский язык
-  переведены 10 методов для работы с Коллекциями в Lodash. Рассмотрены следующие
-методы .countBy .every .filter .find .findLast .flatMap .flatMapDeep .flatMapDeep .forEach .forEachRight
+	Это первая часть посвященная переводу 10ти методов для работы с Коллекциями в Lodash на русский язык. 
+	Рассмотрены следующие методы .countBy .every .filter .find .findLast .flatMap .flatMapDeep .flatMapDeep .forEach .forEachRight
 published: true
 ---
 
