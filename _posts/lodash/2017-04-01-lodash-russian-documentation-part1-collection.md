@@ -6,10 +6,8 @@ tags: Lodash Documentation
 description: >-
 	Это первая часть посвященная переводу 10ти методов для работы с Коллекциями в Lodash на русский язык.
 excerpt_text: >-
-	Это первая часть посвященная переводу 10ти методов для работы с Коллекциями в Lodash на русский язык. 
-	Рассмотрены следующие методы .countBy .every .filter .find .findLast .flatMap .flatMapDeep .flatMapDeep .forEach .forEachRight
+	Это первая часть посвященная переводу 10ти методов для работы с Коллекциями в Lodash на русский язык. Рассмотрены следующие 	методы .countBy .every .filter .find .findLast .flatMap .flatMapDeep .flatMapDeep .forEach .forEachRight
 published: true
----
 
 ![Lodash документация на русском](/images/post/Lodash/Lo-Dash_сollection_part1.jpg)
 
