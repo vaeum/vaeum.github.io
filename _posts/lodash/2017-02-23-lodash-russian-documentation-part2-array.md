@@ -9,7 +9,7 @@ excerpt_text: "Перевод документации библиотеки Loda
 Рассмотрены следующие методы .fill .findIndex .findLastIndex .flatten .flattenDeep .flattenDepth .fromPairs .head .indexOf .initial"
 ---
 
-![Lodash документация на русском](/images/post/Lo-Dash_array_part2.jpg)
+![Lodash документация на русском](/images/post/Lodash/Lo-Dash_array_part2.jpg)
 
 * TOC
 {:toc}

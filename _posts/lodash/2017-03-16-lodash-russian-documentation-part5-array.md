@@ -10,7 +10,7 @@ excerpt_text: "Перевод документации библиотеки Loda
 методы .sortedLastIndexOf .sortedUniq .sortedUniqBy .tail .take .takeRight .takeRightWhile .takeWhile .union .unionBy"
 ---
 
-![Lodash документация на русском](/images/post/Lo-Dash_array_part5.jpg)
+![Lodash документация на русском](/images/post/Lodash/Lo-Dash_array_part5.jpg)
 
 * TOC
 {:toc}

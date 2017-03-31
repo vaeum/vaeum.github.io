@@ -15,7 +15,7 @@ excerpt_text: >-
 published: true
 ---
 
-![Lodash документация на русском](/images/post/Lo-Dash_array_part4.jpg)
+![Lodash документация на русском](/images/post/Lodash/Lo-Dash_array_part4.jpg)
 
 * TOC
 {:toc}

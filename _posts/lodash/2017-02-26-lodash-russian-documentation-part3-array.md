@@ -10,7 +10,7 @@ excerpt_text: "Перевод документации библиотеки Loda
 методы .intersection .intersectionBy .intersectionWith .join .last .lastIndexOf .nth .pull .pullAll .pullAllBy"
 ---
 
-![Lodash документация на русском](/images/post/Lo-Dash_array_part3.jpg)
+![Lodash документация на русском](/images/post/Lodash/Lo-Dash_array_part3.jpg)
 
 * TOC
 {:toc}

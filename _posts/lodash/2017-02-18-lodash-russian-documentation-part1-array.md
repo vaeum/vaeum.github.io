@@ -9,7 +9,7 @@ excerpt_text: "Перевод документации библиотеки Loda
 Расмотренны следующие методы .chunk .compact .concat .difference .differenceBy .differenceWith .drop .dropRight .dropRightWhile .dropWhile"
 ---
 
-![Lodash документация на русском](/images/post/Lo-Dash_array_part1.jpg)
+![Lodash документация на русском](/images/post/Lodash/Lo-Dash_array_part1.jpg)
 
 * TOC
 {:toc}
