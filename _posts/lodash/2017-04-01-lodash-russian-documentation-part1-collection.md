@@ -41,7 +41,6 @@ published: true
 ### Пример
 
 ```javascript
-
 _.countBy([6.1, 4.2, 6.3], Math.floor);
 // => { '4': 1, '6': 2 }
 
@@ -77,7 +76,6 @@ _.countBy(['one', 'two', 'three'], 'length');
 ### Пример
 
 ```javascript
-
 _.every([true, 1, null, 'yes'], Boolean);
 // => false
 
@@ -124,7 +122,6 @@ _.every(users, 'active');
 ### Пример
 
 ```javascript
-
 var users = [
   { 'user': 'barney', 'age': 36, 'active': true },
   { 'user': 'fred',   'age': 40, 'active': false }
@@ -170,7 +167,6 @@ _.filter(users, 'active');
 ### Пример
 
 ```javascript
-
 var users = [
   { 'user': 'barney',  'age': 36, 'active': true },
   { 'user': 'fred',    'age': 40, 'active': false },
@@ -215,7 +211,6 @@ _.find(users, 'active');
 ### Пример
 
 ```javascript
-
 _.findLast([1, 2, 3, 4], function(n) {
   return n % 2 == 1;
 });
@@ -245,7 +240,6 @@ _.findLast([1, 2, 3, 4], function(n) {
 ### Пример
 
 ```javascript
-
 function duplicate(n) {
   return [n, n];
 }
@@ -275,7 +269,6 @@ _.flatMap([1, 2], duplicate);
 ### Пример
 
 ```javascript
-
 function duplicate(n) {
   return [[[n, n]]];
 }
@@ -306,7 +299,6 @@ _.flatMapDeep([1, 2], duplicate);
 ### Пример
 
 ```javascript
-
 function duplicate(n) {
   return [[[n, n]]];
 }
@@ -346,7 +338,6 @@ _.each
 ### Пример
 
 ```javascript
-
 _.forEach([1, 2], function(value) {
   console.log(value);
 });
@@ -383,9 +374,10 @@ _.eachRight
 ### Пример
 
 ```javascript
-
 _.forEachRight([1, 2], function(value) {
   console.log(value);
 });
 // => Logs `2` then `1`.
 ```
+
+[Часть 2](http://vaeum.com/blog/2017/04/01/lodash-russian-documentation-part2-collection/)
