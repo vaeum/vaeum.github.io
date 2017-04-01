@@ -19,29 +19,29 @@ $.fn.isOnScreen = function(){
     || viewport.top > bounds.bottom));
 };
 
+$(window).scroll(function() {
+  if ($(window).width() > 992) {
+    if (!$(".sidebar").isOnScreen()){
+      $(".main").css({
+        'padding-right': '100px',
+        'padding-left': '100px',
+      });
 
+      $(".sidebar").css({
+        right: '-330px',
+        opacity: 0,
+      })
 
-$(function() {
-  $(window).scroll(function() {
-    if ($(window).width() > 992) {
-      if (!$(".sidebar").isOnScreen()){
-        $(".main").css({
-          'padding-right': '0px'
-        });
+    } else {
+      $(".main").css({
+        'padding-right': '330px',
+        'padding-left': '0px',
+      });
 
-        $(".sidebar").css({
-          right: '-330px'
-        })
-
-      } else {
-        $(".main").css({
-          'padding-right': '330px'
-        });
-
-        $(".sidebar").css({
-          right: '15px'
-        })
-      }
+      $(".sidebar").css({
+        right: '15px',
+        opacity: 1,
+      })
     }
-  });
+  }
 });

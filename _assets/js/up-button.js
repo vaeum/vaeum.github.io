@@ -84,27 +84,24 @@ function modern_upbutton_check_for_disable(){
   }
 }
 
-$(function() {
+//проверяем, не удалена ли кнопка
+modern_upbutton_check_for_disable();
 
-  //проверяем, не удалена ли кнопка
-  modern_upbutton_check_for_disable();
+//подгоняем её под окно
+modern_upbutton_resize();
 
-  //подгоняем её под окно
-  modern_upbutton_resize();
+//вешаем следилку на событие "клик по кнопке"
+$('.modern-upbutton').bind("click touch ontouchstart", function(e){
+  if ($(event.target).closest(".modern-upbutton-disable").length) return;
+    if ($(this).attr('data-scroll') == 'up') {
+    modern_upbutton_click_scrollup();  // крутим вверх
+  } else {
+    modern_upbutton_click_scrolldown(); // крутим вниз
+  }
+  event.stopPropagation();
+});
 
-  //вешаем следилку на событие "клик по кнопке"
-  $('.modern-upbutton').bind("click touch ontouchstart", function(e){
-    if ($(event.target).closest(".modern-upbutton-disable").length) return;
-      if ($(this).attr('data-scroll') == 'up') {
-      modern_upbutton_click_scrollup();  // крутим вверх
-    } else {
-      modern_upbutton_click_scrolldown(); // крутим вниз
-    }
-    event.stopPropagation();
-  });
-
-  //вешаем следилку на событие "клик по кнопке Удалить"
-  $('.modern-upbutton-disable').click(function(){
-    modern_upbutton_disable(); // убиваем кнопку
-  });
+//вешаем следилку на событие "клик по кнопке Удалить"
+$('.modern-upbutton-disable').click(function(){
+  modern_upbutton_disable(); // убиваем кнопку
 });
