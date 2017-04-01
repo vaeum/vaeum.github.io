@@ -6,6 +6,7 @@ tags: Lodash Documentation
 description: Это первая часть посвященная переводу 10ти методов для работы с Коллекциями в Lodash на русский язык.
 excerpt_text: Это первая часть посвященная переводу 10ти методов для работы с Коллекциями в Lodash на русский язык. Рассмотрены следующие методы .countBy .every .filter .find .findLast .flatMap .flatMapDeep .flatMapDeep .forEach .forEachRight
 published: true
+---
 
 ![Lodash документация на русском](/images/post/Lodash/Lo-Dash_сollection_part1.jpg)
 
@@ -19,9 +20,9 @@ published: true
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L9094),
 [npm package](https://www.npmjs.com/package/lodash.countby).
 
-Создает объект, состоящий из ключей, сгенерированных из результатов работы каждого элемента коллекции через `iteratee`. 
+Создает объект, состоящий из ключей, сгенерированных из результатов работы каждого элемента коллекции через `iteratee`.
 
-Соответствующее значение каждого ключа это количество раз, когда ключ был возвращен `iteratee`. 
+Соответствующее значение каждого ключа это количество раз, когда ключ был возвращен `iteratee`.
 
 `iteratee` вызывается с одним аргументом: `(value)`.
 
@@ -43,14 +44,11 @@ published: true
 
 _.countBy([6.1, 4.2, 6.3], Math.floor);
 // => { '4': 1, '6': 2 }
- 
+
 // The `_.property` iteratee shorthand.
 _.countBy(['one', 'two', 'three'], 'length');
 // => { '3': 2, '5': 1 }
-
-
 ```
-
 
 ## .every(collection, [predicate=_.identity])
 
@@ -82,34 +80,31 @@ _.countBy(['one', 'two', 'three'], 'length');
 
 _.every([true, 1, null, 'yes'], Boolean);
 // => false
- 
+
 var users = [
   { 'user': 'barney', 'age': 36, 'active': false },
   { 'user': 'fred',   'age': 40, 'active': false }
 ];
- 
+
 // The `_.matches` iteratee shorthand.
 _.every(users, { 'user': 'barney', 'active': false });
 // => false
- 
+
 // The `_.matchesProperty` iteratee shorthand.
 _.every(users, ['active', false]);
 // => true
- 
+
 // The `_.property` iteratee shorthand.
 _.every(users, 'active');
 // => false
-
-
 ```
-
 
 ## .filter(collection, [predicate=_.identity])
 
 [source](https://github.com/lodash/lodash/blob/4.17.4/lodash.js#L9188),
 [npm package](https://www.npmjs.com/package/lodash.filter).
 
-Перебирает элементы коллекции, возвращает массив всех элементов если `predicate ` возвращает  `truthy`. 
+Перебирает элементы коллекции, возвращает массив всех элементов если `predicate ` возвращает  `truthy`.
 
 `predicate` вызывается с тремя аргументами: `(value, index|key, collection)`.
 
@@ -134,25 +129,22 @@ var users = [
   { 'user': 'barney', 'age': 36, 'active': true },
   { 'user': 'fred',   'age': 40, 'active': false }
 ];
- 
+
 _.filter(users, function(o) { return !o.active; });
 // => objects for ['fred']
- 
+
 // The `_.matches` iteratee shorthand.
 _.filter(users, { 'age': 36, 'active': true });
 // => objects for ['barney']
- 
+
 // The `_.matchesProperty` iteratee shorthand.
 _.filter(users, ['active', false]);
 // => objects for ['fred']
- 
+
 // The `_.property` iteratee shorthand.
 _.filter(users, 'active');
 // => objects for ['barney']
-
-
 ```
-
 
 ## .find(collection, [predicate=_.identity], [fromIndex=0])
 
@@ -184,25 +176,22 @@ var users = [
   { 'user': 'fred',    'age': 40, 'active': false },
   { 'user': 'pebbles', 'age': 1,  'active': true }
 ];
- 
+
 _.find(users, function(o) { return o.age < 40; });
 // => object for 'barney'
- 
+
 // The `_.matches` iteratee shorthand.
 _.find(users, { 'age': 1, 'active': true });
 // => object for 'pebbles'
- 
+
 // The `_.matchesProperty` iteratee shorthand.
 _.find(users, ['active', false]);
 // => object for 'fred'
- 
+
 // The `_.property` iteratee shorthand.
 _.find(users, 'active');
 // => object for 'barney'
-
-
 ```
-
 
 ## .findLast(collection, [predicate=_.identity], [fromIndex=collection.length-1])
 
@@ -231,10 +220,7 @@ _.findLast([1, 2, 3, 4], function(n) {
   return n % 2 == 1;
 });
 // => 3
-
-
 ```
-
 
 ## .flatMap(collection, [iteratee=_.identity])
 
@@ -263,13 +249,10 @@ _.findLast([1, 2, 3, 4], function(n) {
 function duplicate(n) {
   return [n, n];
 }
- 
+
 _.flatMap([1, 2], duplicate);
 // => [1, 1, 2, 2]
-
-
 ```
-
 
 ## .flatMapDeep(collection, [iteratee=_.identity])
 
@@ -296,13 +279,10 @@ _.flatMap([1, 2], duplicate);
 function duplicate(n) {
   return [[[n, n]]];
 }
- 
+
 _.flatMapDeep([1, 2], duplicate);
 // => [1, 1, 2, 2]
-
-
 ```
-
 
 ## .flatMapDepth(collection, [iteratee=_.identity], [depth=1])
 
@@ -330,13 +310,10 @@ _.flatMapDeep([1, 2], duplicate);
 function duplicate(n) {
   return [[[n, n]]];
 }
- 
+
 _.flatMapDepth([1, 2], duplicate, 2);
 // => [[1, 1], [2, 2]]
-
-
 ```
-
 
 ## .forEach(collection, [iteratee=_.identity])
 
@@ -346,14 +323,14 @@ _.flatMapDepth([1, 2], duplicate, 2);
 Перебирает элементы коллекции и вызывает итерацию для каждого элемента.
 
 Итерация вызывается с тремя аргументами: `(value, index|key, collection)`.
- 
+
 Функции итерации могут прервать итерацию раньше, явно возвращая `false`.
 
 **Заметка:** Как и в других методах «Collections», объекты со свойством «length» повторяются как массивы. Чтобы избежать такого поведения, используйте [_.forIn](https://lodash.com/docs/4.17.4#forIn) или [_.forOwn](https://lodash.com/docs/4.17.4#forOwn) для итерации объектов.
 
 **Версия:** *0.1.0*
 
-**Псевдонимы:** 
+**Псевдонимы:**
 
 _.each
 
@@ -374,15 +351,12 @@ _.forEach([1, 2], function(value) {
   console.log(value);
 });
 // => Logs `1` then `2`.
- 
+
 _.forEach({ 'a': 1, 'b': 2 }, function(value, key) {
   console.log(key);
 });
 // => Logs 'a' then 'b' (iteration order is not guaranteed).
-
-
 ```
-
 
 ## .forEachRight(collection, [iteratee=_.identity])
 
@@ -393,7 +367,7 @@ _.forEach({ 'a': 1, 'b': 2 }, function(value, key) {
 
 **Версия:** *2.0.0*
 
-**Псевдонимы:** 
+**Псевдонимы:**
 
 _.eachRight
 
@@ -414,9 +388,4 @@ _.forEachRight([1, 2], function(value) {
   console.log(value);
 });
 // => Logs `2` then `1`.
-
-
 ```
-
-
-
