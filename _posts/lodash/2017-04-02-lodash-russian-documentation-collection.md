@@ -4,7 +4,7 @@ layout: post
 categories: Lodash
 tags: Lodash Documentation
 description: Перевод всех методов для работы с Коллекциями в Lodash. Перевод документации Lodash.
-excerpt_text: Перевод всех методов для работы с Коллекциями в Lodash. Перевод документации Lodash. Рассмотрены следующие методы .groupBy .includes .invokeMap .keyBy .map .orderBy .partition .reduce .reduceRight .reject .sample .sampleSize .shuffle .size .some .sortBy
+excerpt_text: Перевод всех методов для работы с Коллекциями в Lodash. Перевод документации Lodash. Рассмотрены следующие методы .countBy .every .filter .find .findLast .flatMap .flatMapDeep .flatMapDeep .forEach .forEachRight .groupBy .includes .invokeMap .keyBy .map .orderBy .partition .reduce .reduceRight .reject .sample .sampleSize .shuffle .size .some .sortBy
 published: true
 ---
 
