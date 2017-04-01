@@ -1,7 +1,7 @@
 //= include variables.js
+//= include share.js
 
 $(function() {
-  //= include share.js
   //= include up-button.js
   //= include search.js
   //= include off-canvas.js
@@ -26,5 +26,3 @@ $(function() {
     })
   }
 });
-
-
