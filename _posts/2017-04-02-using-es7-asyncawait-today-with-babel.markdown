@@ -3,7 +3,7 @@ title: Используем ES7 async/await сегодня вместе с Babel
 layout: post
 categories: Translation
 tags: Babel
-description: Перевод статью "используем ES7 async/await сегодня вместе с Babel"
+description: Перевод статьи "используем ES7 async/await сегодня вместе с Babel"
 ---
 
 Возьмем кусок кода, который содержит пример async/await
