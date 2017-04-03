@@ -35,7 +35,7 @@ $(window).scroll(function() {
     } else {
       $(".main").css({
         'padding-right': '330px',
-        'padding-left': '0px',
+        'padding-left': '15px',
       });
 
       $(".sidebar").css({
