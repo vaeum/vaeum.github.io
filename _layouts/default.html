@@ -19,7 +19,7 @@
 
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
   </head>
-  {% include AdSense.html %}
+  {% include ad-sense.html %}
 
   <body>
     <div class="off-canvas-wrapper">
@@ -43,11 +43,7 @@
     </div>
 
     {% include analytics.html %}
-
-    {% if jekyll.environment == "production" %}
-      {% include disqus_count_comment.html %}
-    {% endif %}
-
+    {% include disqus_count_comment.html %}
     {% include scripts.html %}
   </body>
 </html>
