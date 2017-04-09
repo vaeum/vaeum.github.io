@@ -4,6 +4,7 @@ layout: post
 categories: Translation
 tags: Babel
 description: Перевод статьи "используем ES7 async/await сегодня вместе с Babel"
+published: true
 ---
 
 Возьмем кусок кода, который содержит пример async/await
@@ -142,5 +143,5 @@ printPublicGists();
 
 Теперь если мы опять выполним команду, то все должно быть хорошо
 
-Сылка на оригинал статьи
+Ссылка на оригинал статьи
 [http://masnun.com/2015/11/11/using-es7-asyncawait-today-with-babel.html](http://masnun.com/2015/11/11/using-es7-asyncawait-today-with-babel.html)
