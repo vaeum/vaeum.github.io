@@ -207,7 +207,7 @@ class ViewController: UIViewController {
 
 После этого запустите приложение и протестируйте его. Должно работать так:
 
-![Prepare For Segue](/images/post/prepare_for_segue/prepare_for_segue_16.gif)
+![Prepare For Segue](/images/post/prepare_for_segue/prepare_for_segue_16.mp4)
 
 
 
