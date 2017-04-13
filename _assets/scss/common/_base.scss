@@ -115,6 +115,10 @@ a{
   max-width: 1024px;
   margin: 0 auto;
 
+  @media (max-width:992px){
+    width: 100%;
+  }
+
   @media (max-width:1024px){
     // padding-left: 15px;
     // padding-right: 15px;
