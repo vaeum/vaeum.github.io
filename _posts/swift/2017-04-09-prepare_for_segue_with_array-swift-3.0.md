@@ -1,7 +1,7 @@
 ---
 title: Prepare For Segue With Array - Xcode 8.2 Swift 3.0
 layout: post
-categories: Swift Xcode 
+categories: Swift Xcode
 tags: Swift Xcode PrepareForSegue Snippet
 description: Передача массива с помощью Prepare For Segue
 published: true
@@ -9,22 +9,22 @@ published: true
 
 ![Prepare For Segue](/images/post/prepare_for_segue/prepare_for_segue.jpg)
 
-Сегодня, я покажу как можно передать массив, с помощью **Prepare For Segue** и потом отобразить массив в таблице.
+Сегодня я покажу, как можно передать массив с помощью **Prepare For Segue** и, потом, отобразить массив в таблице.
 
-Для начала создайте проект, с любым названием и выберете язык Swift. 
+Для начала создайте проект с любым названием и выберите язык Swift. 
 
 ![Prepare For Segue](/images/post/prepare_for_segue/prepare_for_segue_1.jpg)
 ![Prepare For Segue](/images/post/prepare_for_segue/prepare_for_segue_2.jpg)
 
-В библиотеке объектов, найдите **Table View Controller** и перетащите его в **StoryBoard**. Выберете по умолчанию созданный **View Controller** и уберите стрелку, которая указывает на него. Для этого выберете **View Controller** и во вкладке атрибут инспектора уберите галочку, со следующего пункта:
+В библиотеке объектов найдите **Table View Controller** и перетащите его в **StoryBoard**. Выберите по умолчанию созданный **View Controller** и уберите стрелку, которая указывает на него. Для этого выбираете **View Controller** и во вкладке атрибут инспектора убираете галочку со следующего пункта:
 
 ![Prepare For Segue](/images/post/prepare_for_segue/prepare_for_segue_3.jpg)
 
-После этого выберете **Table View Controller** и добавьте к нему **Navigation Contoller**. 
+После этого выберите **Table View Controller** и добавьте к нему **Navigation Contoller**. 
 
 ![Prepare For Segue](/images/post/prepare_for_segue/prepare_for_segue_4.jpg)
 
-После этого выделите созданный **Navigation Controller** и добавьте к нему стрелку  поставив галочку в этом пункте.
+Далее выделите созданный **Navigation Controller** и добавьте к нему стрелку,  поставив галочку в этом пункте.
 
 ![Prepare For Segue](/images/post/prepare_for_segue/prepare_for_segue_5.jpg)
 
@@ -36,7 +36,7 @@ published: true
 
 ![Prepare For Segue](/images/post/prepare_for_segue/prepare_for_segue_7.jpg)
 
-После того, как все это сделано, создайте **Segue** от **Table View Controller** к **View Controller** и выберете тип связи **Show Detail**.
+После того, как все это сделано, создайте **Segue** от **Table View Controller** к **View Controller** и выберите тип связи **Show Detail**.
  
 ![Prepare For Segue](/images/post/prepare_for_segue/prepare_for_segue_8.gif)
 
@@ -44,7 +44,7 @@ published: true
 
 ![Prepare For Segue](/images/post/prepare_for_segue/prepare_for_segue_9.jpg)
 
-Теперь добавьте **Label** в ячейку таблицы и назовите её **names**. Выберете **table view** в **Table View Controller** и установите индетификатор **cell**.
+Теперь добавьте **Label** в ячейку таблицы и назовите её **names**. Выберите **table view** в **Table View Controller** и установите индетификатор **cell**.
 
 ![Prepare For Segue](/images/post/prepare_for_segue/prepare_for_segue_10.jpg)
 
@@ -208,8 +208,3 @@ class ViewController: UIViewController {
 После этого запустите приложение и протестируйте его. Должно работать так:
 
 ![Prepare For Segue](/images/post/prepare_for_segue/prepare_for_segue_16.gif)
-
-
-
-	
-
