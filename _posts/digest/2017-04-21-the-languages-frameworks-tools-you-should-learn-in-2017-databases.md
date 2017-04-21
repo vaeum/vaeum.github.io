@@ -10,14 +10,14 @@ excerpt_text: >-
 published: true
 ---
 
-![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/the-languages-and-frameworks-you-should-learn-in-2017.png)
+![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/04-2017/the-languages-and-frameworks-you-should-learn-in-2017.png)
 
 * TOC
 {:toc}
 
 # “Базы Данных”
 
-![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/the-languages-and-frameworks-you-should-learn-in-2017-databases.jpg)
+![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/04-2017/the-languages-and-frameworks-you-should-learn-in-2017-databases.jpg)
 
 **PostgreSQL** увидел в этом году два полноценных релиза – [9.5](https://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.5) и [9.6](https://www.postgresql.org/about/news/1703/). Они принесли давно ожидаемую функциональность UPSERT, которую мы знаем из MySQL (а именно ON DUPLICATE KEY UPDATE), улучшенный полнотекстовый поиск и повышение скорости благодаря параллельным запросам, более эффективной репликации, агрегации, индексации и сортировке. Postgres используется для работы с массивными массивами данных терабайтного масштаба, а также для бизнес веб-приложений, и эти оптимизации приветствуются.
 
