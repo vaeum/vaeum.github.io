@@ -10,14 +10,14 @@ excerpt_text: >-
 published: true
 ---
 
-![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/the-languages-and-frameworks-you-should-learn-in-2017.png)
+![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/04-2017/the-languages-and-frameworks-you-should-learn-in-2017.png)
 
 * TOC
 {:toc}
 
 # “Инструменты”
 
-![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/the-languages-and-frameworks-you-should-learn-in-2017-tools.jpg)
+![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/04-2017/the-languages-and-frameworks-you-should-learn-in-2017-tools.jpg)
 
 [Yarn](https://yarnpkg.com/) является альтернативным менеджером пакетов для Node.js, который разработан компанией Facebook. Это обновление по сравнению с npm утилитой командной строки и обеспечивает более быструю установку, лучшую защиту и детерминированные сборки. Он по-прежнему использует реестр пакетов npm в качестве своего backend, поэтому у вас есть доступ к той же невероятной экосистеме модулей JavaScript. Yarn совместима с форматом `package.json`, который использует npm, и просто быстро устанавливается.
 

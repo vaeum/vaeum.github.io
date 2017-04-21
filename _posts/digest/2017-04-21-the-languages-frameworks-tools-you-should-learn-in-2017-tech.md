@@ -10,14 +10,14 @@ excerpt_text: >-
 published: true
 ---
 
-![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/the-languages-and-frameworks-you-should-learn-in-2017.png)
+![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/04-2017/the-languages-and-frameworks-you-should-learn-in-2017.png)
 
 * TOC
 {:toc}
 
 # “Технологии”
 
-![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/the-languages-and-frameworks-you-should-learn-in-2017-tech.jpg)
+![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/04-2017/the-languages-and-frameworks-you-should-learn-in-2017-tech.jpg)
 
 **Облака** завоевали всю индустрию программного обеспечения, крупные компании закрывают свои датацентры и перемещают всю свою инфраструктуру в "Облака". [AWS](https://aws.amazon.com/), [Google Cloud](https://cloud.google.com/) и [Azure](https://azure.microsoft.com/). Все три имеют мощные, постоянно расширяющиеся наборы функций, включая виртуальные машины, размещенные базы данных, службы машинного обучения и многое другое. Цены быстро снижаются, и "облака" стали доступны небольшим компаниям и отдельным разработчикам. В 2017 году было бы неплохо научиться развертывать сторонний проект у одного из этих поставщиков.
 

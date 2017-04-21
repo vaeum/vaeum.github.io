@@ -10,14 +10,14 @@ excerpt_text: >-
 published: true
 ---
 
-![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/the-languages-and-frameworks-you-should-learn-in-2017.png)
+![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/04-2017/the-languages-and-frameworks-you-should-learn-in-2017.png)
 
 * TOC
 {:toc}
 
 # “Языки”
 
-![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/the-languages-and-frameworks-you-should-learn-in-2017-languages.jpg)
+![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/04-2017/the-languages-and-frameworks-you-should-learn-in-2017-languages.jpg)
 
 ## JavaScript
 
