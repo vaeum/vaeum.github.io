@@ -395,3 +395,6 @@ _.delay(function(text) {
 }, 1000, 'later');
 // => Logs 'later' after one second.
 ```
+
+
+[Часть 2](http://vaeum.com/blog/2017/04/22/lodash-russian-documentation-part2-function/)
