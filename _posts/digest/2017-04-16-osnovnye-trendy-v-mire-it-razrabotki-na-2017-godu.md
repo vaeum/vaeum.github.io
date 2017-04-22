@@ -1,16 +1,16 @@
 ---
-title: Основные тренды в мире IT на 2017 году
+title: Основные тренды в мире IT разработки на 2017 году
 layout: post
 categories: Дайджесты
 tags: Дайджесты
-description: Основные тренды в мире IT на 2017 году
+description: Основные тренды в мире IT разработки на 2017 году
 excerpt_text: >-
-  Основные тренды в мире IT на 2017 году. Перевод статьи Мартина
-  Ангелова(Martin Angelov) с "tutorialzine.com".
+  Основные тренды в мире IT разработки на 2017 году. 
+  Перевод статьи Мартина Ангелова(Martin Angelov) с "tutorialzine.com".
 published: true
 ---
 
-![Основные тренды в мире IT на 2017 году](/images/post/digest/04-2017/the-languages-and-frameworks-you-should-learn-in-2017.png)
+![Основные тренды в мире IT разработки на 2017 году](/images/post/digest/04-2017/the-languages-and-frameworks-you-should-learn-in-2017.png)
 
 * TOC
 {:toc}

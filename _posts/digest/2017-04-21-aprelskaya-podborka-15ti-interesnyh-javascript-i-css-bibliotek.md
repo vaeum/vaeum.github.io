@@ -1,16 +1,16 @@
 ---
-title: 15 интересных JavaScript и CSS библиотек на апрель 2017
+title: Апрельская подборка 15ти интересных JavaScript и CSS библиотек
 layout: post
 categories: Дайджесты
 tags: Дайджесты
-description: 15 интересных JavaScript и CSS библиотек на апрель 2017
+description: Апрельская подборка 15ти интересных JavaScript и CSS библиотек
 excerpt_text: >-
-  15 интересных JavaScript и CSS библиотек на апрель 2017. Перевод статьи Дени
-  Маркова(Danny Markov) с "tutorialzine.com".
+  Апрельская подборка 15ти интересных JavaScript и CSS библиотек.
+  В подборке прдставлены: Core UI, React Trend, Element, Extension Boilerplate, BigPicture, Reactive Listener, Eagle.js, Planck.js, Create React Native App, Pushy Buttons, React Overdrive, MoveTo, Anchorme, RPG Awesome, Tent CSS
 published: true
 ---
 
-![15 интересных JavaScript и CSS библиотек на апрель 2017](/images/post/digest/04-2017/interesting-js-libraries-april-2017.png)
+![Апрельская подборка 15ти интересных JavaScript и CSS библиотек стоит ознакомиться](/images/post/digest/04-2017/interesting-js-libraries-april-2017.png)
 * TOC
 {:toc}
 

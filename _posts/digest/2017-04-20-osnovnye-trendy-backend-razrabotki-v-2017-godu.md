@@ -1,12 +1,12 @@
 ---
-title: Развитие Бэкенд разработки в 2017 году
+title: Основные тренды Backend разработки в 2017 году
 layout: post
 categories: Дайджесты
 tags: Дайджесты
-description: Развитие Бэкенд разработки в 2017 году
+description: Основные тренды Backend разработки в 2017 году
 excerpt_text: >-
-  Развитие Бэкенд разработки в 2017 году. Перевод статьи Мартина
-  Ангелова(Martin Angelov) с "tutorialzine.com".
+  Основные тренды Backend разработки в 2017 году. 
+  Перевод статьи Мартина Ангелова(Martin Angelov) с "tutorialzine.com".
 published: true
 ---
 
@@ -15,7 +15,7 @@ published: true
 * TOC
 {:toc}
 
-# “Бэкенд”
+# “Backend”
 
 ![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/04-2017/the-languages-and-frameworks-you-should-learn-in-2017-backend.jpg)
 
