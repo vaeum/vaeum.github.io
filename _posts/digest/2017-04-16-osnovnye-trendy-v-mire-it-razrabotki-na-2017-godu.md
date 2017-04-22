@@ -1,5 +1,5 @@
 ---
-title: Основные тренды в мире IT разработки на 2017 году
+title: Основные тренды в мире IT разработки на 2017 год!
 layout: post
 categories: Digests
 tags: Digests
