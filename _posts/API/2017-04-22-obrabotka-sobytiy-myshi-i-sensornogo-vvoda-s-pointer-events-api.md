@@ -1,8 +1,8 @@
 ---
 title: Обработка событий Мыши и Сенсорного ввода с Pointer Events API
 layout: post
-categories: Дайджесты
-tags: Дайджесты
+categories: Digests
+tags: Digests
 description: Обработка событий Мыши и Сенсорного ввода с Pointer Events API.
 excerpt_text: >-
   Обзор API Pointer Events. Нового API для работы с обработчиками событий Мыши и Сенсорного ввода.
