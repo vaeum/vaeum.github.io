@@ -1,16 +1,16 @@
 ---
-title: Основные тренды Frontend разработки в 2017 году
+title: Основные тренды для Frontend разработки в 2017 году!
 layout: post
 categories: Digests
 tags: Digests
-description: Основные тренды Frontend разработки в 2017 году
+description: Основные тренды для Frontend разработки в 2017 году!
 excerpt_text: >-
-  Основные тренды Frontend разработки в 2017 году. 
-  Коротко о Angular.js, Vue.js, Ember, Bootstrap, SASS & LESS, Aurelia, React, GraphQL, Immutable.js.
+  Основные тренды Frontend разработки в 2017 году.  Коротко о Angular.js,
+  Vue.js, Ember, Bootstrap, SASS & LESS, Aurelia, React, GraphQL, Immutable.js.
 published: true
 ---
 
-![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/04-2017/the-languages-and-frameworks-you-should-learn-in-2017.png)
+![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/04-2017/languages-2017-frontend.jpg)
 
 * TOC
 {:toc}
