@@ -1,7 +1,7 @@
 ---
 title: Какие языки программирования стоит знать в 2017 году
 layout: post
-    categories: Digests
+categories: Digests
 tags: Digests
 description: Какие языки программирования стоит знать в 2017 году
 excerpt_text: >-
