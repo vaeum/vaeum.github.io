@@ -3,7 +3,7 @@ title: Основные тренды в мире IT разработки на 20
 layout: post
 categories: Digests
 tags: Digests
-description: Основные тренды в мире IT разработки на 2017 год
+description: Основные тренды в мире IT разработки на 2017 год!
 excerpt_text: >-
   Основные тренды в мире IT разработки на 2017 год.  Коротко о прогрессивных
   веб-приложениях, Ботах, консолидации Frontend фреймворков, облачных
@@ -11,7 +11,7 @@ excerpt_text: >-
 published: true
 ---
 
-![Основные тренды в мире IT разработки на 2017 год](/images/post/digest/04-2017/languages-2017-trends.jpg)
+![Основные тренды в мире IT разработки на 2017 год!](/images/post/digest/04-2017/languages-2017-trends.jpg)
 
 * TOC
 {:toc}
