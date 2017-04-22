@@ -1,8 +1,8 @@
 ---
 title: Какие технологии стоит знать в 2017 году
 layout: post
-categories: Дайджесты
-tags: Дайджесты
+categories: Digests
+tags: Digests
 description: Какие технологии стоит знать в 2017 году
 excerpt_text: >-
   Какие технологии стоит знать в 2017 году. 

@@ -1,8 +1,8 @@
 ---
 title: Апрельская подборка 15ти интересных JavaScript и CSS библиотек
 layout: post
-categories: Дайджесты
-tags: Дайджесты
+categories: Digests
+tags: Digests
 description: Апрельская подборка 15ти интересных JavaScript и CSS библиотек
 excerpt_text: >-
   Апрельская подборка 15ти интересных JavaScript и CSS библиотек.

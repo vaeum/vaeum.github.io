@@ -1,8 +1,8 @@
 ---
 title: Основные тренды Backend разработки в 2017 году
 layout: post
-categories: Дайджесты
-tags: Дайджесты
+categories: Digests
+tags: Digests
 description: Основные тренды Backend разработки в 2017 году
 excerpt_text: >-
   Основные тренды Backend разработки в 2017 году. 
