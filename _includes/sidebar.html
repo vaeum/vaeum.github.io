@@ -40,15 +40,15 @@
   <ul class="lsn pl0 mb0 clearfix widget-statistic">
     <li>
       <span class="count">{{ site.posts | size }}</span>
-      <div class="text">Постов</div>
+      <a href="/" class="text">Постов</a>
     </li>
     <li>
       <span class="count">{{ site.categories | size }}</span>
-      <div class="text">Категорий</div>
+      <a href="/categories" class="text">Категорий</a>
     </li>
     <li>
       <span class="count">{{ site.tags | size }}</span>
-      <div class="text">Тегов</div>
+      <a href="/tags" class="text">Тегов</a>
     </li>
   </ul>
 
@@ -99,7 +99,7 @@
 
 
   {% if jekyll.environment == "production" %}
-    
+
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Сайдбар -->
     <ins class="adsbygoogle"
