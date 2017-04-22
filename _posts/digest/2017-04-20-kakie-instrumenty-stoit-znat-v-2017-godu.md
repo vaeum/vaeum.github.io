@@ -3,14 +3,14 @@ title: Какие инструменты стоит знать в 2017 году
 layout: post
 categories: Digests
 tags: Digests
-description: Какие инструменты стоит знать в 2017 году
+description: Какие инструменты стоит знать в 2017 году!
 excerpt_text: >-
-  Какие инструменты стоит знать в 2017 году. 
-  Коротко о Yarn, Git, редакторах кода Visual Studio Code и Atom
+  Какие инструменты стоит знать в 2017 году. Коротко о Yarn, Git, редакторах
+  кода Visual Studio Code и Atom
 published: true
 ---
 
-![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/04-2017/the-languages-and-frameworks-you-should-learn-in-2017.png)
+![Какие языки и фреймворки вы должны знать в 2017 году](/images/post/digest/04-2017/languages-2017-tools.jpg)
 
 * TOC
 {:toc}
