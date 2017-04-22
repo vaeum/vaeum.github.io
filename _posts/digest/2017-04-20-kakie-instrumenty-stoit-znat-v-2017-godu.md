@@ -1,5 +1,5 @@
 ---
-title: Какие инструменты стоит знать в 2017 году
+title: Какие инструменты стоит знать в 2017 году!
 layout: post
 categories: Digests
 tags: Digests
