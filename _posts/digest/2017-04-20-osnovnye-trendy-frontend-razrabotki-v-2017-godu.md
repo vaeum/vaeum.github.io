@@ -19,7 +19,7 @@ published: true
 
 ![Основные тренды Frontend разработки в 2017 году](/images/post/digest/04-2017/the-languages-and-frameworks-you-should-learn-in-2017-frontend.jpg)
 
-В последнее время веб-платформа сделала два важных продвижения – [Web Assembly](http://webassembly.org/) и [Service Workers](https://developer.mozilla.org/en/docs/Web/API/Service_Worker_API). Они открывают двери для быстрых и эффективных веб-приложений, которые устраняют разрыв с собственными нативными приложениями. `Service Workers`, в частности, являются технологией, обеспечивающей `Progressive Web Apps`, и обеспечивают поддержку уведомлений для веб-платформы, и в будущем им потребуется больше API.
+В последнее время веб-платформа сделала два важных продвижения – [Web Assembly](http://webassembly.org/) и [Service Workers](https://developer.mozilla.org/en/docs/Web/API/Service_Worker_API). Они открывают двери для быстрых и эффективных веб-приложений, которые устраняют разрыв с собственными нативными приложениями. **Service Workers**, в частности, являются технологией, обеспечивающей **Progressive Web Apps**, и обеспечивают поддержку уведомлений для веб-платформы, и в будущем им потребуется больше API.
 
 
 ## Angular.js
