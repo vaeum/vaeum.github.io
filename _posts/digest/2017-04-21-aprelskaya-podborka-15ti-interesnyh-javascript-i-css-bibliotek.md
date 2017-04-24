@@ -1,5 +1,5 @@
 ---
-title: Апрельская подборка 15ти интересных JavaScript и CSS библиотек
+title: Апрельская подборка 15-ти интересных JavaScript и CSS библиотек
 layout: post
 categories: Digests
 tags: Digests
