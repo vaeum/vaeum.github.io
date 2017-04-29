@@ -3,7 +3,7 @@ title: Swift Syntax Cheat Codes(Перевод)
 layout: post
 categories: Swift Xcode
 tags: Swift Xcode
-description: Swift: Syntax Cheat Codes
+description: Swift Syntax Cheat Codes
 published: true
 ---
 
