@@ -1,5 +1,5 @@
 ---
-title: Swift: Syntax Cheat Codes(Перевод)
+title: Swift Syntax Cheat Codes(Перевод)
 layout: post
 categories: Swift Xcode
 tags: Swift Xcode
