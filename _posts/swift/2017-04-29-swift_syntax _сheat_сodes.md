@@ -1,9 +1,9 @@
 ---
-title: Swift Syntax Cheat Codes(Перевод)
+title: "Swift Syntax Cheat\_Codes (Перевод)."
 layout: post
 categories: Swift Xcode
 tags: Swift Xcode
-description: Swift Syntax Cheat Codes
+description: "Swift Syntax Cheat\_Codes"
 published: true
 ---
 
@@ -188,5 +188,3 @@ let view = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
 Независимо от того, пишете ли вы новые строки или читаете старые, вы обнаружите части кода, в которых будут использоваться написанные здесь вещи. **Xcode** не всегда корректен, когда речь идет о автозаполнении, поэтому вы всегда должны ставить под сомнение автозаполненный код, который он создает, а также код, который вы пишете сами.
 
 [Ссылка на оригинальную статью](https://medium.com/swift-programming/swift-syntax-cheat-codes-9ce4ab4bc82e)
-
-
