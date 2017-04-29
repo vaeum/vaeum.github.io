@@ -1,5 +1,5 @@
 ---
-title: Swift: Syntax Cheat Codes(Перевод).
+title: Swift: Syntax Cheat Codes(Перевод)
 layout: post
 categories: Swift Xcode
 tags: Swift Xcode
@@ -11,7 +11,7 @@ published: true
 
 Является ли это вашим первым языком или вы начинаете с **Objective-C**, язык **Swift** буквально является бомбой с точки зрения написания кода, но это может быть немного пугающим, если вы не знакомы улучшение синтаксиса, которые он имеет. В этом посте будут рассмотрен и детализирован некоторый общий синтаксис, с которым вы столкнетесь при чтении и научитесь писать сжатый код с помощью **Swift**.
 
-### Closures (Замыкание) 
+### Closures (Замыкание)
 
 ```swift
 () -> Void
@@ -38,7 +38,7 @@ UIView.animate(withDuration: 10.0, animations: {
 ### Trailing closures (Последующее замыкание)
 
 ```swift
-UIView.animate(withDuration: 10.0) { 
+UIView.animate(withDuration: 10.0) {
     button.alpha = 0
 }
 ```
@@ -53,7 +53,7 @@ func say(_ message: String, completion: @escaping () -> Void) {
     completion()
 }
 say("Hello", completion: {
-    // prints: "Hello" 
+    // prints: "Hello"
     // Do some other stuff
 })
 say("Hello") {
