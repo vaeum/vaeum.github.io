@@ -7,7 +7,7 @@ description: "Swift Syntax Cheat\_Codes"
 published: true
 ---
 
-![Swift Syntax Cheat Codes](/images/post/swift_syntax _сheat_сodes/1.png)
+![Swift Syntax Cheat Codes](/images/post/swift_syntax_сheat_сodes/1.png)
 
 Является ли это вашим первым языком или вы начинаете с **Objective-C**, язык **Swift** буквально является бомбой с точки зрения написания кода, но это может быть немного пугающим, если вы не знакомы улучшение синтаксиса, которые он имеет. В этом посте будут рассмотрен и детализирован некоторый общий синтаксис, с которым вы столкнетесь при чтении и научитесь писать сжатый код с помощью **Swift**.
 
