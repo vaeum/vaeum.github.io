@@ -1,5 +1,5 @@
 ---
-title: Search Bar and UISearchController(Перевод).
+title: Search Bar and UISearchController (Перевод)
 layout: post
 categories: Swift Xcode
 tags: Swift Xcode
@@ -13,7 +13,7 @@ published: true
 
 В iOS 8 был введен новый класс под названием **UISearchController**, изменивший **UISearchDisplayController API**, который еще существовал с **IOS 3**. Старый **API** теперь устарел. Если у вас есть опыт работы с **IOS 7** или более ранней версией **SDK**, не забудьте использовать **UISearchController**.
 
-**UISearchController API** упрощает способ создания панели поиска и управления результатами поиска. Вы больше не ограничиваете встроенный поиск в **table view controller**, но можете использовать его в любом **view controller**, таком как **collection view controller**. Более того, он предлагает разработчикам гибкость, чтобы влиять на анимацию панели поиска через пользовательский объект. 
+**UISearchController API** упрощает способ создания панели поиска и управления результатами поиска. Вы больше не ограничиваете встроенный поиск в **table view controller**, но можете использовать его в любом **view controller**, таком как **collection view controller**. Более того, он предлагает разработчикам гибкость, чтобы влиять на анимацию панели поиска через пользовательский объект.
 С **UISearchController** добавление панели поиска в ваше приложение — довольно простая задача. Давайте начнем реализовывать панель поиска по умолчанию и посмотрим, как мы можем фильтровать данные ресторана.
 
 ### Использование UISearchController
@@ -31,7 +31,7 @@ tableView.tableHeaderView = searchController.searchBar
 
 ![Search Bar and UISearchController](/images/post/uisearchcontroller/1.jpg)
 
-Как вы можете видеть, стиль отображения точно такой же, как у **table view**. Если вы хотите отобразить результаты поиска в другом формате, вам нужно будет создать другой **view controller** и указать его во время инициализации **UISearchController**. 
+Как вы можете видеть, стиль отображения точно такой же, как у **table view**. Если вы хотите отобразить результаты поиска в другом формате, вам нужно будет создать другой **view controller** и указать его во время инициализации **UISearchController**.
 
 **Вторая строка кода** сообщает контроллеру поиска, какой объект отвечает за обновление результата поиска. Это может быть любой объект в нашем приложении или просто текущий.
 
@@ -42,13 +42,13 @@ tableView.tableHeaderView = searchController.searchBar
 Теперь попробуйте добавить панель поиска в приложение **FoodPin**. Откройте **RestaurantTableViewController.swift** файл и объявите переменную **searchController**:
 
 ```swift
-var searchController:UISearchController! 
+var searchController:UISearchController!
 ```
 
 Затем добавьте следующие строки кода в **viewDidLoad()** метод:
 
 ```swift
-searchController = UISearchController(searchResultsController: nil) 
+searchController = UISearchController(searchResultsController: nil)
 tableView.tableHeaderView = searchController.searchBar
 ```
 
@@ -72,10 +72,10 @@ func filterContent(for searchText: String) {
         if let name = restaurant.name {
             let isMatch = name.localizedCaseInsensitiveContains(searchText)
             return isMatch
-} 
+}
         return false
     })
-} 
+}
 ```
 
 В **Swift** имеется встроенный метод для фильтрации существующего массива. Вы используете фильтр для перебора по коллекции и возвращению нового массива, содержащего те элементы, которые соответствуют заданному условию. Например, новый массив может содержать только рестораны с названием, начинающимся с большой буквы.
@@ -89,7 +89,7 @@ func filterContent(for searchText: String) {
 Теперь, когда мы реализовали логику поиска, как мы можем обновлять и отображать результаты поиска на экране? Чтобы обновить результат поиска, сначала необходимо добавить в класс новый **UISearchResultsUpdating** протокол:
 
 ```swift
-class RestaurantTableViewController: UITableViewController, 
+class RestaurantTableViewController: UITableViewController,
 NSFetchedResultsControllerDelegate, UISearchResultsUpdating
 ```
 
@@ -101,7 +101,7 @@ func updateSearchResults(for searchController: UISearchController) {
         filterContent(for: searchText)
         tableView.reloadData()
     }
-} 
+}
 ```
 
 Код очень прост — мы получаем текст поиска, введенный пользователем, и передаем его **filterContent(for:)** методу. Наконец, перезагрузите данные таблицы. Как упоминалось ранее, мы используем одно и то же **table view** для отображения результатов поиска. Вот почему мы вызываем **tableView.reloadData()** для перезагрузки результатов поиска.
@@ -121,10 +121,10 @@ override func tableView(_ tableView: UITableView, numberOfRowsInSection section:
     } else {
         return restaurants.count
 	}
-} 
+}
 ```
 
-Когда **search controller** активен, мы возвращаем число результатов поиска. В случае, если контроллер поиска неактивен, мы возвращаем счет полного списка ресторанов. 
+Когда **search controller** активен, мы возвращаем число результатов поиска. В случае, если контроллер поиска неактивен, мы возвращаем счет полного списка ресторанов.
 
 Код в **tableView(_:cellForRowAt:)** методе так же должен возвращаться с дополнительным условием:
 
@@ -146,7 +146,7 @@ array
     cell.accessoryType = restaurant.isVisited ? .checkmark : .none
 
 	return cell
-} 
+}
 ```
 
 Опять же, мы проверяем, активен ли поисковый контроллер. Если пользователь выполняет поиск, извлеките ресторан из результата поиска, а не из массива ресторанов. Вот строка кода, которая делает магию.
@@ -160,7 +160,7 @@ IndexPath) -> Bool {
         return false
     } else {
         return true
-} } 
+} }
 ```
 
 Аналогично, обновите следующую строку кода в методе **prepare(for:)**:
