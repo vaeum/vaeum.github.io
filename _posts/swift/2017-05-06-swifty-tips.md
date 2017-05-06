@@ -22,10 +22,10 @@ published: true
 Вы должны использовать только ссылочные типы для живых объектов. Что я подразумеваю под «живыми»? Давайте рассмотрим ниже пример:
 
 ```swift
-struct Car { 
+struct Car {
   let model: String
 }
-class CarManager { 
+class CarManager {
   private(set) var cars: [Car]
   func fetchCars()
   func registerCar(_ car: Car)
@@ -64,7 +64,7 @@ class SomeView: UIView {
 }
 ```
 
-**Популярные вопрос:** 
+**Популярные вопрос:**
 Должен ли я использовать неявно развертывание при извлечении ячейки из **table view**?
 
 **Не очень популярный ответ:**
@@ -75,6 +75,7 @@ guard let cell = tableView.dequeueCell(...) else {
   fatalError("Cannot dequeue cell with identifier \(cellID)")
 }
 ```
+
 ![Swift Syntax Cheat Codes](/images/post/swifty_tips/2.gif)
 
 ### 3 - Избегайте чрезмерного использования AppDelegate
@@ -99,9 +100,9 @@ func appDidFinishLaunching... {
   return true
 }
 ```
+
 ![Swift Syntax Cheat Codes](/images/post/swifty_tips/3.gif)
 Разработчик в AppDelegate.swift
-
 
 👍 Лучше сделать так:
 
@@ -219,7 +220,7 @@ class PhotoCollectionViewCell {
 
 ### 7 - По умолчанию идет финальная версия 🏁
 
-По умолчанию классы должны быть окончательными, поскольку обычно они не предназначены для расширения. 
+По умолчанию классы должны быть окончательными, поскольку обычно они не предназначены для расширения.
 
 ### 8 - Больше имен в ваших константах
 
@@ -239,7 +240,7 @@ static let kAPIKey = "13511-5234-5234-59234"
 enum Constant {
   enum UI {
     static let animationDuration: TimeInterval = 0.3
-    static let lowAlpha: CGFloat = 0.2  
+    static let lowAlpha: CGFloat = 0.2
   }
   enum Analytics {
     static let apiKey = "13511-5234-5234-59234"
@@ -272,7 +273,7 @@ if name != nil {
 }
 ```
 
-**Неиспользуемый возврат:** 
+**Неиспользуемый возврат:**
 
 ```swift
 _ = manager.removeCar(car) // Returns true if successful.
@@ -281,7 +282,7 @@ _ = manager.removeCar(car) // Returns true if successful.
 **Блоки завершения:**
 
 ```swift
-service.fetchItems { data, error, _ in 
+service.fetchItems { data, error, _ in
   // Hey, I don't care about the 3rd parameter to this block.
 }
 ```
@@ -330,4 +331,3 @@ driver.driving()
 
 Автор оригинала: **Göksel Köksal**
 [Ссылка на оригинальную статью](https://medium.com/@gokselkoksal/swifty-tips-%EF%B8%8F-8564553ba3ec)
-
