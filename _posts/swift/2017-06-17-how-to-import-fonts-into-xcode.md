@@ -1,9 +1,9 @@
 ---
-title: How to Import Fonts into Xcode (Swift 3) (Перевод)
+title: "How to Import Fonts into Xcode (Swift\_3) (Перевод)"
 layout: post
 categories: IOS Fonts Swift Xcode
 tags: IOS Fonts Swift Xcode
-description: How to Import Fonts into Xcode (Swift 3) (Перевод)
+description: "How to Import Fonts into Xcode (Swift\_3) (Перевод)"
 published: true
 ---
 
@@ -17,7 +17,7 @@ published: true
 
 ### Шаг 2. Сохраните шрифты и перетащите их в свой проект.
 
-Когда вы перетаскиваете папку шрифтов в свой проект, обязательно **copy items as needed**.
+Когда вы перетаскиваете папку шрифтов в свой проект, обязательно поставьте галочку в **copy items as needed**.
 
 ![How to Import Fonts into Xcode](/images/post/how-to-import-fonts-into-xcode/2.png)
 
@@ -55,5 +55,3 @@ published: true
 
 Автор оригинала: **Erica Millado**.
 [Ссылка на оригинальную статью](https://medium.com/yay-its-erica/how-to-import-fonts-into-xcode-swift-3-f0de7e921ef8)
-
-
