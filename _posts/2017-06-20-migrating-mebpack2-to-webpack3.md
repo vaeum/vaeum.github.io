@@ -7,8 +7,6 @@ description: Описание новой версии Webpack, и особенн
 published: true
 ---
 
-# Миграция с Webpack 2 на Webpack 3
-
 19 июня вышел Webpack 3, с новыми интересными возможностями. В тот же день он стал доступен в репозитории NPM. Был написан пост на [Medium](https://medium.com/webpack/webpack-3-official-release-15fd2dd8f07b).
 
 ### Как установить Webpack 3?
