@@ -4,8 +4,8 @@ title: Top 5 iOS Libraries — June 2017 (Перевод)
 layout: post
 categories: IOS Libraries Digests
 tags: IOS Libraries Digests
-description: Top 5 iOS Libraries — June 2017
-published: true
+description: "Top 5 iOS Libraries — June 2017"
+
 ---
 
 ![Top 5 iOS Libraries — June 2017](/images/post/top-5-ios-libraries-june/1.png)
