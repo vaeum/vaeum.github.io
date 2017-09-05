@@ -1,13 +1,10 @@
-
 ---
-title: Top 5 iOS Libraries — June 2017 (Перевод)
+published: false
 layout: post
 categories: IOS Libraries Digests
 tags: IOS Libraries Digests
-description: Top 5 iOS Libraries — June 2017
-published: true
+description: "Top 5 iOS Libraries — June\_2017"
 ---
-
 ![Top 5 iOS Libraries — June 2017](/images/post/top-5-ios-libraries-june/1.png)
 
 Как и каждый месяц с сентября, здесь идет список лучших библиотек iOS, чтобы опробовать их в ближайшие дни. Наслаждайтесь! 🤘
@@ -51,5 +48,3 @@ NotificationBanner позволяет вам легко добавлять ра�
 
 Автор оригинала: **COBE Team**.
 [Ссылка на оригинальную статью](https://medium.cobeisfresh.com/top-5-ios-libraries-june-2017-7addf1173114)
-
-
