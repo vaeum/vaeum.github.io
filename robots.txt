@@ -1,0 +1,4 @@
+#Host: vaeum.com
+User-agent: *
+Disallow: /cgi-bin
+Host: vaeum.com
